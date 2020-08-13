@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Расчет</title> 
-<link rel="stylesheet" href="../calc-form/style.css" />
-<script async src="../calc-form/main.js"></script> 
+<link rel="stylesheet" href="../archive/style.css" />
+<script defer src="../archive/main.js"></script> 
 
 </head>
 <body>
@@ -13,9 +13,11 @@
         <div class="allwalls-wrp">                    
             <fieldset>
              <legend class="wf_leg-title" aria-label="Название формы"><h2>Расчет панелей и комплектующих для cтен</h2></legend>
-             
-              <!-- Начало формы e для стен-->
-              <div class="walls-wrp"> 
+             <button class="show-form-stena" id="show-form-stena-id" type="button" aria-label="Кнопка показа формы подсчета стен"><svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"> <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
+                c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
+                c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/></svg> <span class="txt-btn">добавить стену</span></button>
+              <!-- Начало формы для стен-->
+              <div class="walls-wrp hidden" id="walls-wrp-id"> 
                     <div class="walls-list">
                         <div class="walls" id="walls-id">
                             <form action="#" class="walls-form" id="walls-form-id" name="walls-form" aria-labelledby="walls-id walls-form-id">
@@ -59,10 +61,14 @@
                                                
                         </div>
                     </div>                    
-                <button class="add-form" id="add" type="button" aria-label="Кнопка добавления новой формы для подсчета стен"><svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"> <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
+                <button class="add-form" id="add" type="button" aria-label="Кнопка добавления новой формы подсчета стен"><svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"> <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
                         c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
                         c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/></svg> <span class="txt-btn">добавить новую стену</span></button>
               </div>
+              <button class="show-form-window" id="show-form-window" type="button" aria-label="Кнопка показа формы подсчета стен"><svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"> <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
+                c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
+                c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/></svg> <span class="txt-btn">добавить стену</span></button>
+      
               <!-- Начало формы для окон-->
               <div class="windows-wrp">
                 <div class="windows-list" id="windows-list-id">

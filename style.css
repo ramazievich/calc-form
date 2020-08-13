@@ -210,6 +210,7 @@ input[type=number]::-webkit-outer-spin-button {
   }
 
 .add-form,
+.show-form-stena,
 .add-form-window,
 .add-form-door,
 .add-form-ugols-vnesh,
@@ -232,6 +233,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .add-form:hover,
+.show-form-stena:hover,
 .add-form-window:hover,
 .add-form-door:hover,
 .add-form-ugols-vnesh:hover,
@@ -242,6 +244,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .add-form:active,
+.show-form-stena:active,
 .add-form-window:active,
 .add-form-door:active,
 .add-form-ugols-vnesh:active,

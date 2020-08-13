@@ -337,6 +337,21 @@ newClonedNode.name = "walls-form-id-" + newFormStenaId;
 newFormStenaId++;
 });
 
+
+/**
+ * Кнопка показа формы для количества стен в разделе стены
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnStena] remuveBtnStena - добавляет класс hidden к кнопке показать форму
+ * @param {newFormWindow} newFormWindow - добавляем новую форму
+ */
+document.querySelector(".show-form-stena").addEventListener("click", function() {
+  document.getElementById("walls-wrp-id").classList.remove("hidden"); 
+  remuveBtnStena(); 
+}); 
+function remuveBtnStena() {
+  document.getElementById("show-form-stena-id").classList.add("hidden"); 
+ }
+
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе стены
  * @param {newClonedNode} newClonedNode - переменная для всей формы
