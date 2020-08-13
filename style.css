@@ -20,7 +20,8 @@ ul {
 .windows,
 .doors,
 .ugols-vnesh,
-.ugols-inner {
+.ugols-inner,
+.treugol {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -33,7 +34,9 @@ ul {
 .windows-form,
 .doors-form,
 .ugol-vnesh-form,
-.ugol-inner-form {
+.ugol-inner-form,
+.treugol-form,
+.treugol-window-form {
     width: 240px;
     background-color: #f2f2f240;
     border: 0.5px solid #00000005;
@@ -46,7 +49,8 @@ ul {
 .windows-list,
 .doors-list,
 .ugols-vnesh-list,
-.ugols-inner-list {
+.ugols-inner-list,
+.treugol-list {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -159,14 +163,20 @@ input[type=number]::-webkit-outer-spin-button {
 .window_wall-wrp,
 .door_wall-wrp,
 .ugol-vnesh_wall-wrp,
-.ugol-inner_wall-wrp {
+.ugol-inner_wall-wrp,
+.treugol-quantity-wrp,
+.treugol-window-groups-wrp {
    margin-top: 17px; 
 }
 
+.treugol-width-wrp{
+  margin-top: 17px; 
+}
 
 .wf_result-formula,
 .window_result-formula,
-.door_result-formula {
+.door_result-formula,
+.treugol-result-formula {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -313,8 +323,10 @@ legend {
 .window-form-span,
 .door-form-span,
 .ugol-vnesh-span,
-.ugol-inner-span {
-    font-size: 20px;
+.ugol-inner-span,
+.treugol-form-span,
+.treugol-window-form-span {
+    font-size: 19px;
     font-weight: 600;
     color: #000;
 }
