@@ -242,11 +242,7 @@ input[type=number]::-webkit-outer-spin-button {
     cursor:pointer;  
 }
 
-.remove-form,
-.remove-form-windows,
-.remove-form-doors,
-.remove-form-ugols-vnesh,
-.remove-form-ugols-inner {
+.remove-form-btn {
     width: 20px;
     height: 20px;
     border: none;
@@ -259,11 +255,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: none;
 }
 
-.remove-form:hover,
-.remove-form-windows:hover,
-.remove-form-doors:hover,
-.remove-form-ugols-vnesh:hover,
-.remove-form-ugols-inner:hover {
+.remove-form-btn:hover {
     fill: red;
     outline: none;
     border: none;
@@ -271,11 +263,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: none;
 }
 
-.remove-form:active,
-.remove-form-windows:active,
-.remove-form-doors:active,
-.remove-form-ugols-vnesh:active,
-.remove-form-ugols-inner:active  {
+.remove-form-btn:active  {
     fill: rgb(252, 56, 56);
     outline: none;
     border: none;
@@ -283,11 +271,7 @@ input[type=number]::-webkit-outer-spin-button {
     background: none;
 }
 
-.remove-form:focus,
-.remove-form-windows:focus,
-.remove-form-doors:focus,
-.remove-form-ugols-vnesh:focus,
-.remove-form-ugols-inner:focus {
+.remove-form-btn:focus {
     fill: rgb(252, 56, 56);
     outline: #3ac162;
     border: none;
