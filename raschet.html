@@ -17,12 +17,13 @@
             <!-- Формы для треугольного фронтона -->
             <input type="checkbox" id="treugol" value="interest_treugol" name="treugol"><label class="light" for="treugol">треугольный</label><br>
             <!-- Количество и размеры треугольных фронтонов -->
-            <div class="treugol-wrp" id="treugol-wrp-id"> 
-                <div class="treugol-list">
-                    <div class="treugol" id="treugol-id">
-                        <form action="#" class="treugol-form" id="treugol-form-id" name="treugol-form" aria-labelledby="treugol-id treugol-form-id">
-                            <span class="treugol-form-span" id="treugol-form-span-id" aria-label="Название формы">Размер фронтона</span>
-                            <svg class="remove-form-btn treugol-remove-form" id="treugol-close-form" onclick="deleteForm2(this)" aria-label="Кнопка удаления формы подсчета размера треугольного фронтона"
+            <!-- tf - треугольный фронтон -->
+            <div class="tf-wrp" id="tf-wrp-id"> 
+                <div class="tf-list">
+                    <div class="tf" id="tf-id">
+                        <form action="#" class="tf-form" id="tf-form-id" name="tf-form" aria-labelledby="tf-id tf-form-id">
+                            <span class="tf-form-span" id="tf-form-span-id" aria-label="Название формы">Размер фронтона</span>
+                            <svg class="remove-form-btn tf-remove-form" id="tf-close-form" onclick="deleteFormTF(this)" aria-label="Кнопка удаления формы подсчета размера треугольного фронтона"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                 <path class="st0" d="M12.7,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V7.7C13.2,7.5,13,7.2,12.7,7.2z"/>
                                 <path class="st0" d="M7.3,7.2C7,7.2,6.8,7.5,6.8,7.7v8.9C6.8,16.8,7,17,7.3,17c0.3,0,0.5-0.2,0.5-0.5V7.7C7.7,7.5,7.5,7.2,7.3,7.2z"/>
@@ -34,26 +35,30 @@
                                    S3.3,3.4,3.7,3.4z"/>
                                 <path class="st0" d="M10,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5V7.7C10.5,7.5,10.2,7.2,10,7.2z"/>
                             </svg>
-                            <div class="treugol-groups-wrp">
-                                <div class="treugol-width-wrp">
-                                    <label class="treugol-width-label" aria-label="Название поля ввода">Ширина, м(B)</label>
-                                    <input class="treugol-width" id="treugol-width-id" type="number" name="treugol-width[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcStena2(); perimeter2(); sumPerimeters2(); sumAreas2()" aria-labelledby="treugol-id treugol-width-id">
+                            <div class="tf-number-wrp">
+                                <label class="tf-number-label" aria-label="Количество фронтон">Количество фронтонов</label>
+                                <input class="tf-number" id="tf-quantity" type="number" name="tf-quantity[]" step ="1" min="1" value="1" oninput="validity.valid||(value='');" onkeyup="funcTreugFronton(); sumAreasTreugolFronton()" aria-labelledby="tf-form-id tf-quantity">
+                            </div>
+                            <div class="tf-items-wrp">
+                                <div class="tf-width-wrp">
+                                    <label class="tf-width-label" aria-label="Название поля ввода">Ширина, м(B)</label>
+                                    <input class="tf-width" id="tf-width-id" type="number" name="tf-width[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcTreugFronton(); sumAreasTreugolFronton()" aria-labelledby="tf-form-id tf-width-id">
                                 </div>
-                                <div class="treugol-height-wrp">
-                                    <label class="treugol-height-label" aria-label="Название поля ввода">Высота, м(H)</label>
-                                    <input class="treugol-height" id="treugol-height-id" type="number" name="treugol-height[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcStena2(); perimeter2(); sumAreas2()" aria-labelledby="treugol-id treugol-height-id">
+                                <div class="tf-height-wrp">
+                                    <label class="tf-height-label" aria-label="Название поля ввода">Высота, м(H)</label>
+                                    <input class="tf-height" id="tf-height-id" type="number" name="tf-height[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcTreugFronton(); sumAreasTreugolFronton()" aria-labelledby="tf-id tf-height-id">
                                 </div>
                             </div>
-                                <div class="treugol-result-formula">
-                                    <p class="treugol-area-all" aria-label="Название поля вывода">Площадь</p>
-                                    <input class="treugol-result-wall" id="treugol-result" type="text"  name="treugol-result[]" disabled aria-labelledby="treugol-form-id treugol-result">
-                                    <p class="treugol-area-all" >м&sup2;</p>        
+                                <div class="tf-area-wrp">
+                                    <p class="tf-area-txt" aria-label="Название поля вывода">Площадь</p>
+                                    <input class="tf-area" id="tf-area-id" type="text"  name="tf-area[]" disabled aria-labelledby="tf-form-id tf-area-id">
+                                    <p class="tf-area-txt2" >м&sup2;</p>        
                                 </div>  
                         </form> 
                                            
                     </div>
                 </div>                    
-            <button class="add-form-btn add-form-treugol" id="add-form-treugol-id" type="button" aria-label="Кнопка добавления новой формы фронтона"><svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"> <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
+            <button class="add-form-btn add-form-tf" id="add-form-tf-id" type="button" aria-label="Кнопка добавления новой формы фронтона"><svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20"> <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
                     c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
                     c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/></svg> <span class="txt-btn">добавить новый фронтон</span></button>
           </div>
@@ -62,13 +67,14 @@
             <input type="checkbox" id="not-fronton" value="interest_not-fronton" name="not-fronton"><label class="light" for="not-fronton">без фронтона (вальмовая и шатровая крыша)</label>
         </div>
 
-                      <!-- Вывод общих значений -->
-                      <div class="all-results-wrp hidden1">    
-                        <label class="treugol-_area-all2-title" aria-label="Название поля вывода">Общая площадь стен, м² </label>
-                        <input class="treugol-_area-all2"  id="treugol-area-all22-id" disabled type="number" name="treugol-area-all2[]" step ="0.0001" min="0">
-                        </div>   
-    </section>
+            <!-- Вывод общих значений -->
+            <div class="all-results-wrp hidden1">    
+              <label class="tf-area-all2-title" aria-label="Название поля вывода">Общая площадь стен, м² </label>
+              <input class="tf-area-all2"  id="tf-area-all22-id" disabled type="number" name="tf-area-all2[]" step ="0.0001" min="0">
+            </div>   
 
+    </section>     
+    
     <section class="wall">            
         <div class="allwalls-wrp">                    
             <fieldset>
@@ -317,7 +323,7 @@
                                 <span class="txt-btn">добавить внутренний угол</span></button>
               </div> 
               <!-- Вывод общих значений -->
-                <div class="all-results-wrp hidden1">    
+                <div class="all-results-wrp hidden">    
                 <label class="wf_perimeter-all-title" aria-label="Название поля вывода">Общий периметр стен, м </label>
                 <input class="wf_perimeter-all" disabled id="wf_perimeter-all-id" type="number" name="wf-perimeter[]" step ="0.0001" min="0" aria-labelledby="walls-form-id wf_perimeter-all-id">        
                 <label class="wf_area-all2-title" aria-label="Название поля вывода">Общая площадь стен, м² </label>

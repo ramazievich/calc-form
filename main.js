@@ -83,6 +83,35 @@ function funcDoor() {
 }
 
 /**
+ * @function [funcTreugFronton] Функцыя подсчета площади треугольного фронтона для одной формы
+ * @param {allFormsTreugFront} allFormsTreugFront переменная для формы подсчета площади треугольного фронтона
+ * @param {number} shirina - поле ввода ширины треугольного фронтона
+ * @param {number} visota - поле ввода высоты треугольного фронтона
+ * @param {number} result - результат подсчета
+ */
+let allFormsTreugFronton = document.querySelectorAll(".tf-form");
+console.log(allFormsTreugFronton);
+
+function funcTreugFronton() {
+  allFormsTreugFronton = document.querySelectorAll(".tf-form");
+  for (let i = 0, max = allFormsTreugFronton.length; i < max; i++) {
+    let form = allFormsTreugFronton[i];
+    console.log(form.querySelector(".tf-number"));
+    let fronton = Number(form.querySelector(".tf-number").value);
+    fronton = parseFloat(fronton);
+    let shirina = Number(form.querySelector(".tf-width").value);
+    shirina = parseFloat(shirina);
+    let visota = Number(form.querySelector(".tf-height").value);
+    visota = parseFloat(visota);
+    let result = (shirina + visota) * fronton;
+    form.querySelector(".tf-area").value = result;
+  }
+}
+
+
+
+
+/**
  * @function [funcCornerVnesh] функция подсчета высоты внешнего угла для одной формы
  * @param {allFormsCornerVnesh} allFormsCornerVnesh переменная для формы подсчета высоты внешнего угла
  * @param {number} ugol - поле ввода количества внешних углов
@@ -178,6 +207,22 @@ function sumAreasDoor() {
     console.log(sumDoors);
   });
   document.getElementById("door_area-all2-id").value = sumDoors;
+}
+
+/**
+ * @function [sumAreasTreugolFronton] функция для сумирования всех площадей треугольных фронтонов со всех форм
+ * @param {number} areas - переменная поля с площадью стены
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sum - сумма всех площадей после сложения
+ */
+function sumAreasTreugolFronton() {
+  let areas = document.getElementsByClassName("tf-area");
+  let sum = 0;
+  [].forEach.call(areas, function (el) {
+    sum += parseFloat(el.value);
+    console.log(sum);
+  });
+  document.getElementById("tf-area-all22-id").value = sum;
 }
 
  /**
