@@ -178,6 +178,22 @@ function sumAreas() {
 }
 
 /**
+ * @function [sumAreasTreugFronton] функция для сумирования всех площадей стен со всех форм
+ * @param {number} areas - переменная поля с площадью стены
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sum - сумма всех площадей после сложения
+ */
+function sumAreasTreugFronton() {
+  let areas = document.getElementsByClassName("tf-area");
+  let sum = 0;
+  [].forEach.call(areas, function (el) {
+    sum += parseFloat(el.value);
+    console.log(sum);
+  });
+  document.getElementById("tf-area-all22-id").value = sum;
+}
+
+/**
  * @function [sumAreasWindow] функция для сумирования всех площадей оконных проемов со всех форм
  * @param {number} areasWindows - переменная поля с площадью оконных проемов
  * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
@@ -382,7 +398,6 @@ newClonedNode.name = "walls-form-id-" + newFormStenaId;
 newFormStenaId++;
 });
 
-
 /**
  * Кнопка показа формы для количества стен в разделе стены
  * @param {remove} - удаляет класс hidden у формы
@@ -466,6 +481,24 @@ newClonedNode.name = "add-form-ugols-inner-" + newFormInnerUgol;
 newFormInnerUgol++;
 });
 
+
+/**
+ * Кнопка добавления новой формы для размера и площади фронтона в разделе треугольный фронтон
+ * @param {nodeTreugFronton} nodeTreugFronton - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormTreugFronton} newFormTreugFronton - добавляем новую форму
+ */
+let newFormTreugFronton = 1;
+let nodeTreugFronton = document.getElementById("tf-form-id").cloneNode(true);
+
+document.querySelector(".add-form-tf").addEventListener("click", function() {
+let newClonedNode = nodeTreugFronton.cloneNode(true);
+document.querySelector(".tf").appendChild(newClonedNode);
+newClonedNode.id = "tf-form-id-" + newFormTreugFronton;
+newClonedNode.name = "tf-form-id-" + newFormTreugFronton;
+newFormTreugFronton++;
+});
+
 /**
  * @function [deleteForm] Функцыя удаления формы для стен
  * @param {forms} forms - переменная для всей формы
@@ -480,6 +513,20 @@ function deleteForm(btn) {
         sumPerimeters();
         sumAreas();
     }
+}
+
+/**
+ * @function [deleteFormTreugFronton] Функцыя удаления формы для размера треугольного фронтона
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAreasTreugFronton()] вызываем функцию подсчета всех площадей со всех форм для размера треугольного фронтона
+ */
+function deleteFormTreugFronton(btn) {
+  let forms = document.getElementsByClassName('tf-form') ;
+  if (forms.length > 1){
+      btn.parentElement.remove();
+      sumAreasTreugFronton();
+  }
 }
 
 /**
