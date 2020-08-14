@@ -71,7 +71,7 @@
                   <div class="tf-window" id="tf-window-id">
                      <form action="#" class="tf-window-form" id="tf-window-form-id" name="tf-window-form" aria-labelledby="tf-window-list-id tf-window-form-id">
                         <span class="tf-window-form-span" id="tf-window-form-span-id" aria-label="Название формы">Оконный проем</span>
-                        <svg class="remove-form-btn remove-form-tf-window" id="close-form-tf-window" onclick="deleteFormWindow2(this)" aria-label="Кнопка удаления формы подсчета преиметра и площади оконных проемов в треугольных фронтонах"
+                        <svg class="remove-form-btn remove-form-tf-window" id="close-form-tf-window" onclick="deleteFormTreugFrontonWindow(this)" aria-label="Кнопка удаления формы подсчета преиметра и площади оконных проемов в треугольных фронтонах"
                            aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                            <path class="st0" d="M12.7,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V7.7C13.2,7.5,13,7.2,12.7,7.2z"/>
                            <path class="st0" d="M7.3,7.2C7,7.2,6.8,7.5,6.8,7.7v8.9C6.8,16.8,7,17,7.3,17c0.3,0,0.5-0.2,0.5-0.5V7.7C7.7,7.5,7.5,7.2,7.3,7.2z"/>
@@ -85,16 +85,16 @@
                         </svg>
                         <div class="tf-window-num-wrp">
                            <label class="tf-window-number-walls" aria-label="Количество оконных проемов">Количество проемов</label>
-                           <input class="tf-window-num" id="tf-window-num-id" type="number" name="tf-window-quantity[]" step ="1" min="1" value="1" oninput="validity.valid||(value='');" onkeyup="funcWindow2(); sumWidthWindows2(); sumAllWidthWindows2(); sumAreasWindow2()" aria-labelledby="tf-window-form-id tf-window-num-id">
+                           <input class="tf-window-num" id="tf-window-num-id" type="number" name="tf-window-quantity[]" step ="1" min="1" value="1" oninput="validity.valid||(value='');" onkeyup="funcTreugFrontonWindow(); sumWidthTreugFrontonWindows(); sumAllWidthTreugFrontonWindows(); sumAreasTreugFrontonWindow()" aria-labelledby="tf-window-form-id tf-window-num-id">
                         </div>
                         <div class="tf-input_groups-wrp">
                            <div class="tf-window-length-wrp">
                               <label class="tf-window-length-label" aria-label="Название поля ввода">Ширина, м</label>
-                              <input class="tf-window-length" id="tf-window-length-id" type="number" name="tf-window-length-id[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcWindow2(); sumWidthWindows2(); sumAllWidthWindows2(); sumAreasWindow2()" aria-labelledby="tf-window-form-id tf-window-length-id">
+                              <input class="tf-window-length" id="tf-window-length-id" type="number" name="tf-window-length-id[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcTreugFrontonWindow(); sumWidthTreugFrontonWindows(); sumAllWidthTreugFrontonWindows(); sumAreasTreugFrontonWindow()" aria-labelledby="tf-window-form-id tf-window-length-id">
                            </div>
                            <div class="tf-window-height-wrp">
                               <label class="tf-window-height-label" aria-label="Название поля ввода">Высота, м </label>
-                              <input class="tf-window-height" id="tf-window-height-id" type="number" name="tf-window-height-id[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcWindow2(); sumWidthWindows2(); sumAreasWindow2()" aria-labelledby="tf-window-form-id tf-window-height-id">
+                              <input class="tf-window-height" id="tf-window-height-id" type="number" name="tf-window-height-id[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcTreugFrontonWindow(); sumWidthTreugFrontonWindows(); sumAreasTreugFrontonWindow()" aria-labelledby="tf-window-form-id tf-window-height-id">
                            </div>
                         </div>
                         <div class="tf-window-select-wrp">
@@ -106,7 +106,7 @@
                               <option class="options-el" value="3">Утопленное (ширина откоса до 254 мм)</option>
                            </select>
                         </div>
-                        <div class="hidden1">
+                        <div class="hidden">
                            <label class="tf-window-sum-width-label">Сумарн. ширина окон. проемов</label>
                            <input class="tf-window-sum-width" id="tf-window-sum-width-id" disabled type="number" name="tf-window-sum-width-id[]" step ="0.0001" min="0">                    
                         </div>
@@ -127,6 +127,60 @@
                   <span class="txt-btn">добавить оконный проем</span>
                </button>
             </div>
+            <!-- Начало формы для количества и размеров дверных проемов для треугольных фронтонов-->
+            <!-- tf - треугольный фронтон -->
+            <div class="tf-door-wrp">
+               <div class="tf-door-list" id="tf-door-list-id">
+                  <div class="tf-door" id="tf-door-id">
+                     <form action="#" class="tf-door-form" id="tf-door-form-id" name="tf-door-form-id" aria-labelledby="tf-door-id tf-door-form-id">
+                        <span class="tf-door-form-span" id="tf-door-form-span-id" aria-label="Название формы">Дверной проем</span>
+                        <svg class="remove-form-btn remove-form-tf-door" id="close-form-tf-door" onclick="deleteFormTreugFrontonDoor(this)" aria-label="Кнопка удаления формы подсчета преиметра и площади дверных проемов в треугольном фронтоне"
+                           aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+                           <path class="st0" d="M12.7,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V7.7C13.2,7.5,13,7.2,12.7,7.2z"/>
+                           <path class="st0" d="M7.3,7.2C7,7.2,6.8,7.5,6.8,7.7v8.9C6.8,16.8,7,17,7.3,17c0.3,0,0.5-0.2,0.5-0.5V7.7C7.7,7.5,7.5,7.2,7.3,7.2z"/>
+                           <path class="st0" d="M3.3,6v11.5c0,0.7,0.2,1.3,0.7,1.8C4.4,19.7,5,20,5.6,20h8.7c0.6,0,1.2-0.3,1.7-0.7c0.4-0.5,0.7-1.1,0.7-1.8V6
+                              c0.9-0.2,1.4-1.1,1.3-2c-0.1-0.9-0.9-1.6-1.7-1.6h-2.4V1.9c0-0.5-0.2-1-0.5-1.3C13,0.2,12.5,0,12,0H7.9C7.5,0,7,0.2,6.6,0.5
+                              C6.3,0.9,6.1,1.4,6.1,1.9v0.6H3.7C2.9,2.4,2.1,3.1,2,4C1.9,4.9,2.4,5.7,3.3,6z M14.4,19.1H5.6c-0.8,0-1.4-0.7-1.4-1.6V6h11.5v11.5
+                              C15.8,18.4,15.1,19.1,14.4,19.1z M7,1.9c0-0.2,0.1-0.5,0.3-0.7C7.5,1,7.7,0.9,7.9,0.9H12c0.2,0,0.5,0.1,0.6,0.3
+                              c0.2,0.2,0.3,0.4,0.3,0.7v0.6H7V1.9z M3.7,3.4h12.5c0.5,0,0.8,0.4,0.8,0.8s-0.4,0.8-0.8,0.8H3.7c-0.5,0-0.8-0.4-0.8-0.8
+                              S3.3,3.4,3.7,3.4z"/>
+                           <path class="st0" d="M10,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5V7.7C10.5,7.5,10.2,7.2,10,7.2z"/>
+                        </svg>
+                        <div class="tf-door-number-wrp">
+                           <label class="tf-door-number-label" aria-label="Количество дверных проемов">Количество проемов</label>
+                           <input class="tf-door-num" id="tf-door-number-id" type="number" name="tf-door-quantity[]" step ="1" min="1" value="1" oninput="validity.valid||(value='');" onkeyup="funcTreugFrontonDoor(); sumWidthTreugFrontonDoor(); sumAllWidthTreugFrontonDoor(); sumAreasTreugFrontonDoor()" aria-labelledby="tf-door-form-id tf-door-number-id">
+                        </div>
+                        <div class="tf-door-groups-wrp">
+                           <div class="tf-door-length-wrp">
+                              <label class="tf-door-length-label" aria-label="Название поля ввода">Ширина, м</label>
+                              <input class="tf-door-length" id="tf-door-length-id" type="number" name="tf-door-length-id[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcTreugFrontonDoor(); sumWidthTreugFrontonDoor(); sumAllWidthTreugFrontonDoor(); sumAreasTreugFrontonDoor()" aria-labelledby="tf-door-form-id tf-door-length-id">
+                           </div>
+                           <div class="tf-door-height-wrp">
+                              <label class="tf-door-height-title" aria-label="Название поля ввода">Высота, м </label>
+                              <input class="tf-door-height" id="tf-door-visota" type="number" name="tf-door-visota[]" step ="0.0001" min="0" oninput="validity.valid||(value='');" onkeyup="funcTreugFrontonDoor(); sumWidthTreugFrontonDoor(); sumAreasTreugFrontonDoor()" aria-labelledby="tf-door-form-id tf-door-visota">
+                           </div>
+                        </div>
+                        <div class="hidden1">
+                           <label class="tf-door-sum-width-title">Сумарн. ширина дверн. проемов</label>
+                           <input class="tf-door-sum-width" id="tf-door-sum-width-id" disabled type="number" name="tf-door-sum-width[]" step ="0.0001" min="0">                    
+                        </div>
+                        <div class="tf-door-result-formula">
+                           <p class="tf-door-area-all" aria-label="Название поля вывода">Площадь</p>
+                           <input class="tf-door-result" id="tf-door-result-id" type="text"  name="tf-door-result-id[]" disabled aria-labelledby="tf-door-form-id tf-door-result-id">
+                           <p class="tf-door-area-all" >м&sup2;</p>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               <button class="add-form-btn add-form-tf-door" id="add-form-tf-door-id" type="button" aria-label="Кнопка добавления новой формы подсчета дверных проемов в треугольных фронтонах">
+                  <svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+                     <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
+                        c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
+                        c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/>
+                  </svg>
+                  <span class="txt-btn">добавить дверной проем</span>
+               </button>
+            </div>
             <input type="checkbox" id="lomaniy" value="interest_lomaniy" name="lomaniy"><label class="light" for="lomaniy">ломаный</label><br>
             <input type="checkbox" id="not-fronton" value="interest_not-fronton" name="not-fronton"><label class="light" for="not-fronton">без фронтона (вальмовая и шатровая крыша)</label>
          </div>
@@ -134,10 +188,14 @@
          <div class="all-results-wrp hidden1">    
             <label class="tf-area-all2-title" aria-label="Название поля вывода">Общая площадь треугольного фронтона, м² </label>
             <input class="tf-area-all2"  id="tf-area-all22-id" disabled type="number" name="tf-area-all2[]" step ="0.0001" min="0">
-            <label class="tf-window-sum-width-all-label" aria-label="Название поля вывода">Общая ширина окон, м </label>
+            <label class="tf-window-sum-width-all-label" aria-label="Название поля вывода">Общая ширина оконных проемов треугольного фронтона, м </label>
             <input class="tf-window-sum-width-all" disabled id="tf-window-sum-width-all-id" type="number" name="window_sum-width-all[]" step ="0.0001" min="0" aria-labelledby="tf-window-form-id tf-window-sum-width-all-id">        
-            <label class="tf-window-area-all2-label" aria-label="Название поля вывода">Общая площадь окон, м² </label>
+            <label class="tf-window-area-all2-label" aria-label="Название поля вывода">Общая площадь оконных проемов треугольного фронтона, м² </label>
             <input class="tf-window-area-all2"  id="tf-window-area-all2-id" disabled type="number" name="tf-window-area-all2-id[]" step ="0.0001" min="0" aria-labelledby="tf-window-form-id tf-window-area-all2-id">
+            <label class="tf-door-sum-width-all-title" aria-label="Название поля вывода">Общая ширина дверных проемов треугольного фронтона, м </label>
+            <input class="tf-door-sum-width-all" disabled id="tf-door-sum-width-all-id" type="number" name="tf-door-sum-width-all[]" step ="0.0001" min="0" aria-labelledby="tf-door-form-id tf-door-sum-width-all-id">        
+            <label class="tf-door-area-all2-title" aria-label="Название поля вывода">Общая площадь дверных проемов треугольного фронтона, м² </label>
+            <input class="tf-door-area-all2"  id="tf-door-area-all2-id" disabled type="number" name="tf-door-area-all2[]" step ="0.0001" min="0" aria-labelledby="tf-door-form-id tf-door-area-all2-id">
          </div>
       </section>
       <section class="wall" aria-label="Форма расчета панелей и комплектующих для cтен">
@@ -407,18 +465,18 @@
                   </button>
                </div>
                <!-- Вывод общих значений -->
-               <div class="all-results-wrp hidden">    
+               <div class="all-results-wrp hidden1">    
                   <label class="wf_perimeter-all-title" aria-label="Название поля вывода">Общий периметр стен, м </label>
                   <input class="wf_perimeter-all" disabled id="wf_perimeter-all-id" type="number" name="wf-perimeter[]" step ="0.0001" min="0" aria-labelledby="walls-form-id wf_perimeter-all-id">        
                   <label class="wf_area-all2-title" aria-label="Название поля вывода">Общая площадь стен, м² </label>
                   <input class="wf_area-all2"  id="wf_area-all2" disabled type="number" name="wf_area-all2[]" step ="0.0001" min="0" aria-labelledby="walls-form-id wf_area-all2">
-                  <label class="window_sum-width-all-title" aria-label="Название поля вывода">Общая ширина окон, м </label>
+                  <label class="window_sum-width-all-title" aria-label="Название поля вывода">Общая ширина оконных проемов, м </label>
                   <input class="window_sum-width-all" disabled id="window_sum-width-all-id" type="number" name="window_sum-width-all[]" step ="0.0001" min="0" aria-labelledby="windows-form-id window_sum-width-all-id">        
-                  <label class="window_area-all2-title" aria-label="Название поля вывода">Общая площадь окон, м² </label>
+                  <label class="window_area-all2-title" aria-label="Название поля вывода">Общая площадь оконных проемов, м² </label>
                   <input class="window_area-all2"  id="window_area-all2-id" disabled type="number" name="window_area-all2[]" step ="0.0001" min="0" aria-labelledby="windows-form-id window_area-all2-id">
-                  <label class="door_sum-width-all-title" aria-label="Название поля вывода">Общая ширина дверей, м </label>
+                  <label class="door_sum-width-all-title" aria-label="Название поля вывода">Общая ширина дверных проемов, м </label>
                   <input class="door_sum-width-all" disabled id="door_sum-width-all-id" type="number" name="door_sum-width-all[]" step ="0.0001" min="0" aria-labelledby="doors-form-id door_sum-width-all-id">        
-                  <label class="door_area-all2-title" aria-label="Название поля вывода">Общая площадь дверей, м² </label>
+                  <label class="door_area-all2-title" aria-label="Название поля вывода">Общая площадь дверных проемов, м² </label>
                   <input class="door_area-all2"  id="door_area-all2-id" disabled type="number" name="door_area-all2[]" step ="0.0001" min="0" aria-labelledby="doors-form-id door_area-all2-id">
                   <label class="ugol_sum-width-all-title" aria-label="Название поля вывода">Высота всех внеш. углов всех форм</label>
                   <input class="ugol_sum-width-all" disabled id="ugol_sum-width-all-id" type="number" name="ugol_sum-width-all[]" step ="0.0001" min="0" aria-labelledby="ugol-vnesh-form-id ugol_sum-width-all-id">        
