@@ -23,7 +23,8 @@ ul {
 .ugols-inner,
 .tf,
 .tf-window,
-.tf-door {
+.tf-door,
+.tf-frontsves {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -39,7 +40,8 @@ ul {
 .ugol-inner-form,
 .tf-form,
 .tf-window-form,
-.tf-door-form {
+.tf-door-form,
+.tf-frontsves-form {
     width: 240px;
     background-color: #f2f2f240;
     border: 0.5px solid #00000005;
@@ -170,7 +172,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tf-quantity-wrp,
 .tf-window-groups-wrp,
 .tf-window-num-wrp,
-.tf-door-number-wrp {
+.tf-door-number-wrp,
+.tf-frontsves-number-wrp {
    margin-top: 17px; 
 }
 
@@ -184,7 +187,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tf-result-formula,
 .tf-area-wrp,
 .tf-window-result-formula,
-.tf-door-result-formula {
+.tf-door-result-formula,
+.tf-frontsves-result-formula {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -338,7 +342,8 @@ legend {
 .ugol-inner-span,
 .tf-form-span,
 .tf-window-form-span,
-.tf-door-form-span {
+.tf-door-form-span,
+.tf-frontsves-form-span {
     font-size: 19px;
     font-weight: 600;
     color: #000;

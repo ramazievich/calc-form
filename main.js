@@ -84,7 +84,7 @@ function funcTreugFrontonWindow() {
 
 /**
  * @function [funcTreugFrontonDoor] Функцыя подсчета площади дверного проема для одной формы в треугольных фронтонах
- * @param {allFormsTreugFrontonDoor} allFormsTreugFrontonDoor переменная для формы подсчета площади оконнх проемов в треугольных фронтонах
+ * @param {allFormsTreugFrontonDoor} allFormsTreugFrontonDoor переменная для формы подсчета площади дверных проемов в треугольных фронтонах
  * @param {number} dver - поле ввода количества оконных проемов в треугольных фронтонах
  * @param {number} shirina - поле ввода ширины оконного проема в треугольных фронтонах
  * @param {number} visota - поле ввода высоты оконного проема в треугольных фронтонах
@@ -107,6 +107,34 @@ function funcTreugFrontonDoor() {
     visota = parseFloat(visota);
     let result = (shirina + visota) * dver;
     form.querySelector(".tf-door-result").value = result;
+  }
+}
+
+/**
+ * @function [funcTreugFrontonFrontsves] Функцыя подсчета площади фронтонного свеса для одной формы в треугольных фронтонах
+ * @param {allFormsTreugFrontonFrontsves} allFormsTreugFrontonFrontsves переменная для формы подсчета площади фронтонного свеса в треугольных фронтонах
+ * @param {number} frontsves - поле ввода количества фронтонных свесов в треугольных фронтонах
+ * @param {number} shirina - поле ввода ширины фронтонного свеса в треугольных фронтонах
+ * @param {number} visota - поле ввода высоты фронтонного свеса в треугольных фронтонах
+ * @param {number} result - результат подсчета
+ */
+
+let allFormsTreugFrontonFrontsves = document.querySelectorAll(".tf-frontsves-form");
+console.log(allFormsTreugFrontonFrontsves);
+
+function funcTreugFrontonFrontsves() {
+  allFormsTreugFrontonFrontsves = document.querySelectorAll(".tf-frontsves-form");
+  for (let i = 0, max = allFormsTreugFrontonFrontsves.length; i < max; i++) {
+    let form = allFormsTreugFrontonFrontsves[i];
+    console.log(form.querySelector(".tf-frontsves-num"));
+    let frontsves = Number(form.querySelector(".tf-frontsves-num").value);
+    frontsves = parseFloat(frontsves);
+    let shirina = Number(form.querySelector(".tf-frontsves-length").value);
+    shirina = parseFloat(shirina);
+    let visota = Number(form.querySelector(".tf-frontsves-height").value);
+    visota = parseFloat(visota);
+    let result = (shirina + visota) * frontsves;
+    form.querySelector(".tf-frontsves-result").value = result;
   }
 }
 
@@ -283,7 +311,7 @@ function sumAreasTreugFrontonWindow() {
 
 /**
  * @function [sumAreasTreugFrontonDoor] функция для сумирования всех площадей дверных проемов со всех форм в треугольных фронтонах
- * @param {number} areasTreugFrontonDoor - переменная поля с площадью оконных проемов
+ * @param {number} areasTreugFrontonDoor - переменная поля с площадью дверных проемов
  * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
  * @param {number} sumTreugFrontonDoor - сумма всех площадей после сложения
  */
@@ -295,6 +323,22 @@ function sumAreasTreugFrontonDoor() {
     console.log(sumTreugFrontonDoor);
   });
   document.getElementById("tf-door-area-all2-id").value = sumTreugFrontonDoor;
+}
+
+/**
+ * @function [sumAreasTreugFrontonFrontsves] функция для сумирования всех площадей фронтонных свесов со всех форм в треугольных фронтонах
+ * @param {number} areasTreugFrontonFrontsves - переменная поля с площадью фронтонных свесов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumTreugFrontonFrontsves - сумма всех площадей после сложения
+ */
+function sumAreasTreugFrontonFrontsves() {
+  let areasTreugFrontonFrontsves = document.getElementsByClassName("tf-frontsves-result");
+  let sumTreugFrontonFrontsves = 0;
+  [].forEach.call(areasTreugFrontonFrontsves, function (el) {
+    sumTreugFrontonFrontsves += parseFloat(el.value);
+    console.log(sumTreugFrontonFrontsves);
+  });
+  document.getElementById("tf-frontsves-area-all2-id").value = sumTreugFrontonFrontsves;
 }
 
 /**
@@ -413,22 +457,22 @@ function sumWidthTreugFrontonDoor() {
 
 
 /**
- * @function [sumWidthTreugFrontonDoor] Функцыя подсчета сумарной ширины дверного проема для одной формы треугольного фронтона
- * @param {allFormsTreugFrontonDoor} formTreugFrontonDoor переменная для формы подсчета площади оконного проема
- * @param {number} window - поле ввода количества оконных проемов
- * @param {number} shirina - поле ввода ширины оконного проема
+ * @function [sumWidthTreugFrontonFrontsves] Функцыя подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
+ * @param {allFormsTreugFrontonFrontsves} formTreugFrontonFrontsves переменная для формы подсчета площади фронтонного свеса
+ * @param {number} frontsves - поле ввода количества фронтонных свесов
+ * @param {number} shirina - поле ввода ширины фронтонного свеса
  * @param {number} result - результат подсчета
  */
-function sumWidthTreugFrontonDoor() {
-  for (let i = 0, max = allFormsTreugFrontonDoor.length; i < max; i++) {
-    let formTreugFrontonDoor = allFormsTreugFrontonDoor[i];
-    console.log(formTreugFrontonDoor.querySelectorAll(".tf-door-num"));
-    let door = Number(formTreugFrontonDoor.querySelector(".tf-door-num").value);
-    door = parseFloat(door);
-    let shirina = Number(formTreugFrontonDoor.querySelector(".tf-door-length").value);
+function sumWidthTreugFrontonFrontsves() {
+  for (let i = 0, max = allFormsTreugFrontonFrontsves.length; i < max; i++) {
+    let formTreugFrontonFrontsves = allFormsTreugFrontonFrontsves[i];
+    console.log(formTreugFrontonFrontsves.querySelectorAll(".tf-frontsves-num"));
+    let frontsves = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-num").value);
+    frontsves = parseFloat(frontsves);
+    let shirina = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-length").value);
     shirina = parseFloat(shirina);
-    let result = shirina * door;
-    formTreugFrontonDoor.querySelector(".tf-door-sum-width").value = result;
+    let result = shirina * frontsves;
+    formTreugFrontonFrontsves.querySelector(".tf-frontsves-sum-width").value = result;
   }
 }
 
@@ -449,6 +493,26 @@ function sumWidthDoors() {
     shirina = parseFloat(shirina);
     let result = shirina * door;
     formDoor.querySelector(".door_sum-width").value = result;
+  }
+}
+
+/**
+ * @function [sumHeightTreugFrontonFrontsves] Функцыя подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
+ * @param {allFormsTreugFrontonFrontsves} formTreugFrontonFrontsves переменная для формы подсчета площади фронтонного свеса
+ * @param {number} frontsves - поле ввода количества фронтонных свесов
+ * @param {number} height - поле ввода ширины фронтонного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumHeightTreugFrontonFrontsves() {
+  for (let i = 0, max = allFormsTreugFrontonFrontsves.length; i < max; i++) {
+    let formTreugFrontonFrontsves = allFormsTreugFrontonFrontsves[i];
+    console.log(formTreugFrontonFrontsves.querySelectorAll(".tf-frontsves-num"));
+    let frontsves = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-num").value);
+    frontsves = parseFloat(frontsves);
+    let height = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-height").value);
+    height = parseFloat(height);
+    let result = height * frontsves;
+    formTreugFrontonFrontsves.querySelector(".tf-frontsves-sum-height").value = result;
   }
 }
 
@@ -516,6 +580,22 @@ function sumAllWidthTreugFrontonDoor() {
   document.getElementById("tf-door-sum-width-all-id").value = sum;
 }
 
+/**
+ * @function [sumAllWidthTreugFrontonFrontsves] Функцыя подсчета всех сумарных высот дверных проемов в треугольных фронтонах
+ * @param {number} widthTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllWidthTreugFrontonFrontsves() {
+  let widthTreugFrontonFrontsves = document.getElementsByClassName("tf-frontsves-sum-width");
+  let sum = 0;
+  [].forEach.call(widthTreugFrontonFrontsves, function (el) {
+    sum += parseFloat(el.value);
+    console.log(sum);
+  });
+  document.getElementById("tf-frontsves-sum-width-all-id").value = sum;
+}
+
 
 /**
  * @function [sumAllWidthDoors] Функцыя подсчета всех сумарных ширин дверных проемов
@@ -563,6 +643,22 @@ function sumAllHeightInnerUgol() {
     console.log(sumInnerUgol);
   });
   document.getElementById("ugol-inner_sum-width-all-id").value = sumInnerUgol;
+}
+
+/**
+ * @function [sumAllHeightTreugFrontonFrontsves] Функцыя подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
+ * @param {number} heightTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllHeightTreugFrontonFrontsves() {
+  let heightTreugFrontonFrontsves = document.getElementsByClassName("tf-frontsves-sum-height");
+  let sum = 0;
+  [].forEach.call(heightTreugFrontonFrontsves, function (el) {
+    sum += parseFloat(el.value);
+    console.log(sum);
+  });
+  document.getElementById("tf-frontsves-sum-height-all-id").value = sum;
 }
 
 /**
@@ -718,6 +814,23 @@ newFormTreugFrontonDoor++;
 });
 
 /**
+ * Кнопка добавления новой формы для фронтальных свесов в разделе треугольный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormTreugFrontonFrontsves} newFormTreugFrontonFrontsves - добавляем новую форму
+ */
+let newFormTreugFrontonFrontsves = 1;
+let nodeTreugFrontonFrontsves = document.getElementById("tf-frontsves-form-id").cloneNode(true);
+
+document.querySelector(".add-form-tf-frontsves").addEventListener("click", function() {
+let newClonedNode = nodeTreugFrontonFrontsves.cloneNode(true);
+document.querySelector(".tf-frontsves").appendChild(newClonedNode);
+newClonedNode.id = "tf-frontsves-form-id-" + newFormTreugFrontonFrontsves;
+newClonedNode.name = "tf-frontsves-form-id-" + newFormTreugFrontonFrontsves;
+newFormTreugFrontonFrontsves++;
+});
+
+/**
  * @function [deleteForm] Функцыя удаления формы для стен
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
@@ -767,8 +880,8 @@ function deleteFormWindow(btn) {
  * @function [deleteFormTreugFrontonWindow] Функцыя удаления формы оконных проемов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthTreugFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для стен
- * @function [sumAreasTreugFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для стен
+ * @function [sumAllWidthTreugFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для треугольных фронтонов
+ * @function [sumAreasTreugFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для треугольных фронтонов
  */
 function deleteFormTreugFrontonWindow(btn) {
   let forms = document.getElementsByClassName('tf-window-form') ;
@@ -783,8 +896,8 @@ function deleteFormTreugFrontonWindow(btn) {
  * @function [deleteFormTreugFrontonDoor] Функцыя удаления формы дверных проемов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthTreugFrontonDoor()] вызываем функцию подсчета всех ширин со всех форм дверных проемов для стен
- * @function [sumAreasTreugFrontonDoor()] вызываем функцию подсчета всех площадей дверных проемов со всех форм для стен
+ * @function [sumAllWidthTreugFrontonDoor()] вызываем функцию подсчета всех ширин со всех форм дверных проемов для треугольных фронтонов
+ * @function [sumAreasTreugFrontonDoor()] вызываем функцию подсчета всех площадей дверных проемов со всех форм для треугольных фронтонов
  */
 function deleteFormTreugFrontonDoor(btn) {
   let forms = document.getElementsByClassName('tf-door-form') ;
@@ -792,6 +905,23 @@ function deleteFormTreugFrontonDoor(btn) {
       btn.parentElement.remove();
       sumAllWidthTreugFrontonDoor();
       sumAreasTreugFrontonDoor();
+  }
+}
+
+/**
+ * @function [deleteFormTreugFrontonFrontsves] Функцыя удаления формы фронтонных свесов в треугольных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthTreugFrontonFrontsves()] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для треугольных фронтонов
+ * @function [sumAreasTreugFrontonFrontsves()] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для треугольных фронтонов
+ */
+function deleteFormTreugFrontonFrontsves(btn) {
+  let forms = document.getElementsByClassName('tf-frontsves-form') ;
+  if (forms.length > 1){
+      btn.parentElement.remove();
+      sumAllWidthTreugFrontonFrontsves();
+      sumAllHeightTreugFrontonFrontsves();
+      sumAreasTreugFrontonFrontsves();
   }
 }
 
