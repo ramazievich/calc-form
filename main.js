@@ -793,6 +793,20 @@ document.querySelector(".add-form").addEventListener("click", function () {
 });
 
 /**
+ * показ формы расчета панелей и комплектующих для треугольных фронтонов
+ * @function [showTreugolFrontonItems] добавляет класс hidden к чекбоксу с треугольным фронтоном
+ * @param {remove} - удаляет класс hidden у формы
+ * @param {check}  - переменная к классу для чекбокса
+ * @param {add}  - добавляет hidden к форме
+ */
+function showTreugolFrontonItems(check) {
+    check = document.getElementById("check-treugol");
+    if (check.checked) {
+		document.getElementById("check-treugol-field").classList.remove("hidden");
+	} else document.getElementById("check-treugol-field").classList.add("hidden");
+  }
+
+/**
  * Кнопка показа формы для количества стен в разделе стены
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnStena] remuveBtnStena - добавляет класс hidden к кнопке показать форму
@@ -806,6 +820,7 @@ document.querySelector(".show-form-stena").addEventListener("click", function ()
 function remuveBtnStena() {
 	document.getElementById("show-form-stena-id").classList.add("hidden");
 }
+
 
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе стены
