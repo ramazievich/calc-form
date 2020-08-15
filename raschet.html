@@ -13,7 +13,7 @@
          <div class="fronton-item-wrp">
             <label>Тип фронтона:</label>
             <!-- Формы для треугольного фронтона -->
-            <input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugol" onchange ='showTreugolFrontonItems(this)' ><label class="light check-treugol-fronton" for="treugol">треугольный</label><br>
+            <input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugol" onchange ='showTreugolFrontonItems(this)'> <label class="light check-treugol-fronton" for="check-treugol">треугольный</label><br>
             <!-- Количество, размеры, свесы треугольных фронтонов -->
             <div class="select-treugol-fronton hidden" id="check-treugol-field">
                <!-- Начало формы для размеров треугольных фронтонов-->
@@ -321,7 +321,7 @@
                   <input class="tf-karnizsves-area-all2"  id="tf-karnizsves-area-all2-id" disabled type="number" name="tf-karnizsves-area-all2[]" step ="0.0001" min="0" aria-labelledby="tf-karnizsves-form-id tf-karnizsves-area-all2-id">
                </div>
             </div>
-            <input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy" onchange ='showLomFrontonItems(this)'><label class="light" for="lomaniy">ломаный</label><br>
+            <input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy" onchange ='showLomFrontonItems(this)'><label class="light" for="check-lom">ломаный</label><br>
             <!-- Количество, размеры, свесы ломаных фронтонов -->
             <div class="select-lom-fronton hidden" id="check-lom-field">
                <!-- Начало формы для размеров ломаных фронтонов-->
@@ -513,9 +513,8 @@
                   <input class="lf-door-sum-width-all" disabled id="lf-door-sum-width-all-id" type="number" name="lf-door-sum-width-all[]" step ="0.0001" min="0" aria-labelledby="lf-door-form-id lf-door-sum-width-all-id">        
                   <label class="lf-door-area-all2-title" aria-label="Название поля вывода">Общая площадь дверных проемов ломаного фронтона, м² </label>
                   <input class="lf-door-area-all2"  id="lf-door-area-all2-id" disabled type="number" name="lf-door-area-all2[]" step ="0.0001" min="0" aria-labelledby="lf-door-form-id lf-door-area-all2-id">
-                  
                </div>
-            </div>   
+            </div>
             <input type="checkbox" id="not-fronton" value="interest_not-fronton" name="not-fronton"><label class="light" for="not-fronton">без фронтона (вальмовая и шатровая крыша)</label>
          </div>
       </section>
