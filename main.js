@@ -1,6 +1,6 @@
 'use strict';
 /**
- * @function [funcStena] Функцыя подсчета площади стены для одной формы
+ * @function [funcStena] Функция подсчета площади стены для одной формы
  * @param {allForms} allForms переменная для формы подсчета площади стен
  * @param {number} stena - поле ввода количества стен
  * @param {number} dlina - поле ввода длины стены
@@ -27,7 +27,7 @@ function funcStena() {
 }
 
 /**
- * @function [funcWindow] Функцыя подсчета площади оконного проема для одной формы
+ * @function [funcWindow] Функция подсчета площади оконного проема для одной формы
  * @param {allFormsWindow} allFormsWindow переменная для формы подсчета площади оконнх проемов
  * @param {number} okno - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
@@ -55,8 +55,8 @@ function funcWindow() {
 }
 
 /**
- * @function [funcTreugFrontonWindow] Функцыя подсчета площади оконного проема для одной формы в треугольных фронтонах
- * @param {allFormsTreugFrontonWindow} allFormsTreugFrontonWindow переменная для формы подсчета площади оконнх проемов в треугольных фронтонах
+ * @function [funcTreugFrontonWindow] Функция подсчета площади оконного проема для одной формы в треугольных фронтонах
+ * @param {allFormsTreugFrontonWindow} allFormsTreugFrontonWindow переменная для формы подсчета площади оконных проемов в треугольных фронтонах
  * @param {number} okno - поле ввода количества оконных проемов в треугольных фронтонах
  * @param {number} shirina - поле ввода ширины оконного проема в треугольных фронтонах
  * @param {number} visota - поле ввода высоты оконного проема в треугольных фронтонах
@@ -83,7 +83,35 @@ function funcTreugFrontonWindow() {
 }
 
 /**
- * @function [funcTreugFrontonDoor] Функцыя подсчета площади дверного проема для одной формы в треугольных фронтонах
+ * @function [funcLomFrontonWindow] Функция подсчета площади оконного проема для одной формы в ломаных фронтонах
+ * @param {allFormsLomFrontonWindow} allFormsLomFrontonWindow переменная для формы подсчета площади оконных проемов в ломаных фронтонах
+ * @param {number} okno - поле ввода количества оконных проемов в ломаных фронтонах
+ * @param {number} shirina - поле ввода ширины оконного проема в ломаных фронтонах
+ * @param {number} visota - поле ввода высоты оконного проема в ломаных фронтонах
+ * @param {number} result - результат подсчета
+ */
+
+let allFormsLomFrontonWindow = document.querySelectorAll(".lf-window-form");
+console.log(allFormsLomFrontonWindow);
+
+function funcLomFrontonWindow() {
+	allFormsLomFrontonWindow = document.querySelectorAll(".lf-window-form");
+	for (let i = 0, max = allFormsLomFrontonWindow.length; i < max; i++) {
+		let form = allFormsLomFrontonWindow[i];
+		console.log(form.querySelector(".lf-window-num"));
+		let okno = Number(form.querySelector(".lf-window-num").value);
+		okno = parseFloat(okno);
+		let shirina = Number(form.querySelector(".lf-window-length").value);
+		shirina = parseFloat(shirina);
+		let visota = Number(form.querySelector(".lf-window-height").value);
+		visota = parseFloat(visota);
+		let result = (shirina + visota) * okno;
+		form.querySelector(".lf-window-result").value = result;
+	}
+}
+
+/**
+ * @function [funcTreugFrontonDoor] Функция подсчета площади дверного проема для одной формы в треугольных фронтонах
  * @param {allFormsTreugFrontonDoor} allFormsTreugFrontonDoor переменная для формы подсчета площади дверных проемов в треугольных фронтонах
  * @param {number} dver - поле ввода количества оконных проемов в треугольных фронтонах
  * @param {number} shirina - поле ввода ширины оконного проема в треугольных фронтонах
@@ -111,7 +139,35 @@ function funcTreugFrontonDoor() {
 }
 
 /**
- * @function [funcTreugFrontonFrontsves] Функцыя подсчета площади фронтонного свеса для одной формы в треугольных фронтонах
+ * @function [funcLomFrontonDoor] Функция подсчета площади дверного проема для одной формы в ломаных фронтонах
+ * @param {allFormsLomFrontonDoor} allFormsLomFrontonDoor переменная для формы подсчета площади дверных проемов в ломаных фронтонах
+ * @param {number} dver - поле ввода количества оконных проемов в ломаных фронтонах
+ * @param {number} shirina - поле ввода ширины оконного проема в ломаных фронтонах
+ * @param {number} visota - поле ввода высоты оконного проема в ломаных фронтонах
+ * @param {number} result - результат подсчета
+ */
+
+let allFormsLomFrontonDoor = document.querySelectorAll(".lf-door-form");
+console.log(allFormsTreugFrontonDoor);
+
+function funcLomFrontonDoor() {
+	allFormsLomFrontonDoor = document.querySelectorAll(".lf-door-form");
+	for (let i = 0, max = allFormsLomFrontonDoor.length; i < max; i++) {
+		let form = allFormsLomFrontonDoor[i];
+		console.log(form.querySelector(".lf-door-num"));
+		let dver = Number(form.querySelector(".lf-door-num").value);
+		dver = parseFloat(dver);
+		let shirina = Number(form.querySelector(".lf-door-length").value);
+		shirina = parseFloat(shirina);
+		let visota = Number(form.querySelector(".lf-door-height").value);
+		visota = parseFloat(visota);
+		let result = (shirina + visota) * dver;
+		form.querySelector(".lf-door-result").value = result;
+	}
+}
+
+/**
+ * @function [funcTreugFrontonFrontsves] Функция подсчета площади фронтонного свеса для одной формы в треугольных фронтонах
  * @param {allFormsTreugFrontonFrontsves} allFormsTreugFrontonFrontsves переменная для формы подсчета площади фронтонного свеса в треугольных фронтонах
  * @param {number} frontsves - поле ввода количества фронтонных свесов в треугольных фронтонах
  * @param {number} shirina - поле ввода ширины фронтонного свеса в треугольных фронтонах
@@ -139,7 +195,7 @@ function funcTreugFrontonFrontsves() {
 }
 
 /**
- * @function [funcTreugFrontonKarnizsves] Функцыя подсчета площади карнизного свеса для одной формы в треугольных фронтонах
+ * @function [funcTreugFrontonKarnizsves] Функция подсчета площади карнизного свеса для одной формы в треугольных фронтонах
  * @param {allFormsTreugFrontonKarnizsves} allFormsTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса в треугольных фронтонах
  * @param {number} karnizsves - поле ввода количества фронтонных свесов в треугольных фронтонах
  * @param {number} shirina - поле ввода ширины карнизного свеса в треугольных фронтонах
@@ -195,7 +251,7 @@ function funcDoor() {
 }
 
 /**
- * @function [funcTreugFronton] Функцыя подсчета площади треугольного фронтона для одной формы
+ * @function [funcTreugFronton]Функция подсчета площади треугольного фронтона для одной формы
  * @param {allFormsTreugFront} allFormsTreugFront переменная для формы подсчета площади треугольного фронтона
  * @param {number} shirina - поле ввода ширины треугольного фронтона
  * @param {number} visota - поле ввода высоты треугольного фронтона
@@ -217,6 +273,36 @@ function funcTreugFronton() {
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * fronton;
 		form.querySelector(".tf-area").value = result;
+	}
+}
+
+/**
+ * @function [funcTreugFronton]Функция подсчета площади треугольного фронтона для одной формы
+ * @param {allFormsTreugFront} allFormsTreugFront переменная для формы подсчета площади треугольного фронтона
+ * @param {number} shirina - поле ввода ширины треугольного фронтона
+ * @param {number} visota - поле ввода высоты треугольного фронтона
+ * @param {number} result - результат подсчета
+ */
+let allFormsLomFronton = document.querySelectorAll(".lf-form");
+console.log(allFormsLomFronton);
+
+function funcLomFronton() {
+	allFormsLomFronton = document.querySelectorAll(".lf-form");
+	for (let i = 0, max = allFormsLomFronton.length; i < max; i++) {
+		let form = allFormsLomFronton[i];
+		console.log(form.querySelector(".lf-number"));
+		let fronton = Number(form.querySelector(".lf-number").value);
+		fronton = parseFloat(fronton);
+		let shirina = Number(form.querySelector(".lf-width").value);
+		shirina = parseFloat(shirina);
+		let shirina2 = Number(form.querySelector(".lf-width2").value);
+		shirina2 = parseFloat(shirina2);
+		let visota = Number(form.querySelector(".lf-height").value);
+		visota = parseFloat(visota);
+		let visota2 = Number(form.querySelector(".lf-height2").value);
+		visota2 = parseFloat(visota2);
+		let result = (shirina + visota + shirina2 + visota2) * fronton;
+		form.querySelector(".lf-area").value = result;
 	}
 }
 
@@ -336,6 +422,22 @@ function sumAreasTreugFrontonWindow() {
 }
 
 /**
+ * @function [sumAreasLomFrontonWindow] функция для сумирования всех площадей оконных проемов со всех форм в ломаных фронтонах
+ * @param {number} areasLomFrontonWindows - переменная поля с площадью оконных проемов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumLomFrontonWindows - сумма всех площадей после сложения
+ */
+function sumAreasLomFrontonWindow() {
+	let areasLomFrontonWindows = document.getElementsByClassName("lf-window-result");
+	let sumLomFrontonWindows = 0;
+	[].forEach.call(areasLomFrontonWindows, function (el) {
+		sumLomFrontonWindows += parseFloat(el.value);
+		console.log(sumLomFrontonWindows);
+	});
+	document.getElementById("lf-window-area-all2-id").value = sumLomFrontonWindows;
+}
+
+/**
  * @function [sumAreasTreugFrontonDoor] функция для сумирования всех площадей дверных проемов со всех форм в треугольных фронтонах
  * @param {number} areasTreugFrontonDoor - переменная поля с площадью дверных проемов
  * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
@@ -349,6 +451,22 @@ function sumAreasTreugFrontonDoor() {
 		console.log(sumTreugFrontonDoor);
 	});
 	document.getElementById("tf-door-area-all2-id").value = sumTreugFrontonDoor;
+}
+
+/**
+ * @function [sumAreasLomFrontonDoor] функция для сумирования всех площадей дверных проемов со всех форм в ломаных фронтонах
+ * @param {number} areasLomFrontonDoor - переменная поля с площадью дверных проемов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumLomFrontonDoor - сумма всех площадей после сложения
+ */
+function sumAreasLomFrontonDoor() {
+	let areasLomFrontonDoor = document.getElementsByClassName("lf-door-result");
+	let sumLomFrontonDoor = 0;
+	[].forEach.call(areasLomFrontonDoor, function (el) {
+		sumLomFrontonDoor += parseFloat(el.value);
+		console.log(sumLomFrontonDoor);
+	});
+	document.getElementById("lf-door-area-all2-id").value = sumLomFrontonDoor;
 }
 
 /**
@@ -418,9 +536,25 @@ function sumAreasTreugolFronton() {
 	document.getElementById("tf-area-all22-id").value = sum;
 }
 
+/**
+ * @function [sumAreasLomFronton] функция для сумирования всех площадей треугольных фронтонов со всех форм
+ * @param {number} areas - переменная поля с площадью стены
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sum - сумма всех площадей после сложения
+ */
+function sumAreasLomFronton() {
+	let areas = document.getElementsByClassName("lf-area");
+	let sum = 0;
+	[].forEach.call(areas, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-area-all22-id").value = sum;
+}
+
 
 /**
- * @function [perimeter] Функцыя подсчета периметра стены для одной формы
+ * @function [perimeter] Функция подсчета периметра стены для одной формы
  * @param {allForms} form переменная для формы подсчета площади стен
  * @param {number} stena - поле ввода количества стен
  * @param {number} dlina - поле ввода длины стен
@@ -440,7 +574,7 @@ function perimeter() {
 }
 
 /**
- * @function [sumWidthWindows] Функцыя подсчета сумарной ширины оконного проема для одной формы
+ * @function [sumWidthWindows] Функция подсчета сумарной ширины оконного проема для одной формы
  * @param {allFormsWindow} formWindow переменная для формы подсчета площади оконного проема
  * @param {number} window - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
@@ -460,7 +594,7 @@ function sumWidthWindows() {
 }
 
 /**
- * @function [sumWidthTreugFrontonWindows] Функцыя подсчета сумарной ширины оконного проема для одной формы треугольного фронтона
+ * @function [sumWidthTreugFrontonWindows] Функция подсчета сумарной ширины оконного проема для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonWindow} formTreugFrontonWindow переменная для формы подсчета площади оконного проема
  * @param {number} window - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
@@ -480,7 +614,27 @@ function sumWidthTreugFrontonWindows() {
 }
 
 /**
- * @function [sumWidthTreugFrontonDoor] Функцыя подсчета сумарной ширины дверного проема для одной формы треугольного фронтона
+ * @function [sumWidthLomFrontonWindows] Функция подсчета сумарной ширины оконного проема для одной формы ломаного фронтона
+ * @param {allFormsLomFrontonWindow} formLomFrontonWindow переменная для формы подсчета площади оконного проема
+ * @param {number} window - поле ввода количества оконных проемов
+ * @param {number} shirina - поле ввода ширины оконного проема
+ * @param {number} result - результат подсчета
+ */
+function sumWidthLomFrontonWindows() {
+	for (let i = 0, max = allFormsLomFrontonWindow.length; i < max; i++) {
+		let formLomFrontonWindow = allFormsLomFrontonWindow[i];
+		console.log(formLomFrontonWindow.querySelectorAll(".lf-window-num"));
+		let window = Number(formLomFrontonWindow.querySelector(".lf-window-num").value);
+		window = parseFloat(window);
+		let shirina = Number(formLomFrontonWindow.querySelector(".lf-window-length").value);
+		shirina = parseFloat(shirina);
+		let result = shirina * window;
+		formLomFrontonWindow.querySelector(".lf-window-sum-width").value = result;
+	}
+}
+
+/**
+ * @function [sumWidthTreugFrontonDoor] Функция подсчета сумарной ширины дверного проема для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonDoor} formTreugFrontonDoor переменная для формы подсчета площади дверного проема
  * @param {number} Door - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
@@ -499,9 +653,28 @@ function sumWidthTreugFrontonDoor() {
 	}
 }
 
+/**
+ * @function [sumWidthLomFrontonDoor] Функция подсчета сумарной ширины дверного проема для одной формы ломаного фронтона
+ * @param {allFormsLomFrontonDoor} formLomFrontonDoor переменная для формы подсчета площади дверного проема
+ * @param {number} Door - поле ввода количества оконных проемов
+ * @param {number} shirina - поле ввода ширины оконного проема
+ * @param {number} result - результат подсчета
+ */
+function sumWidthLomFrontonDoor() {
+	for (let i = 0, max = allFormsLomFrontonDoor.length; i < max; i++) {
+		let formLomFrontonDoor = allFormsLomFrontonDoor[i];
+		console.log(formLomFrontonDoor.querySelectorAll(".lf-door-num"));
+		let door = Number(formLomFrontonDoor.querySelector(".lf-door-num").value);
+		door = parseFloat(door);
+		let shirina = Number(formLomFrontonDoor.querySelector(".lf-door-length").value);
+		shirina = parseFloat(shirina);
+		let result = shirina * door;
+		formLomFrontonDoor.querySelector(".lf-door-sum-width").value = result;
+	}
+}
 
 /**
- * @function [sumWidthTreugFrontonFrontsves] Функцыя подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
+ * @function [sumWidthTreugFrontonFrontsves] Функция подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonFrontsves} formTreugFrontonFrontsves переменная для формы подсчета площади фронтонного свеса
  * @param {number} frontsves - поле ввода количества фронтонных свесов
  * @param {number} shirina - поле ввода ширины фронтонного свеса
@@ -521,7 +694,7 @@ function sumWidthTreugFrontonFrontsves() {
 }
 
 /**
- * @function [sumWidthTreugFrontonKarnizsves] Функцыя подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
+ * @function [sumWidthTreugFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonKarnizsves} formTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
  * @param {number} karnizsves - поле ввода количества карнизных свесов
  * @param {number} shirina - поле ввода ширины карнизного свеса
@@ -541,7 +714,7 @@ function sumWidthTreugFrontonKarnizsves() {
 }
 
 /**
- * @function [sumWidthDoors] Функцыя подсчета сумарной ширины дверного проема для одной формы
+ * @function [sumWidthDoors] Функция подсчета сумарной ширины дверного проема для одной формы
  * @param {allFormsDoor} formDoor переменная для формы подсчета площади дверного проема
  * @param {number} door - поле ввода количества дверных проемов
  * @param {number} shirina - поле ввода ширины дверного проема
@@ -561,7 +734,7 @@ function sumWidthDoors() {
 }
 
 /**
- * @function [sumHeightTreugFrontonFrontsves] Функцыя подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
+ * @function [sumHeightTreugFrontonFrontsves] Функция подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonFrontsves} formTreugFrontonFrontsves переменная для формы подсчета площади фронтонного свеса
  * @param {number} frontsves - поле ввода количества фронтонных свесов
  * @param {number} height - поле ввода ширины фронтонного свеса
@@ -581,7 +754,7 @@ function sumHeightTreugFrontonFrontsves() {
 }
 
 /**
- * @function [sumHeightTreugFrontonKarnizsves] Функцыя подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
+ * @function [sumHeightTreugFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonKarnizsves} formTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
  * @param {number} karnizsves - поле ввода количества карнизных свесов
  * @param {number} height - поле ввода ширины карнизного свеса
@@ -601,7 +774,7 @@ function sumHeightTreugFrontonKarnizsves() {
 }
 
 /**
- * @function [sumPerimeters] Функцыя подсчета всех периметров стен со всех форм
+ * @function [sumPerimeters] Функция подсчета всех периметров стен со всех форм
  * @param {number} perim - переменная для поля периметра из формы
  * @param {forEach} function (el) - перебор полей периметра по всем формам
  * @param {number} sum - складываем все поля периметра из всех созданных форм
@@ -617,7 +790,7 @@ function sumPerimeters() {
 }
 
 /**
- * @function [sumAllWidthWindows] Функцыя подсчета всех сумарных ширин оконных проемов
+ * @function [sumAllWidthWindows] Функция подсчета всех сумарных ширин оконных проемов
  * @param {number} widthWindows - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
@@ -633,7 +806,7 @@ function sumAllWidthWindows() {
 }
 
 /**
- * @function [sumAllWidthTreugFrontonWindows] Функцыя подсчета всех сумарных ширин оконных проемов в треугольных фронтонах
+ * @function [sumAllWidthTreugFrontonWindows] Функция подсчета всех сумарных ширин оконных проемов в треугольных фронтонах
  * @param {number} widthTreugolFrontonWindows - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
@@ -649,7 +822,23 @@ function sumAllWidthTreugFrontonWindows() {
 }
 
 /**
- * @function [sumAllWidthTreugFrontonDoor] Функцыя подсчета всех сумарных ширин дверных проемов в треугольных фронтонах
+ * @function [sumAllWidthLomFrontonWindows] Функция подсчета всех сумарных ширин оконных проемов в ломаных фронтонах
+ * @param {number} widthLomFrontonWindows - переменная для поля сумарной ширины из формы
+ * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
+ * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
+ */
+function sumAllWidthLomFrontonWindows() {
+	let widthLomFrontonWindows = document.getElementsByClassName("lf-window-sum-width");
+	let sum = 0;
+	[].forEach.call(widthLomFrontonWindows, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-window-sum-width-all-id").value = sum;
+}
+
+/**
+ * @function [sumAllWidthTreugFrontonDoor] Функция подсчета всех сумарных ширин дверных проемов в треугольных фронтонах
  * @param {number} widthTreugolFrontonDoor - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
@@ -665,7 +854,23 @@ function sumAllWidthTreugFrontonDoor() {
 }
 
 /**
- * @function [sumAllWidthTreugFrontonFrontsves] Функцыя подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
+ * @function [sumAllWidthLomFrontonDoor] Функция подсчета всех сумарных ширин дверных проемов в ломаных фронтонах
+ * @param {number} widthLomFrontonDoor - переменная для поля сумарной ширины из формы
+ * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
+ * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
+ */
+function sumAllWidthLomFrontonDoor() {
+	let widthLomFrontonDoor = document.getElementsByClassName("lf-door-sum-width");
+	let sum = 0;
+	[].forEach.call(widthLomFrontonDoor, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-door-sum-width-all-id").value = sum;
+}
+
+/**
+ * @function [sumAllWidthTreugFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
  * @param {number} widthTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
@@ -681,7 +886,7 @@ function sumAllWidthTreugFrontonFrontsves() {
 }
 
 /**
- * @function [sumAllWidthTreugFrontonKarnizsves] Функцыя подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
+ * @function [sumAllWidthTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
  * @param {number} widthTreugolFrontonKarnizsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
@@ -696,7 +901,7 @@ function sumAllWidthTreugFrontonKarnizsves() {
 	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
 }
 /**
- * @function [sumAllWidthDoors] Функцыя подсчета всех сумарных ширин дверных проемов
+ * @function [sumAllWidthDoors] Функция подсчета всех сумарных ширин дверных проемов
  * @param {number} widthDoors - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
@@ -712,7 +917,7 @@ function sumAllWidthDoors() {
 }
 
 /**
- * @function [sumAllHeightVneshUgol] Функцыя подсчета всех сумарных высот внешних углов из всех форм
+ * @function [sumAllHeightVneshUgol] Функция подсчета всех сумарных высот внешних углов из всех форм
  * @param {number} heightVneshUgol - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
@@ -728,7 +933,7 @@ function sumAllHeightVneshUgol() {
 }
 
 /**
- * @function [sumAllHeightInnerUgol] Функцыя подсчета всех сумарных высот внутренних углов из всех форм
+ * @function [sumAllHeightInnerUgol] Функция подсчета всех сумарных высот внутренних углов из всех форм
  * @param {number} heightInnerUgol - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
@@ -744,7 +949,7 @@ function sumAllHeightInnerUgol() {
 }
 
 /**
- * @function [sumAllHeightTreugFrontonFrontsves] Функцыя подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
+ * @function [sumAllHeightTreugFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
  * @param {number} heightTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
@@ -760,7 +965,7 @@ function sumAllHeightTreugFrontonFrontsves() {
 }
 
 /**
- * @function [sumAllHeightTreugFrontonKarnizsves] Функцыя подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
+ * @function [sumAllHeightTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
  * @param {number} heightTreugolFrontonKarnizsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
@@ -805,6 +1010,20 @@ function showTreugolFrontonItems(check) {
 		document.getElementById("check-treugol-field").classList.remove("hidden");
 	} else document.getElementById("check-treugol-field").classList.add("hidden");
   }
+
+/**
+ * показ формы расчета панелей и комплектующих для треугольных фронтонов
+ * @function [showLomFrontonItems] добавляет класс hidden к чекбоксу с треугольным фронтоном
+ * @param {remove} - удаляет класс hidden у формы
+ * @param {check}  - переменная к классу для чекбокса
+ * @param {add}  - добавляет hidden к форме
+ */
+function showLomFrontonItems(check) {
+    check = document.getElementById("check-lom");
+    if (check.checked) {
+		document.getElementById("check-lom-field").classList.remove("hidden");
+	} else document.getElementById("check-lom-field").classList.add("hidden");
+  }  
 
 /**
  * Кнопка показа формы для количества стен в разделе стены
@@ -910,6 +1129,23 @@ document.querySelector(".add-form-tf").addEventListener("click", function () {
 });
 
 /**
+ * Кнопка добавления новой формы для размера и площади фронтона в разделе ломаный фронтон
+ * @param {nodeLomFronton} nodeLomFronton - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFronton} newFormLomFronton - добавляем новую форму
+ */
+let newFormLomFronton = 1;
+let nodeLomFronton = document.getElementById("lf-form-id").cloneNode(true);
+
+document.querySelector(".add-form-lf").addEventListener("click", function () {
+	let newClonedNode = nodeLomFronton.cloneNode(true);
+	document.querySelector(".lf").appendChild(newClonedNode);
+	newClonedNode.id = "lf-form-id-" + newFormLomFronton;
+	newClonedNode.name = "lf-form-id-" + newFormLomFronton;
+	newFormLomFronton++;
+});
+
+/**
  * Кнопка добавления новой формы для оконных проемов в разделе треугольный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
@@ -924,6 +1160,41 @@ document.querySelector(".add-form-tf-window").addEventListener("click", function
 	newClonedNode.id = "tf-window-form-id-" + newFormTreugFrontonWindow;
 	newClonedNode.name = "tf-window-form-id-" + newFormTreugFrontonWindow;
 	newFormTreugFrontonWindow++;
+});
+
+/**
+ * Кнопка добавления новой формы для оконных проемов в разделе ломаный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFrontonWindow} newFormLomFrontonWindow - добавляем новую форму
+ */
+let newFormLomFrontonWindow = 1;
+let nodeLomFrontonWindow = document.getElementById("lf-window-form-id").cloneNode(true);
+
+document.querySelector(".add-form-lf-window").addEventListener("click", function () {
+	let newClonedNode = nodeLomFrontonWindow.cloneNode(true);
+	document.querySelector(".lf-window").appendChild(newClonedNode);
+	newClonedNode.id = "lf-window-form-id-" + newFormLomFrontonWindow;
+	newClonedNode.name = "lf-window-form-id-" + newFormLomFrontonWindow;
+	newFormLomFrontonWindow++;
+});
+
+
+/**
+ * Кнопка добавления новой формы для оконных проемов в разделе ломаный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFrontonWindow} newFormLomFrontonWindow - добавляем новую форму
+ */
+let newFormLomFrontonDoor = 1;
+let nodeLomFrontonDoor = document.getElementById("lf-door-form-id").cloneNode(true);
+
+document.querySelector(".add-form-lf-door").addEventListener("click", function () {
+	let newClonedNode = nodeLomFrontonDoor.cloneNode(true);
+	document.querySelector(".lf-door").appendChild(newClonedNode);
+	newClonedNode.id = "lf-door-form-id-" + newFormLomFrontonDoor;
+	newClonedNode.name = "lf-door-form-id-" + newFormLomFrontonDoor;
+	newFormLomFrontonDoor++;
 });
 
 /**
@@ -980,7 +1251,7 @@ document.querySelector(".add-form-tf-karnizsves").addEventListener("click", func
 
 
 /**
- * @function [deleteForm] Функцыя удаления формы для стен
+ * @function [deleteForm] Функция удаления формы для стен
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumPerimeters()] вызываем функцию подсчета всех периметров со всех форм для стен
@@ -996,7 +1267,7 @@ function deleteForm(btn) {
 }
 
 /**
- * @function [deleteFormTreugFronton] Функцыя удаления формы для размера треугольного фронтона
+ * @function [deleteFormTreugFronton] Функция удаления формы для размера треугольного фронтона
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAreasTreugFronton()] вызываем функцию подсчета всех площадей со всех форм для размера треугольного фронтона
@@ -1010,7 +1281,21 @@ function deleteFormTreugFronton(btn) {
 }
 
 /**
- * @function [deleteFormWindow] Функцыя удаления формы оконных проемов в стенах
+ * @function [deleteFormLomFronton] Функция удаления формы для размера ломаного фронтона
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAreasLomFronton()] вызываем функцию подсчета всех площадей со всех форм для размера ломаного фронтона
+ */
+function deleteFormLomFronton(btn) {
+	let forms = document.getElementsByClassName('lf-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAreasLomFronton();
+	}
+}
+
+/**
+ * @function [deleteFormWindow] Функция удаления формы оконных проемов в стенах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthWindows()] вызываем функцию подсчета всех ширин со всех формах оконных проемах для стен
@@ -1026,7 +1311,7 @@ function deleteFormWindow(btn) {
 }
 
 /**
- * @function [deleteFormTreugFrontonWindow] Функцыя удаления формы оконных проемов в треугольных фронтонах
+ * @function [deleteFormTreugFrontonWindow] Функция удаления формы оконных проемов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthTreugFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для треугольных фронтонов
@@ -1036,13 +1321,46 @@ function deleteFormTreugFrontonWindow(btn) {
 	let forms = document.getElementsByClassName('tf-window-form');
 	if (forms.length > 1) {
 		btn.parentElement.remove();
-		sumAllWidthTreugolFrontonWindows();
+		sumAllWidthTreugFrontonWindows();
 		sumAreasTreugFrontonWindow();
 	}
 }
 
+
 /**
- * @function [deleteFormTreugFrontonDoor] Функцыя удаления формы дверных проемов в треугольных фронтонах
+ * @function [deleteFormLomFrontonWindow] Функция удаления формы оконных проемов в ломаных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthLomFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для ломаных фронтонов
+ * @function [sumAreasLomFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для ломаных фронтонов
+ */
+function deleteFormLomFrontonWindow(btn) {
+	let forms = document.getElementsByClassName('lf-window-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonWindows();
+		sumAreasLomFrontonWindow();
+	}
+}
+
+/**
+ * @function [deleteFormLomFrontonWindow] Функция удаления формы оконных проемов в ломаных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthLomFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для ломаных фронтонов
+ * @function [sumAreasLomFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для ломаных фронтонов
+ */
+function deleteFormLomFrontonWindow(btn) {
+	let forms = document.getElementsByClassName('lf-window-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonWindows();
+		sumAreasLomFrontonWindow();
+	}
+}
+
+/**
+ * @function [deleteFormTreugFrontonDoor] Функция удаления формы дверных проемов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthTreugFrontonDoor()] вызываем функцию подсчета всех ширин со всех форм дверных проемов для треугольных фронтонов
@@ -1058,7 +1376,23 @@ function deleteFormTreugFrontonDoor(btn) {
 }
 
 /**
- * @function [deleteFormTreugFrontonFrontsves] Функцыя удаления формы фронтонных свесов в треугольных фронтонах
+ * @function [deleteFormLomFrontonDoor] Функция удаления формы дверных проемов в ломаных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthLomFrontonDoor()] вызываем функцию подсчета всех ширин со всех форм дверных проемов для ломаных фронтонов
+ * @function [sumAreasLomFrontonDoor()] вызываем функцию подсчета всех площадей дверных проемов со всех форм для ломаных фронтонов
+ */
+function deleteFormLomFrontonDoor(btn) {
+	let forms = document.getElementsByClassName('lf-door-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonDoor();
+		sumAreasLomFrontonDoor();
+	}
+}
+
+/**
+ * @function [deleteFormTreugFrontonFrontsves] Функция удаления формы фронтонных свесов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthTreugFrontonFrontsves()] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для треугольных фронтонов
@@ -1076,7 +1410,7 @@ function deleteFormTreugFrontonFrontsves(btn) {
 }
 
 /**
- * @function [deleteFormTreugFrontonKarnizsves] Функцыя удаления формы карнизных свесов в треугольных фронтонах
+ * @function [deleteFormTreugFrontonKarnizsves] Функция удаления формы карнизных свесов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthTreugFrontonKarnizsves()] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для треугольных фронтонов
@@ -1094,7 +1428,7 @@ function deleteFormTreugFrontonKarnizsves(btn) {
 }
 
 /**
- * @function [deleteFormDoor] Функцыя удаления формы для дверных проемов
+ * @function [deleteFormDoor] Функция удаления формы для дверных проемов
  * @param {formsDoor} formsDoor - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthDoors()] вызываем функцию подсчета всех сумарных ширин со всех форм для дверных проемов
@@ -1110,7 +1444,7 @@ function deleteFormDoor(btn) {
 }
 
 /**
- * @function [deleteFormVneshUgol] Функцыя удаления формы для подсчета внешних углов
+ * @function [deleteFormVneshUgol] Функция удаления формы для подсчета внешних углов
  * @param {formsVneshUgol} formsVneshUgol - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllHeightVneshUgol()] вызываем функцию подсчета всех высот со всех форм для внешних углов
@@ -1124,7 +1458,7 @@ function deleteFormVneshUgol(btn) {
 }
 
 /**
- * @function [deleteFormInnerUgol] Функцыя удаления формы для подсчета внутренних углов
+ * @function [deleteFormInnerUgol] Функция удаления формы для подсчета внутренних углов
  * @param {formsInnerUgol} formsVneshUgol - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllHeightInnerUgol()] вызываем функцию подсчета всех высот со всех форм для внутренних углов

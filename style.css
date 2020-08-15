@@ -34,7 +34,10 @@ ul {
 .tf-window,
 .tf-door,
 .tf-frontsves,
-.tf-karnizsves {
+.tf-karnizsves,
+.lf,
+.lf-window,
+.lf-door {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -63,7 +66,10 @@ ul {
 .tf-window-form,
 .tf-door-form,
 .tf-frontsves-form,
-.tf-karnizsves-form {
+.tf-karnizsves-form,
+.lf-form,
+.lf-window-form,
+.lf-door-form {
 	width: 240px;
 	background-color: #f2f2f240;
 	border: 0.5px solid #00000005;
@@ -211,7 +217,9 @@ input[type=number]::-webkit-outer-spin-button {
 .tf-window-num-wrp,
 .tf-door-number-wrp,
 .tf-frontsves-number-wrp,
-.tf-karnizsves-number-wrp {
+.tf-karnizsves-number-wrp,
+.lf-window-num-wrp,
+.lf-door-number-wrp {
 	margin-top: 17px;
 }
 
@@ -227,7 +235,10 @@ input[type=number]::-webkit-outer-spin-button {
 .tf-window-result-formula,
 .tf-door-result-formula,
 .tf-frontsves-result-formula,
-.tf-karnizsves-result-formula {
+.tf-karnizsves-result-formula,
+.lf-area-wrp,
+.lf-window-result-formula,
+.lf-door-result-formula {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -329,7 +340,8 @@ button {
 	background: none;
 }
 
-.tf-remove-form {
+.tf-remove-form,
+.lf-remove-form {
 	margin: 0 0 0 234px;
 }
 
@@ -396,7 +408,9 @@ legend {
 .tf-window-form-span,
 .tf-door-form-span,
 .tf-frontsves-form-span,
-.tf-karnizsves-form-span {
+.tf-karnizsves-form-span,
+.lf-window-form-span,
+.lf-door-form-span  {
 	font-size: 19px;
 	font-weight: 600;
 	color: #000;
