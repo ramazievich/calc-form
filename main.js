@@ -195,6 +195,36 @@ function funcTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [funcLomFrontonFrontsves] Функция подсчета площади фронтонного свеса для одной формы в ломаных фронтонах
+ * @param {allFormsLomFrontonFrontsves} allFormsLomFrontonFrontsves переменная для формы подсчета площади фронтонного свеса в ломаных фронтонах
+ * @param {number} frontsves - поле ввода количества фронтонных свесов в ломаных фронтонах
+ * @param {number} shirina - поле ввода ширины фронтонного свеса в ломаных фронтонах
+ * @param {number} visota - поле ввода высоты фронтонного свеса в ломаных фронтонах
+ * @param {number} result - результат подсчета
+ */
+
+let allFormsLomFrontonFrontsves = document.querySelectorAll(".lf-frontsves-form");
+console.log(allFormsLomFrontonFrontsves);
+
+function funcLomFrontonFrontsves() {
+	allFormsLomFrontonFrontsves = document.querySelectorAll(".lf-frontsves-form");
+	for (let i = 0, max = allFormsLomFrontonFrontsves.length; i < max; i++) {
+		let form = allFormsLomFrontonFrontsves[i];
+		console.log(form.querySelector(".lf-frontsves-num"));
+		let frontsves = Number(form.querySelector(".lf-frontsves-num").value);
+		frontsves = parseFloat(frontsves);
+		let shirina = Number(form.querySelector(".lf-frontsves-length").value);
+		shirina = parseFloat(shirina);
+		let visota = Number(form.querySelector(".lf-frontsves-height").value);
+		visota = parseFloat(visota);
+		let visota2 = Number(form.querySelector(".lf-frontsves-height2").value);
+		visota2 = parseFloat(visota2);
+		let result = (shirina + visota + visota2) * frontsves;
+		form.querySelector(".lf-frontsves-result").value = result;
+	}
+}
+
+/**
  * @function [funcTreugFrontonKarnizsves] Функция подсчета площади карнизного свеса для одной формы в треугольных фронтонах
  * @param {allFormsTreugFrontonKarnizsves} allFormsTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса в треугольных фронтонах
  * @param {number} karnizsves - поле ввода количества фронтонных свесов в треугольных фронтонах
@@ -219,6 +249,34 @@ function funcTreugFrontonKarnizsves() {
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * karnizsves;
 		form.querySelector(".tf-karnizsves-result").value = result;
+	}
+}
+
+/**
+ * @function [funcLomFrontonKarnizsves] Функция подсчета площади карнизного свеса для одной формы в ломаных фронтонах
+ * @param {allFormsLomFrontonKarnizsves} allFormsLomFrontonKarnizsves переменная для формы подсчета площади карнизного свеса в ломаных фронтонах
+ * @param {number} karnizsves - поле ввода количества фронтонных свесов в ломаных фронтонах
+ * @param {number} shirina - поле ввода ширины карнизного свеса в ломаных фронтонах
+ * @param {number} visota - поле ввода высоты карнизного свеса в ломаных фронтонах
+ * @param {number} result - результат подсчета
+ */
+
+let allFormsLomFrontonKarnizsves = document.querySelectorAll(".lf-karnizsves-form");
+console.log(allFormsLomFrontonKarnizsves);
+
+function funcLomFrontonKarnizsves() {
+	allFormsLomFrontonKarnizsves = document.querySelectorAll(".lf-karnizsves-form");
+	for (let i = 0, max = allFormsLomFrontonKarnizsves.length; i < max; i++) {
+		let form = allFormsLomFrontonKarnizsves[i];
+		console.log(form.querySelector(".lf-karnizsves-num"));
+		let karnizsves = Number(form.querySelector(".lf-karnizsves-num").value);
+		karnizsves = parseFloat(karnizsves);
+		let shirina = Number(form.querySelector(".lf-karnizsves-length").value);
+		shirina = parseFloat(shirina);
+		let visota = Number(form.querySelector(".lf-karnizsves-height").value);
+		visota = parseFloat(visota);
+		let result = (shirina + visota) * karnizsves;
+		form.querySelector(".lf-karnizsves-result").value = result;
 	}
 }
 
@@ -485,6 +543,22 @@ function sumAreasTreugFrontonFrontsves() {
 	document.getElementById("tf-frontsves-area-all2-id").value = sumTreugFrontonFrontsves;
 }
 
+/**
+ * @function [sumAreasLomFrontonFrontsves] функция для сумирования всех площадей фронтонных свесов со всех форм в ломаных фронтонах
+ * @param {number} areasLomFrontonFrontsves - переменная поля с площадью фронтонных свесов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumLomFrontonFrontsves - сумма всех площадей после сложения
+ */
+function sumAreasLomFrontonFrontsves() {
+	let areasLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-result");
+	let sumLomFrontonFrontsves = 0;
+	[].forEach.call(areasLomFrontonFrontsves, function (el) {
+		sumLomFrontonFrontsves += parseFloat(el.value);
+		console.log(sumLomFrontonFrontsves);
+	});
+	document.getElementById("lf-frontsves-area-all2-id").value = sumLomFrontonFrontsves;
+}
+
 
 /**
  * @function [sumAreasTreugFrontonKarnizsves] функция для сумирования всех площадей карнизных свесов со всех форм в треугольных фронтонах
@@ -502,6 +576,21 @@ function sumAreasTreugFrontonKarnizsves() {
 	document.getElementById("tf-karnizsves-area-all2-id").value = sumTreugFrontonKarnizsves;
 }
 
+/**
+ * @function [sumAreasLomFrontonKarnizsves] функция для сумирования всех площадей карнизных свесов со всех форм в ломаных фронтонах
+ * @param {number} areasLomFrontonKarnizsves - переменная поля с площадью карнизных свесов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumLomFrontonKarnizsves - сумма всех площадей после сложения
+ */
+function sumAreasLomFrontonKarnizsves() {
+	let areasLomFrontonKarnizsves = document.getElementsByClassName("lf-karnizsves-result");
+	let sumLomFrontonKarnizsves = 0;
+	[].forEach.call(areasLomFrontonKarnizsves, function (el) {
+		sumLomFrontonKarnizsves += parseFloat(el.value);
+		console.log(sumLomFrontonKarnizsves);
+	});
+	document.getElementById("lf-karnizsves-area-all2-id").value = sumLomFrontonKarnizsves;
+}
 
 /**
  * @function [sumAreasDoor] функция для сумирования всех площадей дверных проемов со всех форм
@@ -694,6 +783,26 @@ function sumWidthTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [sumWidthLomFrontonFrontsves] Функция подсчета сумарной ширины фронтонного свеса для одной формы ломаного фронтона
+ * @param {allFormsLomFrontonFrontsves} formLomFrontonFrontsves переменная для формы подсчета площади фронтонного свеса
+ * @param {number} frontsves - поле ввода количества фронтонных свесов
+ * @param {number} shirina - поле ввода ширины фронтонного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumWidthLomFrontonFrontsves() {
+	for (let i = 0, max = allFormsLomFrontonFrontsves.length; i < max; i++) {
+		let formLomFrontonFrontsves = allFormsLomFrontonFrontsves[i];
+		console.log(formLomFrontonFrontsves.querySelectorAll(".lf-frontsves-num"));
+		let frontsves = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-num").value);
+		frontsves = parseFloat(frontsves);
+		let shirina = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-length").value);
+		shirina = parseFloat(shirina);
+		let result = shirina * frontsves;
+		formLomFrontonFrontsves.querySelector(".lf-frontsves-sum-width").value = result;
+	}
+}
+
+/**
  * @function [sumWidthTreugFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonKarnizsves} formTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
  * @param {number} karnizsves - поле ввода количества карнизных свесов
@@ -710,6 +819,26 @@ function sumWidthTreugFrontonKarnizsves() {
 		shirina = parseFloat(shirina);
 		let result = shirina * karnizsves;
 		formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-sum-width").value = result;
+	}
+}
+
+/**
+ * @function [sumWidthLomFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы ломаного фронтона
+ * @param {allFormsLomFrontonKarnizsves} formLomFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
+ * @param {number} karnizsves - поле ввода количества карнизных свесов
+ * @param {number} shirina - поле ввода ширины карнизного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumWidthLomFrontonKarnizsves() {
+	for (let i = 0, max = allFormsLomFrontonKarnizsves.length; i < max; i++) {
+		let formLomFrontonKarnizsves = allFormsLomFrontonKarnizsves[i];
+		console.log(formLomFrontonKarnizsves.querySelectorAll(".lf-karnizsves-num"));
+		let karnizsves = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-num").value);
+		karnizsves = parseFloat(karnizsves);
+		let shirina = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-length").value);
+		shirina = parseFloat(shirina);
+		let result = shirina * karnizsves;
+		formLomFrontonKarnizsves.querySelector(".lf-karnizsves-sum-width").value = result;
 	}
 }
 
@@ -754,6 +883,28 @@ function sumHeightTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [sumHeightLomFrontonFrontsves] Функция подсчета сумарной ширины фронтонного свеса для одной формы ломаного фронтона
+ * @param {allFormsLomFrontonFrontsves} formLomFrontonFrontsves переменная для формы подсчета площади фронтонного свеса
+ * @param {number} frontsves - поле ввода количества фронтонных свесов
+ * @param {number} height - поле ввода ширины фронтонного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumHeightLomFrontonFrontsves() {
+	for (let i = 0, max = allFormsLomFrontonFrontsves.length; i < max; i++) {
+		let formLomFrontonFrontsves = allFormsLomFrontonFrontsves[i];
+		console.log(formLomFrontonFrontsves.querySelectorAll(".lf-frontsves-num"));
+		let frontsves = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-num").value);
+		frontsves = parseFloat(frontsves);
+		let height = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-height").value);
+		height = parseFloat(height);
+		let height2 = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-height2").value);
+		height2 = parseFloat(height2);
+		let result = (height + height2) * frontsves;
+		formLomFrontonFrontsves.querySelector(".lf-frontsves-sum-height").value = result;
+	}
+}
+
+/**
  * @function [sumHeightTreugFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonKarnizsves} formTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
  * @param {number} karnizsves - поле ввода количества карнизных свесов
@@ -770,6 +921,26 @@ function sumHeightTreugFrontonKarnizsves() {
 		height = parseFloat(height);
 		let result = height * karnizsves;
 		formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-sum-height").value = result;
+	}
+}
+
+/**
+ * @function [sumHeightLomFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы ломаного фронтона
+ * @param {allFormsLomFrontonKarnizsves} formLomFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
+ * @param {number} karnizsves - поле ввода количества карнизных свесов
+ * @param {number} height - поле ввода ширины карнизного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumHeightLomFrontonKarnizsves() {
+	for (let i = 0, max = allFormsLomFrontonKarnizsves.length; i < max; i++) {
+		let formLomFrontonKarnizsves = allFormsLomFrontonKarnizsves[i];
+		console.log(formLomFrontonKarnizsves.querySelectorAll(".lf-karnizsves-num"));
+		let karnizsves = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-num").value);
+		karnizsves = parseFloat(karnizsves);
+		let height = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-height").value);
+		height = parseFloat(height);
+		let result = height * karnizsves;
+		formLomFrontonKarnizsves.querySelector(".lf-karnizsves-sum-height").value = result;
 	}
 }
 
@@ -871,7 +1042,7 @@ function sumAllWidthLomFrontonDoor() {
 
 /**
  * @function [sumAllWidthTreugFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
- * @param {number} widthTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
+ * @param {number} widthTreugFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
  */
@@ -886,8 +1057,24 @@ function sumAllWidthTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [sumAllWidthLomFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в ломаных фронтонах
+ * @param {number} widthLomFrontonFrontsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllWidthLomFrontonFrontsves() {
+	let widthLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-width");
+	let sum = 0;
+	[].forEach.call(widthLomFrontonFrontsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-frontsves-sum-width-all-id").value = sum;
+}
+
+/**
  * @function [sumAllWidthTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
- * @param {number} widthTreugolFrontonKarnizsves - переменная для поля сумарной высот из формы
+ * @param {number} widthTreugFrontonKarnizsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
  */
@@ -900,6 +1087,23 @@ function sumAllWidthTreugFrontonKarnizsves() {
 	});
 	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
 }
+
+/**
+ * @function [sumAllWidthLomFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в ломаных фронтонах
+ * @param {number} widthLomFrontonKarnizsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllWidthLomFrontonKarnizsves() {
+	let widthLomFrontonKarnizsves = document.getElementsByClassName("lf-karnizsves-sum-width");
+	let sum = 0;
+	[].forEach.call(widthLomFrontonKarnizsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-karnizsves-sum-width-all-id").value = sum;
+}
+
 /**
  * @function [sumAllWidthDoors] Функция подсчета всех сумарных ширин дверных проемов
  * @param {number} widthDoors - переменная для поля сумарной ширины из формы
@@ -950,7 +1154,7 @@ function sumAllHeightInnerUgol() {
 
 /**
  * @function [sumAllHeightTreugFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
- * @param {number} heightTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
+ * @param {number} heightTreugFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
  */
@@ -965,8 +1169,24 @@ function sumAllHeightTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [sumAllHeightLomFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в ломаных фронтонах
+ * @param {number} heightLomFrontonFrontsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllHeightLomFrontonFrontsves() {
+	let heightLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-height");
+	let sum = 0;
+	[].forEach.call(heightLomFrontonFrontsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-frontsves-sum-height-all-id").value = sum;
+}
+
+/**
  * @function [sumAllHeightTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
- * @param {number} heightTreugolFrontonKarnizsves - переменная для поля сумарной высот из формы
+ * @param {number} heightTreugFrontonKarnizsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
  */
@@ -978,6 +1198,22 @@ function sumAllHeightTreugFrontonKarnizsves() {
 		console.log(sum);
 	});
 	document.getElementById("tf-karnizsves-sum-height-all-id").value = sum;
+}
+
+/**
+ * @function [sumAllHeightLomFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в ломаных фронтонах
+ * @param {number} heightLomFrontonKarnizsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllHeightLomFrontonKarnizsves() {
+	let heightLomFrontonKarnizsves = document.getElementsByClassName("lf-karnizsves-sum-height");
+	let sum = 0;
+	[].forEach.call(heightLomFrontonKarnizsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-karnizsves-sum-height-all-id").value = sum;
 }
 
 /**
@@ -998,6 +1234,7 @@ document.querySelector(".add-form").addEventListener("click", function () {
 });
 
 /**
+ * Для чекбокса
  * показ формы расчета панелей и комплектующих для треугольных фронтонов
  * @function [showTreugolFrontonItems] добавляет класс hidden к чекбоксу с треугольным фронтоном
  * @param {remove} - удаляет класс hidden у формы
@@ -1012,6 +1249,7 @@ function showTreugolFrontonItems(check) {
   }
 
 /**
+ * Для чекбокса
  * показ формы расчета панелей и комплектующих для треугольных фронтонов
  * @function [showLomFrontonItems] добавляет класс hidden к чекбоксу с треугольным фронтоном
  * @param {remove} - удаляет класс hidden у формы
@@ -1026,20 +1264,159 @@ function showLomFrontonItems(check) {
   }  
 
 /**
- * Кнопка показа формы для количества стен в разделе стены
+ * Кнопка показа формы для количества окон в разделе стены
  * @param {remove} - удаляет класс hidden у формы
- * @function [remuveBtnStena] remuveBtnStena - добавляет класс hidden к кнопке показать форму
- * @param {newFormWindow} newFormWindow - добавляем новую форму
+ * @function [remuveBtnWindow] remuveBtnWindow - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-stena").addEventListener("click", function () {
-	document.getElementById("walls-wrp-id").classList.remove("hidden");
-	remuveBtnStena();
+document.querySelector(".show-form-windows").addEventListener("click", function () {
+	document.getElementById("windows-wrp-id").classList.remove("hidden");
+	remuveBtnWindow();
 });
 
-function remuveBtnStena() {
-	document.getElementById("show-form-stena-id").classList.add("hidden");
+function remuveBtnWindow() {
+	document.getElementById("show-form-windows-id").classList.add("hidden");
 }
 
+/**
+ * Кнопка показа формы для количества дверей в разделе стены
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnDoors] remuveBtnDoors - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-doors").addEventListener("click", function () {
+	document.getElementById("doors-wrp-id").classList.remove("hidden");
+	remuveBtnDoors();
+});
+
+function remuveBtnDoors() {
+	document.getElementById("show-form-doors-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы для количества внешних углов в разделе стены
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnUgolsVnes] remuveBtnUgolsVnes - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-ugols-vnesh").addEventListener("click", function () {
+	document.getElementById("ugols-vnesh-wrp-id").classList.remove("hidden");
+	remuveBtnUgolsVnes();
+});
+
+function remuveBtnUgolsVnesh() {
+	document.getElementById("show-form-ugols-vnesh-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы для количества внутренних углов в разделе стены
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnUgolsInnerh] remuveBtnUgolsInnerh - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-ugols-inner").addEventListener("click", function () {
+	document.getElementById("ugols-inner-wrp-id").classList.remove("hidden");
+	remuveBtnUgolsInnerh();
+});
+
+function remuveBtnUgolsInnerh() {
+	document.getElementById("show-form-ugols-inner-id").classList.add("hidden");
+}
+
+
+/**
+ * Кнопка показа формы размера и количества окон в разделе треугольный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtntfWindow] remuveBtntfWindow - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-tf-window").addEventListener("click", function () {
+	document.getElementById("tf-window-wrp-id").classList.remove("hidden");
+	remuveBtnTfWindow();
+});
+
+function remuveBtnTfWindow() {
+	document.getElementById("show-form-tf-window-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы размера и количества окон в разделе ломаный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnLfWindow] remuveBtnLfWindow - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-lf-window").addEventListener("click", function () {
+	document.getElementById("lf-window-wrp-id").classList.remove("hidden");
+	remuveBtnLfWindow();
+});
+
+function remuveBtnLfWindow() {
+	document.getElementById("show-form-lf-window-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы размера и количества дверей в разделе ломаный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnLfDoor] remuveBtnLfDoor - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-lf-door").addEventListener("click", function () {
+	document.getElementById("lf-door-wrp-id").classList.remove("hidden");
+	remuveBtnLfDoor();
+});
+
+function remuveBtnLfDoor() {
+	document.getElementById("show-form-lf-door-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы размера и количества фронтонных свесов в разделе ломаный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnLfFrontsves] remuveBtnLfFrontsves - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
+	document.getElementById("lf-frontsves-wrp-id").classList.remove("hidden");
+	remuveBtnLfFrontsves();
+});
+
+function remuveBtnLfFrontsves() {
+	document.getElementById("show-form-lf-frontsves-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы размера и количества дверей в разделе треугольный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtntfDoor] remuveBtntfDoor - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-tf-door").addEventListener("click", function () {
+	document.getElementById("tf-door-wrp-id").classList.remove("hidden");
+	remuveBtntfDoor();
+});
+
+function remuveBtntfDoor() {
+	document.getElementById("show-form-tf-door-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы размера и количества фронтонных свесов в разделе треугольный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtntfFrontsves] remuveBtntfFrontsves - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-tf-frontsves").addEventListener("click", function () {
+	document.getElementById("tf-frontsves-wrp-id").classList.remove("hidden");
+	remuveBtntfFrontsves();
+});
+
+function remuveBtntfFrontsves() {
+	document.getElementById("show-form-tf-frontsves-id").classList.add("hidden");
+}
+
+/**
+ * Кнопка показа формы размера и количества карнизных свесов в разделе треугольный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtntfKarnizsves] remuveBtntfKarnizsves - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-tf-karnizsves").addEventListener("click", function () {
+	document.getElementById("tf-karnizsves-wrp-id").classList.remove("hidden");
+	remuveBtntfKarnizsves();
+});
+
+function remuveBtntfKarnizsves() {
+	document.getElementById("show-form-tf-karnizsves-id").classList.add("hidden");
+}
 
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе стены
@@ -1231,6 +1608,22 @@ document.querySelector(".add-form-tf-frontsves").addEventListener("click", funct
 	newFormTreugFrontonFrontsves++;
 });
 
+/**
+ * Кнопка добавления новой формы для фронтонных свесов в разделе треугольный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFrontonFrontsves} newFormLomFrontonFrontsves - добавляем новую форму
+ */
+let newFormLomFrontonFrontsves = 1;
+let nodeLomFrontonFrontsves = document.getElementById("lf-frontsves-form-id").cloneNode(true);
+
+document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
+	let newClonedNode = nodeLomFrontonFrontsves.cloneNode(true);
+	document.querySelector(".lf-frontsves").appendChild(newClonedNode);
+	newClonedNode.id = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
+	newClonedNode.name = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
+	newFormLomFrontonFrontsves++;
+});
 
 /**
  * Кнопка добавления новой формы для карнизных свесов в разделе треугольный фронтон
@@ -1249,6 +1642,22 @@ document.querySelector(".add-form-tf-karnizsves").addEventListener("click", func
 	newFormTreugFrontonKarnizsves++;
 });
 
+/**
+ * Кнопка добавления новой формы для карнизных свесов в разделе ломаный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFrontonKarnizsves} newFormLomFrontonKarnizsves - добавляем новую форму
+ */
+let newFormLomFrontonKarnizsves = 1;
+let nodeLomFrontonKarnizsves = document.getElementById("lf-karnizsves-form-id").cloneNode(true);
+
+document.querySelector(".add-form-lf-karnizsves").addEventListener("click", function () {
+	let newClonedNode = nodeLomFrontonKarnizsves.cloneNode(true);
+	document.querySelector(".lf-karnizsves").appendChild(newClonedNode);
+	newClonedNode.id = "lf-karnizsves-form-id-" + newFormLomFrontonKarnizsves;
+	newClonedNode.name = "lf-karnizsves-form-id-" + newFormLomFrontonKarnizsves;
+	newFormLomFrontonKarnizsves++;
+});
 
 /**
  * @function [deleteForm] Функция удаления формы для стен
@@ -1263,6 +1672,7 @@ function deleteForm(btn) {
 		btn.parentElement.remove();
 		sumPerimeters();
 		sumAreas();
+		remuveBtnStena();
 	}
 }
 
@@ -1410,6 +1820,24 @@ function deleteFormTreugFrontonFrontsves(btn) {
 }
 
 /**
+ * @function [deleteFormLomFrontonFrontsves] Функция удаления формы фронтонных свесов в ломаных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthLomFrontonFrontsves()] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для ломаных фронтонов
+ * @function [sumAllHeightLomFrontonFrontsves()] вызываем функцию подсчета всех высот со всех форм фронтонных свесов для ломаных фронтонов
+ * @function [sumAreasLomFrontonFrontsves()] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для ломаных фронтонов
+ */
+function deleteFormLomFrontonFrontsves(btn) {
+	let forms = document.getElementsByClassName('lf-frontsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonFrontsves();
+		sumAllHeightLomFrontonFrontsves();
+		sumAreasLomFrontonFrontsves();
+	}
+}
+
+/**
  * @function [deleteFormTreugFrontonKarnizsves] Функция удаления формы карнизных свесов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
@@ -1424,6 +1852,25 @@ function deleteFormTreugFrontonKarnizsves(btn) {
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();
+	}
+}
+
+
+/**
+ * @function [deleteFormLomFrontonKarnizsves] Функция удаления формы карнизных свесов в ломаных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthLomFrontonKarnizsves()] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для ломаных фронтонов
+ * @function [sumAllHeightLomFrontonKarnizsves()] вызываем функцию подсчета всех высот со всех форм карнизных свесов для ломаных фронтонов
+ * @function [sumAreasLomFrontonKarnizsves()] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для ломаных фронтонов
+ */
+function deleteFormLomFrontonKarnizsves(btn) {
+	let forms = document.getElementsByClassName('lf-karnizsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonKarnizsves();
+		sumAllHeightLomFrontonKarnizsves();
+		sumAreasLomFrontonKarnizsves();
 	}
 }
 
