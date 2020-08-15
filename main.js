@@ -1377,6 +1377,20 @@ function remuveBtnLfFrontsves() {
 }
 
 /**
+ * Кнопка показа формы размера и количества карнизных свесов в разделе ломаный фронтон
+ * @param {remove} - удаляет класс hidden у формы
+ * @function [remuveBtnLfKarnizsves] remuveBtnLfKarnizsves - добавляет класс hidden к кнопке показать форму
+ */
+document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
+	document.getElementById("lf-karnizsves-wrp-id").classList.remove("hidden");
+	remuveBtnLfKarnizsves();
+});
+
+function remuveBtnLfKarnizsves() {
+	document.getElementById("show-form-lf-karnizsves-id").classList.add("hidden");
+}
+
+/**
  * Кнопка показа формы размера и количества дверей в разделе треугольный фронтон
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtntfDoor] remuveBtntfDoor - добавляет класс hidden к кнопке показать форму

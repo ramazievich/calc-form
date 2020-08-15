@@ -297,7 +297,6 @@ button {
 	margin-bottom: 10px;
 }
 
-.show-form-btn,
 .add-form-btn {
 	width: 250px;
 	text-align: center;
@@ -321,6 +320,29 @@ button {
 	cursor: pointer;
 }
 
+.show-form-btn {
+	width: 250px;
+	text-align: left;
+	background-color: #1fbde7;
+	fill: white;
+	color: white;
+	padding: 8px 8px;
+	margin: 14px 0 8px 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: space-evenly;
+	    -ms-flex-pack: space-evenly;
+	        justify-content: space-evenly;
+	border: 0.5px solid #19acd3;
+	outline: none;
+	border-radius: 4px;
+	border-width: 1px 1px 3px;
+	-webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+	cursor: pointer;
+}
+
 .show-form-btn:hover,
 .add-form-btn:hover {
 	background-color: #31c15c;
@@ -328,7 +350,7 @@ button {
 	cursor: pointer;
 }
 
-.show-form-btn:hover,
+.show-form-btn:active,
 .add-form-btn:active {
 	background-color: #4bc970;
 	fill: rgb(250, 253, 54);
