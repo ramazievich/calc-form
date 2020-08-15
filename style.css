@@ -33,7 +33,8 @@ ul {
 .tf,
 .tf-window,
 .tf-door,
-.tf-frontsves {
+.tf-frontsves,
+.tf-karnizsves {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -61,7 +62,8 @@ ul {
 .tf-form,
 .tf-window-form,
 .tf-door-form,
-.tf-frontsves-form {
+.tf-frontsves-form,
+.tf-karnizsves-form {
 	width: 240px;
 	background-color: #f2f2f240;
 	border: 0.5px solid #00000005;
@@ -208,7 +210,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tf-window-groups-wrp,
 .tf-window-num-wrp,
 .tf-door-number-wrp,
-.tf-frontsves-number-wrp {
+.tf-frontsves-number-wrp,
+.tf-karnizsves-number-wrp {
 	margin-top: 17px;
 }
 
@@ -223,7 +226,8 @@ input[type=number]::-webkit-outer-spin-button {
 .tf-area-wrp,
 .tf-window-result-formula,
 .tf-door-result-formula,
-.tf-frontsves-result-formula {
+.tf-frontsves-result-formula,
+.tf-karnizsves-result-formula {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -391,7 +395,8 @@ legend {
 .tf-form-span,
 .tf-window-form-span,
 .tf-door-form-span,
-.tf-frontsves-form-span {
+.tf-frontsves-form-span,
+.tf-karnizsves-form-span {
 	font-size: 19px;
 	font-weight: 600;
 	color: #000;

@@ -139,6 +139,34 @@ function funcTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [funcTreugFrontonKarnizsves] Функцыя подсчета площади карнизного свеса для одной формы в треугольных фронтонах
+ * @param {allFormsTreugFrontonKarnizsves} allFormsTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса в треугольных фронтонах
+ * @param {number} karnizsves - поле ввода количества фронтонных свесов в треугольных фронтонах
+ * @param {number} shirina - поле ввода ширины карнизного свеса в треугольных фронтонах
+ * @param {number} visota - поле ввода высоты карнизного свеса в треугольных фронтонах
+ * @param {number} result - результат подсчета
+ */
+
+let allFormsTreugFrontonKarnizsves = document.querySelectorAll(".tf-karnizsves-form");
+console.log(allFormsTreugFrontonKarnizsves);
+
+function funcTreugFrontonKarnizsves() {
+	allFormsTreugFrontonKarnizsves = document.querySelectorAll(".tf-karnizsves-form");
+	for (let i = 0, max = allFormsTreugFrontonKarnizsves.length; i < max; i++) {
+		let form = allFormsTreugFrontonKarnizsves[i];
+		console.log(form.querySelector(".tf-karnizsves-num"));
+		let karnizsves = Number(form.querySelector(".tf-karnizsves-num").value);
+		karnizsves = parseFloat(karnizsves);
+		let shirina = Number(form.querySelector(".tf-karnizsves-length").value);
+		shirina = parseFloat(shirina);
+		let visota = Number(form.querySelector(".tf-karnizsves-height").value);
+		visota = parseFloat(visota);
+		let result = (shirina + visota) * karnizsves;
+		form.querySelector(".tf-karnizsves-result").value = result;
+	}
+}
+
+/**
  * @function [funcDoor] функция подсчета площади дверного проема для одной формы
  * @param {allFormsDoor} allFormsDoor переменная для формы подсчета площади дверных проемов
  * @param {number} dver - поле ввода количества дверных проемов
@@ -339,6 +367,24 @@ function sumAreasTreugFrontonFrontsves() {
 	document.getElementById("tf-frontsves-area-all2-id").value = sumTreugFrontonFrontsves;
 }
 
+
+/**
+ * @function [sumAreasTreugFrontonKarnizsves] функция для сумирования всех площадей карнизных свесов со всех форм в треугольных фронтонах
+ * @param {number} areasTreugFrontonKarnizsves - переменная поля с площадью карнизных свесов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumTreugFrontonKarnizsves - сумма всех площадей после сложения
+ */
+function sumAreasTreugFrontonKarnizsves() {
+	let areasTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-result");
+	let sumTreugFrontonKarnizsves = 0;
+	[].forEach.call(areasTreugFrontonKarnizsves, function (el) {
+		sumTreugFrontonKarnizsves += parseFloat(el.value);
+		console.log(sumTreugFrontonKarnizsves);
+	});
+	document.getElementById("tf-karnizsves-area-all2-id").value = sumTreugFrontonKarnizsves;
+}
+
+
 /**
  * @function [sumAreasDoor] функция для сумирования всех площадей дверных проемов со всех форм
  * @param {number} areasDoors - переменная поля с площадью дверных проемов
@@ -475,6 +521,26 @@ function sumWidthTreugFrontonFrontsves() {
 }
 
 /**
+ * @function [sumWidthTreugFrontonKarnizsves] Функцыя подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
+ * @param {allFormsTreugFrontonKarnizsves} formTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
+ * @param {number} karnizsves - поле ввода количества карнизных свесов
+ * @param {number} shirina - поле ввода ширины карнизного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumWidthTreugFrontonKarnizsves() {
+	for (let i = 0, max = allFormsTreugFrontonKarnizsves.length; i < max; i++) {
+		let formTreugFrontonKarnizsves = allFormsTreugFrontonKarnizsves[i];
+		console.log(formTreugFrontonKarnizsves.querySelectorAll(".tf-karnizsves-num"));
+		let karnizsves = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-num").value);
+		karnizsves = parseFloat(karnizsves);
+		let shirina = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-length").value);
+		shirina = parseFloat(shirina);
+		let result = shirina * karnizsves;
+		formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-sum-width").value = result;
+	}
+}
+
+/**
  * @function [sumWidthDoors] Функцыя подсчета сумарной ширины дверного проема для одной формы
  * @param {allFormsDoor} formDoor переменная для формы подсчета площади дверного проема
  * @param {number} door - поле ввода количества дверных проемов
@@ -511,6 +577,26 @@ function sumHeightTreugFrontonFrontsves() {
 		height = parseFloat(height);
 		let result = height * frontsves;
 		formTreugFrontonFrontsves.querySelector(".tf-frontsves-sum-height").value = result;
+	}
+}
+
+/**
+ * @function [sumHeightTreugFrontonKarnizsves] Функцыя подсчета сумарной ширины карнизного свеса для одной формы треугольного фронтона
+ * @param {allFormsTreugFrontonKarnizsves} formTreugFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
+ * @param {number} karnizsves - поле ввода количества карнизных свесов
+ * @param {number} height - поле ввода ширины карнизного свеса
+ * @param {number} result - результат подсчета
+ */
+function sumHeightTreugFrontonKarnizsves() {
+	for (let i = 0, max = allFormsTreugFrontonKarnizsves.length; i < max; i++) {
+		let formTreugFrontonKarnizsves = allFormsTreugFrontonKarnizsves[i];
+		console.log(formTreugFrontonKarnizsves.querySelectorAll(".tf-karnizsves-num"));
+		let karnizsves = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-num").value);
+		karnizsves = parseFloat(karnizsves);
+		let height = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-height").value);
+		height = parseFloat(height);
+		let result = height * karnizsves;
+		formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-sum-height").value = result;
 	}
 }
 
@@ -579,7 +665,7 @@ function sumAllWidthTreugFrontonDoor() {
 }
 
 /**
- * @function [sumAllWidthTreugFrontonFrontsves] Функцыя подсчета всех сумарных высот дверных проемов в треугольных фронтонах
+ * @function [sumAllWidthTreugFrontonFrontsves] Функцыя подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
  * @param {number} widthTreugolFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
@@ -594,7 +680,21 @@ function sumAllWidthTreugFrontonFrontsves() {
 	document.getElementById("tf-frontsves-sum-width-all-id").value = sum;
 }
 
-
+/**
+ * @function [sumAllWidthTreugFrontonKarnizsves] Функцыя подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
+ * @param {number} widthTreugolFrontonKarnizsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllWidthTreugFrontonKarnizsves() {
+	let widthTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-width");
+	let sum = 0;
+	[].forEach.call(widthTreugFrontonKarnizsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
+}
 /**
  * @function [sumAllWidthDoors] Функцыя подсчета всех сумарных ширин дверных проемов
  * @param {number} widthDoors - переменная для поля сумарной ширины из формы
@@ -657,6 +757,22 @@ function sumAllHeightTreugFrontonFrontsves() {
 		console.log(sum);
 	});
 	document.getElementById("tf-frontsves-sum-height-all-id").value = sum;
+}
+
+/**
+ * @function [sumAllHeightTreugFrontonKarnizsves] Функцыя подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
+ * @param {number} heightTreugolFrontonKarnizsves - переменная для поля сумарной высот из формы
+ * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
+ * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
+ */
+function sumAllHeightTreugFrontonKarnizsves() {
+	let heightTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-height");
+	let sum = 0;
+	[].forEach.call(heightTreugFrontonKarnizsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("tf-karnizsves-sum-height-all-id").value = sum;
 }
 
 /**
@@ -813,7 +929,7 @@ document.querySelector(".add-form-tf-door").addEventListener("click", function (
 });
 
 /**
- * Кнопка добавления новой формы для фронтальных свесов в разделе треугольный фронтон
+ * Кнопка добавления новой формы для фронтонных свесов в разделе треугольный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormTreugFrontonFrontsves} newFormTreugFrontonFrontsves - добавляем новую форму
@@ -828,6 +944,25 @@ document.querySelector(".add-form-tf-frontsves").addEventListener("click", funct
 	newClonedNode.name = "tf-frontsves-form-id-" + newFormTreugFrontonFrontsves;
 	newFormTreugFrontonFrontsves++;
 });
+
+
+/**
+ * Кнопка добавления новой формы для карнизных свесов в разделе треугольный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormTreugFrontonKarnizsves} newFormTreugFrontonKarnizsves - добавляем новую форму
+ */
+let newFormTreugFrontonKarnizsves = 1;
+let nodeTreugFrontonKarnizsves = document.getElementById("tf-karnizsves-form-id").cloneNode(true);
+
+document.querySelector(".add-form-tf-karnizsves").addEventListener("click", function () {
+	let newClonedNode = nodeTreugFrontonKarnizsves.cloneNode(true);
+	document.querySelector(".tf-karnizsves").appendChild(newClonedNode);
+	newClonedNode.id = "tf-karnizsves-form-id-" + newFormTreugFrontonKarnizsves;
+	newClonedNode.name = "tf-karnizsves-form-id-" + newFormTreugFrontonKarnizsves;
+	newFormTreugFrontonKarnizsves++;
+});
+
 
 /**
  * @function [deleteForm] Функцыя удаления формы для стен
@@ -912,6 +1047,7 @@ function deleteFormTreugFrontonDoor(btn) {
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthTreugFrontonFrontsves()] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для треугольных фронтонов
+ * @function [sumAllHeightTreugFrontonFrontsves()] вызываем функцию подсчета всех высот со всех форм фронтонных свесов для треугольных фронтонов
  * @function [sumAreasTreugFrontonFrontsves()] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для треугольных фронтонов
  */
 function deleteFormTreugFrontonFrontsves(btn) {
@@ -921,6 +1057,24 @@ function deleteFormTreugFrontonFrontsves(btn) {
 		sumAllWidthTreugFrontonFrontsves();
 		sumAllHeightTreugFrontonFrontsves();
 		sumAreasTreugFrontonFrontsves();
+	}
+}
+
+/**
+ * @function [deleteFormTreugFrontonKarnizsves] Функцыя удаления формы карнизных свесов в треугольных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthTreugFrontonKarnizsves()] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для треугольных фронтонов
+ * @function [sumAllHeightTreugFrontonKarnizsves()] вызываем функцию подсчета всех высот со всех форм карнизных свесов для треугольных фронтонов
+ * @function [sumAreasTreugFrontonKarnizsves()] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для треугольных фронтонов
+ */
+function deleteFormTreugFrontonKarnizsves(btn) {
+	let forms = document.getElementsByClassName('tf-karnizsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();
 	}
 }
 
