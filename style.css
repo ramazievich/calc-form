@@ -5,6 +5,13 @@
 * Browsers: last 5 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 5 version
+*/
+
 .hidden {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
@@ -39,7 +46,8 @@ ul {
 .lf-window,
 .lf-door,
 .lf-frontsves,
-.lf-karnizsves {
+.lf-karnizsves,
+.notfront-karnizsves {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -73,7 +81,8 @@ ul {
 .lf-window-form,
 .lf-door-form,
 .lf-frontsves-form,
-.lf-karnizsves-form {
+.lf-karnizsves-form,
+.notfront-karnizsves-form {
 	width: 240px;
 	background-color: #f2f2f240;
 	border: 0.5px solid #00000005;
@@ -225,7 +234,8 @@ input[type=number]::-webkit-outer-spin-button {
 .lf-window-num-wrp,
 .lf-door-number-wrp,
 .lf-frontsves-number-wrp,
-.lf-karnizsves-number-wrp {
+.lf-karnizsves-number-wrp,
+.notfront-karnizsves-number-wrp {
 	margin-top: 17px;
 }
 
@@ -246,7 +256,8 @@ input[type=number]::-webkit-outer-spin-button {
 .lf-window-result-formula,
 .lf-door-result-formula,
 .lf-frontsves-result-formula,
-.lf-karnizsves-result-formula {
+.lf-karnizsves-result-formula,
+.notfront-karnizsves-result-formula {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -405,7 +416,7 @@ fieldset {
 }
 
 legend {
-	font-size: 1.4em;
+	font-size: 16px;
 	margin-bottom: 10px;
 }
 
@@ -442,7 +453,8 @@ legend {
 .lf-window-form-span,
 .lf-door-form-span,
 .lf-frontsves-form-span,
-.lf-karnizsves-form-span {
+.lf-karnizsves-form-span,
+.notfront-karnizsves-form-span {
 	font-size: 19px;
 	font-weight: 600;
 	color: #000;
