@@ -319,9 +319,17 @@
       <section class="fronton" aria-label="Форма расчета панелей и комплектующих для фронтонов">
          <h2>Расчет панелей и комплектующих для фронтонов</h2>
          <div class="fronton-item-wrp">
-            <label>Тип фронтона:</label>
+            <label class="checkboxs-lable-title">Тип фронтона:</label>
             <!-- Формы для треугольного фронтона -->
+            <!--
             <input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugol" onchange ='showTreugolFrontonItems(this)'> <label class="light check-treugol-fronton" for="check-treugol">треугольный</label><br>
+            -->
+            <label class="custom-lable" for="check-treugol">
+               <input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugo" onchange ='showTreugolFrontonItems(this)'>
+               <i></i>
+               треугольный фронтон
+              </label>
+            
             <!-- Количество, размеры, свесы треугольных фронтонов -->
             <div class="select-treugol-fronton hidden" id="check-treugol-field">
                <!-- Начало формы для размеров треугольных фронтонов-->
@@ -662,7 +670,14 @@
                </div>
             </div>
             <!-- Формы для ломаного фронтона -->
-            <input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy" onchange ='showLomFrontonItems(this)'><label class="light" for="check-lom">ломаный</label><br>
+            <!--
+               <input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy" onchange ='showLomFrontonItems(this)'><label class="light" for="check-lom">ломаный</label><br>
+             -->
+               <label class="custom-lable" for="check-lom">
+               <input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy" onchange ='showLomFrontonItems(this)'>
+               <i></i>
+               ломаный фронтон
+              </label>
             <!-- Количество, размеры, свесы ломаных фронтонов -->
             <div class="select-lom-fronton hidden" id="check-lom-field">
                <!-- Начало формы для размеров ломаных фронтонов-->
@@ -1016,7 +1031,14 @@
                   <input class="lf-karnizsves-area-all2"  id="lf-karnizsves-area-all2-id" disabled type="number" name="lf-karnizsves-area-all2[]" step ="0.0001" min="0" aria-labelledby="lf-karnizsves-form-id lf-karnizsves-area-all2-id">
                </div>
             </div>
+            <!-- 
             <input type="checkbox" id="check-notfront" value="interest_notfront" name="notfront" onchange ='showNotFrontonItems(this)'><label class="light" for="check-notfront">без фронтона (вальмовая и шатровая крыша)</label><br>
+             -->
+            <label class="custom-lable" for="check-notfront">
+              <input type="checkbox" id="check-notfront" value="interest_notfront" name="notfront" onchange ='showNotFrontonItems(this)'>
+              <i></i>
+              без фронтона (вальмовая и шатровая крыша)
+             </label>
             <!-- Количество, размеры, свесов когда нет фронтонов -->
             <!-- notfront - без фронтонов -->
             <div class="select-notfront-fronton hidden" id="check-notfront-field">
@@ -1094,5 +1116,6 @@
             </div>
          </div>
       </section>
+
    </body>
 </html>

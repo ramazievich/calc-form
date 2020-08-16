@@ -334,7 +334,7 @@ button {
 .show-form-btn {
 	width: 250px;
 	text-align: left;
-	background-color: #1fbde7;
+	background-color: #d8d9db;
 	fill: white;
 	color: white;
 	padding: 8px 8px;
@@ -345,7 +345,7 @@ button {
 	-webkit-box-pack: space-evenly;
 	    -ms-flex-pack: space-evenly;
 	        justify-content: space-evenly;
-	border: 0.5px solid #19acd3;
+	border: 0.5px solid #c0c0c0;
 	outline: none;
 	border-radius: 4px;
 	border-width: 1px 1px 3px;
@@ -354,19 +354,34 @@ button {
 	cursor: pointer;
 }
 
-.show-form-btn:hover,
 .add-form-btn:hover {
 	background-color: #31c15c;
 	fill: rgb(250, 253, 54);
 	cursor: pointer;
 }
 
-.show-form-btn:active,
 .add-form-btn:active {
 	background-color: #4bc970;
 	fill: rgb(250, 253, 54);
 	cursor: pointer;
 }
+
+.show-form-btn:hover {
+background-color: #cccccc;
+fill: rgb(255, 255, 255);
+}
+
+.show-form-btn:active {
+    background-color: #09d5db;
+	fill: rgb(254, 254, 254);
+	border: 0.5px solid #1ec6cc;
+	outline: none;
+	border-radius: 4px;
+	border-width: 1px 1px 3px;
+	-webkit-box-shadow: 0 -1px 0 #1dd2d9 inset;
+	        box-shadow: 0 -1px 0 #1dd2d9 inset;
+}
+
 
 .remove-form-btn {
 	width: 20px;
@@ -434,12 +449,6 @@ legend {
 	border-radius: 100%;
 }
 
-@media screen and (min-width: 480px) {
-	form {
-		max-width: 480px;
-	}
-}
-
 .wall-form-span,
 .window-form-span,
 .door-form-span,
@@ -480,6 +489,9 @@ legend {
 	    align-content: flex-start;
 }
 
+.checkboxs-lable-title {
+	font-weight: 600;
+}
 label {
 	display: block;
 	margin-bottom: 8px;
@@ -489,3 +501,50 @@ label.light {
 	font-weight: 300;
 	display: inline;
 }
+
+label > input {
+	display: none;
+  }
+
+.custom-lable{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+  label i {
+	padding: 2px;
+	margin-right: 7px;
+	width: 40px;
+	height: 20px;
+	border-radius: 13px;
+	vertical-align: middle;
+	transition: 0.15s 0.09s;
+	position: relative;
+	background: #d8d9db;
+	box-sizing: initial;
+  }
+  label i:after {
+	content: " ";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	left: 2px;
+	top: 1.5px;
+	transition: 0.15s;
+  }
+  label > input:checked + i {
+	background: #4bd865;
+  }
+  label > input:checked + i:after {
+	transform: translateX(20px);
+  }
+  label:hover {
+	cursor: pointer;
+  }
