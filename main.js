@@ -1106,15 +1106,16 @@ function sumAllWidthLomFrontonFrontsves() {
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllWidthTreugFrontonKarnizsves() {
-	let widthTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-width");
-	let sum = 0;
-	[].forEach.call(widthTreugFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
+function sumAllHeightVneshUgol() {
+	let heightVneshUgol = document.getElementsByClassName("ugol_sum-width");
+	let sumVneshUgol = 0;
+	[].forEach.call(heightVneshUgol, function (el) {
+		sumVneshUgol += parseFloat(el.value);
+		console.log(sumVneshUgol);
 	});
-	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
+	document.getElementById("ugol_sum-width-all-id").value = sumVneshUgol;
 }
+
 
 
 
