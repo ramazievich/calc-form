@@ -1028,33 +1028,10 @@ function sumAllWidthTreugFrontonFrontsves() {
 }
 
 /**
-<<<<<<< HEAD
  * @function [sumAllWidthLomFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в ломаных фронтонах
  * @param {number} widthLomFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
-=======
- * @function [sumAllWidthLomFrontonWindows] Функция подсчета всех сумарных ширин оконных проемов в ломаных фронтонах
- * @param {number} widthLomFrontonWindows - переменная для поля сумарной ширины из формы
- * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
- * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
- */
-function sumAllWidthLomFrontonWindows() {
-	let widthLomFrontonWindows = document.getElementsByClassName("lf-window-sum-width");
-	let sum = 0;
-	[].forEach.call(widthLomFrontonWindows, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-window-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthTreugFrontonDoor] Функция подсчета всех сумарных ширин дверных проемов в треугольных фронтонах
- * @param {number} widthTreugolFrontonDoor - переменная для поля сумарной ширины из формы
- * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
- * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
->>>>>>> ca907d7daad43643ef7d354e9153c4f5e674e274
  */
 function sumAllWidthLomFrontonFrontsves() {
 	let widthLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-width");
@@ -1067,29 +1044,8 @@ function sumAllWidthLomFrontonFrontsves() {
 }
 
 /**
-<<<<<<< HEAD
  * @function [sumAllWidthTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
  * @param {number} widthTreugFrontonKarnizsves - переменная для поля сумарной высот из формы
-=======
- * @function [sumAllWidthLomFrontonDoor] Функция подсчета всех сумарных ширин дверных проемов в ломаных фронтонах
- * @param {number} widthLomFrontonDoor - переменная для поля сумарной ширины из формы
- * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
- * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
- */
-function sumAllWidthLomFrontonDoor() {
-	let widthLomFrontonDoor = document.getElementsByClassName("lf-door-sum-width");
-	let sum = 0;
-	[].forEach.call(widthLomFrontonDoor, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-door-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthTreugFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
- * @param {number} widthTreugFrontonFrontsves - переменная для поля сумарной высот из формы
->>>>>>> ca907d7daad43643ef7d354e9153c4f5e674e274
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
  */
@@ -1120,17 +1076,10 @@ function sumAllWidthLomFrontonKarnizsves() {
 }
 
 /**
-<<<<<<< HEAD
  * @function [sumAllWidthDoors] Функция подсчета всех сумарных ширин дверных проемов
  * @param {number} widthDoors - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
-=======
- * @function [sumAllWidthLomFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в ломаных фронтонах
- * @param {number} widthLomFrontonFrontsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
->>>>>>> ca907d7daad43643ef7d354e9153c4f5e674e274
  */
 function sumAllWidthLomFrontonFrontsves() {
 	let widthLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-width");
@@ -1143,17 +1092,10 @@ function sumAllWidthLomFrontonFrontsves() {
 }
 
 /**
-<<<<<<< HEAD
  * @function [sumAllHeightVneshUgol] Функция подсчета всех сумарных высот внешних углов из всех форм
  * @param {number} heightVneshUgol - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
-=======
- * @function [sumAllWidthTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
- * @param {number} widthTreugFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
->>>>>>> ca907d7daad43643ef7d354e9153c4f5e674e274
  */
 function sumAllWidthTreugFrontonKarnizsves() {
 	let widthTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-width");
@@ -1166,73 +1108,6 @@ function sumAllWidthTreugFrontonKarnizsves() {
 }
 
 /**
-<<<<<<< HEAD
-=======
- * @function [sumAllWidthLomFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в ломаных фронтонах
- * @param {number} widthLomFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllWidthLomFrontonKarnizsves() {
-	let widthLomFrontonKarnizsves = document.getElementsByClassName("lf-karnizsves-sum-width");
-	let sum = 0;
-	[].forEach.call(widthLomFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-karnizsves-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthNotFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов когда нет фронтонов
- * @param {number} widthNotFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllWidthNotFrontonKarnizsves() {
-	let widthNotFrontonKarnizsves = document.getElementsByClassName("notfront-karnizsves-sum-width");
-	let sum = 0;
-	[].forEach.call(widthNotFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("notfront-karnizsves-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthDoors] Функция подсчета всех сумарных ширин дверных проемов
- * @param {number} widthDoors - переменная для поля сумарной ширины из формы
- * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
- * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
- */
-function sumAllWidthDoors() {
-	let widthDoors = document.getElementsByClassName("door_sum-width");
-	let sum = 0;
-	[].forEach.call(widthDoors, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("door_sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllHeightVneshUgol] Функция подсчета всех сумарных высот внешних углов из всех форм
- * @param {number} heightVneshUgol - переменная для поля сумарной ширины из формы
- * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
- * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
- */
-function sumAllHeightVneshUgol() {
-	let heightVneshUgol = document.getElementsByClassName("ugol_sum-width");
-	let sumVneshUgol = 0;
-	[].forEach.call(heightVneshUgol, function (el) {
-		sumVneshUgol += parseFloat(el.value);
-		console.log(sumVneshUgol);
-	});
-	document.getElementById("ugol_sum-width-all-id").value = sumVneshUgol;
-}
-
-/**
->>>>>>> ca907d7daad43643ef7d354e9153c4f5e674e274
  * @function [sumAllHeightInnerUgol] Функция подсчета всех сумарных высот внутренних углов из всех форм
  * @param {number} heightInnerUgol - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
@@ -1269,73 +1144,6 @@ function sumAllHeightTreugFrontonFrontsves() {
  * @param {number} heightLomFrontonFrontsves - переменная для поля сумарной высот из формы
  * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
  * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
-<<<<<<< HEAD
-=======
- */
-function sumAllHeightLomFrontonFrontsves() {
-	let heightLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-height");
-	let sum = 0;
-	[].forEach.call(heightLomFrontonFrontsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-frontsves-sum-height-all-id").value = sum;
-}
-
-/**
- * @function [sumAllHeightTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
- * @param {number} heightTreugFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllHeightTreugFrontonKarnizsves() {
-	let heightTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-height");
-	let sum = 0;
-	[].forEach.call(heightTreugFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("tf-karnizsves-sum-height-all-id").value = sum;
-}
-
-/**
- * @function [sumAllHeightLomFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в ломаных фронтонах
- * @param {number} heightLomFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllHeightLomFrontonKarnizsves() {
-	let heightLomFrontonKarnizsves = document.getElementsByClassName("lf-karnizsves-sum-height");
-	let sum = 0;
-	[].forEach.call(heightLomFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-karnizsves-sum-height-all-id").value = sum;
-}
-
-/**
- * @function [sumAllHeightNotFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов когда нет фронтонов
- * @param {number} heightNotFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllHeightNotFrontonKarnizsves() {
-	let heightNotFrontonKarnizsves = document.getElementsByClassName("notfront-karnizsves-sum-height");
-	let sum = 0;
-	[].forEach.call(heightNotFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("notfront-karnizsves-sum-height-all-id").value = sum;
-}
-
-/**
- * Кнопка добавления новой формы для стен в разделе стены
- * @param {node} node - переменная для всей формы
- * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
- * @param {newFormStenaId} newFormStenaId - добавляем новую форму
->>>>>>> ca907d7daad43643ef7d354e9153c4f5e674e274
  */
 function sumAllHeightLomFrontonFrontsves() {
 	let heightLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-height");
