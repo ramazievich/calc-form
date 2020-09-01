@@ -1106,14 +1106,14 @@ function sumAllWidthLomFrontonFrontsves() {
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllHeightVneshUgol() {
-	let heightVneshUgol = document.getElementsByClassName("ugol_sum-width");
-	let sumVneshUgol = 0;
-	[].forEach.call(heightVneshUgol, function (el) {
-		sumVneshUgol += parseFloat(el.value);
-		console.log(sumVneshUgol);
+function sumAllWidthTreugFrontonKarnizsves() {
+	let widthTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-width");
+	let sum = 0;
+	[].forEach.call(widthTreugFrontonKarnizsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
 	});
-	document.getElementById("ugol_sum-width-all-id").value = sumVneshUgol;
+	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
 }
 
 
@@ -2057,6 +2057,64 @@ function deleteFormTreugFrontonKarnizsvesTemplate(btn) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
 		deleteTreugFrontonKarnizsves();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();		
+	}	
+}
+
+function deleteTreugFrontonKarnizsvesTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.tf-karnizsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+	}
+}
+
+function deleteFormTreugFrontonKarnizsves(btn) {
+	let forms = document.getElementsByClassName('tf-karnizsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
+		eleteTreugFrontonKarnizsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
+		eleteTreugFrontonKarnizsves();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();		
+	}	
+}
+
+function deleteTreugFrontonKarnizsves(){
+	let wrpFormInnerUgol = document.querySelector('.tf-karnizsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+	}
+}
+
+function deleteFormTreugFrontonKarnizsvesTemplate(btn) {
+	let forms = document.getElementsByClassName('tf-karnizsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
+		eleteTreugFrontonKarnizsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
+		eleteTreugFrontonKarnizsves();
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();		
