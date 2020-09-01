@@ -2,7 +2,6 @@
 /**
  * @function [funcStena] Функция подсчета площади стены для одной формы
  * @param {allForms} allForms переменная для формы подсчета площади стен
- * @param {number} stena - поле ввода количества стен
  * @param {number} dlina - поле ввода длины стены
  * @param {number} visota - поле ввода высоты стены
  * @param {number} result - результат подсчета
@@ -14,14 +13,11 @@ function funcStena() {
 	allForms = document.querySelectorAll(".walls-form");
 	for (let i = 0, max = allForms.length; i < max; i++) {
 		let form = allForms[i];
-		console.log(form.querySelector(".wf_wall"));
-		let stena = Number(form.querySelector(".wf_wall").value);
-		stena = parseFloat(stena);
 		let dlina = Number(form.querySelector(".wf_length").value);
 		dlina = parseFloat(dlina);
 		let visota = Number(form.querySelector(".wf_height").value);
 		visota = parseFloat(visota);
-		let result = (dlina + visota) * stena;
+		let result = (dlina * visota);
 		form.querySelector(".wf_result-wall").value = result;
 	}
 }
@@ -29,7 +25,6 @@ function funcStena() {
 /**
  * @function [funcWindow] Функция подсчета площади оконного проема для одной формы
  * @param {allFormsWindow} allFormsWindow переменная для формы подсчета площади оконнх проемов
- * @param {number} okno - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
  * @param {number} visota - поле ввода высоты оконного проема
  * @param {number} result - результат подсчета
@@ -42,14 +37,11 @@ function funcWindow() {
 	allFormsWindow = document.querySelectorAll(".windows-form");
 	for (let i = 0, max = allFormsWindow.length; i < max; i++) {
 		let form = allFormsWindow[i];
-		console.log(form.querySelector(".window_wall"));
-		let okno = Number(form.querySelector(".window_wall").value);
-		okno = parseFloat(okno);
 		let shirina = Number(form.querySelector(".window_length").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".window_height").value);
 		visota = parseFloat(visota);
-		let result = (shirina + visota) * okno;
+		let result = (shirina * visota);
 		form.querySelector(".window_result-window").value = result;
 	}
 }
@@ -57,7 +49,6 @@ function funcWindow() {
 /**
  * @function [funcTreugFrontonWindow] Функция подсчета площади оконного проема для одной формы в треугольных фронтонах
  * @param {allFormsTreugFrontonWindow} allFormsTreugFrontonWindow переменная для формы подсчета площади оконных проемов в треугольных фронтонах
- * @param {number} okno - поле ввода количества оконных проемов в треугольных фронтонах
  * @param {number} shirina - поле ввода ширины оконного проема в треугольных фронтонах
  * @param {number} visota - поле ввода высоты оконного проема в треугольных фронтонах
  * @param {number} result - результат подсчета
@@ -147,24 +138,24 @@ function funcTreugFrontonDoor() {
  * @param {number} result - результат подсчета
  */
 
-let allFormsLomFrontonDoor = document.querySelectorAll(".lf-door-form");
-console.log(allFormsTreugFrontonDoor);
-
-function funcLomFrontonDoor() {
-	allFormsLomFrontonDoor = document.querySelectorAll(".lf-door-form");
-	for (let i = 0, max = allFormsLomFrontonDoor.length; i < max; i++) {
-		let form = allFormsLomFrontonDoor[i];
-		console.log(form.querySelector(".lf-door-num"));
-		let dver = Number(form.querySelector(".lf-door-num").value);
-		dver = parseFloat(dver);
-		let shirina = Number(form.querySelector(".lf-door-length").value);
-		shirina = parseFloat(shirina);
-		let visota = Number(form.querySelector(".lf-door-height").value);
-		visota = parseFloat(visota);
-		let result = (shirina + visota) * dver;
-		form.querySelector(".lf-door-result").value = result;
-	}
-}
+// let allFormsLomFrontonDoor = document.querySelectorAll(".lf-door-form");
+// console.log(allFormsTreugFrontonDoor);
+//
+// function funcLomFrontonDoor() {
+// 	allFormsLomFrontonDoor = document.querySelectorAll(".lf-door-form");
+// 	for (let i = 0, max = allFormsLomFrontonDoor.length; i < max; i++) {
+// 		let form = allFormsLomFrontonDoor[i];
+// 		console.log(form.querySelector(".lf-door-num"));
+// 		let dver = Number(form.querySelector(".lf-door-num").value);
+// 		dver = parseFloat(dver);
+// 		let shirina = Number(form.querySelector(".lf-door-length").value);
+// 		shirina = parseFloat(shirina);
+// 		let visota = Number(form.querySelector(".lf-door-height").value);
+// 		visota = parseFloat(visota);
+// 		let result = (shirina + visota) * dver;
+// 		form.querySelector(".lf-door-result").value = result;
+// 	}
+// }
 
 /**
  * @function [funcTreugFrontonFrontsves] Функция подсчета площади фронтонного свеса для одной формы в треугольных фронтонах
@@ -182,14 +173,11 @@ function funcTreugFrontonFrontsves() {
 	allFormsTreugFrontonFrontsves = document.querySelectorAll(".tf-frontsves-form");
 	for (let i = 0, max = allFormsTreugFrontonFrontsves.length; i < max; i++) {
 		let form = allFormsTreugFrontonFrontsves[i];
-		console.log(form.querySelector(".tf-frontsves-num"));
-		let frontsves = Number(form.querySelector(".tf-frontsves-num").value);
-		frontsves = parseFloat(frontsves);
 		let shirina = Number(form.querySelector(".tf-frontsves-length").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".tf-frontsves-height").value);
 		visota = parseFloat(visota);
-		let result = (shirina + visota) * frontsves;
+		let result = (shirina * visota);
 		form.querySelector(".tf-frontsves-result").value = result;
 	}
 }
@@ -210,16 +198,13 @@ function funcLomFrontonFrontsves() {
 	allFormsLomFrontonFrontsves = document.querySelectorAll(".lf-frontsves-form");
 	for (let i = 0, max = allFormsLomFrontonFrontsves.length; i < max; i++) {
 		let form = allFormsLomFrontonFrontsves[i];
-		console.log(form.querySelector(".lf-frontsves-num"));
-		let frontsves = Number(form.querySelector(".lf-frontsves-num").value);
-		frontsves = parseFloat(frontsves);
 		let shirina = Number(form.querySelector(".lf-frontsves-length").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".lf-frontsves-height").value);
 		visota = parseFloat(visota);
 		let visota2 = Number(form.querySelector(".lf-frontsves-height2").value);
 		visota2 = parseFloat(visota2);
-		let result = (shirina + visota + visota2) * frontsves;
+		let result = shirina * (visota + visota2);
 		form.querySelector(".lf-frontsves-result").value = result;
 	}
 }
@@ -240,14 +225,11 @@ function funcTreugFrontonKarnizsves() {
 	allFormsTreugFrontonKarnizsves = document.querySelectorAll(".tf-karnizsves-form");
 	for (let i = 0, max = allFormsTreugFrontonKarnizsves.length; i < max; i++) {
 		let form = allFormsTreugFrontonKarnizsves[i];
-		console.log(form.querySelector(".tf-karnizsves-num"));
-		let karnizsves = Number(form.querySelector(".tf-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
 		let shirina = Number(form.querySelector(".tf-karnizsves-length").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".tf-karnizsves-height").value);
 		visota = parseFloat(visota);
-		let result = (shirina + visota) * karnizsves;
+		let result = (shirina * visota);
 		form.querySelector(".tf-karnizsves-result").value = result;
 	}
 }
@@ -268,56 +250,18 @@ function funcLomFrontonKarnizsves() {
 	allFormsLomFrontonKarnizsves = document.querySelectorAll(".lf-karnizsves-form");
 	for (let i = 0, max = allFormsLomFrontonKarnizsves.length; i < max; i++) {
 		let form = allFormsLomFrontonKarnizsves[i];
-		console.log(form.querySelector(".lf-karnizsves-num"));
-		let karnizsves = Number(form.querySelector(".lf-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
 		let shirina = Number(form.querySelector(".lf-karnizsves-length").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".lf-karnizsves-height").value);
 		visota = parseFloat(visota);
-		let result = (shirina + visota) * karnizsves;
+		let result = (shirina * visota);
 		form.querySelector(".lf-karnizsves-result").value = result;
-	}
-}
-
-/**
- * @function [funcNotFrontonKarnizsves] Функция подсчета площади карнизного свеса для одной формы когда без фронтонов
- * @param {allFormsNotFrontonKarnizsves} allFormsNotFrontonKarnizsves переменная для формы подсчета площади карнизного свеса когда без фронтонов
- * @param {number} karnizsves - поле ввода количества фронтонных свесов когда без фронтонов
- * @param {number} shirina - поле ввода ширины карнизного свеса когда без фронтонов
- * @param {number} shirina2 - поле ввода ширины карнизного свеса когда без фронтонов
- * @param {number} visota - поле ввода высоты карнизного свеса когда без фронтонов
- * @param {number} visota2 - поле ввода высоты карнизного свеса когда без фронтонов
- * @param {number} result - результат подсчета
- */
-
-let allFormsNotFrontonKarnizsves = document.querySelectorAll(".notfront-karnizsves-form");
-console.log(allFormsNotFrontonKarnizsves);
-
-function funcNotFrontonKarnizsves() {
-	allFormsNotFrontonKarnizsves = document.querySelectorAll(".notfront-karnizsves-form");
-	for (let i = 0, max = allFormsNotFrontonKarnizsves.length; i < max; i++) {
-		let form = allFormsNotFrontonKarnizsves[i];
-		console.log(form.querySelector(".notfront-karnizsves-num"));
-		let karnizsves = Number(form.querySelector(".notfront-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
-		let shirina = Number(form.querySelector(".notfront-karnizsves-length").value);
-		shirina = parseFloat(shirina);
-		let shirina2 = Number(form.querySelector(".notfront-karnizsves-length2").value);
-		shirina2 = parseFloat(shirina2);
-		let visota = Number(form.querySelector(".notfront-karnizsves-height").value);
-		visota = parseFloat(visota);
-		let visota2 = Number(form.querySelector(".notfront-karnizsves-height2").value);
-		visota2 = parseFloat(visota2);
-		let result = (shirina + visota + shirina2 + visota2) * karnizsves;
-		form.querySelector(".notfront-karnizsves-result").value = result;
 	}
 }
 
 /**
  * @function [funcDoor] функция подсчета площади дверного проема для одной формы
  * @param {allFormsDoor} allFormsDoor переменная для формы подсчета площади дверных проемов
- * @param {number} dver - поле ввода количества дверных проемов
  * @param {number} shirina - поле ввода ширины дверного проема
  * @param {number} visota - поле ввода высоты дверного проема
  * @param {number} result - результат подсчета
@@ -330,14 +274,11 @@ function funcDoor() {
 	allFormsDoor = document.querySelectorAll(".doors-form");
 	for (let i = 0, max = allFormsDoor.length; i < max; i++) {
 		let form = allFormsDoor[i];
-		console.log(form.querySelector(".door_wall"));
-		let dver = Number(form.querySelector(".door_wall").value);
-		dver = parseFloat(dver);
 		let shirina = Number(form.querySelector(".door_length").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".door_height").value);
 		visota = parseFloat(visota);
-		let result = (shirina + visota) * dver;
+		let result = (shirina * visota);
 		form.querySelector(".door_result-door").value = result;
 	}
 }
@@ -356,14 +297,11 @@ function funcTreugFronton() {
 	allFormsTreugFronton = document.querySelectorAll(".tf-form");
 	for (let i = 0, max = allFormsTreugFronton.length; i < max; i++) {
 		let form = allFormsTreugFronton[i];
-		console.log(form.querySelector(".tf-number"));
-		let fronton = Number(form.querySelector(".tf-number").value);
-		fronton = parseFloat(fronton);
 		let shirina = Number(form.querySelector(".tf-width").value);
 		shirina = parseFloat(shirina);
 		let visota = Number(form.querySelector(".tf-height").value);
 		visota = parseFloat(visota);
-		let result = (shirina + visota) * fronton;
+		let result = (shirina * visota);
 		form.querySelector(".tf-area").value = result;
 	}
 }
@@ -382,9 +320,6 @@ function funcLomFronton() {
 	allFormsLomFronton = document.querySelectorAll(".lf-form");
 	for (let i = 0, max = allFormsLomFronton.length; i < max; i++) {
 		let form = allFormsLomFronton[i];
-		console.log(form.querySelector(".lf-number"));
-		let fronton = Number(form.querySelector(".lf-number").value);
-		fronton = parseFloat(fronton);
 		let shirina = Number(form.querySelector(".lf-width").value);
 		shirina = parseFloat(shirina);
 		let shirina2 = Number(form.querySelector(".lf-width2").value);
@@ -393,7 +328,10 @@ function funcLomFronton() {
 		visota = parseFloat(visota);
 		let visota2 = Number(form.querySelector(".lf-height2").value);
 		visota2 = parseFloat(visota2);
-		let result = (shirina + visota + shirina2 + visota2) * fronton;
+		let s1 = (shirina - shirina2) / visota;
+		let s2 = 0.5 * shirina2 * visota2;
+		let s3 = shirina2 * visota;
+		let result = (s1 + s2 + s3);
 		form.querySelector(".lf-area").value = result;
 	}
 }
@@ -402,7 +340,6 @@ function funcLomFronton() {
 /**
  * @function [funcCornerVnesh] функция подсчета высоты внешнего угла для одной формы
  * @param {allFormsCornerVnesh} allFormsCornerVnesh переменная для формы подсчета высоты внешнего угла
- * @param {number} ugol - поле ввода количества внешних углов
  * @param {number} visota - поле ввода высоты внешнего угла
  * @param {number} result - результат подсчета
  */
@@ -414,12 +351,9 @@ function funcCornerVnesh() {
 	allFormsCornerVnesh = document.querySelectorAll(".ugol-vnesh-form");
 	for (let i = 0, max = allFormsCornerVnesh.length; i < max; i++) {
 		let form = allFormsCornerVnesh[i];
-		console.log(form.querySelector(".ugol-quantity"));
-		let ugol = Number(form.querySelector(".ugol-quantity").value);
-		ugol = parseFloat(ugol);
 		let visota = Number(form.querySelector(".ugol_height").value);
 		visota = parseFloat(visota);
-		let result = ugol * visota;
+		let result = visota;
 		form.querySelector(".ugol_sum-width").value = result;
 	}
 }
@@ -439,12 +373,9 @@ function funcCornerInner() {
 	allFormsCornerInner = document.querySelectorAll(".ugol-inner-form");
 	for (let i = 0, max = allFormsCornerInner.length; i < max; i++) {
 		let form = allFormsCornerInner[i];
-		console.log(form.querySelector(".ugol-inner-quantity"));
-		let ugolInner = Number(form.querySelector(".ugol-inner-quantity").value);
-		ugolInner = parseFloat(ugolInner);
 		let visota = Number(form.querySelector(".ugol-inner_height").value);
 		visota = parseFloat(visota);
-		let result = ugolInner * visota;
+		let result = visota;
 		form.querySelector(".ugol-inner_sum-width").value = result;
 	}
 }
@@ -503,15 +434,31 @@ function sumAreasWindow() {
  * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
  * @param {number} sumTreugFrontonWindows - сумма всех площадей после сложения
  */
-function sumAreasTreugFrontonWindow() {
-	let areasTreugFrontonWindows = document.getElementsByClassName("tf-window-result");
-	let sumTreugFrontonWindows = 0;
-	[].forEach.call(areasTreugFrontonWindows, function (el) {
-		sumTreugFrontonWindows += parseFloat(el.value);
-		console.log(sumTreugFrontonWindows);
-	});
-	document.getElementById("tf-window-area-all2-id").value = sumTreugFrontonWindows;
-}
+// function sumAreasTreugFrontonWindow() {
+// 	let areasTreugFrontonWindows = document.getElementsByClassName("tf-window-result");
+// 	let sumTreugFrontonWindows = 0;
+// 	[].forEach.call(areasTreugFrontonWindows, function (el) {
+// 		sumTreugFrontonWindows += parseFloat(el.value);
+// 		console.log(sumTreugFrontonWindows);
+// 	});
+// 	document.getElementById("tf-window-area-all2-id").value = sumTreugFrontonWindows;
+// }
+
+/**
+ * @function [sumAreasLomFrontonWindow] функция для сумирования всех площадей оконных проемов со всех форм в ломаных фронтонах
+ * @param {number} areasLomFrontonWindows - переменная поля с площадью оконных проемов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumLomFrontonWindows - сумма всех площадей после сложения
+ */
+// function sumAreasLomFrontonWindow() {
+// 	let areasLomFrontonWindows = document.getElementsByClassName("lf-window-result");
+// 	let sumLomFrontonWindows = 0;
+// 	[].forEach.call(areasLomFrontonWindows, function (el) {
+// 		sumLomFrontonWindows += parseFloat(el.value);
+// 		console.log(sumLomFrontonWindows);
+// 	});
+// 	document.getElementById("lf-window-area-all2-id").value = sumLomFrontonWindows;
+// }
 
 /**
  * @function [sumAreasLomFrontonWindow] функция для сумирования всех площадей оконных проемов со всех форм в ломаных фронтонах
@@ -535,15 +482,31 @@ function sumAreasLomFrontonWindow() {
  * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
  * @param {number} sumTreugFrontonDoor - сумма всех площадей после сложения
  */
-function sumAreasTreugFrontonDoor() {
-	let areasTreugFrontonDoor = document.getElementsByClassName("tf-door-result");
-	let sumTreugFrontonDoor = 0;
-	[].forEach.call(areasTreugFrontonDoor, function (el) {
-		sumTreugFrontonDoor += parseFloat(el.value);
-		console.log(sumTreugFrontonDoor);
-	});
-	document.getElementById("tf-door-area-all2-id").value = sumTreugFrontonDoor;
-}
+// function sumAreasTreugFrontonDoor() {
+// 	let areasTreugFrontonDoor = document.getElementsByClassName("tf-door-result");
+// 	let sumTreugFrontonDoor = 0;
+// 	[].forEach.call(areasTreugFrontonDoor, function (el) {
+// 		sumTreugFrontonDoor += parseFloat(el.value);
+// 		console.log(sumTreugFrontonDoor);
+// 	});
+// 	document.getElementById("tf-door-area-all2-id").value = sumTreugFrontonDoor;
+// }
+
+/**
+ * @function [sumAreasLomFrontonDoor] функция для сумирования всех площадей дверных проемов со всех форм в ломаных фронтонах
+ * @param {number} areasLomFrontonDoor - переменная поля с площадью дверных проемов
+ * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
+ * @param {number} sumLomFrontonDoor - сумма всех площадей после сложения
+ */
+// function sumAreasLomFrontonDoor() {
+// 	let areasLomFrontonDoor = document.getElementsByClassName("lf-door-result");
+// 	let sumLomFrontonDoor = 0;
+// 	[].forEach.call(areasLomFrontonDoor, function (el) {
+// 		sumLomFrontonDoor += parseFloat(el.value);
+// 		console.log(sumLomFrontonDoor);
+// 	});
+// 	document.getElementById("lf-door-area-all2-id").value = sumLomFrontonDoor;
+// }
 
 /**
  * @function [sumAreasLomFrontonDoor] функция для сумирования всех площадей дверных проемов со всех форм в ломаных фронтонах
@@ -627,22 +590,6 @@ function sumAreasLomFrontonKarnizsves() {
 }
 
 /**
- * @function [sumAreasNotFrontonKarnizsves] функция для сумирования всех площадей карнизных свесов со всех форм когда нет фронтонов
- * @param {number} areasNotFrontonKarnizsves - переменная поля с площадью карнизных свесов
- * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
- * @param {number} sumNotFrontonKarnizsves - сумма всех площадей после сложения
- */
-function sumAreasNotFrontonKarnizsves() {
-	let areaNotFrontonKarnizsves = document.getElementsByClassName("notfront-karnizsves-result");
-	let sumNotFrontonKarnizsves = 0;
-	[].forEach.call(areaNotFrontonKarnizsves, function (el) {
-		sumNotFrontonKarnizsves += parseFloat(el.value);
-		console.log(sumNotFrontonKarnizsves);
-	});
-	document.getElementById("notfront-karnizsves-area-all2-id").value = sumNotFrontonKarnizsves;
-}
-
-/**
  * @function [sumAreasDoor] функция для сумирования всех площадей дверных проемов со всех форм
  * @param {number} areasDoors - переменная поля с площадью дверных проемов
  * @param [function (el)] - функция перебора и сумирования всех полученных площадей из всех форм
@@ -702,12 +649,9 @@ function sumAreasLomFronton() {
 function perimeter() {
 	for (let i = 0, max = allForms.length; i < max; i++) {
 		let form = allForms[i];
-		console.log(form.querySelectorAll(".wf_wall"));
-		let stena = Number(form.querySelector(".wf_wall").value);
-		stena = parseFloat(stena);
 		let dlina = Number(form.querySelector(".wf_length").value);
 		dlina = parseFloat(dlina);
-		let result = dlina * stena;
+		let result = dlina;
 		form.querySelector(".wf_perimeter").value = result;
 	}
 }
@@ -715,19 +659,15 @@ function perimeter() {
 /**
  * @function [sumWidthWindows] Функция подсчета сумарной ширины оконного проема для одной формы
  * @param {allFormsWindow} formWindow переменная для формы подсчета площади оконного проема
- * @param {number} window - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
  * @param {number} result - результат подсчета
  */
 function sumWidthWindows() {
 	for (let i = 0, max = allFormsWindow.length; i < max; i++) {
 		let formWindow = allFormsWindow[i];
-		console.log(formWindow.querySelectorAll(".window_wall"));
-		let window = Number(formWindow.querySelector(".window_wall").value);
-		window = parseFloat(window);
 		let shirina = Number(formWindow.querySelector(".window_length").value);
 		shirina = parseFloat(shirina);
-		let result = shirina * window;
+		let result = shirina;
 		formWindow.querySelector(".window_sum-width").value = result;
 	}
 }
@@ -822,12 +762,9 @@ function sumWidthLomFrontonDoor() {
 function sumWidthTreugFrontonFrontsves() {
 	for (let i = 0, max = allFormsTreugFrontonFrontsves.length; i < max; i++) {
 		let formTreugFrontonFrontsves = allFormsTreugFrontonFrontsves[i];
-		console.log(formTreugFrontonFrontsves.querySelectorAll(".tf-frontsves-num"));
-		let frontsves = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-num").value);
-		frontsves = parseFloat(frontsves);
 		let shirina = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-length").value);
 		shirina = parseFloat(shirina);
-		let result = shirina * frontsves;
+		let result = shirina;
 		formTreugFrontonFrontsves.querySelector(".tf-frontsves-sum-width").value = result;
 	}
 }
@@ -842,12 +779,9 @@ function sumWidthTreugFrontonFrontsves() {
 function sumWidthLomFrontonFrontsves() {
 	for (let i = 0, max = allFormsLomFrontonFrontsves.length; i < max; i++) {
 		let formLomFrontonFrontsves = allFormsLomFrontonFrontsves[i];
-		console.log(formLomFrontonFrontsves.querySelectorAll(".lf-frontsves-num"));
-		let frontsves = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-num").value);
-		frontsves = parseFloat(frontsves);
 		let shirina = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-length").value);
 		shirina = parseFloat(shirina);
-		let result = shirina * frontsves;
+		let result = shirina;
 		formLomFrontonFrontsves.querySelector(".lf-frontsves-sum-width").value = result;
 	}
 }
@@ -862,12 +796,9 @@ function sumWidthLomFrontonFrontsves() {
 function sumWidthTreugFrontonKarnizsves() {
 	for (let i = 0, max = allFormsTreugFrontonKarnizsves.length; i < max; i++) {
 		let formTreugFrontonKarnizsves = allFormsTreugFrontonKarnizsves[i];
-		console.log(formTreugFrontonKarnizsves.querySelectorAll(".tf-karnizsves-num"));
-		let karnizsves = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
 		let shirina = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-length").value);
 		shirina = parseFloat(shirina);
-		let result = shirina * karnizsves;
+		let result = shirina;
 		formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-sum-width").value = result;
 	}
 }
@@ -882,54 +813,26 @@ function sumWidthTreugFrontonKarnizsves() {
 function sumWidthLomFrontonKarnizsves() {
 	for (let i = 0, max = allFormsLomFrontonKarnizsves.length; i < max; i++) {
 		let formLomFrontonKarnizsves = allFormsLomFrontonKarnizsves[i];
-		console.log(formLomFrontonKarnizsves.querySelectorAll(".lf-karnizsves-num"));
-		let karnizsves = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
 		let shirina = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-length").value);
 		shirina = parseFloat(shirina);
-		let result = shirina * karnizsves;
+		let result = shirina;
 		formLomFrontonKarnizsves.querySelector(".lf-karnizsves-sum-width").value = result;
 	}
 }
 
-/**
- * @function [sumWidthNotFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы когда нет фронтонов
- * @param {allFormsNotFrontonKarnizsves} formNotFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
- * @param {number} karnizsves - поле ввода количества карнизных свесов
- * @param {number} shirina - поле ввода ширины карнизного свеса
- * @param {number} result - результат подсчета
- */
-function sumWidthNotFrontonKarnizsves() {
-	for (let i = 0, max = allFormsNotFrontonKarnizsves.length; i < max; i++) {
-		let formNotFrontonKarnizsves = allFormsNotFrontonKarnizsves[i];
-		console.log(formNotFrontonKarnizsves.querySelectorAll(".notfront-karnizsves-num"));
-		let karnizsves = Number(formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
-		let shirina = Number(formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-length").value);
-		shirina = parseFloat(shirina);
-		let shirina2 = Number(formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-length2").value);
-		shirina2 = parseFloat(shirina2);
-		let result = (shirina + shirina2) * karnizsves;
-		formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-sum-width").value = result;
-	}
-}
 
 /**
  * @function [sumWidthDoors] Функция подсчета сумарной ширины дверного проема для одной формы
  * @param {allFormsDoor} formDoor переменная для формы подсчета площади дверного проема
- * @param {number} door - поле ввода количества дверных проемов
  * @param {number} shirina - поле ввода ширины дверного проема
  * @param {number} result - результат подсчета
  */
 function sumWidthDoors() {
 	for (let i = 0, max = allFormsDoor.length; i < max; i++) {
 		let formDoor = allFormsDoor[i];
-		console.log(formDoor.querySelectorAll(".door_wall"));
-		let door = Number(formDoor.querySelector(".door_wall").value);
-		door = parseFloat(door);
 		let shirina = Number(formDoor.querySelector(".door_length").value);
 		shirina = parseFloat(shirina);
-		let result = shirina * door;
+		let result = shirina;
 		formDoor.querySelector(".door_sum-width").value = result;
 	}
 }
@@ -944,12 +847,9 @@ function sumWidthDoors() {
 function sumHeightTreugFrontonFrontsves() {
 	for (let i = 0, max = allFormsTreugFrontonFrontsves.length; i < max; i++) {
 		let formTreugFrontonFrontsves = allFormsTreugFrontonFrontsves[i];
-		console.log(formTreugFrontonFrontsves.querySelectorAll(".tf-frontsves-num"));
-		let frontsves = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-num").value);
-		frontsves = parseFloat(frontsves);
 		let height = Number(formTreugFrontonFrontsves.querySelector(".tf-frontsves-height").value);
 		height = parseFloat(height);
-		let result = height * frontsves;
+		let result = height;
 		formTreugFrontonFrontsves.querySelector(".tf-frontsves-sum-height").value = result;
 	}
 }
@@ -964,14 +864,11 @@ function sumHeightTreugFrontonFrontsves() {
 function sumHeightLomFrontonFrontsves() {
 	for (let i = 0, max = allFormsLomFrontonFrontsves.length; i < max; i++) {
 		let formLomFrontonFrontsves = allFormsLomFrontonFrontsves[i];
-		console.log(formLomFrontonFrontsves.querySelectorAll(".lf-frontsves-num"));
-		let frontsves = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-num").value);
-		frontsves = parseFloat(frontsves);
 		let height = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-height").value);
 		height = parseFloat(height);
 		let height2 = Number(formLomFrontonFrontsves.querySelector(".lf-frontsves-height2").value);
 		height2 = parseFloat(height2);
-		let result = (height + height2) * frontsves;
+		let result = (height + height2);
 		formLomFrontonFrontsves.querySelector(".lf-frontsves-sum-height").value = result;
 	}
 }
@@ -986,12 +883,9 @@ function sumHeightLomFrontonFrontsves() {
 function sumHeightTreugFrontonKarnizsves() {
 	for (let i = 0, max = allFormsTreugFrontonKarnizsves.length; i < max; i++) {
 		let formTreugFrontonKarnizsves = allFormsTreugFrontonKarnizsves[i];
-		console.log(formTreugFrontonKarnizsves.querySelectorAll(".tf-karnizsves-num"));
-		let karnizsves = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
 		let height = Number(formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-height").value);
 		height = parseFloat(height);
-		let result = height * karnizsves;
+		let result = height;
 		formTreugFrontonKarnizsves.querySelector(".tf-karnizsves-sum-height").value = result;
 	}
 }
@@ -1006,38 +900,13 @@ function sumHeightTreugFrontonKarnizsves() {
 function sumHeightLomFrontonKarnizsves() {
 	for (let i = 0, max = allFormsLomFrontonKarnizsves.length; i < max; i++) {
 		let formLomFrontonKarnizsves = allFormsLomFrontonKarnizsves[i];
-		console.log(formLomFrontonKarnizsves.querySelectorAll(".lf-karnizsves-num"));
-		let karnizsves = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
 		let height = Number(formLomFrontonKarnizsves.querySelector(".lf-karnizsves-height").value);
 		height = parseFloat(height);
-		let result = height * karnizsves;
+		let result = height;
 		formLomFrontonKarnizsves.querySelector(".lf-karnizsves-sum-height").value = result;
 	}
 }
 
-/**
- * @function [sumHeightNotFrontonKarnizsves] Функция подсчета сумарной ширины карнизного свеса для одной формы когда нет фронтонов
- * @param {allFormsNotFrontonKarnizsves} formNotFrontonKarnizsves переменная для формы подсчета площади карнизного свеса
- * @param {number} karnizsves - поле ввода количества карнизных свесов
- * @param {number} height - поле ввода ширины карнизного свеса
- * @param {number} height2 - поле ввода ширины карнизного свеса
- * @param {number} result - результат подсчета
- */
-function sumHeightNotFrontonKarnizsves() {
-	for (let i = 0, max = allFormsNotFrontonKarnizsves.length; i < max; i++) {
-		let formNotFrontonKarnizsves = allFormsNotFrontonKarnizsves[i];
-		console.log(formNotFrontonKarnizsves.querySelectorAll(".notfront-karnizsves-num"));
-		let karnizsves = Number(formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-num").value);
-		karnizsves = parseFloat(karnizsves);
-		let height = Number(formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-height").value);
-		height = parseFloat(height);
-		let height2 = Number(formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-height2").value);
-		height2 = parseFloat(height2);
-		let result = (height + height2) * karnizsves;
-		formNotFrontonKarnizsves.querySelector(".notfront-karnizsves-sum-height").value = result;
-	}
-}
 
 /**
  * @function [sumPerimeters] Функция подсчета всех периметров стен со всех форм
@@ -1072,20 +941,36 @@ function sumAllWidthWindows() {
 }
 
 /**
+ * @function [sumAllWidthDoors] Функция подсчета всех сумарных ширин дверных проемов
+ * @param {number} widthDoor - переменная для поля сумарной ширины из формы
+ * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
+ * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
+ */
+function sumAllWidthDoors() {
+	let widthDoor = document.getElementsByClassName("door_sum-width");
+	let sum = 0;
+	[].forEach.call(widthDoor, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("door_sum-width-all-id").value = sum;
+}
+
+/**
  * @function [sumAllWidthTreugFrontonWindows] Функция подсчета всех сумарных ширин оконных проемов в треугольных фронтонах
  * @param {number} widthTreugolFrontonWindows - переменная для поля сумарной ширины из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllWidthTreugFrontonWindows() {
-	let widthTreugolFrontonWindows = document.getElementsByClassName("tf-window-sum-width");
-	let sum = 0;
-	[].forEach.call(widthTreugolFrontonWindows, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("tf-window-sum-width-all-id").value = sum;
-}
+// function sumAllWidthTreugFrontonWindows() {
+// 	let widthTreugolFrontonWindows = document.getElementsByClassName("tf-window-sum-width");
+// 	let sum = 0;
+// 	[].forEach.call(widthTreugolFrontonWindows, function (el) {
+// 		sum += parseFloat(el.value);
+// 		console.log(sum);
+// 	});
+// 	document.getElementById("tf-window-sum-width-all-id").value = sum;
+// }
 
 /**
  * @function [sumAllWidthLomFrontonWindows] Функция подсчета всех сумарных ширин оконных проемов в ломаных фронтонах
@@ -1093,15 +978,15 @@ function sumAllWidthTreugFrontonWindows() {
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllWidthLomFrontonWindows() {
-	let widthLomFrontonWindows = document.getElementsByClassName("lf-window-sum-width");
-	let sum = 0;
-	[].forEach.call(widthLomFrontonWindows, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-window-sum-width-all-id").value = sum;
-}
+// function sumAllWidthLomFrontonWindows() {
+// 	let widthLomFrontonWindows = document.getElementsByClassName("lf-window-sum-width");
+// 	let sum = 0;
+// 	[].forEach.call(widthLomFrontonWindows, function (el) {
+// 		sum += parseFloat(el.value);
+// 		console.log(sum);
+// 	});
+// 	document.getElementById("lf-window-sum-width-all-id").value = sum;
+// }
 
 /**
  * @function [sumAllWidthTreugFrontonDoor] Функция подсчета всех сумарных ширин дверных проемов в треугольных фронтонах
@@ -1109,15 +994,15 @@ function sumAllWidthLomFrontonWindows() {
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllWidthTreugFrontonDoor() {
-	let widthTreugFrontonDoor = document.getElementsByClassName("tf-door-sum-width");
-	let sum = 0;
-	[].forEach.call(widthTreugFrontonDoor, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("tf-door-sum-width-all-id").value = sum;
-}
+// function sumAllWidthTreugFrontonDoor() {
+// 	let widthTreugFrontonDoor = document.getElementsByClassName("tf-door-sum-width");
+// 	let sum = 0;
+// 	[].forEach.call(widthTreugFrontonDoor, function (el) {
+// 		sum += parseFloat(el.value);
+// 		console.log(sum);
+// 	});
+// 	document.getElementById("tf-door-sum-width-all-id").value = sum;
+// }
 
 /**
  * @function [sumAllWidthLomFrontonDoor] Функция подсчета всех сумарных ширин дверных проемов в ломаных фронтонах
@@ -1125,15 +1010,15 @@ function sumAllWidthTreugFrontonDoor() {
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllWidthLomFrontonDoor() {
-	let widthLomFrontonDoor = document.getElementsByClassName("lf-door-sum-width");
-	let sum = 0;
-	[].forEach.call(widthLomFrontonDoor, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-door-sum-width-all-id").value = sum;
-}
+// function sumAllWidthLomFrontonDoor() {
+// 	let widthLomFrontonDoor = document.getElementsByClassName("lf-door-sum-width");
+// 	let sum = 0;
+// 	[].forEach.call(widthLomFrontonDoor, function (el) {
+// 		sum += parseFloat(el.value);
+// 		console.log(sum);
+// 	});
+// 	document.getElementById("lf-door-sum-width-all-id").value = sum;
+// }
 
 /**
  * @function [sumAllWidthTreugFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в треугольных фронтонах
@@ -1149,38 +1034,6 @@ function sumAllWidthTreugFrontonFrontsves() {
 		console.log(sum);
 	});
 	document.getElementById("tf-frontsves-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthLomFrontonFrontsves] Функция подсчета всех сумарных высот фронтонных свесов в ломаных фронтонах
- * @param {number} widthLomFrontonFrontsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllWidthLomFrontonFrontsves() {
-	let widthLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-width");
-	let sum = 0;
-	[].forEach.call(widthLomFrontonFrontsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("lf-frontsves-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthTreugFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов в треугольных фронтонах
- * @param {number} widthTreugFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllWidthTreugFrontonKarnizsves() {
-	let widthTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-width");
-	let sum = 0;
-	[].forEach.call(widthTreugFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
 }
 
 /**
@@ -1200,35 +1053,51 @@ function sumAllWidthLomFrontonKarnizsves() {
 }
 
 /**
- * @function [sumAllWidthNotFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов когда нет фронтонов
- * @param {number} widthNotFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllWidthNotFrontonKarnizsves() {
-	let widthNotFrontonKarnizsves = document.getElementsByClassName("notfront-karnizsves-sum-width");
-	let sum = 0;
-	[].forEach.call(widthNotFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
-	});
-	document.getElementById("notfront-karnizsves-sum-width-all-id").value = sum;
-}
-
-/**
- * @function [sumAllWidthDoors] Функция подсчета всех сумарных ширин дверных проемов
- * @param {number} widthDoors - переменная для поля сумарной ширины из формы
+ * @function [sumAllWidthLomFrontonFrontsves] Функция подсчета всех сумарных ширин фронтонных свесов в ломаных фронтонах
+ * @param {number} widthLomFrontonFrontsves - переменная для поля сумарной ширин из формы
  * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
  * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
  */
-function sumAllWidthDoors() {
-	let widthDoors = document.getElementsByClassName("door_sum-width");
+function sumAllWidthLomFrontonFrontsves() {
+	let widthLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-width");
 	let sum = 0;
-	[].forEach.call(widthDoors, function (el) {
+	[].forEach.call(widthLomFrontonFrontsves, function (el) {
 		sum += parseFloat(el.value);
 		console.log(sum);
 	});
-	document.getElementById("door_sum-width-all-id").value = sum;
+	document.getElementById("lf-frontsves-sum-width-all-id").value = sum;
+}
+
+/**
+ * @function [sumAllWidthTreugFrontonKarnizsves] Функция подсчета всех сумарных ширин карнизных свесов в треугольных фронтонах
+ * @param {number} widthTreugFrontonKarnizsves - переменная для поля сумарной ширин из формы
+ * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
+ * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
+ */
+function sumAllWidthTreugFrontonKarnizsves() {
+	let widthTreugFrontonKarnizsves = document.getElementsByClassName("tf-karnizsves-sum-width");
+	let sum = 0;
+	[].forEach.call(widthTreugFrontonKarnizsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("tf-karnizsves-sum-width-all-id").value = sum;
+}
+
+/**
+ * @function [sumAllWidthLomFrontonFrontsves] Функция подсчета всех сумарных ширин фронтонных свесов в ломаных фронтонах
+ * @param {number} widthLomFrontonFrontsves - переменная для поля сумарной ширины из формы
+ * @param {forEach} function (el) - перебор полей сумарных ширин по всем формам
+ * @param {number} sum - складываем все поля сумарных ширин из всех созданных форм
+ */
+function sumAllWidthLomFrontonFrontsves() {
+	let widthLomFrontonFrontsves = document.getElementsByClassName("lf-frontsves-sum-width");
+	let sum = 0;
+	[].forEach.call(widthLomFrontonFrontsves, function (el) {
+		sum += parseFloat(el.value);
+		console.log(sum);
+	});
+	document.getElementById("lf-frontsves-sum-width-all-id").value = sum;
 }
 
 /**
@@ -1246,6 +1115,8 @@ function sumAllHeightVneshUgol() {
 	});
 	document.getElementById("ugol_sum-width-all-id").value = sumVneshUgol;
 }
+
+
 
 /**
  * @function [sumAllHeightInnerUgol] Функция подсчета всех сумарных высот внутренних углов из всех форм
@@ -1327,38 +1198,17 @@ function sumAllHeightLomFrontonKarnizsves() {
 	document.getElementById("lf-karnizsves-sum-height-all-id").value = sum;
 }
 
-/**
- * @function [sumAllHeightNotFrontonKarnizsves] Функция подсчета всех сумарных высот карнизных свесов когда нет фронтонов
- * @param {number} heightNotFrontonKarnizsves - переменная для поля сумарной высот из формы
- * @param {forEach} function (el) - перебор полей сумарных высот по всем формам
- * @param {number} sum - складываем все поля сумарных высот из всех созданных форм
- */
-function sumAllHeightNotFrontonKarnizsves() {
-	let heightNotFrontonKarnizsves = document.getElementsByClassName("notfront-karnizsves-sum-height");
+
+function sumAllSquareNotFrontonKarnizsves() {
 	let sum = 0;
-	[].forEach.call(heightNotFrontonKarnizsves, function (el) {
-		sum += parseFloat(el.value);
-		console.log(sum);
+	let sum_height = 0;
+	$('.notfront-karnizsves-form').each((i, el) => {
+		sum += parseFloat($(el).find('.notfront-karnizsves-length').val()) * parseFloat($(el).find('.notfront-karnizsves-height').val());
+		sum_height += parseFloat($(el).find('.notfront-karnizsves-height').val());
 	});
-	document.getElementById("notfront-karnizsves-sum-height-all-id").value = sum;
+	$('.notfront-karnizsves-sum-square-all').val(sum);
+	$('.notfront-karnizsves-sum-height').val(sum_height);
 }
-
-/**
- * Кнопка добавления новой формы для стен в разделе стены
- * @param {node} node - переменная для всей формы
- * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
- * @param {newFormStenaId} newFormStenaId - добавляем новую форму
- */
-let newFormStenaId = 1;
-let node = document.getElementById("walls-form-id").cloneNode(true);
-
-document.querySelector(".add-form").addEventListener("click", function () {
-	let newClonedNode = node.cloneNode(true);
-	document.querySelector(".walls").appendChild(newClonedNode);
-	newClonedNode.id = "walls-form-id-" + newFormStenaId;
-	newClonedNode.name = "walls-form-id-" + newFormStenaId;
-	newFormStenaId++;
-});
 
 /**
  * Для чекбокса
@@ -1411,8 +1261,10 @@ function showNotFrontonItems(check) {
  * @function [remuveBtnWindow] remuveBtnWindow - добавляет класс hidden к кнопке показать форму
  */
 document.querySelector(".show-form-windows").addEventListener("click", function () {
-	document.getElementById("windows-wrp-id").classList.remove("hidden");
-	remuveBtnWindow();
+	document.getElementById("windows-id").classList.remove("hidden");
+	document.getElementById("add-form-window-id").classList.remove("hidden");
+	document.getElementById("windows-form-id").classList.add("hidden");
+	remuveBtnWindow();	
 });
 
 function remuveBtnWindow() {
@@ -1425,7 +1277,9 @@ function remuveBtnWindow() {
  * @function [remuveBtnDoors] remuveBtnDoors - добавляет класс hidden к кнопке показать форму
  */
 document.querySelector(".show-form-doors").addEventListener("click", function () {
-	document.getElementById("doors-wrp-id").classList.remove("hidden");
+	document.getElementById("doors-id").classList.remove("hidden");
+	document.getElementById("add-form-door-id").classList.remove("hidden");
+	document.getElementById("doors-form-id").classList.add("hidden");
 	remuveBtnDoors();
 });
 
@@ -1439,8 +1293,10 @@ function remuveBtnDoors() {
  * @function [remuveBtnUgolsVnes] remuveBtnUgolsVnes - добавляет класс hidden к кнопке показать форму
  */
 document.querySelector(".show-form-ugols-vnesh").addEventListener("click", function () {
-	document.getElementById("ugols-vnesh-wrp-id").classList.remove("hidden");
-	remuveBtnUgolsVnes();
+	document.getElementById("ugols-vnesh-id").classList.remove("hidden");
+	document.getElementById("add-form-ugols-vnesh-id").classList.remove("hidden");
+	document.getElementById("ugol-vnesh-form-id").classList.add("hidden");
+	remuveBtnUgolsVnesh();
 });
 
 function remuveBtnUgolsVnesh() {
@@ -1453,7 +1309,9 @@ function remuveBtnUgolsVnesh() {
  * @function [remuveBtnUgolsInnerh] remuveBtnUgolsInnerh - добавляет класс hidden к кнопке показать форму
  */
 document.querySelector(".show-form-ugols-inner").addEventListener("click", function () {
-	document.getElementById("ugols-inner-wrp-id").classList.remove("hidden");
+	document.getElementById("ugols-inner-id").classList.remove("hidden");
+	document.getElementById("add-form-ugols-inner-id").classList.remove("hidden");
+	document.getElementById("ugol-inner-form-id").classList.add("hidden");
 	remuveBtnUgolsInnerh();
 });
 
@@ -1467,49 +1325,53 @@ function remuveBtnUgolsInnerh() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtntfWindow] remuveBtntfWindow - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-tf-window").addEventListener("click", function () {
-	document.getElementById("tf-window-wrp-id").classList.remove("hidden");
-	remuveBtnTfWindow();
-});
-
-function remuveBtnTfWindow() {
-	document.getElementById("show-form-tf-window-id").classList.add("hidden");
-}
+// document.querySelector(".show-form-tf-window").addEventListener("click", function () {
+// $(document).on('click', '.show-form-tf-window', function () {
+// 	document.getElementById("tf-window-wrp-id").classList.remove("hidden");
+// 	remuveBtnTfWindow();
+// });
+//
+// function remuveBtnTfWindow() {
+// 	document.getElementById("show-form-tf-window-id").classList.add("hidden");
+// }
 
 /**
  * Кнопка показа формы размера и количества окон в разделе ломаный фронтон
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfWindow] remuveBtnLfWindow - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-lf-window").addEventListener("click", function () {
-	document.getElementById("lf-window-wrp-id").classList.remove("hidden");
-	remuveBtnLfWindow();
-});
-
-function remuveBtnLfWindow() {
-	document.getElementById("show-form-lf-window-id").classList.add("hidden");
-}
+// document.querySelector(".show-form-lf-window").addEventListener("click", function () {
+// $(document).on('click', '.show-form-lf-window', function () {
+// 	document.getElementById("lf-window-wrp-id").classList.remove("hidden");
+// 	remuveBtnLfWindow();
+// });
+//
+// function remuveBtnLfWindow() {
+// 	document.getElementById("show-form-lf-window-id").classList.add("hidden");
+// }
 
 /**
  * Кнопка показа формы размера и количества дверей в разделе ломаный фронтон
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfDoor] remuveBtnLfDoor - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-lf-door").addEventListener("click", function () {
-	document.getElementById("lf-door-wrp-id").classList.remove("hidden");
-	remuveBtnLfDoor();
-});
-
-function remuveBtnLfDoor() {
-	document.getElementById("show-form-lf-door-id").classList.add("hidden");
-}
+// document.querySelector(".show-form-lf-door").addEventListener("click", function () {
+// $(document).on('click', '.show-form-lf-door', function () {
+// 	document.getElementById("lf-door-wrp-id").classList.remove("hidden");
+// 	remuveBtnLfDoor();
+// });
+//
+// function remuveBtnLfDoor() {
+// 	document.getElementById("show-form-lf-door-id").classList.add("hidden");
+// }
 
 /**
  * Кнопка показа формы размера и количества фронтонных свесов в разделе ломаный фронтон
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfFrontsves] remuveBtnLfFrontsves - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
+// document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
+$(document).on('click', '.show-form-lf-frontsves', function () {
 	document.getElementById("lf-frontsves-wrp-id").classList.remove("hidden");
 	remuveBtnLfFrontsves();
 });
@@ -1523,7 +1385,8 @@ function remuveBtnLfFrontsves() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfKarnizsves] remuveBtnLfKarnizsves - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
+// document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
+$(document).on('click', '.show-form-lf-karnizsves', function () {
 	document.getElementById("lf-karnizsves-wrp-id").classList.remove("hidden");
 	remuveBtnLfKarnizsves();
 });
@@ -1537,14 +1400,15 @@ function remuveBtnLfKarnizsves() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtntfDoor] remuveBtntfDoor - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-tf-door").addEventListener("click", function () {
-	document.getElementById("tf-door-wrp-id").classList.remove("hidden");
-	remuveBtntfDoor();
-});
+// document.querySelector(".show-form-tf-door").addEventListener("click", function () {
+// $(document).on('click', '.show-form-tf-door', function () {
+// 	document.getElementById("tf-door-wrp-id").classList.remove("hidden");
+// 	remuveBtntfDoor();
+// });
 
-function remuveBtntfDoor() {
-	document.getElementById("show-form-tf-door-id").classList.add("hidden");
-}
+// function remuveBtntfDoor() {
+// 	document.getElementById("show-form-tf-door-id").classList.add("hidden");
+// }
 
 /**
  * Кнопка показа формы размера и количества фронтонных свесов в разделе треугольный фронтон
@@ -1552,7 +1416,9 @@ function remuveBtntfDoor() {
  * @function [remuveBtntfFrontsves] remuveBtntfFrontsves - добавляет класс hidden к кнопке показать форму
  */
 document.querySelector(".show-form-tf-frontsves").addEventListener("click", function () {
-	document.getElementById("tf-frontsves-wrp-id").classList.remove("hidden");
+	document.getElementById("tf-frontsves-id").classList.remove("hidden");
+	document.getElementById("add-form-tf-frontsves-id").classList.remove("hidden");
+	document.getElementById("tf-frontsves-form-id").classList.add("hidden");
 	remuveBtntfFrontsves();
 });
 
@@ -1566,13 +1432,36 @@ function remuveBtntfFrontsves() {
  * @function [remuveBtntfKarnizsves] remuveBtntfKarnizsves - добавляет класс hidden к кнопке показать форму
  */
 document.querySelector(".show-form-tf-karnizsves").addEventListener("click", function () {
-	document.getElementById("tf-karnizsves-wrp-id").classList.remove("hidden");
+	document.getElementById("tf-karnizsves-id").classList.remove("hidden");
+	document.getElementById("add-form-tf-karnizsves-id").classList.remove("hidden");
+	document.getElementById("tf-karnizsves-form-id").classList.add("hidden");
 	remuveBtntfKarnizsves();
 });
 
 function remuveBtntfKarnizsves() {
 	document.getElementById("show-form-tf-karnizsves-id").classList.add("hidden");
 }
+
+/**
+ * Кнопка добавления новой формы для стен в разделе стены
+ * @param {node} node - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormStenaId} newFormStenaId - добавляем новую форму
+ */
+let newFormStenaId = 1;
+let node = document.getElementById("walls-form-id").cloneNode(true);
+
+document.querySelector(".add-form").addEventListener("click", function () {
+	let newClonedNode = node.cloneNode(true);
+	document.querySelector(".walls").appendChild(newClonedNode);
+	newClonedNode.id = "walls-form-id-" + newFormStenaId;
+	newClonedNode.querySelector(".wf_length").name = 'data[Стены][' + newFormStenaId + '][Длина]';
+	newClonedNode.querySelector(".wf_length").value = '';
+	newClonedNode.querySelector(".wf_height").name = 'data[Стены][' + newFormStenaId + '][Высота]';
+	newClonedNode.querySelector(".wf_height").value = '';
+	funcStena();
+	newFormStenaId++;
+});
 
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе стены
@@ -1582,14 +1471,18 @@ function remuveBtntfKarnizsves() {
  */
 let newFormWindow = 1;
 let nodeWindow = document.getElementById("windows-form-id").cloneNode(true);
-
-document.querySelector(".add-form-window").addEventListener("click", function () {
-	let newClonedNode = nodeWindow.cloneNode(true);
-	document.querySelector(".windows").appendChild(newClonedNode);
-	newClonedNode.id = "windows-form-id-" + newFormWindow;
-	newClonedNode.name = "windows-form-id-" + newFormWindow;
-	newFormWindow++;
+document.querySelector(".add-form-window").addEventListener("click", function () {	
+let newClonedNode = nodeWindow.cloneNode(true);
+document.querySelector(".windows").appendChild(newClonedNode);
+newClonedNode.id = "windows-form-id-" + newFormWindow;
+newClonedNode.querySelector(".window_length").name = 'data[Окна][' + newFormWindow + '][Ширина]';
+newClonedNode.querySelector(".window_length").value = '';
+newClonedNode.querySelector(".window_height").name = 'data[Окна][' + newFormWindow + '][Высота]';
+newClonedNode.querySelector(".window_height").value = '';
+newClonedNode.querySelector(".select-selected").name = 'data[Окна][' + newFormWindow + '][Исполнение]';
+newFormWindow++;
 });
+
 
 /**
  * Кнопка добавления новой формы для дверных проемов в стенах
@@ -1604,7 +1497,11 @@ document.querySelector(".add-form-door").addEventListener("click", function () {
 	let newClonedNode = nodeDoor.cloneNode(true);
 	document.querySelector(".doors").appendChild(newClonedNode);
 	newClonedNode.id = "doors-form-id-" + newFormDoor;
-	newClonedNode.name = "doors-form-id-" + newFormDoor;
+	newClonedNode.querySelector(".door_length").name = 'data[Двери][' + newFormDoor + '][Ширина]';
+	newClonedNode.querySelector(".door_length").value = '';
+	newClonedNode.querySelector(".door_height").name = 'data[Двери][' + newFormDoor + '][Высота]';
+	newClonedNode.querySelector(".door_height").value = '';
+	newClonedNode.querySelector(".select-selected").name = 'data[Двери][' + newFormDoor + '][Исполнение]';
 	newFormDoor++;
 });
 
@@ -1617,7 +1514,8 @@ document.querySelector(".add-form-door").addEventListener("click", function () {
 let newFormVneshUgol = 1;
 let nodeVneshUgol = document.getElementById("ugol-vnesh-form-id").cloneNode(true);
 
-document.querySelector(".add-form-ugols-vnesh").addEventListener("click", function () {
+// document.querySelector(".add-form-ugols-vnesh").addEventListener("click", function () {
+$(document).on('click', '.add-form-ugols-vnesh', function () {
 	let newClonedNode = nodeVneshUgol.cloneNode(true);
 	document.querySelector(".ugols-vnesh").appendChild(newClonedNode);
 	newClonedNode.id = "ugol-vnesh-form-id-" + newFormVneshUgol;
@@ -1638,8 +1536,8 @@ let nodeInnerUgol = document.getElementById("ugol-inner-form-id").cloneNode(true
 document.querySelector(".add-form-ugols-inner").addEventListener("click", function () {
 	let newClonedNode = nodeInnerUgol.cloneNode(true);
 	document.querySelector(".ugols-inner").appendChild(newClonedNode);
-	newClonedNode.id = "add-form-ugols-inner-" + newFormInnerUgol;
-	newClonedNode.name = "add-form-ugols-inner-" + newFormInnerUgol;
+	newClonedNode.id = "gol-inner-form-id-" + newFormInnerUgol;
+	newClonedNode.name = "ugol-inner-form-" + newFormInnerUgol;
 	newFormInnerUgol++;
 });
 
@@ -1653,7 +1551,8 @@ document.querySelector(".add-form-ugols-inner").addEventListener("click", functi
 let newFormTreugFronton = 1;
 let nodeTreugFronton = document.getElementById("tf-form-id").cloneNode(true);
 
-document.querySelector(".add-form-tf").addEventListener("click", function () {
+// document.querySelector(".add-form-tf").addEventListener("click", function () {
+$(document).on('click', '.add-form-tf', function () {
 	let newClonedNode = nodeTreugFronton.cloneNode(true);
 	document.querySelector(".tf").appendChild(newClonedNode);
 	newClonedNode.id = "tf-form-id-" + newFormTreugFronton;
@@ -1670,7 +1569,8 @@ document.querySelector(".add-form-tf").addEventListener("click", function () {
 let newFormLomFronton = 1;
 let nodeLomFronton = document.getElementById("lf-form-id").cloneNode(true);
 
-document.querySelector(".add-form-lf").addEventListener("click", function () {
+// document.querySelector(".add-form-lf").addEventListener("click", function () {
+$(document).on('click', '.add-form-lf', function () {
 	let newClonedNode = nodeLomFronton.cloneNode(true);
 	document.querySelector(".lf").appendChild(newClonedNode);
 	newClonedNode.id = "lf-form-id-" + newFormLomFronton;
@@ -1684,16 +1584,17 @@ document.querySelector(".add-form-lf").addEventListener("click", function () {
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormTreugFrontonWindow} newFormTreugFrontonWindow - добавляем новую форму
  */
-let newFormTreugFrontonWindow = 1;
-let nodeTreugFrontonWindow = document.getElementById("tf-window-form-id").cloneNode(true);
-
-document.querySelector(".add-form-tf-window").addEventListener("click", function () {
-	let newClonedNode = nodeTreugFrontonWindow.cloneNode(true);
-	document.querySelector(".tf-window").appendChild(newClonedNode);
-	newClonedNode.id = "tf-window-form-id-" + newFormTreugFrontonWindow;
-	newClonedNode.name = "tf-window-form-id-" + newFormTreugFrontonWindow;
-	newFormTreugFrontonWindow++;
-});
+// let newFormTreugFrontonWindow = 1;
+// let nodeTreugFrontonWindow = document.getElementById("tf-window-form-id").cloneNode(true);
+//
+// // document.querySelector(".add-form-tf-window").addEventListener("click", function () {
+// $(document).on('click', '.add-form-tf-window', function () {
+// 	let newClonedNode = nodeTreugFrontonWindow.cloneNode(true);
+// 	document.querySelector(".tf-window").appendChild(newClonedNode);
+// 	newClonedNode.id = "tf-window-form-id-" + newFormTreugFrontonWindow;
+// 	newClonedNode.name = "tf-window-form-id-" + newFormTreugFrontonWindow;
+// 	newFormTreugFrontonWindow++;
+// });
 
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе ломаный фронтон
@@ -1701,7 +1602,45 @@ document.querySelector(".add-form-tf-window").addEventListener("click", function
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormLomFrontonWindow} newFormLomFrontonWindow - добавляем новую форму
  */
-let newFormLomFrontonWindow = 1;
+// let newFormLomFrontonWindow = 1;
+// let nodeLomFrontonWindow = document.getElementById("lf-window-form-id").cloneNode(true);
+//
+// // document.querySelector(".add-form-lf-window").addEventListener("click", function () {
+// $(document).on('click', '.add-form-lf-window', function () {
+// 	let newClonedNode = nodeLomFrontonWindow.cloneNode(true);
+// 	document.querySelector(".lf-window").appendChild(newClonedNode);
+// 	newClonedNode.id = "lf-window-form-id-" + newFormLomFrontonWindow;
+// 	newClonedNode.name = "lf-window-form-id-" + newFormLomFrontonWindow;
+// 	newFormLomFrontonWindow++;
+// });
+
+
+/**
+ * Кнопка добавления новой формы для дверных проемов в разделе ломаный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFrontonWindow} newFormLomFrontonWindow - добавляем новую форму
+ */
+// let newFormLomFrontonDoor = 1;
+// let nodeLomFrontonDoor = document.getElementById("lf-door-form-id").cloneNode(true);
+//
+// // document.querySelector(".add-form-lf-door").addEventListener("click", function () {
+// $(document).on('click', '.add-form-lf-door', function () {
+// 	let newClonedNode = nodeLomFrontonDoor.cloneNode(true);
+// 	document.querySelector(".lf-door").appendChild(newClonedNode);
+// 	newClonedNode.id = "lf-door-form-id-" + newFormLomFrontonDoor;
+// 	newClonedNode.name = "lf-door-form-id-" + newFormLomFrontonDoor;
+// 	newFormLomFrontonDoor++;
+// });
+
+/**
+ * Кнопка добавления новой формы для оконных проемов в разделе ломаный фронтон
+ * @param {newClonedNode} newClonedNode - переменная для всей формы
+ * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
+ * @param {newFormLomFrontonWindow} newFormLomFrontonWindow - добавляем новую форму
+ */
+/*
+ let newFormLomFrontonWindow = 1;
 let nodeLomFrontonWindow = document.getElementById("lf-window-form-id").cloneNode(true);
 
 document.querySelector(".add-form-lf-window").addEventListener("click", function () {
@@ -1712,13 +1651,15 @@ document.querySelector(".add-form-lf-window").addEventListener("click", function
 	newFormLomFrontonWindow++;
 });
 
-
+*/
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе ломаный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormLomFrontonWindow} newFormLomFrontonWindow - добавляем новую форму
  */
+
+ /*
 let newFormLomFrontonDoor = 1;
 let nodeLomFrontonDoor = document.getElementById("lf-door-form-id").cloneNode(true);
 
@@ -1729,6 +1670,7 @@ document.querySelector(".add-form-lf-door").addEventListener("click", function (
 	newClonedNode.name = "lf-door-form-id-" + newFormLomFrontonDoor;
 	newFormLomFrontonDoor++;
 });
+*/
 
 /**
  * Кнопка добавления новой формы для дверных проемов в разделе треугольный фронтон
@@ -1736,16 +1678,17 @@ document.querySelector(".add-form-lf-door").addEventListener("click", function (
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormTreugFrontonDoor} newFormTreugFrontonDoor - добавляем новую форму
  */
-let newFormTreugFrontonDoor = 1;
-let nodeTreugFrontonDoor = document.getElementById("tf-door-form-id").cloneNode(true);
-
-document.querySelector(".add-form-tf-door").addEventListener("click", function () {
-	let newClonedNode = nodeTreugFrontonDoor.cloneNode(true);
-	document.querySelector(".tf-door").appendChild(newClonedNode);
-	newClonedNode.id = "tf-door-form-id-" + newFormTreugFrontonDoor;
-	newClonedNode.name = "tf-door-form-id-" + newFormTreugFrontonDoor;
-	newFormTreugFrontonDoor++;
-});
+// let newFormTreugFrontonDoor = 1;
+// let nodeTreugFrontonDoor = document.getElementById("tf-door-form-id").cloneNode(true);
+//
+// // document.querySelector(".add-form-tf-door").addEventListener("click", function () {
+// $(document).on('click', '.add-form-tf-door', function () {
+// 	let newClonedNode = nodeTreugFrontonDoor.cloneNode(true);
+// 	document.querySelector(".tf-door").appendChild(newClonedNode);
+// 	newClonedNode.id = "tf-door-form-id-" + newFormTreugFrontonDoor;
+// 	newClonedNode.name = "tf-door-form-id-" + newFormTreugFrontonDoor;
+// 	newFormTreugFrontonDoor++;
+// });
 
 /**
  * Кнопка добавления новой формы для фронтонных свесов в разделе треугольный фронтон
@@ -1765,7 +1708,7 @@ document.querySelector(".add-form-tf-frontsves").addEventListener("click", funct
 });
 
 /**
- * Кнопка добавления новой формы для фронтонных свесов в разделе треугольный фронтон
+ * Кнопка добавления новой формы для фронтонных свесов в разделе ломаный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormLomFrontonFrontsves} newFormLomFrontonFrontsves - добавляем новую форму
@@ -1773,7 +1716,8 @@ document.querySelector(".add-form-tf-frontsves").addEventListener("click", funct
 let newFormLomFrontonFrontsves = 1;
 let nodeLomFrontonFrontsves = document.getElementById("lf-frontsves-form-id").cloneNode(true);
 
-document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
+// document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
+$(document).on('click', '.add-form-lf-frontsves', function () {
 	let newClonedNode = nodeLomFrontonFrontsves.cloneNode(true);
 	document.querySelector(".lf-frontsves").appendChild(newClonedNode);
 	newClonedNode.id = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
@@ -1807,7 +1751,8 @@ document.querySelector(".add-form-tf-karnizsves").addEventListener("click", func
 let newFormLomFrontonKarnizsves = 1;
 let nodeLomFrontonKarnizsves = document.getElementById("lf-karnizsves-form-id").cloneNode(true);
 
-document.querySelector(".add-form-lf-karnizsves").addEventListener("click", function () {
+// document.querySelector(".add-form-lf-karnizsves").addEventListener("click", function () {
+$(document).on('click', '.add-form-lf-karnizsves', function () {
 	let newClonedNode = nodeLomFrontonKarnizsves.cloneNode(true);
 	document.querySelector(".lf-karnizsves").appendChild(newClonedNode);
 	newClonedNode.id = "lf-karnizsves-form-id-" + newFormLomFrontonKarnizsves;
@@ -1824,7 +1769,8 @@ document.querySelector(".add-form-lf-karnizsves").addEventListener("click", func
 let newFormNotFrontonKarnizsves = 1;
 let nodeNotFrontonKarnizsves = document.getElementById("notfront-karnizsves-form-id").cloneNode(true);
 
-document.querySelector(".add-form-notfront-karnizsves").addEventListener("click", function () {
+// document.querySelector(".add-form-notfront-karnizsves").addEventListener("click", function () {
+$(document).on('click', '.add-form-notfront-karnizsves', function () {
 	let newClonedNode = nodeNotFrontonKarnizsves.cloneNode(true);
 	document.querySelector(".notfront-karnizsves").appendChild(newClonedNode);
 	newClonedNode.id = "notfront-karnizsves-form-id-" + newFormNotFrontonKarnizsves;
@@ -1845,7 +1791,7 @@ function deleteForm(btn) {
 		btn.parentElement.remove();
 		sumPerimeters();
 		sumAreas();
-		remuveBtnStena();
+		// remuveBtnStena();
 	}
 }
 
@@ -1878,36 +1824,20 @@ function deleteFormLomFronton(btn) {
 }
 
 /**
- * @function [deleteFormWindow] Функция удаления формы оконных проемов в стенах
- * @param {forms} forms - переменная для всей формы
- * @param {remove} remove - удаляем форму
- * @function [sumAllWidthWindows()] вызываем функцию подсчета всех ширин со всех формах оконных проемах для стен
- * @function [sumAreasWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для стен
- */
-function deleteFormWindow(btn) {
-	let forms = document.getElementsByClassName('windows-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthWindows();
-		sumAreasWindow();
-	}
-}
-
-/**
  * @function [deleteFormTreugFrontonWindow] Функция удаления формы оконных проемов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthTreugFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для треугольных фронтонов
  * @function [sumAreasTreugFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для треугольных фронтонов
  */
-function deleteFormTreugFrontonWindow(btn) {
-	let forms = document.getElementsByClassName('tf-window-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthTreugFrontonWindows();
-		sumAreasTreugFrontonWindow();
-	}
-}
+// function deleteFormTreugFrontonWindow(btn) {
+// 	let forms = document.getElementsByClassName('tf-window-form');
+// 	if (forms.length > 1) {
+// 		btn.parentElement.remove();
+// 		sumAllWidthTreugFrontonWindows();
+// 		sumAreasTreugFrontonWindow();
+// 	}
+// }
 
 
 /**
@@ -1917,14 +1847,31 @@ function deleteFormTreugFrontonWindow(btn) {
  * @function [sumAllWidthLomFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для ломаных фронтонов
  * @function [sumAreasLomFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для ломаных фронтонов
  */
-function deleteFormLomFrontonWindow(btn) {
-	let forms = document.getElementsByClassName('lf-window-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthLomFrontonWindows();
-		sumAreasLomFrontonWindow();
-	}
-}
+// function deleteFormLomFrontonWindow(btn) {
+// 	let forms = document.getElementsByClassName('lf-window-form');
+// 	if (forms.length > 1) {
+// 		btn.parentElement.remove();
+// 		sumAllWidthLomFrontonWindows();
+// 		sumAreasLomFrontonWindow();
+// 	}
+// }
+
+/**
+ * @function [deleteFormLomFrontonWindow] Функция удаления формы оконных проемов в ломаных фронтонах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthLomFrontonWindows()] вызываем функцию подсчета всех ширин со всех форм оконных проемов для ломаных фронтонов
+ * @function [sumAreasLomFrontonWindow()] вызываем функцию подсчета всех площадей оконных проемов со всех форм для ломаных фронтонов
+ */
+// function deleteFormLomFrontonWindow(btn) {
+// 	let forms = document.getElementsByClassName('lf-window-form');
+// 	if (forms.length > 1) {
+// 		btn.parentElement.remove();
+// 		sumAllWidthLomFrontonWindows();
+// 		sumAreasLomFrontonWindow();
+// 	}
+// }
+
 
 /**
  * @function [deleteFormLomFrontonWindow] Функция удаления формы оконных проемов в ломаных фронтонах
@@ -1949,38 +1896,39 @@ function deleteFormLomFrontonWindow(btn) {
  * @function [sumAllWidthTreugFrontonDoor()] вызываем функцию подсчета всех ширин со всех форм дверных проемов для треугольных фронтонов
  * @function [sumAreasTreugFrontonDoor()] вызываем функцию подсчета всех площадей дверных проемов со всех форм для треугольных фронтонов
  */
-function deleteFormTreugFrontonDoor(btn) {
-	let forms = document.getElementsByClassName('tf-door-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthTreugFrontonDoor();
-		sumAreasTreugFrontonDoor();
-	}
-}
+// function deleteFormTreugFrontonDoor(btn) {
+// 	let forms = document.getElementsByClassName('tf-door-form');
+// 	if (forms.length > 1) {
+// 		btn.parentElement.remove();
+// 		sumAllWidthTreugFrontonDoor();
+// 		sumAreasTreugFrontonDoor();
+// 	}
+// }
 
 /**
  * @function [deleteFormLomFrontonDoor] Функция удаления формы дверных проемов в ломаных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthLomFrontonDoor()] вызываем функцию подсчета всех ширин со всех форм дверных проемов для ломаных фронтонов
- * @function [sumAreasLomFrontonDoor()] вызываем функцию подсчета всех площадей дверных проемов со всех форм для ломаных фронтонов
+ * @function [sumAllWidthLomFrontonDoor] вызываем функцию подсчета всех ширин со всех форм дверных проемов для ломаных фронтонов
+ * @function [sumAreasLomFrontonDoor] вызываем функцию подсчета всех площадей дверных проемов со всех форм для ломаных фронтонов
  */
-function deleteFormLomFrontonDoor(btn) {
-	let forms = document.getElementsByClassName('lf-door-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthLomFrontonDoor();
-		sumAreasLomFrontonDoor();
-	}
-}
+// function deleteFormLomFrontonDoor(btn) {
+// 	let forms = document.getElementsByClassName('lf-door-form');
+// 	if (forms.length > 1) {
+// 		btn.parentElement.remove();
+// 		sumAllWidthLomFrontonDoor();
+// 		sumAreasLomFrontonDoor();
+// 	}
+// }
 
 /**
  * @function [deleteFormTreugFrontonFrontsves] Функция удаления формы фронтонных свесов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthTreugFrontonFrontsves()] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для треугольных фронтонов
- * @function [sumAllHeightTreugFrontonFrontsves()] вызываем функцию подсчета всех высот со всех форм фронтонных свесов для треугольных фронтонов
- * @function [sumAreasTreugFrontonFrontsves()] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для треугольных фронтонов
+ * @function [sumAllWidthTreugFrontonFrontsves] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для треугольных фронтонов
+ * @function [sumAllHeightTreugFrontonFrontsves] вызываем функцию подсчета всех высот со всех форм фронтонных свесов для треугольных фронтонов
+ * @function [sumAreasTreugFrontonFrontsves] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для треугольных фронтонов
+ * @function [deleteTreugFrontonFrontsves] удаляем обвертку у формы
  */
 function deleteFormTreugFrontonFrontsves(btn) {
 	let forms = document.getElementsByClassName('tf-frontsves-form');
@@ -1989,6 +1937,52 @@ function deleteFormTreugFrontonFrontsves(btn) {
 		sumAllWidthTreugFrontonFrontsves();
 		sumAllHeightTreugFrontonFrontsves();
 		sumAreasTreugFrontonFrontsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
+		document.getElementById("tf-frontsves-id").classList.add("hidden");
+		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");	
+		deleteTreugFrontonFrontsves ();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
+		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");
+		deleteTreugFrontonFrontsves();
+		sumAllWidthTreugFrontonFrontsves();
+		sumAllHeightTreugFrontonFrontsves();
+		sumAreasTreugFrontonFrontsves();		
+	}	
+}
+function deleteTreugFrontonFrontsves(){
+	let wrpFormInnerUgol = document.querySelector('.tf-frontsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("tf-frontsves-id").classList.add("hidden");
+	}
+}
+
+function deleteFormTreugFrontonFrontsvesTemplate(btn) {
+	let forms = document.getElementsByClassName('tf-frontsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthTreugFrontonFrontsves();
+		sumAllHeightTreugFrontonFrontsves();
+		sumAreasTreugFrontonFrontsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
+		document.getElementById("tf-frontsves-id").classList.add("hidden");
+		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");	
+		deleteTreugFrontonFrontsvesTemplate();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
+		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");
+		deleteTreugFrontonFrontsvesTemplate();
+		sumAllWidthTreugFrontonFrontsves();
+		sumAllHeightTreugFrontonFrontsves();
+		sumAreasTreugFrontonFrontsves();		
+	}	
+}
+function deleteTreugFrontonFrontsvesTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.tf-frontsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("tf-frontsves-id").classList.add("hidden");
 	}
 }
 
@@ -1996,9 +1990,9 @@ function deleteFormTreugFrontonFrontsves(btn) {
  * @function [deleteFormLomFrontonFrontsves] Функция удаления формы фронтонных свесов в ломаных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthLomFrontonFrontsves()] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для ломаных фронтонов
- * @function [sumAllHeightLomFrontonFrontsves()] вызываем функцию подсчета всех высот со всех форм фронтонных свесов для ломаных фронтонов
- * @function [sumAreasLomFrontonFrontsves()] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для ломаных фронтонов
+ * @function [sumAllWidthLomFrontonFrontsves] вызываем функцию подсчета всех ширин со всех форм фронтонных свесов для ломаных фронтонов
+ * @function [sumAllHeightLomFrontonFrontsves] вызываем функцию подсчета всех высот со всех форм фронтонных свесов для ломаных фронтонов
+ * @function [sumAreasLomFrontonFrontsves] вызываем функцию подсчета всех площадей фронтонных свесов со всех форм для ломаных фронтонов
  */
 function deleteFormLomFrontonFrontsves(btn) {
 	let forms = document.getElementsByClassName('lf-frontsves-form');
@@ -2014,9 +2008,9 @@ function deleteFormLomFrontonFrontsves(btn) {
  * @function [deleteFormTreugFrontonKarnizsves] Функция удаления формы карнизных свесов в треугольных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthTreugFrontonKarnizsves()] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для треугольных фронтонов
- * @function [sumAllHeightTreugFrontonKarnizsves()] вызываем функцию подсчета всех высот со всех форм карнизных свесов для треугольных фронтонов
- * @function [sumAreasTreugFrontonKarnizsves()] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для треугольных фронтонов
+ * @function [sumAllWidthTreugFrontonKarnizsves] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для треугольных фронтонов
+ * @function [sumAllHeightTreugFrontonKarnizsves] вызываем функцию подсчета всех высот со всех форм карнизных свесов для треугольных фронтонов
+ * @function [sumAreasTreugFrontonKarnizsves] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для треугольных фронтонов
  */
 function deleteFormTreugFrontonKarnizsves(btn) {
 	let forms = document.getElementsByClassName('tf-karnizsves-form');
@@ -2025,6 +2019,54 @@ function deleteFormTreugFrontonKarnizsves(btn) {
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
+		deleteTreugFrontonKarnizsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
+		deleteTreugFrontonKarnizsves();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();		
+	}	
+}
+
+function deleteTreugFrontonKarnizsves(){
+	let wrpFormInnerUgol = document.querySelector('.tf-karnizsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+	}
+}
+
+function deleteFormTreugFrontonKarnizsvesTemplate(btn) {
+	let forms = document.getElementsByClassName('tf-karnizsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
+		deleteTreugFrontonKarnizsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
+		deleteTreugFrontonKarnizsves();
+		sumAllWidthTreugFrontonKarnizsves();
+		sumAllHeightTreugFrontonKarnizsves();
+		sumAreasTreugFrontonKarnizsves();		
+	}	
+}
+
+function deleteTreugFrontonKarnizsvesTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.tf-karnizsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("tf-karnizsves-id").classList.add("hidden");
 	}
 }
 
@@ -2032,9 +2074,9 @@ function deleteFormTreugFrontonKarnizsves(btn) {
  * @function [deleteFormLomFrontonKarnizsves] Функция удаления формы карнизных свесов в ломаных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthLomFrontonKarnizsves()] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для ломаных фронтонов
- * @function [sumAllHeightLomFrontonKarnizsves()] вызываем функцию подсчета всех высот со всех форм карнизных свесов для ломаных фронтонов
- * @function [sumAreasLomFrontonKarnizsves()] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для ломаных фронтонов
+ * @function [sumAllWidthLomFrontonKarnizsves] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для ломаных фронтонов
+ * @function [sumAllHeightLomFrontonKarnizsves] вызываем функцию подсчета всех высот со всех форм карнизных свесов для ломаных фронтонов
+ * @function [sumAreasLomFrontonKarnizsves] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для ломаных фронтонов
  */
 function deleteFormLomFrontonKarnizsves(btn) {
 	let forms = document.getElementsByClassName('lf-karnizsves-form');
@@ -2050,33 +2092,137 @@ function deleteFormLomFrontonKarnizsves(btn) {
  * @function [deleteFormNotFrontonKarnizsves] Функция удаления формы карнизных свесов в ломаных фронтонах
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthNotFrontonKarnizsves()] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для ломаных фронтонов
- * @function [sumAllHeightNotFrontonKarnizsves()] вызываем функцию подсчета всех высот со всех форм карнизных свесов для ломаных фронтонов
- * @function [sumAreasNotFrontonKarnizsves()] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для ломаных фронтонов
+ * @function [sumAllWidthNotFrontonKarnizsves] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для ломаных фронтонов
+ * @function [sumAllHeightNotFrontonKarnizsves] вызываем функцию подсчета всех высот со всех форм карнизных свесов для ломаных фронтонов
+ * @function [sumAreasNotFrontonKarnizsves] вызываем функцию подсчета всех площадей карнизных свесов со всех форм для ломаных фронтонов
  */
 function deleteFormNotFrontonKarnizsves(btn) {
 	let forms = document.getElementsByClassName('notfront-karnizsves-form');
 	if (forms.length > 1) {
 		btn.parentElement.remove();
-		sumAllWidthNotFrontonKarnizsves();
-		sumAllHeightNotFrontonKarnizsves();
-		sumAreasNotFrontonKarnizsves();
 	}
 }
 
 /**
+ * @function [deleteFormWindow] Функция удаления формы оконных проемов в стенах
+ * @function [deleteFormWindowTemplate] Функция удаления формы оконных проемов в стенах для второй формы
+ * @function deleteWrpFormWindow] Функция удаления обвертки для оконных проемов в стенах
+ * @param {forms} forms - переменная для всей формы
+ * @param {remove} remove - удаляем форму
+ * @function [sumAllWidthWindows] вызываем функцию подсчета всех ширин со всех формах оконных проемах для стен
+ * @function [sumAreasWindow] вызываем функцию подсчета всех площадей оконных проемов со всех форм для стен
+ */
+function deleteFormWindow(btn) {
+	let forms = document.getElementsByClassName('windows-form');	
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		document.getElementById("windows-id").classList.remove("hidden");
+		sumAllWidthWindows();
+		sumAreasWindow();
+	} if (forms.length == 1){
+		document.querySelector(".add-form-window").classList.add("hidden");
+		document.getElementById("windows-id").classList.add("hidden");
+		document.getElementById("show-form-windows-id").classList.remove("hidden");
+	} if (forms.length == 0) {
+		document.querySelector(".add-form-window").classList.add("hidden");
+		document.querySelector(".show-form-windows").classList.remove("hidden");
+		deleteWrpFormWindow();
+		sumAllWidthWindows();
+		sumAreasWindow();
+			
+	} 
+	function deleteWrpFormWindow(){
+		let wrpFormWindow = document.querySelector('.windows-form');
+		if(!wrpFormWindow){
+			document.getElementById("windows-id").classList.add("hidden");
+		} 
+	}	
+}
+function deleteFormWindowTemplate(btn) {
+	let forms = document.getElementsByClassName('windows-form');	
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		document.getElementById("windows-id").classList.remove("hidden");
+		sumAllWidthWindows();
+		sumAreasWindow();
+	} if (forms.length == 1){
+		document.querySelector(".add-form-window").classList.add("hidden");
+		document.getElementById("windows-id").classList.add("hidden");
+		document.getElementById("show-form-windows-id").classList.remove("hidden");
+	} if (forms.length == 0) {
+		document.querySelector(".add-form-window").classList.add("hidden");
+		document.querySelector(".show-form-windows").classList.remove("hidden");
+		deleteWrpFormWindowTemplate();
+		sumAllWidthWindows();
+		sumAreasWindow();
+			
+	} 
+	function deleteWrpFormWindowTemplate(){
+		let wrpFormWindow = document.querySelector('.windows-form');
+		if(!wrpFormWindow){
+			document.getElementById("windows-id").classList.add("hidden");
+		} 
+	}	
+}
+
+/**
  * @function [deleteFormDoor] Функция удаления формы для дверных проемов
+ * @function [deleteFormDoorTemplate] Функция удаления формы дверных проемов в стенах для второй формы
+ * @function [deleteWrpFormDoor] Функция удаления обвертки для дверных проемов в стенах
  * @param {formsDoor} formsDoor - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllWidthDoors()] вызываем функцию подсчета всех сумарных ширин со всех форм для дверных проемов
- * @function [sumAreasDoor()] вызываем функцию подсчета всех площадей со всех форм для дверных проемов
+ * @function [sumAllWidthDoors] вызываем функцию подсчета всех сумарных ширин со всех форм для дверных проемов
+ * @function [sumAreasDoor] вызываем функцию подсчета всех площадей со всех форм для дверных проемов
  */
 function deleteFormDoor(btn) {
+	let formsDoor = document.getElementsByClassName("doors-form");
+	if (formsDoor.length > 1) {
+		btn.parentElement.remove();
+		document.getElementById("doors-id").classList.remove("hidden");
+		sumAllWidthDoors();
+		sumAreasDoor();
+	} if (formsDoor.length == 1){
+		document.querySelector(".add-form-door").classList.add("hidden");
+		document.getElementById("doors-id").classList.add("hidden");
+		document.getElementById("show-form-doors-id").classList.remove("hidden");
+	} if (formsDoor.length == 0) {
+		document.querySelector(".add-form-door").classList.add("hidden");
+		document.querySelector(".show-form-doors").classList.remove("hidden");
+		deleteWrpFormDoor();
+		sumAllWidthDoors();
+		sumAreasDoor();			
+	} 	
+}
+function deleteWrpFormDoor(){
+	let wrpFormDoor = document.querySelector('.doors-form');
+	if(!wrpFormDoor){
+		document.getElementById("doors-id").classList.add("hidden");
+	}
+}
+
+function deleteFormDoorTemplate(btn) {
 	let formsDoor = document.getElementsByClassName('doors-form');
 	if (formsDoor.length > 1) {
 		btn.parentElement.remove();
+		document.getElementById("doors-id").classList.remove("hidden");
 		sumAllWidthDoors();
 		sumAreasDoor();
+	} if (formsDoor.length == 1){
+		document.querySelector(".add-form-door").classList.add("hidden");
+		document.getElementById("doors-id").classList.add("hidden");
+		document.getElementById("show-form-doors-id").classList.remove("hidden");
+	} if (formsDoor.length == 0) {
+		document.querySelector(".add-form-door").classList.add("hidden");
+		document.querySelector(".show-form-doors").classList.remove("hidden");
+		deleteWrpFormDoorTemplate();
+		sumAllWidthDoors();
+		sumAreasDoor();			
+	} 	
+}
+function deleteWrpFormDoorTemplate(){
+	let wrpFormDoor = document.querySelector('.doors-form');
+	if(!wrpFormDoor){
+		document.getElementById("doors-id").classList.add("hidden");
 	}
 }
 
@@ -2084,13 +2230,53 @@ function deleteFormDoor(btn) {
  * @function [deleteFormVneshUgol] Функция удаления формы для подсчета внешних углов
  * @param {formsVneshUgol} formsVneshUgol - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllHeightVneshUgol()] вызываем функцию подсчета всех высот со всех форм для внешних углов
+ * @function [sumAllHeightVneshUgol] вызываем функцию подсчета всех высот со всех форм для внешних углов
  */
 function deleteFormVneshUgol(btn) {
 	let formsVneshUgol = document.getElementsByClassName('ugol-vnesh-form');
 	if (formsVneshUgol.length > 1) {
 		btn.parentElement.remove();
 		sumAllHeightVneshUgol();
+	} if (formsVneshUgol.length == 1) {
+		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
+		document.getElementById("ugols-vnesh-id").classList.add("hidden");
+		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");	
+		deleteWrpVneshUgol ();	
+	} if (formsVneshUgol.length == 0) {
+		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
+		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");
+		deleteWrpVneshUgol();
+		sumAllHeightVneshUgol();		
+	}	
+}
+function deleteWrpVneshUgol(){
+	let wrpFormVneshUgol = document.querySelector('.ugol-vnesh-form');
+	if(!wrpFormVneshUgol){
+		document.getElementById("ugols-vnesh-id").classList.add("hidden");
+	}
+}
+
+function deleteFormVneshUgolTemplate(btn) {
+	let formsVneshUgol = document.getElementsByClassName('ugol-vnesh-form');
+	if (formsVneshUgol.length > 1) {
+		btn.parentElement.remove();
+		sumAllHeightVneshUgol();
+	} if (formsVneshUgol.length == 1) {
+		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
+		document.getElementById("ugols-vnesh-id").classList.add("hidden");
+		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");	
+		deleteWrpVneshUgolTemplate();	
+	} if (formsVneshUgol.length == 0) {
+		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
+		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");
+		deleteWrpVneshUgolTemplate();
+		sumAllHeightVneshUgol();		
+	}	
+}
+function deleteWrpVneshUgolTemplate(){
+	let wrpFormVneshUgol = document.querySelector('.ugol-vnesh-form');
+	if(!wrpFormVneshUgol){
+		document.getElementById("ugols-vnesh-id").classList.add("hidden");
 	}
 }
 
@@ -2098,12 +2284,52 @@ function deleteFormVneshUgol(btn) {
  * @function [deleteFormInnerUgol] Функция удаления формы для подсчета внутренних углов
  * @param {formsInnerUgol} formsVneshUgol - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAllHeightInnerUgol()] вызываем функцию подсчета всех высот со всех форм для внутренних углов
+ * @function [sumAllHeightInnerUgol] вызываем функцию подсчета всех высот со всех форм для внутренних углов
  */
 function deleteFormInnerUgol(btn) {
 	let formsInnerUgol = document.getElementsByClassName('ugol-inner-form');
 	if (formsInnerUgol.length > 1) {
 		btn.parentElement.remove();
 		sumAllHeightInnerUgol();
+	} if (formsInnerUgol.length == 1) {
+		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
+		document.getElementById("ugols-inner-id").classList.add("hidden");
+		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");	
+		deleteWrpInnerUgol ();	
+	}  if (formsInnerUgol.length == 0) {
+		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
+		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");
+		deleteWrpInnerhUgol();
+		sumAllHeightInnerUgol();		
+	}	
+}
+function deleteWrpInnerUgol(){
+	let wrpFormInnerUgol = document.querySelector('.ugol-inner-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("ugols-inner-id").classList.add("hidden");
+	}
+}
+
+function deleteFormInnerUgolTemplate(btn) {
+	let formsInnerUgol = document.getElementsByClassName('ugol-inner-form');
+	if (formsInnerUgol.length > 1) {
+		btn.parentElement.remove();
+		sumAllHeightInnerUgol();
+	} if (formsInnerUgol.length == 1) {
+		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
+		document.getElementById("ugols-inner-id").classList.add("hidden");
+		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");	
+		deleteWrpInnerUgolTemplate();	
+	}  if (formsInnerUgol.length == 0) {
+		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
+		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");
+		deleteWrpInnerUgolTemplate();
+		sumAllHeightInnerUgol();		
+	}	
+}
+function deleteWrpInnerUgolTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.ugol-inner-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("ugols-inner-id").classList.add("hidden");
 	}
 }
