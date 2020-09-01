@@ -524,7 +524,7 @@
                         name="ugol-inner-visota[]" step="0.0001" min="0"
                         oninput="validity.valid||(value='');"
                         onkeyup="funcCornerInner(); sumAllHeightInnerUgol()"
-                        aria-labelledby="ugol-inner-form-id ugol-inner-visota-template">
+                        aria-labelledby="ugol-inner-form-template ugol-inner-visota-template">
                   </div>
                   <div class="hidden">
                      <label class="ugol-inner_sum-width-title">Высота внутренних углов</label>
@@ -710,29 +710,18 @@
                         </svg>
                         <span class="txt-btn">добавить новый фронтон</span>
                         </button>
+
                   </div>
                   <!-- Начало формы для количества и размеров фронтонных свесов для треугольных фронтонов-->
-                  <!-- tf - треугольный фронтон -->
-                  <button class="show-form-btn show-form-tf-frontsves" id="show-form-tf-frontsves-id" type="button"
-                     aria-label="Кнопка показа формы количества и размеров фронтонных свесов треугольного фронтона">
-                     <svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20"
-                        viewBox="0 0 20 20">
-                        <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
-                           c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
-                           c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/>
-                     </svg>
-                     <span class="txt-btn">добавить фронтонный свес</span>
-                  </button>
-                  <div class="tf-frontsves-wrp hidden" id="tf-frontsves-wrp-id">
-                     <div class="tf-frontsves-list" id="tf-frontsves-list-id">
-                        <div class="tf-frontsves" id="tf-frontsves-id">
-                           <form action="#" class="tf-frontsves-form" id="tf-frontsves-form-id"
-                              name="tf-frontsves-form-id"
-                              aria-labelledby="tf-frontsves-id tf-frontsves-id">
-                              <span class="tf-frontsves-form-span" id="tf-frontsves-form-span-id"
+                  <!-- tf - треугольный фронтон - фронтонный свес -->
+                        <div class="tf-frontsves hidden" id="tf-frontsves-id">
+                           <form action="#" class="tf-frontsves-form" id="tf-frontsves-form-template"
+                              name="tf-frontsves-form-template"
+                              aria-labelledby="tf-frontsves-form-template tf-frontsves-id">
+                              <span class="tf-frontsves-form-span" id="tf-frontsves-form-span-template"
                                  aria-label="Название формы">Фронтонный свес</span>
-                              <svg class="remove-form-btn remove-form-tf-frontsves" id="close-form-tf-frontsves"
-                                 onclick="deleteFormTreugFrontonFrontsves(this)"
+                              <svg class="remove-form-btn remove-form-tf-frontsves" id="close-form-tf-frontsves-template"
+                                 onclick="deleteFormTreugFrontonFrontsvesTemplate(this)"
                                  aria-label="Кнопка удаления формы подсчета площади фронтонных свесов в треугольном фронтоне"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                  <path class="st0"
@@ -752,43 +741,102 @@
                                  <div class="tf-frontsves-length-wrp">
                                     <label class="tf-frontsves-length-label" aria-label="Название поля ввода">
                                     Ширина(A), м</label>
-                                    <input class="tf-frontsves-length" id="tf-frontsves-length-id" type="number"
-                                       name="tf-frontsves-length-id[]" step="0.0001" min="0"
+                                    <input class="tf-frontsves-length" id="tf-frontsves-length-template" type="number"
+                                       name="tf-frontsves-length-template[]" step="0.0001" min="0"
                                        oninput="validity.valid||(value='');"
                                        onkeyup="funcTreugFrontonFrontsves(); sumHeightTreugFrontonFrontsves(); sumWidthTreugFrontonFrontsves(); sumAllWidthTreugFrontonFrontsves(); sumAreasTreugFrontonFrontsves()"
-                                       aria-labelledby="tf-frontsves-form-id tf-frontsves-length-id">
+                                       aria-labelledby="tf-frontsves-form-template tf-frontsves-length-template">
                                  </div>
                                  <div class="tf-frontsves-height-wrp">
                                     <label class="tf-frontsves-height-title" aria-label="Название поля ввода">
                                     Высота(B), м </label>
-                                    <input class="tf-frontsves-height" id="tf-frontsves-visota" type="number"
+                                    <input class="tf-frontsves-height" id="tf-frontsves-visota-template" type="number"
                                        name="tf-frontsves-visota[]" step="0.0001" min="0"
                                        oninput="validity.valid||(value='');"
                                        onkeyup="funcTreugFrontonFrontsves(); sumHeightTreugFrontonFrontsves(); sumWidthTreugFrontonFrontsves(); sumAllHeightTreugFrontonFrontsves(); sumAreasTreugFrontonFrontsves()"
-                                       aria-labelledby="tf-frontsves-form-id tf-frontsves-visota">
+                                       aria-labelledby="tf-frontsves-form-template tf-frontsves-visota-template">
                                  </div>
                               </div>
                               <div class="hidden">
                                  <label class="tf-frontsves-sum-width-title">
                                  Сумарн. ширина(A) фронтонных свесов</label>
-                                 <input class="tf-frontsves-sum-width" id="tf-frontsves-sum-width-id" disabled
+                                 <input class="tf-frontsves-sum-width" id="tf-frontsves-sum-width-template" disabled
                                     type="number" name="tf-frontsves-sum-width[]" step="0.0001" min="0">
                                  <label class="tf-frontsves-sum-height-title">
                                  Сумарн. высота(B) фронтонных свесов</label>
-                                 <input class="tf-frontsves-sum-height" id="tf-frontsves-sum-height-id" disabled
+                                 <input class="tf-frontsves-sum-height" id="tf-frontsves-sum-height-template" disabled
                                     type="number" name="tf-frontsves-sum-height[]" step="0.0001" min="0">
                               </div>
                               <div class="tf-frontsves-result-formula">
                                  <p class="tf-frontsves-area-all" aria-label="Название поля вывода">Площадь</p>
-                                 <input class="tf-frontsves-result" id="tf-frontsves-result-id" type="text"
-                                    name="tf-frontsves-result-id[]" disabled
-                                    aria-labelledby="tf-frontsves-form-id tf-frontsves-result-id">
+                                 <input class="tf-frontsves-result" id="tf-frontsves-result-template" type="text"
+                                    name="tf-frontsves-result-template[]" disabled
+                                    aria-labelledby="tf-frontsves-form-template tf-frontsves-result-template">
                                  <p class="tf-frontsves-area-all">м&sup2;</p>
                               </div>
                            </form>
+                           <form action="#" class="tf-frontsves-form" id="tf-frontsves-form-id"
+                           name="tf-frontsves-form-id"
+                           aria-labelledby="tf-frontsves-id tf-frontsves-id">
+                           <span class="tf-frontsves-form-span" id="tf-frontsves-form-span-id"
+                              aria-label="Название формы">Фронтонный свес</span>
+                           <svg class="remove-form-btn remove-form-tf-frontsves" id="close-form-tf-frontsves"
+                              onclick="deleteFormTreugFrontonFrontsves(this)"
+                              aria-label="Кнопка удаления формы подсчета площади фронтонных свесов в треугольном фронтоне"
+                              aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+                              <path class="st0"
+                                 d="M12.7,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V7.7C13.2,7.5,13,7.2,12.7,7.2z"/>
+                              <path class="st0"
+                                 d="M7.3,7.2C7,7.2,6.8,7.5,6.8,7.7v8.9C6.8,16.8,7,17,7.3,17c0.3,0,0.5-0.2,0.5-0.5V7.7C7.7,7.5,7.5,7.2,7.3,7.2z"/>
+                              <path class="st0" d="M3.3,6v11.5c0,0.7,0.2,1.3,0.7,1.8C4.4,19.7,5,20,5.6,20h8.7c0.6,0,1.2-0.3,1.7-0.7c0.4-0.5,0.7-1.1,0.7-1.8V6
+                                 c0.9-0.2,1.4-1.1,1.3-2c-0.1-0.9-0.9-1.6-1.7-1.6h-2.4V1.9c0-0.5-0.2-1-0.5-1.3C13,0.2,12.5,0,12,0H7.9C7.5,0,7,0.2,6.6,0.5
+                                 C6.3,0.9,6.1,1.4,6.1,1.9v0.6H3.7C2.9,2.4,2.1,3.1,2,4C1.9,4.9,2.4,5.7,3.3,6z M14.4,19.1H5.6c-0.8,0-1.4-0.7-1.4-1.6V6h11.5v11.5
+                                 C15.8,18.4,15.1,19.1,14.4,19.1z M7,1.9c0-0.2,0.1-0.5,0.3-0.7C7.5,1,7.7,0.9,7.9,0.9H12c0.2,0,0.5,0.1,0.6,0.3
+                                 c0.2,0.2,0.3,0.4,0.3,0.7v0.6H7V1.9z M3.7,3.4h12.5c0.5,0,0.8,0.4,0.8,0.8s-0.4,0.8-0.8,0.8H3.7c-0.5,0-0.8-0.4-0.8-0.8
+                                 S3.3,3.4,3.7,3.4z"/>
+                              <path class="st0"
+                                 d="M10,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5V7.7C10.5,7.5,10.2,7.2,10,7.2z"/>
+                           </svg>
+                           <div class="tf-frontsves-groups-wrp">
+                              <div class="tf-frontsves-length-wrp">
+                                 <label class="tf-frontsves-length-label" aria-label="Название поля ввода">
+                                 Ширина(A), м</label>
+                                 <input class="tf-frontsves-length" id="tf-frontsves-length-id" type="number"
+                                    name="tf-frontsves-length-id[]" step="0.0001" min="0"
+                                    oninput="validity.valid||(value='');"
+                                    onkeyup="funcTreugFrontonFrontsves(); sumHeightTreugFrontonFrontsves(); sumWidthTreugFrontonFrontsves(); sumAllWidthTreugFrontonFrontsves(); sumAreasTreugFrontonFrontsves()"
+                                    aria-labelledby="tf-frontsves-form-id tf-frontsves-length-id">
+                              </div>
+                              <div class="tf-frontsves-height-wrp">
+                                 <label class="tf-frontsves-height-title" aria-label="Название поля ввода">
+                                 Высота(B), м </label>
+                                 <input class="tf-frontsves-height" id="tf-frontsves-visota" type="number"
+                                    name="tf-frontsves-visota[]" step="0.0001" min="0"
+                                    oninput="validity.valid||(value='');"
+                                    onkeyup="funcTreugFrontonFrontsves(); sumHeightTreugFrontonFrontsves(); sumWidthTreugFrontonFrontsves(); sumAllHeightTreugFrontonFrontsves(); sumAreasTreugFrontonFrontsves()"
+                                    aria-labelledby="tf-frontsves-form-id tf-frontsves-visota">
+                              </div>
+                           </div>
+                           <div class="hidden">
+                              <label class="tf-frontsves-sum-width-title">
+                              Сумарн. ширина(A) фронтонных свесов</label>
+                              <input class="tf-frontsves-sum-width" id="tf-frontsves-sum-width-id" disabled
+                                 type="number" name="tf-frontsves-sum-width[]" step="0.0001" min="0">
+                              <label class="tf-frontsves-sum-height-title">
+                              Сумарн. высота(B) фронтонных свесов</label>
+                              <input class="tf-frontsves-sum-height" id="tf-frontsves-sum-height-id" disabled
+                                 type="number" name="tf-frontsves-sum-height[]" step="0.0001" min="0">
+                           </div>
+                           <div class="tf-frontsves-result-formula">
+                              <p class="tf-frontsves-area-all" aria-label="Название поля вывода">Площадь</p>
+                              <input class="tf-frontsves-result" id="tf-frontsves-result-id" type="text"
+                                 name="tf-frontsves-result-id[]" disabled
+                                 aria-labelledby="tf-frontsves-form-id tf-frontsves-result-id">
+                              <p class="tf-frontsves-area-all">м&sup2;</p>
+                           </div>
+                           </form>
                         </div>
-                     </div>
-                     <button class="add-form-btn add-form-tf-frontsves" id="add-form-tf-frontsves-id" type="button"
+                     <button class="add-form-btn hidden add-form-tf-frontsves" id="add-form-tf-frontsves-id" type="button"
                         aria-label="Кнопка добавления новой формы подсчета фронтонных свесов в треугольных фронтонах">
                         <svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20"
                            viewBox="0 0 20 20">
@@ -798,28 +846,25 @@
                         </svg>
                         <span class="txt-btn">добавить фронтонный свес</span>
                      </button>
-                  </div>
-                  <!-- Начало формы для количества и размеров карнизных свесов для треугольных фронтонов-->
-                  <!-- tf - треугольный фронтон -->
-                  <button class="show-form-btn show-form-tf-karnizsves" id="show-form-tf-karnizsves-id" type="button"
-                     aria-label="Кнопка показа формы количества и размеров карнизных свесов треугольного фронтона">
+                     <button class="show-form-btn show-form-tf-frontsves" id="show-form-tf-frontsves-id" type="button"
+                     aria-label="Кнопка показа формы количества и размеров фронтонных свесов треугольного фронтона">
                      <svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20"
                         viewBox="0 0 20 20">
                         <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
                            c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
                            c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/>
                      </svg>
-                     <span class="txt-btn">добавить карнизный свес</span>
+                     <span class="txt-btn">добавить фронтонный свес</span>
                   </button>
-                  <div class="tf-karnizsves-wrp hidden" id="tf-karnizsves-wrp-id">
-                     <div class="tf-karnizsves-list" id="tf-karnizsves-list-id">
-                        <div class="tf-karnizsves" id="tf-karnizsves-id">
-                           <form action="#" class="tf-karnizsves-form" id="tf-karnizsves-form-id"
-                              name="tf-karnizsves-form-id" aria-labelledby="tf-karnizsves-id tf-karnizsves-id">
-                              <span class="tf-karnizsves-form-span" id="tf-karnizsves-form-span-id"
+                  <!-- Начало формы для количества и размеров карнизных свесов для треугольных фронтонов-->
+                  <!-- tf - треугольный фронтон - карнизный свес -->
+                     <div class="tf-karnizsves hidden" id="tf-karnizsves-id">
+                        <form action="#" class="tf-karnizsves-form" id="tf-karnizsves-form-template"
+                              name="tf-karnizsves-form-template" aria-labelledby="tf-karnizsves-id tf-karnizsves-template">
+                              <span class="tf-karnizsves-form-span" id="tf-karnizsves-form-span-template"
                                  aria-label="Название формы">Карнизный свес</span>
-                              <svg class="remove-form-btn remove-form-tf-karnizsves" id="close-form-tf-karnizsves"
-                                 onclick="deleteFormTreugFrontonKarnizsves(this)"
+                              <svg class="remove-form-btn remove-form-tf-karnizsves" id="close-form-tf-karnizsves-template"
+                                 onclick="deleteFormTreugFrontonKarnizsvesTemplate(this)"
                                  aria-label="Кнопка удаления формы подсчета площади карнизных свесов в треугольном фронтоне"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                  <path class="st0"
@@ -839,41 +884,97 @@
                                  <div class="tf-karnizsves-length-wrp">
                                     <label class="tf-karnizsves-length-label" aria-label="Название поля ввода">
                                     Ширина(C), м</label>
-                                    <input class="tf-karnizsves-length" id="tf-karnizsves-length-id" type="number"
+                                    <input class="tf-karnizsves-length" id="tf-karnizsves-length-template" type="number"
                                        name="tf-karnizsves-length-id[]" step="0.0001" min="0"
                                        oninput="validity.valid||(value='');"
                                        onkeyup="funcTreugFrontonKarnizsves(); sumHeightTreugFrontonKarnizsves(); sumWidthTreugFrontonKarnizsves(); sumAllWidthTreugFrontonKarnizsves(); sumAreasTreugFrontonKarnizsves()"
-                                       aria-labelledby="tf-karnizsves-form-id tf-karnizsves-length-id">
+                                       aria-labelledby="tf-karnizsves-length-template tf-karnizsves-form-template">
                                  </div>
                                  <div class="tf-karnizsves-height-wrp">
                                     <label class="tf-karnizsves-height-title" aria-label="Название поля ввода">
                                     Длина(D), м </label>
-                                    <input class="tf-karnizsves-height" id="tf-karnizsves-visota" type="number"
-                                       name="tf-karnizsves-visota[]" step="0.0001" min="0"
+                                    <input class="tf-karnizsves-height" id="tf-karnizsves-visota-template" type="number"
+                                       name="tf-karnizsves-visota-template[]" step="0.0001" min="0"
                                        oninput="validity.valid||(value='');"
                                        onkeyup="funcTreugFrontonKarnizsves(); sumHeightTreugFrontonKarnizsves(); sumWidthTreugFrontonKarnizsves(); sumAllHeightTreugFrontonKarnizsves(); sumAreasTreugFrontonKarnizsves()"
-                                       aria-labelledby="tf-karnizsves-form-id tf-karnizsves-visota">
+                                       aria-labelledby="tf-karnizsves-visota-template tf-karnizsves-form-template">
                                  </div>
                               </div>
                               <div class="hidden">
                                  <label class="tf-karnizsves-sum-width-title">Сумарн. ширина карнизных свесов</label>
-                                 <input class="tf-karnizsves-sum-width" id="tf-karnizsves-sum-width-id" disabled
+                                 <input class="tf-karnizsves-sum-width" id="tf-karnizsves-sum-width-template" disabled
                                     type="number" name="tf-karnizsves-sum-width[]" step="0.0001" min="0">
                                  <label class="tf-karnizsves-sum-height-title">Сумарн. длина карнизных свесов</label>
-                                 <input class="tf-karnizsves-sum-height" id="tf-karnizsves-sum-height-id" disabled
+                                 <input class="tf-karnizsves-sum-height" id="tf-karnizsves-sum-height-template" disabled
                                     type="number" name="tf-karnizsves-sum-height[]" step="0.0001" min="0">
                               </div>
                               <div class="tf-karnizsves-result-formula">
                                  <p class="tf-karnizsves-area-all" aria-label="Название поля вывода">Площадь</p>
-                                 <input class="tf-karnizsves-result" id="tf-karnizsves-result-id" type="text"
-                                    name="tf-karnizsves-result-id[]" disabled
-                                    aria-labelledby="tf-karnizsves-form-id tf-karnizsves-result-id">
+                                 <input class="tf-karnizsves-result" id="tf-karnizsves-result-template" type="text"
+                                    name="tf-karnizsves-result-template[]" disabled
+                                    aria-labelledby="tf-karnizsves-form-id tf-karnizsves-result-template">
                                  <p class="tf-karnizsves-area-all">м&sup2;</p>
                               </div>
-                           </form>
+                        </form>
+                        <form action="#" class="tf-karnizsves-form" id="tf-karnizsves-form-id"
+                        name="tf-karnizsves-form-id" aria-labelledby="tf-karnizsves-id tf-karnizsves-id">
+                        <span class="tf-karnizsves-form-span" id="tf-karnizsves-form-span-id"
+                           aria-label="Название формы">Карнизный свес</span>
+                        <svg class="remove-form-btn remove-form-tf-karnizsves" id="close-form-tf-karnizsves"
+                           onclick="deleteFormTreugFrontonKarnizsves(this)"
+                           aria-label="Кнопка удаления формы подсчета площади карнизных свесов в треугольном фронтоне"
+                           aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
+                           <path class="st0"
+                              d="M12.7,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V7.7C13.2,7.5,13,7.2,12.7,7.2z"/>
+                           <path class="st0"
+                              d="M7.3,7.2C7,7.2,6.8,7.5,6.8,7.7v8.9C6.8,16.8,7,17,7.3,17c0.3,0,0.5-0.2,0.5-0.5V7.7C7.7,7.5,7.5,7.2,7.3,7.2z"/>
+                           <path class="st0" d="M3.3,6v11.5c0,0.7,0.2,1.3,0.7,1.8C4.4,19.7,5,20,5.6,20h8.7c0.6,0,1.2-0.3,1.7-0.7c0.4-0.5,0.7-1.1,0.7-1.8V6
+                              c0.9-0.2,1.4-1.1,1.3-2c-0.1-0.9-0.9-1.6-1.7-1.6h-2.4V1.9c0-0.5-0.2-1-0.5-1.3C13,0.2,12.5,0,12,0H7.9C7.5,0,7,0.2,6.6,0.5
+                              C6.3,0.9,6.1,1.4,6.1,1.9v0.6H3.7C2.9,2.4,2.1,3.1,2,4C1.9,4.9,2.4,5.7,3.3,6z M14.4,19.1H5.6c-0.8,0-1.4-0.7-1.4-1.6V6h11.5v11.5
+                              C15.8,18.4,15.1,19.1,14.4,19.1z M7,1.9c0-0.2,0.1-0.5,0.3-0.7C7.5,1,7.7,0.9,7.9,0.9H12c0.2,0,0.5,0.1,0.6,0.3
+                              c0.2,0.2,0.3,0.4,0.3,0.7v0.6H7V1.9z M3.7,3.4h12.5c0.5,0,0.8,0.4,0.8,0.8s-0.4,0.8-0.8,0.8H3.7c-0.5,0-0.8-0.4-0.8-0.8
+                              S3.3,3.4,3.7,3.4z"/>
+                           <path class="st0"
+                              d="M10,7.2c-0.3,0-0.5,0.2-0.5,0.5v8.9c0,0.3,0.2,0.5,0.5,0.5c0.3,0,0.5-0.2,0.5-0.5V7.7C10.5,7.5,10.2,7.2,10,7.2z"/>
+                        </svg>
+                        <div class="tf-karnizsves-groups-wrp">
+                           <div class="tf-karnizsves-length-wrp">
+                              <label class="tf-karnizsves-length-label" aria-label="Название поля ввода">
+                              Ширина(C), м</label>
+                              <input class="tf-karnizsves-length" id="tf-karnizsves-length-id" type="number"
+                                 name="tf-karnizsves-length-id[]" step="0.0001" min="0"
+                                 oninput="validity.valid||(value='');"
+                                 onkeyup="funcTreugFrontonKarnizsves(); sumHeightTreugFrontonKarnizsves(); sumWidthTreugFrontonKarnizsves(); sumAllWidthTreugFrontonKarnizsves(); sumAreasTreugFrontonKarnizsves()"
+                                 aria-labelledby="tf-karnizsves-form-id tf-karnizsves-length-id">
+                           </div>
+                           <div class="tf-karnizsves-height-wrp">
+                              <label class="tf-karnizsves-height-title" aria-label="Название поля ввода">
+                              Длина(D), м </label>
+                              <input class="tf-karnizsves-height" id="tf-karnizsves-visota" type="number"
+                                 name="tf-karnizsves-visota[]" step="0.0001" min="0"
+                                 oninput="validity.valid||(value='');"
+                                 onkeyup="funcTreugFrontonKarnizsves(); sumHeightTreugFrontonKarnizsves(); sumWidthTreugFrontonKarnizsves(); sumAllHeightTreugFrontonKarnizsves(); sumAreasTreugFrontonKarnizsves()"
+                                 aria-labelledby="tf-karnizsves-form-id tf-karnizsves-visota">
+                           </div>
                         </div>
+                        <div class="hidden">
+                           <label class="tf-karnizsves-sum-width-title">Сумарн. ширина карнизных свесов</label>
+                           <input class="tf-karnizsves-sum-width" id="tf-karnizsves-sum-width-id" disabled
+                              type="number" name="tf-karnizsves-sum-width[]" step="0.0001" min="0">
+                           <label class="tf-karnizsves-sum-height-title">Сумарн. длина карнизных свесов</label>
+                           <input class="tf-karnizsves-sum-height" id="tf-karnizsves-sum-height-id" disabled
+                              type="number" name="tf-karnizsves-sum-height[]" step="0.0001" min="0">
+                        </div>
+                        <div class="tf-karnizsves-result-formula">
+                           <p class="tf-karnizsves-area-all" aria-label="Название поля вывода">Площадь</p>
+                           <input class="tf-karnizsves-result" id="tf-karnizsves-result-id" type="text"
+                              name="tf-karnizsves-result-id[]" disabled
+                              aria-labelledby="tf-karnizsves-form-id tf-karnizsves-result-id">
+                           <p class="tf-karnizsves-area-all">м&sup2;</p>
+                        </div>
+                        </form>
                      </div>
-                     <button class="add-form-btn add-form-tf-karnizsves" id="add-form-tf-karnizsves-id" type="button"
+                     <button class="add-form-btn hidden add-form-tf-karnizsves" id="add-form-tf-karnizsves-id" type="button"
                         aria-label="Кнопка добавления новой формы подсчета карнизных свесов в треугольных фронтонах">
                         <svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20"
                            viewBox="0 0 20 20">
@@ -883,8 +984,17 @@
                         </svg>
                         <span class="txt-btn">добавить карнизный свес</span>
                      </button>
-                  </div>
-                  <!-- Вывод общих значений -->
+                     <button class="show-form-btn show-form-tf-karnizsves" id="show-form-tf-karnizsves-id" type="button"
+                     aria-label="Кнопка показа формы количества и размеров карнизных свесов треугольного фронтона">
+                     <svg class="add-icon" aria-hidden="true" focusable="false" width="20" height="20"
+                        viewBox="0 0 20 20">
+                        <path class="st0" d="M10,0C4.48,0,0,4.48,0,10s4.48,10,10,10s10-4.48,10-10S15.52,0,10,0z M14.38,10.83h-3.54v3.54
+                           c0,0.46-0.38,0.83-0.83,0.83s-0.83-0.38-0.83-0.83v-3.54H5.62c-0.46,0-0.83-0.38-0.83-0.83s0.38-0.83,0.83-0.83h3.54V5.62
+                           c0-0.46,0.38-0.83,0.83-0.83s0.83,0.38,0.83,0.83v3.54h3.54c0.46,0,0.83,0.38,0.83,0.83S14.83,10.83,14.38,10.83z"/>
+                     </svg>
+                     <span class="txt-btn">добавить карнизный свес</span>
+                     </button>
+                 <!-- Вывод общих значений -->
                   <div class="all-results-wrp hidden">
                      <label class="tf-area-all2-title" aria-label="Название поля вывода">
                      Общая площадь всех треугольных фронтонов, м² </label>
