@@ -1359,9 +1359,10 @@ function remuveBtnUgolsInnerh() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfFrontsves] remuveBtnLfFrontsves - добавляет класс hidden к кнопке показать форму
  */
-// document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
-$(document).on('click', '.show-form-lf-frontsves', function () {
-	document.getElementById("lf-frontsves-wrp-id").classList.remove("hidden");
+document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
+	document.getElementById("lf-frontsves-id").classList.remove("hidden");
+	document.getElementById("add-form-lf-karnizsves-id").classList.remove("hidden");
+	document.getElementById("lf-karnizsves-form-id").classList.add("hidden");
 	remuveBtnLfFrontsves();
 });
 
@@ -1369,20 +1370,26 @@ function remuveBtnLfFrontsves() {
 	document.getElementById("show-form-lf-frontsves-id").classList.add("hidden");
 }
 
+
+
 /**
  * Кнопка показа формы размера и количества карнизных свесов в разделе ломаный фронтон
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfKarnizsves] remuveBtnLfKarnizsves - добавляет класс hidden к кнопке показать форму
  */
 // document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
-$(document).on('click', '.show-form-lf-karnizsves', function () {
-	document.getElementById("lf-karnizsves-wrp-id").classList.remove("hidden");
-	remuveBtnLfKarnizsves();
+document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
+	document.getElementById("lf-karnizsves-id").classList.remove("hidden");
+	document.getElementById("add-form-lf-karnizsves-id").classList.remove("hidden");
+	document.getElementById("lf-karnizsves-form-id").classList.add("hidden");
+	remuveBtnlfKarnizsves();
 });
 
-function remuveBtnLfKarnizsves() {
+function remuveBtnlfKarnizsves() {
 	document.getElementById("show-form-lf-karnizsves-id").classList.add("hidden");
 }
+
+
 
 /**
  * Кнопка показа формы размера и количества дверей в разделе треугольный фронтон
@@ -1705,8 +1712,7 @@ document.querySelector(".add-form-tf-frontsves").addEventListener("click", funct
 let newFormLomFrontonFrontsves = 1;
 let nodeLomFrontonFrontsves = document.getElementById("lf-frontsves-form-id").cloneNode(true);
 
-// document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
-$(document).on('click', '.add-form-lf-frontsves', function () {
+document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
 	let newClonedNode = nodeLomFrontonFrontsves.cloneNode(true);
 	document.querySelector(".lf-frontsves").appendChild(newClonedNode);
 	newClonedNode.id = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
@@ -1990,6 +1996,52 @@ function deleteFormLomFrontonFrontsves(btn) {
 		sumAllWidthLomFrontonFrontsves();
 		sumAllHeightLomFrontonFrontsves();
 		sumAreasLomFrontonFrontsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-lf-frontsves").classList.add("hidden");
+		document.getElementById("lf-frontsves-id").classList.add("hidden");
+		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");	
+		deleteLomFrontonFrontsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-formlf-frontsves").classList.add("hidden");
+		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");
+		deleteLomFrontonFrontsves();
+		sumAllWidthLomFrontonFrontsves();
+		sumAllHeightLomFrontonFrontsves();
+		sumAreasLomFrontonFrontsves();		
+	}	
+}
+function deleteLomFrontonFrontsvesTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.lf-frontsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("lf-frontsves-id").classList.add("hidden");
+	}
+}
+
+function deleteFormTreugFrontonFrontsvesTemplate(btn) {
+	let forms = document.getElementsByClassName('lf-frontsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonFrontsves();
+		sumAllHeightLomFrontonFrontsves();
+		sumAreasLomFrontonFrontsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-lf-frontsves").classList.add("hidden");
+		document.getElementById("lf-frontsves-id").classList.add("hidden");
+		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");	
+		deleteLomFrontonFrontsvesTemplate();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-formlf-frontsves").classList.add("hidden");
+		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");
+		deleteLomFrontonFrontsvesTemplate();
+		sumAllWidthLomFrontonFrontsves();
+		sumAllHeightLomFrontonFrontsves();
+		sumAreasLomFrontonFrontsves();		
+	}	
+}
+function deleteLomFrontonFrontsvesTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.lf-frontsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("lf-frontsves-id").classList.add("hidden");
 	}
 }
 
@@ -2008,25 +2060,15 @@ function deleteFormTreugFrontonKarnizsves(btn) {
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();
-	}
-}
-
-function deleteFormTreugFrontonKarnizsves(btn) {
-	let forms = document.getElementsByClassName('tf-karnizsves-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthTreugFrontonKarnizsves();
-		sumAllHeightTreugFrontonKarnizsves();
-		sumAreasTreugFrontonKarnizsves();
 	} if (forms.length == 1) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.getElementById("tf-karnizsves-id").classList.add("hidden");
 		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
-		eleteTreugFrontonKarnizsves();	
+		deleteTreugFrontonKarnizsves();	
 	}  if (forms.length == 0) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
-		eleteTreugFrontonKarnizsves();
+		deleteTreugFrontonKarnizsves();
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();		
@@ -2051,11 +2093,11 @@ function deleteFormTreugFrontonKarnizsvesTemplate(btn) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.getElementById("tf-karnizsves-id").classList.add("hidden");
 		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
-		eleteTreugFrontonKarnizsves();	
+		deleteTreugFrontonKarnizsvesTemplate();	
 	}  if (forms.length == 0) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
-		eleteTreugFrontonKarnizsves();
+		deleteTreugFrontonKarnizsvesTemplate();
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();		
@@ -2084,6 +2126,54 @@ function deleteFormLomFrontonKarnizsves(btn) {
 		sumAllWidthLomFrontonKarnizsves();
 		sumAllHeightLomFrontonKarnizsves();
 		sumAreasLomFrontonKarnizsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
+		document.getElementById("lf-karnizsves-id").classList.add("hidden");
+		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");	
+		deleteLomFrontonKarnizsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
+		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");
+		deleteLomFrontonKarnizsves();
+		sumAllWidthLomFrontonKarnizsves();
+		sumAllHeightLomFrontonKarnizsves();
+		sumAreasLomFrontonKarnizsves();	
+	}	
+}
+
+function deleteLomFrontonKarnizsves(){
+	let wrpFormInnerUgol = document.querySelector('.lf-karnizsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("lf-karnizsves-id").classList.add("hidden");
+	}
+}
+
+function deleteFormLomFrontonKarnizsvesTemplate(btn) {
+	let forms = document.getElementsByClassName('lf-karnizsves-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumAllWidthLomFrontonKarnizsves();
+		sumAllHeightLomFrontonKarnizsves();
+		sumAreasLomFrontonKarnizsves();
+	} if (forms.length == 1) {
+		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
+		document.getElementById("lf-karnizsves-id").classList.add("hidden");
+		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");	
+		deleteLomFrontonKarnizsves();	
+	}  if (forms.length == 0) {
+		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
+		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");
+		deleteLomFrontonKarnizsves();
+		sumAllWidthLomFrontonKarnizsves();
+		sumAllHeightLomFrontonKarnizsves();
+		sumAreasLomFrontonKarnizsves();	
+	}	
+}
+
+function deleteLomFrontonKarnizsvesTemplate(){
+	let wrpFormInnerUgol = document.querySelector('.lf-karnizsves-form');
+	if(!wrpFormInnerUgol){
+		document.getElementById("lf-karnizsves-id").classList.add("hidden");
 	}
 }
 
@@ -2191,12 +2281,13 @@ function deleteFormDoor(btn) {
 		sumAllWidthDoors();
 		sumAreasDoor();			
 	} 	
-}
-function deleteWrpFormDoor (){
+
+function deleteWrpFormDoor(){
 	let wrpFormDoor = document.querySelector('.doors-form');
 	if(!wrpFormDoor){
 		document.getElementById("doors-id").classList.add("hidden");
 	}
+}
 }
 
 function deleteFormDoorTemplate(btn) {
@@ -2217,12 +2308,13 @@ function deleteFormDoorTemplate(btn) {
 		sumAllWidthDoors();
 		sumAreasDoor();			
 	} 	
-}
+
 function deleteWrpFormDoorTemplate(){
 	let wrpFormDoor = document.querySelector('.doors-form');
 	if(!wrpFormDoor){
 		document.getElementById("doors-id").classList.add("hidden");
 	}
+}
 }
 
 /**
