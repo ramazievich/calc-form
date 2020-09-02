@@ -1965,34 +1965,6 @@ function deleteTreugFrontonFrontsves(){
 	}
 }
 
-function deleteFormTreugFrontonFrontsvesTemplate(btn) {
-	let forms = document.getElementsByClassName('tf-frontsves-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthTreugFrontonFrontsves();
-		sumAllHeightTreugFrontonFrontsves();
-		sumAreasTreugFrontonFrontsves();
-	} if (forms.length == 1) {
-		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
-		document.getElementById("tf-frontsves-id").classList.add("hidden");
-		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");	
-		deleteTreugFrontonFrontsvesTemplate();	
-	}  if (forms.length == 0) {
-		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
-		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");
-		deleteTreugFrontonFrontsvesTemplate();
-		sumAllWidthTreugFrontonFrontsves();
-		sumAllHeightTreugFrontonFrontsves();
-		sumAreasTreugFrontonFrontsves();		
-	}	
-}
-function deleteTreugFrontonFrontsvesTemplate(){
-	let wrpFormInnerUgol = document.querySelector('.tf-frontsves-form');
-	if(!wrpFormInnerUgol){
-		document.getElementById("tf-frontsves-id").classList.add("hidden");
-	}
-}
-
 /**
  * @function [deleteFormLomFrontonFrontsves] Функция удаления формы фронтонных свесов в ломаных фронтонах
  * @param {forms} forms - переменная для всей формы
@@ -2022,35 +1994,7 @@ function deleteFormLomFrontonFrontsves(btn) {
 		sumAreasLomFrontonFrontsves();		
 	}	
 }
-function deleteLomFrontonFrontsvesTemplate(){
-	let wrpFormInnerUgol = document.querySelector('.lf-frontsves-form');
-	if(!wrpFormInnerUgol){
-		document.getElementById("lf-frontsves-id").classList.add("hidden");
-	}
-}
-
-function deleteFormTreugFrontonFrontsvesTemplate(btn) {
-	let forms = document.getElementsByClassName('lf-frontsves-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthLomFrontonFrontsves();
-		sumAllHeightLomFrontonFrontsves();
-		sumAreasLomFrontonFrontsves();
-	} if (forms.length == 1) {
-		document.querySelector(".add-form-lf-frontsves").classList.add("hidden");
-		document.getElementById("lf-frontsves-id").classList.add("hidden");
-		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");	
-		deleteLomFrontonFrontsvesTemplate();	
-	}  if (forms.length == 0) {
-		document.querySelector(".add-formlf-frontsves").classList.add("hidden");
-		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");
-		deleteLomFrontonFrontsvesTemplate();
-		sumAllWidthLomFrontonFrontsves();
-		sumAllHeightLomFrontonFrontsves();
-		sumAreasLomFrontonFrontsves();		
-	}	
-}
-function deleteLomFrontonFrontsvesTemplate(){
+function deleteLomFrontonFrontsves(){
 	let wrpFormInnerUgol = document.querySelector('.lf-frontsves-form');
 	if(!wrpFormInnerUgol){
 		document.getElementById("lf-frontsves-id").classList.add("hidden");
@@ -2094,35 +2038,6 @@ function deleteTreugFrontonKarnizsves(){
 	}
 }
 
-function deleteFormTreugFrontonKarnizsvesTemplate(btn) {
-	let forms = document.getElementsByClassName('tf-karnizsves-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthTreugFrontonKarnizsves();
-		sumAllHeightTreugFrontonKarnizsves();
-		sumAreasTreugFrontonKarnizsves();
-	} if (forms.length == 1) {
-		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
-		document.getElementById("tf-karnizsves-id").classList.add("hidden");
-		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
-		deleteTreugFrontonKarnizsvesTemplate();	
-	}  if (forms.length == 0) {
-		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
-		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
-		deleteTreugFrontonKarnizsvesTemplate();
-		sumAllWidthTreugFrontonKarnizsves();
-		sumAllHeightTreugFrontonKarnizsves();
-		sumAreasTreugFrontonKarnizsves();		
-	}	
-}
-
-function deleteTreugFrontonKarnizsvesTemplate(){
-	let wrpFormInnerUgol = document.querySelector('.tf-karnizsves-form');
-	if(!wrpFormInnerUgol){
-		document.getElementById("tf-karnizsves-id").classList.add("hidden");
-	}
-}
-
 /**
  * @function [deleteFormLomFrontonKarnizsves] Функция удаления формы карнизных свесов в ломаных фронтонах
  * @param {forms} forms - переменная для всей формы
@@ -2160,37 +2075,8 @@ function deleteLomFrontonKarnizsves(){
 	}
 }
 
-function deleteFormLomFrontonKarnizsvesTemplate(btn) {
-	let forms = document.getElementsByClassName('lf-karnizsves-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumAllWidthLomFrontonKarnizsves();
-		sumAllHeightLomFrontonKarnizsves();
-		sumAreasLomFrontonKarnizsves();
-	} if (forms.length == 1) {
-		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
-		document.getElementById("lf-karnizsves-id").classList.add("hidden");
-		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");	
-		deleteLomFrontonKarnizsves();	
-	}  if (forms.length == 0) {
-		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
-		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");
-		deleteLomFrontonKarnizsves();
-		sumAllWidthLomFrontonKarnizsves();
-		sumAllHeightLomFrontonKarnizsves();
-		sumAreasLomFrontonKarnizsves();	
-	}	
-}
-
-function deleteLomFrontonKarnizsvesTemplate(){
-	let wrpFormInnerUgol = document.querySelector('.lf-karnizsves-form');
-	if(!wrpFormInnerUgol){
-		document.getElementById("lf-karnizsves-id").classList.add("hidden");
-	}
-}
-
 /**
- * @function [deleteFormNotFrontonKarnizsves] Функция удаления формы карнизных свесов в ломаных фронтонах
+ * @function [deleteFormNotFrontonKarnizsves] Функция удаления формы когда вальмовая или шатровая крыша
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
  * @function [sumAllWidthNotFrontonKarnizsves] вызываем функцию подсчета всех ширин со всех форм карнизных свесов для ломаных фронтонов
@@ -2239,32 +2125,6 @@ function deleteFormWindow(btn) {
 		} 
 	}	
 }
-function deleteFormWindowTemplate(btn) {
-	let forms = document.getElementsByClassName('windows-form');	
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		document.getElementById("windows-id").classList.remove("hidden");
-		sumAllWidthWindows();
-		sumAreasWindow();
-	} if (forms.length == 1){
-		document.querySelector(".add-form-window").classList.add("hidden");
-		document.getElementById("windows-id").classList.add("hidden");
-		document.getElementById("show-form-windows-id").classList.remove("hidden");
-	} if (forms.length == 0) {
-		document.querySelector(".add-form-window").classList.add("hidden");
-		document.querySelector(".show-form-windows").classList.remove("hidden");
-		deleteWrpFormWindowTemplate();
-		sumAllWidthWindows();
-		sumAreasWindow();
-			
-	} 
-	function deleteWrpFormWindowTemplate(){
-		let wrpFormWindow = document.querySelector('.windows-form');
-		if(!wrpFormWindow){
-			document.getElementById("windows-id").classList.add("hidden");
-		} 
-	}	
-}
 
 /**
  * @function [deleteFormDoor] Функция удаления формы для дверных проемов
@@ -2294,33 +2154,6 @@ function deleteFormDoor(btn) {
 		sumAreasDoor();			
 	} 	
 function deleteWrpFormDoor(){
-	let wrpFormDoor = document.querySelector('.doors-form');
-	if(!wrpFormDoor){
-		document.getElementById("doors-id").classList.add("hidden");
-	}
-}
-}
-
-function deleteFormDoorTemplate(btn) {
-	let formsDoor = document.getElementsByClassName('doors-form');
-	if (formsDoor.length > 1) {
-		btn.parentElement.remove();
-		document.getElementById("doors-id").classList.remove("hidden");
-		sumAllWidthDoors();
-		sumAreasDoor();
-	} if (formsDoor.length == 1){
-		document.querySelector(".add-form-door").classList.add("hidden");
-		document.getElementById("doors-id").classList.add("hidden");
-		document.getElementById("show-form-doors-id").classList.remove("hidden");
-	} if (formsDoor.length == 0) {
-		document.querySelector(".add-form-door").classList.add("hidden");
-		document.querySelector(".show-form-doors").classList.remove("hidden");
-		deleteWrpFormDoorTemplate();
-		sumAllWidthDoors();
-		sumAreasDoor();			
-	} 	
-
-function deleteWrpFormDoorTemplate(){
 	let wrpFormDoor = document.querySelector('.doors-form');
 	if(!wrpFormDoor){
 		document.getElementById("doors-id").classList.add("hidden");
@@ -2358,30 +2191,6 @@ function deleteWrpVneshUgol(){
 	}
 }
 
-function deleteFormVneshUgolTemplate(btn) {
-	let formsVneshUgol = document.getElementsByClassName('ugol-vnesh-form');
-	if (formsVneshUgol.length > 1) {
-		btn.parentElement.remove();
-		sumAllHeightVneshUgol();
-	} if (formsVneshUgol.length == 1) {
-		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
-		document.getElementById("ugols-vnesh-id").classList.add("hidden");
-		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");	
-		deleteWrpVneshUgolTemplate();	
-	} if (formsVneshUgol.length == 0) {
-		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
-		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");
-		deleteWrpVneshUgolTemplate();
-		sumAllHeightVneshUgol();		
-	}	
-}
-function deleteWrpVneshUgolTemplate(){
-	let wrpFormVneshUgol = document.querySelector('.ugol-vnesh-form');
-	if(!wrpFormVneshUgol){
-		document.getElementById("ugols-vnesh-id").classList.add("hidden");
-	}
-}
-
 /**
  * @function [deleteFormInnerUgol] Функция удаления формы для подсчета внутренних углов
  * @param {formsInnerUgol} formsVneshUgol - переменная для всей формы
@@ -2406,30 +2215,6 @@ function deleteFormInnerUgol(btn) {
 	}	
 }
 function deleteWrpInnerUgol(){
-	let wrpFormInnerUgol = document.querySelector('.ugol-inner-form');
-	if(!wrpFormInnerUgol){
-		document.getElementById("ugols-inner-id").classList.add("hidden");
-	}
-}
-
-function deleteFormInnerUgolTemplate(btn) {
-	let formsInnerUgol = document.getElementsByClassName('ugol-inner-form');
-	if (formsInnerUgol.length > 1) {
-		btn.parentElement.remove();
-		sumAllHeightInnerUgol();
-	} if (formsInnerUgol.length == 1) {
-		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
-		document.getElementById("ugols-inner-id").classList.add("hidden");
-		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");	
-		deleteWrpInnerUgolTemplate();	
-	}  if (formsInnerUgol.length == 0) {
-		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
-		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");
-		deleteWrpInnerUgolTemplate();
-		sumAllHeightInnerUgol();		
-	}	
-}
-function deleteWrpInnerUgolTemplate(){
 	let wrpFormInnerUgol = document.querySelector('.ugol-inner-form');
 	if(!wrpFormInnerUgol){
 		document.getElementById("ugols-inner-id").classList.add("hidden");

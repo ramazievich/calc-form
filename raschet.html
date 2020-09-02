@@ -88,7 +88,7 @@
                      Оконный проем
                      </span>
                      <svg class="remove-form-btn remove-form-windows" id="close-form-windows-template"
-                        onclick="deleteFormWindowTemplate(this)"
+                        onclick="deleteFormWindow(this)"
                         aria-label="Кнопка удаления формы подсчета преиметра и площади оконных проемов"
                         aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                         <path class="st0"
@@ -252,7 +252,7 @@
                      <span class="door-form-span" id="door-form-span-template"
                         aria-label="Название формы">Дверной проем</span>
                      <svg class="remove-form-btn remove-form-doors" id="close-form-doors-template"
-                        onclick="deleteFormDoorTemplate(this)"
+                        onclick="deleteFormDoor(this)"
                         aria-label="Кнопка удаления формы подсчета преиметра и площади дверных проемов"
                         aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                         <path class="st0"
@@ -411,7 +411,7 @@
                      aria-labelledby="ugols-vnesh-id ugol-vnesh-form-template">
                      <span class="ugol-vnesh-span" aria-label="заголовок внешние углы">Внешние углы</span>
                      <svg class="remove-form-btn remove-form-ugols-vnesh" id="close-form-ugols-vnesh-template"
-                        onclick="deleteFormVneshUgolTemplate(this)"
+                        onclick="deleteFormVneshUgol(this)"
                         aria-label="Кнопка удаления формы подсчета внешних углов"
                         aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                         <path class="st0"
@@ -501,7 +501,7 @@
                   aria-labelledby="ugols-inner-id ugol-inner-form-template">
                   <span class="ugol-inner-span" aria-label="заголовок внутренние углы">Внутренние углы</span>
                   <svg class="remove-form-btn remove-form-ugols-inner" id="close-form-ugols-inner-template"
-                     onclick="deleteFormInnerUgolTemplate(this)"
+                     onclick="deleteFormInnerUgol(this)"
                      aria-label="Кнопка удаления формы подсчета внутрениих углов"
                      aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                      <path class="st0"
@@ -721,7 +721,7 @@
                               <span class="tf-frontsves-form-span" id="tf-frontsves-form-span-template"
                                  aria-label="Название формы">Фронтонный свес</span>
                               <svg class="remove-form-btn remove-form-tf-frontsves" id="close-form-tf-frontsves-template"
-                                 onclick="deleteFormTreugFrontonFrontsvesTemplate(this)"
+                                 onclick="deleteFormTreugFrontonFrontsves(this)"
                                  aria-label="Кнопка удаления формы подсчета площади фронтонных свесов в треугольном фронтоне"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                  <path class="st0"
@@ -860,11 +860,11 @@
                   <!-- tf - треугольный фронтон - карнизный свес -->
                      <div class="tf-karnizsves hidden" id="tf-karnizsves-id">
                         <form action="#" class="tf-karnizsves-form" id="tf-karnizsves-form-template"
-                              name="tf-karnizsves-form-template" aria-labelledby="tf-karnizsves-id tf-karnizsves-template">
+                              name="tf-karnizsves-form-template" aria-labelledby="tf-karnizsves-id tf-karnizsves-form-template">
                               <span class="tf-karnizsves-form-span" id="tf-karnizsves-form-span-template"
                                  aria-label="Название формы">Карнизный свес</span>
                               <svg class="remove-form-btn remove-form-tf-karnizsves" id="close-form-tf-karnizsves-template"
-                                 onclick="deleteFormTreugFrontonKarnizsvesTemplate(this)"
+                                 onclick="deleteFormTreugFrontonKarnizsves(this)"
                                  aria-label="Кнопка удаления формы подсчета площади карнизных свесов в треугольном фронтоне"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                  <path class="st0"
@@ -917,7 +917,7 @@
                               </div>
                         </form>
                         <form action="#" class="tf-karnizsves-form" id="tf-karnizsves-form-id"
-                        name="tf-karnizsves-form-id" aria-labelledby="tf-karnizsves-id tf-karnizsves-id">
+                        name="tf-karnizsves-form-id" aria-labelledby="tf-karnizsves-id tf-karnizsves-form-id">
                         <span class="tf-karnizsves-form-span" id="tf-karnizsves-form-span-id"
                            aria-label="Название формы">Карнизный свес</span>
                         <svg class="remove-form-btn remove-form-tf-karnizsves" id="close-form-tf-karnizsves"
@@ -1136,11 +1136,11 @@
                         <div class="lf-frontsves hidden" id="lf-frontsves-id">
                            <form action="#" class="lf-frontsves-form" id="lf-frontsves-form-template"
                               name="lf-frontsves-form-id"
-                              aria-labelledby="lf-frontsves-form-template lf-frontsves-template">
+                              aria-labelledby="lf-frontsves-form-template lf-frontsves-form-template">
                               <span class="lf-frontsves-form-span" id="lf-frontsves-form-span-template"
                                  aria-label="Название формы">Фронтонный свес</span>
                               <svg class="remove-form-btn remove-form-lf-frontsves" id="close-form-lf-frontsves-template"
-                                 onclick="deleteFormLomFrontonFrontsvesTemplate(this)"
+                                 onclick="deleteFormLomFrontonFrontsves(this)"
                                  aria-label="Кнопка удаления формы подсчета площади фронтонных свесов в ломаном фронтоне"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                  <path class="st0"
@@ -1271,7 +1271,7 @@
                                  aria-labelledby="lf-frontsves-form-id lf-frontsves-result-id">
                               <p class="lf-frontsves-area-all">м&sup2;</p>
                            </div>
-                        </form>
+                           </form>
                         </div>
                      <button class="add-form-btn hidden add-form-lf-frontsves" id="add-form-lf-frontsves-id" type="button"
                         aria-label="Кнопка добавления новой формы подсчета фронтонных свесов в ломаных фронтонах">
@@ -1301,7 +1301,7 @@
                               <span class="lf-karnizsves-form-span" id="lf-karnizsves-form-span-template"
                                  aria-label="Название формы">Карнизный свес</span>
                               <svg class="remove-form-btn remove-form-lf-karnizsves" id="close-form-lf-karnizsves-template"
-                                 onclick="deleteFormLomFrontonKarnizsvesTemplate(this)"
+                                 onclick="deleteFormLomFrontonKarnizsves(this)"
                                  aria-label="Кнопка удаления формы подсчета площади карнизных свесов в ломаных фронтоне"
                                  aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 20 20">
                                  <path class="st0"
