@@ -1373,23 +1373,20 @@ function remuveBtnUgolsInnerh() {
  */
 document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
 	document.getElementById("lf-frontsves-id").classList.remove("hidden");
-	document.getElementById("add-form-lf-karnizsves-id").classList.remove("hidden");
-	document.getElementById("lf-karnizsves-form-id").classList.add("hidden");
-	remuveBtnLfFrontsves();
+	document.getElementById("add-form-lf-frontsves-id").classList.remove("hidden");
+	document.getElementById("lf-frontsves-form-id").classList.add("hidden");
+	remuveBtnlfFrontsves();
 });
 
-function remuveBtnLfFrontsves() {
+function remuveBtnlfFrontsves() {
 	document.getElementById("show-form-lf-frontsves-id").classList.add("hidden");
 }
-
-
 
 /**
  * Кнопка показа формы размера и количества карнизных свесов в разделе ломаный фронтон
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfKarnizsves] remuveBtnLfKarnizsves - добавляет класс hidden к кнопке показать форму
  */
-// document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
 document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
 	document.getElementById("lf-karnizsves-id").classList.remove("hidden");
 	document.getElementById("add-form-lf-karnizsves-id").classList.remove("hidden");
