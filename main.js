@@ -258,7 +258,7 @@ function funcDoor() {
  * @param {number} visota - поле ввода высоты треугольного фронтона
  * @param {number} result - результат подсчета
  */
-/*let allFormsTreugFronton = document.querySelectorAll(".tf-form");
+let allFormsTreugFronton = document.querySelectorAll(".tf-form");
 console.log(allFormsTreugFronton);
 
 function funcTreugFronton() {
@@ -273,7 +273,7 @@ function funcTreugFronton() {
 		form.querySelector(".tf-area").value = result;
 	}
 }
-*/
+
 
 /**
  * @function [funcTreugFronton]Функция подсчета площади треугольного фронтона для одной формы
@@ -915,8 +915,6 @@ function sumAllHeightVneshUgol() {
 }
 
 
-
-
 /**
  * @function [sumAllHeightInnerUgol] Функция подсчета всех сумарных высот внутренних углов из всех форм
  * @param {number} heightInnerUgol - переменная для поля сумарной ширины из формы
@@ -1061,11 +1059,12 @@ function showNotFrontonItems(check) {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnWindow] remuveBtnWindow - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-windows").addEventListener("click", function () {
+// document.querySelector(".show-form-windows").addEventListener("click", function () {
+$(document).on('click', '.show-form-windows', function () {
 	document.getElementById("windows-id").classList.remove("hidden");
 	document.getElementById("add-form-window-id").classList.remove("hidden");
 	document.getElementById("windows-form-id").classList.add("hidden");
-	remuveBtnWindow();	
+	remuveBtnWindow();
 });
 
 function remuveBtnWindow() {
@@ -1077,7 +1076,8 @@ function remuveBtnWindow() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnDoors] remuveBtnDoors - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-doors").addEventListener("click", function () {
+// document.querySelector(".show-form-doors").addEventListener("click", function () {
+$(document).on('click', '.show-form-doors', function () {
 	document.getElementById("doors-id").classList.remove("hidden");
 	document.getElementById("add-form-door-id").classList.remove("hidden");
 	document.getElementById("doors-form-id").classList.add("hidden");
@@ -1093,7 +1093,8 @@ function remuveBtnDoors() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnUgolsVnes] remuveBtnUgolsVnes - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-ugols-vnesh").addEventListener("click", function () {
+// document.querySelector(".show-form-ugols-vnesh").addEventListener("click", function () {
+$(document).on('click', '.show-form-ugols-vnesh', function () {
 	document.getElementById("ugols-vnesh-id").classList.remove("hidden");
 	document.getElementById("add-form-ugols-vnesh-id").classList.remove("hidden");
 	document.getElementById("ugol-vnesh-form-id").classList.add("hidden");
@@ -1109,7 +1110,8 @@ function remuveBtnUgolsVnesh() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnUgolsInnerh] remuveBtnUgolsInnerh - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-ugols-inner").addEventListener("click", function () {
+// document.querySelector(".show-form-ugols-inner").addEventListener("click", function () {
+$(document).on('click', '.show-form-ugols-inner', function () {
 	document.getElementById("ugols-inner-id").classList.remove("hidden");
 	document.getElementById("add-form-ugols-inner-id").classList.remove("hidden");
 	document.getElementById("ugol-inner-form-id").classList.add("hidden");
@@ -1125,7 +1127,8 @@ function remuveBtnUgolsInnerh() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfFrontsves] remuveBtnLfFrontsves - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
+// document.querySelector(".show-form-lf-frontsves").addEventListener("click", function () {
+$(document).on('click', '.show-form-lf-frontsves', function () {
 	document.getElementById("lf-frontsves-id").classList.remove("hidden");
 	document.getElementById("add-form-lf-frontsves-id").classList.remove("hidden");
 	document.getElementById("lf-frontsves-form-id").classList.add("hidden");
@@ -1141,7 +1144,8 @@ function remuveBtnlfFrontsves() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtnLfKarnizsves] remuveBtnLfKarnizsves - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
+// document.querySelector(".show-form-lf-karnizsves").addEventListener("click", function () {
+$(document).on('click', '.show-form-lf-karnizsves', function () {
 	document.getElementById("lf-karnizsves-id").classList.remove("hidden");
 	document.getElementById("add-form-lf-karnizsves-id").classList.remove("hidden");
 	document.getElementById("lf-karnizsves-form-id").classList.add("hidden");
@@ -1157,7 +1161,8 @@ function remuveBtnlfKarnizsves() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtntfFrontsves] remuveBtntfFrontsves - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-tf-frontsves").addEventListener("click", function () {
+// document.querySelector(".show-form-tf-frontsves").addEventListener("click", function () {
+$(document).on('click', '.show-form-tf-frontsves', function () {
 	document.getElementById("tf-frontsves-id").classList.remove("hidden");
 	document.getElementById("add-form-tf-frontsves-id").classList.remove("hidden");
 	document.getElementById("tf-frontsves-form-id").classList.add("hidden");
@@ -1173,7 +1178,8 @@ function remuveBtntfFrontsves() {
  * @param {remove} - удаляет класс hidden у формы
  * @function [remuveBtntfKarnizsves] remuveBtntfKarnizsves - добавляет класс hidden к кнопке показать форму
  */
-document.querySelector(".show-form-tf-karnizsves").addEventListener("click", function () {
+// document.querySelector(".show-form-tf-karnizsves").addEventListener("click", function () {
+$(document).on('click', '.show-form-tf-karnizsves', function () {
 	document.getElementById("tf-karnizsves-id").classList.remove("hidden");
 	document.getElementById("add-form-tf-karnizsves-id").classList.remove("hidden");
 	document.getElementById("tf-karnizsves-form-id").classList.add("hidden");
@@ -1193,7 +1199,8 @@ function remuveBtntfKarnizsves() {
 let newFormStenaId = 1;
 let node = document.getElementById("walls-form-id").cloneNode(true);
 
-document.querySelector(".add-form").addEventListener("click", function () {
+// document.querySelector(".add-form").addEventListener("click", function () {
+$(document).on('click', '.add-form', function () {
 	let newClonedNode = node.cloneNode(true);
 	document.querySelector(".walls").appendChild(newClonedNode);
 	newClonedNode.id = "walls-form-id-" + newFormStenaId;
@@ -1213,16 +1220,17 @@ document.querySelector(".add-form").addEventListener("click", function () {
  */
 let newFormWindow = 1;
 let nodeWindow = document.getElementById("windows-form-id").cloneNode(true);
-document.querySelector(".add-form-window").addEventListener("click", function () {	
-let newClonedNode = nodeWindow.cloneNode(true);
-document.querySelector(".windows").appendChild(newClonedNode);
-newClonedNode.id = "windows-form-id-" + newFormWindow;
-newClonedNode.querySelector(".window_length").name = 'data[Окна][' + newFormWindow + '][Ширина]';
-newClonedNode.querySelector(".window_length").value = '';
-newClonedNode.querySelector(".window_height").name = 'data[Окна][' + newFormWindow + '][Высота]';
-newClonedNode.querySelector(".window_height").value = '';
-newClonedNode.querySelector(".select-selected").name = 'data[Окна][' + newFormWindow + '][Исполнение]';
-newFormWindow++;
+// document.querySelector(".add-form-window").addEventListener("click", function () {
+$(document).on('click', '.add-form-window', function () {
+	let newClonedNode = nodeWindow.cloneNode(true);
+	document.querySelector(".windows").appendChild(newClonedNode);
+	newClonedNode.id = "windows-form-id-" + newFormWindow;
+	newClonedNode.querySelector(".window_length").name = 'data[Окна][' + newFormWindow + '][Ширина]';
+	newClonedNode.querySelector(".window_length").value = '';
+	newClonedNode.querySelector(".window_height").name = 'data[Окна][' + newFormWindow + '][Высота]';
+	newClonedNode.querySelector(".window_height").value = '';
+	newClonedNode.querySelector(".select-selected").name = 'data[Окна][' + newFormWindow + '][Исполнение]';
+	newFormWindow++;
 });
 
 
@@ -1235,7 +1243,8 @@ newFormWindow++;
 let newFormDoor = 1;
 let nodeDoor = document.getElementById("doors-form-id").cloneNode(true);
 
-document.querySelector(".add-form-door").addEventListener("click", function () {
+// document.querySelector(".add-form-door").addEventListener("click", function () {
+$(document).on('click', '.add-form-door', function () {
 	let newClonedNode = nodeDoor.cloneNode(true);
 	document.querySelector(".doors").appendChild(newClonedNode);
 	newClonedNode.id = "doors-form-id-" + newFormDoor;
@@ -1275,7 +1284,8 @@ $(document).on('click', '.add-form-ugols-vnesh', function () {
 let newFormInnerUgol = 1;
 let nodeInnerUgol = document.getElementById("ugol-inner-form-id").cloneNode(true);
 
-document.querySelector(".add-form-ugols-inner").addEventListener("click", function () {
+// document.querySelector(".add-form-ugols-inner").addEventListener("click", function () {
+$(document).on('click', '.add-form-ugols-inner', function () {
 	let newClonedNode = nodeInnerUgol.cloneNode(true);
 	document.querySelector(".ugols-inner").appendChild(newClonedNode);
 	newClonedNode.id = "gol-inner-form-id-" + newFormInnerUgol;
@@ -1329,7 +1339,8 @@ $(document).on('click', '.add-form-lf', function () {
 let newFormTreugFrontonFrontsves = 1;
 let nodeTreugFrontonFrontsves = document.getElementById("tf-frontsves-form-id").cloneNode(true);
 
-document.querySelector(".add-form-tf-frontsves").addEventListener("click", function () {
+// document.querySelector(".add-form-tf-frontsves").addEventListener("click", function () {
+$(document).on('click', '.add-form-tf-frontsves', function () {
 	let newClonedNode = nodeTreugFrontonFrontsves.cloneNode(true);
 	document.querySelector(".tf-frontsves").appendChild(newClonedNode);
 	newClonedNode.id = "tf-frontsves-form-id-" + newFormTreugFrontonFrontsves;
@@ -1346,7 +1357,8 @@ document.querySelector(".add-form-tf-frontsves").addEventListener("click", funct
 let newFormLomFrontonFrontsves = 1;
 let nodeLomFrontonFrontsves = document.getElementById("lf-frontsves-form-id").cloneNode(true);
 
-document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
+// document.querySelector(".add-form-lf-frontsves").addEventListener("click", function () {
+$(document).on('click', '.add-form-lf-frontsves', function () {
 	let newClonedNode = nodeLomFrontonFrontsves.cloneNode(true);
 	document.querySelector(".lf-frontsves").appendChild(newClonedNode);
 	newClonedNode.id = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
@@ -1363,7 +1375,8 @@ document.querySelector(".add-form-lf-frontsves").addEventListener("click", funct
 let newFormTreugFrontonKarnizsves = 1;
 let nodeTreugFrontonKarnizsves = document.getElementById("tf-karnizsves-form-id").cloneNode(true);
 
-document.querySelector(".add-form-tf-karnizsves").addEventListener("click", function () {
+// document.querySelector(".add-form-tf-karnizsves").addEventListener("click", function () {
+$(document).on('click', '.add-form-tf-karnizsves', function () {
 	let newClonedNode = nodeTreugFrontonKarnizsves.cloneNode(true);
 	document.querySelector(".tf-karnizsves").appendChild(newClonedNode);
 	newClonedNode.id = "tf-karnizsves-form-id-" + newFormTreugFrontonKarnizsves;
@@ -1483,23 +1496,26 @@ function deleteFormTreugFrontonFrontsves(btn) {
 		sumAllWidthTreugFrontonFrontsves();
 		sumAllHeightTreugFrontonFrontsves();
 		sumAreasTreugFrontonFrontsves();
-	} if (forms.length == 1) {
+	}
+	if (forms.length == 1) {
 		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
 		document.getElementById("tf-frontsves-id").classList.add("hidden");
-		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");	
-		deleteTreugFrontonFrontsves ();	
-	}  if (forms.length == 0) {
+		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");
+		deleteTreugFrontonFrontsves();
+	}
+	if (forms.length == 0) {
 		document.querySelector(".add-form-tf-frontsves").classList.add("hidden");
 		document.querySelector(".show-form-tf-frontsves").classList.remove("hidden");
 		deleteTreugFrontonFrontsves();
 		sumAllWidthTreugFrontonFrontsves();
 		sumAllHeightTreugFrontonFrontsves();
-		sumAreasTreugFrontonFrontsves();		
-	}	
+		sumAreasTreugFrontonFrontsves();
+	}
 }
-function deleteTreugFrontonFrontsves(){
+
+function deleteTreugFrontonFrontsves() {
 	let wrpFormInnerUgol = document.querySelector('.tf-frontsves-form');
-	if(!wrpFormInnerUgol){
+	if (!wrpFormInnerUgol) {
 		document.getElementById("tf-frontsves-id").classList.add("hidden");
 	}
 }
@@ -1519,23 +1535,26 @@ function deleteFormLomFrontonFrontsves(btn) {
 		sumAllWidthLomFrontonFrontsves();
 		sumAllHeightLomFrontonFrontsves();
 		sumAreasLomFrontonFrontsves();
-	} if (forms.length == 1) {
+	}
+	if (forms.length == 1) {
 		document.querySelector(".add-form-lf-frontsves").classList.add("hidden");
 		document.getElementById("lf-frontsves-id").classList.add("hidden");
-		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");	
-		deleteLomFrontonFrontsves();	
-	}  if (forms.length == 0) {
+		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");
+		deleteLomFrontonFrontsves();
+	}
+	if (forms.length == 0) {
 		document.querySelector(".add-formlf-frontsves").classList.add("hidden");
 		document.querySelector(".show-form-lf-frontsves").classList.remove("hidden");
 		deleteLomFrontonFrontsves();
 		sumAllWidthLomFrontonFrontsves();
 		sumAllHeightLomFrontonFrontsves();
-		sumAreasLomFrontonFrontsves();		
-	}	
+		sumAreasLomFrontonFrontsves();
+	}
 }
-function deleteLomFrontonFrontsves(){
+
+function deleteLomFrontonFrontsves() {
 	let wrpFormInnerUgol = document.querySelector('.lf-frontsves-form');
-	if(!wrpFormInnerUgol){
+	if (!wrpFormInnerUgol) {
 		document.getElementById("lf-frontsves-id").classList.add("hidden");
 	}
 }
@@ -1555,24 +1574,26 @@ function deleteFormTreugFrontonKarnizsves(btn) {
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
 		sumAreasTreugFrontonKarnizsves();
-	} if (forms.length == 1) {
+	}
+	if (forms.length == 1) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.getElementById("tf-karnizsves-id").classList.add("hidden");
-		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");	
-		deleteTreugFrontonKarnizsves();	
-	}  if (forms.length == 0) {
+		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
+		deleteTreugFrontonKarnizsves();
+	}
+	if (forms.length == 0) {
 		document.querySelector(".add-form-tf-karnizsves").classList.add("hidden");
 		document.querySelector(".show-form-tf-karnizsves").classList.remove("hidden");
 		deleteTreugFrontonKarnizsves();
 		sumAllWidthTreugFrontonKarnizsves();
 		sumAllHeightTreugFrontonKarnizsves();
-		sumAreasTreugFrontonKarnizsves();		
-	}	
+		sumAreasTreugFrontonKarnizsves();
+	}
 }
 
-function deleteTreugFrontonKarnizsves(){
+function deleteTreugFrontonKarnizsves() {
 	let wrpFormInnerUgol = document.querySelector('.tf-karnizsves-form');
-	if(!wrpFormInnerUgol){
+	if (!wrpFormInnerUgol) {
 		document.getElementById("tf-karnizsves-id").classList.add("hidden");
 	}
 }
@@ -1592,24 +1613,26 @@ function deleteFormLomFrontonKarnizsves(btn) {
 		sumAllWidthLomFrontonKarnizsves();
 		sumAllHeightLomFrontonKarnizsves();
 		sumAreasLomFrontonKarnizsves();
-	} if (forms.length == 1) {
+	}
+	if (forms.length == 1) {
 		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
 		document.getElementById("lf-karnizsves-id").classList.add("hidden");
-		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");	
-		deleteLomFrontonKarnizsves();	
-	}  if (forms.length == 0) {
+		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");
+		deleteLomFrontonKarnizsves();
+	}
+	if (forms.length == 0) {
 		document.querySelector(".add-form-lf-karnizsves").classList.add("hidden");
 		document.querySelector(".show-form-lf-karnizsves").classList.remove("hidden");
 		deleteLomFrontonKarnizsves();
 		sumAllWidthLomFrontonKarnizsves();
 		sumAllHeightLomFrontonKarnizsves();
-		sumAreasLomFrontonKarnizsves();	
-	}	
+		sumAreasLomFrontonKarnizsves();
+	}
 }
 
-function deleteLomFrontonKarnizsves(){
+function deleteLomFrontonKarnizsves() {
 	let wrpFormInnerUgol = document.querySelector('.lf-karnizsves-form');
-	if(!wrpFormInnerUgol){
+	if (!wrpFormInnerUgol) {
 		document.getElementById("lf-karnizsves-id").classList.add("hidden");
 	}
 }
@@ -1639,30 +1662,33 @@ function deleteFormNotFrontonKarnizsves(btn) {
  * @function [sumAreasWindow] вызываем функцию подсчета всех площадей оконных проемов со всех форм для стен
  */
 function deleteFormWindow(btn) {
-	let forms = document.getElementsByClassName('windows-form');	
+	let forms = document.getElementsByClassName('windows-form');
 	if (forms.length > 1) {
 		btn.parentElement.remove();
 		document.getElementById("windows-id").classList.remove("hidden");
 		sumAllWidthWindows();
 		sumAreasWindow();
-	} if (forms.length == 1){
+	}
+	if (forms.length == 1) {
 		document.querySelector(".add-form-window").classList.add("hidden");
 		document.getElementById("windows-id").classList.add("hidden");
 		document.getElementById("show-form-windows-id").classList.remove("hidden");
-	} if (forms.length == 0) {
+	}
+	if (forms.length == 0) {
 		document.querySelector(".add-form-window").classList.add("hidden");
 		document.querySelector(".show-form-windows").classList.remove("hidden");
 		deleteWrpFormWindow();
 		sumAllWidthWindows();
 		sumAreasWindow();
-			
-	} 
-	function deleteWrpFormWindow(){
+
+	}
+
+	function deleteWrpFormWindow() {
 		let wrpFormWindow = document.querySelector('.windows-form');
-		if(!wrpFormWindow){
+		if (!wrpFormWindow) {
 			document.getElementById("windows-id").classList.add("hidden");
-		} 
-	}	
+		}
+	}
 }
 
 /**
@@ -1681,23 +1707,26 @@ function deleteFormDoor(btn) {
 		document.getElementById("doors-id").classList.remove("hidden");
 		sumAllWidthDoors();
 		sumAreasDoor();
-	} if (formsDoor.length == 1){
+	}
+	if (formsDoor.length == 1) {
 		document.querySelector(".add-form-door").classList.add("hidden");
 		document.getElementById("doors-id").classList.add("hidden");
 		document.getElementById("show-form-doors-id").classList.remove("hidden");
-	} if (formsDoor.length == 0) {
+	}
+	if (formsDoor.length == 0) {
 		document.querySelector(".add-form-door").classList.add("hidden");
 		document.querySelector(".show-form-doors").classList.remove("hidden");
 		deleteWrpFormDoor();
 		sumAllWidthDoors();
-		sumAreasDoor();			
-	} 	
-function deleteWrpFormDoor(){
-	let wrpFormDoor = document.querySelector('.doors-form');
-	if(!wrpFormDoor){
-		document.getElementById("doors-id").classList.add("hidden");
+		sumAreasDoor();
 	}
-}
+
+	function deleteWrpFormDoor() {
+		let wrpFormDoor = document.querySelector('.doors-form');
+		if (!wrpFormDoor) {
+			document.getElementById("doors-id").classList.add("hidden");
+		}
+	}
 }
 
 /**
@@ -1711,21 +1740,24 @@ function deleteFormVneshUgol(btn) {
 	if (formsVneshUgol.length > 1) {
 		btn.parentElement.remove();
 		sumAllHeightVneshUgol();
-	} if (formsVneshUgol.length == 1) {
+	}
+	if (formsVneshUgol.length == 1) {
 		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
 		document.getElementById("ugols-vnesh-id").classList.add("hidden");
-		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");	
-		deleteWrpVneshUgol ();	
-	} if (formsVneshUgol.length == 0) {
+		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");
+		deleteWrpVneshUgol();
+	}
+	if (formsVneshUgol.length == 0) {
 		document.querySelector(".add-form-ugols-vnesh").classList.add("hidden");
 		document.querySelector(".show-form-ugols-vnesh").classList.remove("hidden");
 		deleteWrpVneshUgol();
-		sumAllHeightVneshUgol();		
-	}	
+		sumAllHeightVneshUgol();
+	}
 }
-function deleteWrpVneshUgol(){
+
+function deleteWrpVneshUgol() {
 	let wrpFormVneshUgol = document.querySelector('.ugol-vnesh-form');
-	if(!wrpFormVneshUgol){
+	if (!wrpFormVneshUgol) {
 		document.getElementById("ugols-vnesh-id").classList.add("hidden");
 	}
 }
@@ -1741,21 +1773,24 @@ function deleteFormInnerUgol(btn) {
 	if (formsInnerUgol.length > 1) {
 		btn.parentElement.remove();
 		sumAllHeightInnerUgol();
-	} if (formsInnerUgol.length == 1) {
+	}
+	if (formsInnerUgol.length == 1) {
 		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
 		document.getElementById("ugols-inner-id").classList.add("hidden");
-		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");	
-		deleteWrpInnerUgol ();	
-	}  if (formsInnerUgol.length == 0) {
+		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");
+		deleteWrpInnerUgol();
+	}
+	if (formsInnerUgol.length == 0) {
 		document.querySelector(".add-form-ugols-inner").classList.add("hidden");
 		document.querySelector(".show-form-ugols-inner").classList.remove("hidden");
 		deleteWrpInnerhUgol();
-		sumAllHeightInnerUgol();		
-	}	
+		sumAllHeightInnerUgol();
+	}
 }
-function deleteWrpInnerUgol(){
+
+function deleteWrpInnerUgol() {
 	let wrpFormInnerUgol = document.querySelector('.ugol-inner-form');
-	if(!wrpFormInnerUgol){
+	if (!wrpFormInnerUgol) {
 		document.getElementById("ugols-inner-id").classList.add("hidden");
 	}
 }

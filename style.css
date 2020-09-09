@@ -1,16 +1,6 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 5 version
-*/
-
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 5 version
-*/
+.fasad_form_main h2 {
+    margin: 20px 0;
+}
 
 .fasad_form_main .hidden {
     position: absolute !important;
@@ -85,12 +75,13 @@
 .fasad_form_main .lf-frontsves-form,
 .fasad_form_main .lf-karnizsves-form,
 .fasad_form_main .notfront-karnizsves-form {
+    position: relative;
     width: 240px;
     background-color: #f2f2f240;
     border: 0.5px solid #00000005;
     border-radius: 4px;
-    -webkit-box-shadow: 0px 0 6px 1px rgba(0, 0, 0, 0);
-    box-shadow: 0px 0 6px 1px rgba(0, 0, 0, 0);
+    -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
     margin: 2px;
 }
 
@@ -361,10 +352,12 @@
 
 
 .fasad_form_main .remove-form-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 20px;
     height: 20px;
     border: none;
-    margin: -26px 0 0 234px;
     cursor: pointer;
     background: none;
     display: block;
@@ -426,21 +419,21 @@
     border-radius: 100%;
 }
 
-.fasad_form_main .wall-form-span,
-.fasad_form_main .window-form-span,
-.fasad_form_main .door-form-span,
-.fasad_form_main .ugol-vnesh-span,
-.fasad_form_main .ugol-inner-span,
-.fasad_form_main .tf-form-span,
-.fasad_form_main .tf-window-form-span,
-.fasad_form_main .tf-door-form-span,
-.fasad_form_main .tf-frontsves-form-span,
-.fasad_form_main .tf-karnizsves-form-span,
-.fasad_form_main .lf-window-form-span,
-.fasad_form_main .lf-door-form-span,
-.fasad_form_main .lf-frontsves-form-span,
-.fasad_form_main .lf-karnizsves-form-span,
-.fasad_form_main .notfront-karnizsves-form-span {
+.fasad_form_main .wall-form-label,
+.fasad_form_main .window-form-label,
+.fasad_form_main .door-form-label,
+.fasad_form_main .ugol-vnesh-label,
+.fasad_form_main .ugol-inner-label,
+.fasad_form_main .tf-form-label,
+.fasad_form_main .tf-window-form-label,
+.fasad_form_main .tf-door-form-label,
+.fasad_form_main .tf-frontsves-form-label,
+.fasad_form_main .tf-karnizsves-form-label,
+.fasad_form_main .lf-window-form-label,
+.fasad_form_main .lf-door-form-label,
+.fasad_form_main .lf-frontsves-form-label,
+.fasad_form_main .lf-karnizsves-form-label,
+.fasad_form_main .notfront-karnizsves-form-label {
     font-size: 19px;
     font-weight: 600;
     color: #000;
