@@ -1024,9 +1024,6 @@ function showTreugolFrontonItems(check) {
 		document.getElementById("check-treugol-field").classList.remove("hidden");
 	} else document.getElementById("check-treugol-field").classList.add("hidden");
 	clearAllFormTreugolFronton();
-	deleteFormTreugFrontonFrontsves(btn);
-	deleteFormTreugFrontonFrontsves(btn);
-	deleteFormTreugFrontonKarnizsves(btn);
 }
 
 function clearAllFormTreugolFronton() {
