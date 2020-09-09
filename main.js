@@ -1016,13 +1016,29 @@ function sumAllSquareNotFrontonKarnizsves() {
  * @param {remove} - удаляет класс hidden у формы
  * @param {check}  - переменная к классу для чекбокса
  * @param {add}  - добавляет hidden к форме
+ * @function [clearAllFormTreugolFronton] функция сброса всех данных в заполненых полях в треугольных фронтонах когда checkbox снят
  */
 function showTreugolFrontonItems(check) {
 	check = document.getElementById("check-treugol");
 	if (check.checked) {
 		document.getElementById("check-treugol-field").classList.remove("hidden");
 	} else document.getElementById("check-treugol-field").classList.add("hidden");
+	clearAllFormTreugolFronton();
+	deleteFormTreugFrontonFrontsves(btn);
+	deleteFormTreugFrontonFrontsves(btn);
+	deleteFormTreugFrontonKarnizsves(btn);
 }
+
+function clearAllFormTreugolFronton() {
+	let form = document.getElementById('check-treugol-field');
+	let inputs = form.getElementsByTagName('input');
+	for (let input of inputs)
+	  input.value = '';
+
+  }
+  
+  let checkboxTreugol = document.getElementById('check-treugol');
+  checkboxTreugol.addEventListener('click', clearAllFormTreugolFronton);
 
 /**
  * Для чекбокса
@@ -1031,13 +1047,26 @@ function showTreugolFrontonItems(check) {
  * @param {remove} - удаляет класс hidden у формы
  * @param {check}  - переменная к классу для чекбокса
  * @param {add}  - добавляет hidden к форме
+ * @function [clearAllFormLomFronton] функция сброса всех данных в заполненых полях в ломаных фронтонах когда checkbox снят
  */
 function showLomFrontonItems(check) {
 	check = document.getElementById("check-lom");
 	if (check.checked) {
 		document.getElementById("check-lom-field").classList.remove("hidden");
 	} else document.getElementById("check-lom-field").classList.add("hidden");
+	clearAllFormLomFronton();
 }
+
+function clearAllFormLomFronton() {
+	let form = document.getElementById('check-lom-field');
+	let inputs = form.getElementsByTagName('input');
+	for (let input of inputs)
+	  input.value = '';
+  }
+  
+  let checkboxLom = document.getElementById('check-lom');
+  checkboxLom.addEventListener('click', clearAllFormLomFronton);
+  
 
 /**
  * Для чекбокса
@@ -1440,13 +1469,13 @@ function deleteForm(btn) {
  * @function [deleteFormTreugFronton] Функция удаления формы для размера треугольного фронтона
  * @param {forms} forms - переменная для всей формы
  * @param {remove} remove - удаляем форму
- * @function [sumAreasTreugFronton()] вызываем функцию подсчета всех площадей со всех форм для размера треугольного фронтона
+ * @function [sumAreasTreugolFronton()] вызываем функцию подсчета всех площадей со всех форм для размера треугольного фронтона
  */
 function deleteFormTreugFronton(btn) {
 	let forms = document.getElementsByClassName('tf-form');
 	if (forms.length > 1) {
 		btn.parentElement.remove();
-		sumAreasTreugFronton();
+		sumAreasTreugolFronton();
 	}
 }
 
