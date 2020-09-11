@@ -1022,8 +1022,10 @@ function showTreugolFrontonItems(check) {
 	check = document.getElementById("check-treugol");
 	if (check.checked) {
 		document.getElementById("check-treugol-field").classList.remove("hidden");
-	} else document.getElementById("check-treugol-field").classList.add("hidden");
+	} else
+	document.getElementById("check-treugol-field").classList.add("hidden");
 	clearAllFormTreugolFronton();
+
 }
 
 function clearAllFormTreugolFronton() {
@@ -1031,7 +1033,6 @@ function clearAllFormTreugolFronton() {
 	let inputs = form.getElementsByTagName('input');
 	for (let input of inputs)
 	  input.value = '';
-
   }
   
   let checkboxTreugol = document.getElementById('check-treugol');
@@ -1072,13 +1073,27 @@ function clearAllFormLomFronton() {
  * @param {remove} - удаляет класс hidden у формы
  * @param {check}  - переменная к классу для чекбокса
  * @param {add}  - добавляет hidden к форме
+ * @function [clearAllFormNotFronton] функция сброса всех данных в заполненых полях когда нет фронтонов и когда checkbox снят
  */
 function showNotFrontonItems(check) {
 	check = document.getElementById("check-notfront");
 	if (check.checked) {
 		document.getElementById("check-notfront-field").classList.remove("hidden");
 	} else document.getElementById("check-notfront-field").classList.add("hidden");
+	clearAllFormNotFronton();
 }
+
+function clearAllFormNotFronton() {
+	let form = document.getElementById('check-notfront-field');
+	let inputs = form.getElementsByTagName('input');
+	for (let input of inputs)
+	  input.value = '';
+
+  }
+  
+  let checkboxNotFronton = document.getElementById('check-notfront');
+  checkboxNotFronton.addEventListener('click', clearAllFormNotFronton);
+
 
 /**
  * Кнопка показа формы для количества окон в разделе стены
@@ -1537,6 +1552,7 @@ function deleteFormTreugFrontonFrontsves(btn) {
 		sumAllHeightTreugFrontonFrontsves();
 		sumAreasTreugFrontonFrontsves();
 	}
+	//return [this];
 }
 
 function deleteTreugFrontonFrontsves() {
