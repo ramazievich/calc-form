@@ -14,6 +14,14 @@
     overflow: hidden;
 }
 
+.fasad_form_main .wall, {
+    width: 1200px;
+}
+
+.fasad_form_main .fronton {
+    width: 1200px;
+} 
+
 .fasad_form_main ul {
     list-style: none;
 }
@@ -525,3 +533,5 @@
 .fasad_form_main label:hover {
     cursor: pointer;
 }
+
+
