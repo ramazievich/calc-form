@@ -9,467 +9,7 @@
     width: 1px !important;
     overflow: hidden;
 }
-
-.fasad_form_main h2 {
-    margin: 20px 0;
-}
-
-.fasad_form_main .wall, {
-    width: 1200px;
-}
-
-.fasad_form_main .fronton {
-    width: 1200px;
-} 
-
-.fasad_form_main ul {
-    list-style: none;
-}
-
-.fasad_form_main .walls,
-.fasad_form_main .windows,
-.fasad_form_main .doors,
-.fasad_form_main .ugols-vnesh,
-.fasad_form_main .ugols-inner,
-.fasad_form_main .tf,
-.fasad_form_main .tf-window,
-.fasad_form_main .tf-door,
-.fasad_form_main .tf-frontsves,
-.fasad_form_main .tf-karnizsves,
-.fasad_form_main .lf,
-.fasad_form_main .lf-window,
-.fasad_form_main .lf-door,
-.fasad_form_main .lf-frontsves,
-.fasad_form_main .lf-karnizsves,
-.fasad_form_main .notfront-karnizsves {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-    margin: 0;
-    padding: 0;
-}
-
-.fasad_form_main .windows-form {
-    list-style-type: none;
-}
-
-.fasad_form_main .walls-form,
-.fasad_form_main .windows-form,
-.fasad_form_main .doors-form,
-.fasad_form_main .ugol-vnesh-form,
-.fasad_form_main .ugol-inner-form,
-.fasad_form_main .tf-form,
-.fasad_form_main .tf-window-form,
-.fasad_form_main .tf-door-form,
-.fasad_form_main .tf-frontsves-form,
-.fasad_form_main .tf-karnizsves-form,
-.fasad_form_main .lf-form,
-.fasad_form_main .lf-window-form,
-.fasad_form_main .lf-door-form,
-.fasad_form_main .lf-frontsves-form,
-.fasad_form_main .lf-karnizsves-form,
-.fasad_form_main .notfront-karnizsves-form {
-    position: relative;
-    width: 240px;
-    background-color: #f2f2f240;
-    border: 0.5px solid #00000005;
-    border-radius: 4px;
-    -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
-    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
-    margin: 2px;
-}
-
-.fasad_form_main form {
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background: #f4f7f8;
-    border-radius: 8px;
-}
-
-.fasad_form_main h1 {
-    margin: 0 0 30px 0;
-    text-align: center;
-}
-
-.fasad_form_main input[type="text"],
-.fasad_form_main input[type="password"],
-.fasad_form_main input[type="date"],
-.fasad_form_main input[type="datetime"],
-.fasad_form_main input[type="email"],
-.fasad_form_main input[type="number"],
-.fasad_form_main input[type="search"],
-.fasad_form_main input[type="tel"],
-.fasad_form_main input[type="time"],
-.fasad_form_main input[type="url"],
-.fasad_form_main textarea,
-.fasad_form_main select {
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    font-size: 16px;
-    height: auto;
-    margin: 0;
-    outline: 0;
-    padding: 7px;
-    width: 85%;
-    background-color: #e8eeefb0;
-    color: #8a97a0;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 5px;
-}
-
-.fasad_form_main input[type="text"]:hover,
-.fasad_form_main input[type="password"]:hover,
-.fasad_form_main input[type="date"]:hover,
-.fasad_form_main input[type="datetime"]:hover,
-.fasad_form_main input[type="email"]:hover,
-.fasad_form_main input[type="number"]:hover,
-.fasad_form_main input[type="search"]:hover,
-.fasad_form_main input[type="tel"]:hover,
-.fasad_form_main input[type="time"]:hover,
-.fasad_form_main input[type="url"]:hover {
-    background: rgb(224, 236, 236);
-}
-
-.fasad_form_main input[type="text"]:active,
-.fasad_form_main input[type="password"]:active,
-.fasad_form_main input[type="date"]:active,
-.fasad_form_main input[type="datetime"]:active,
-.fasad_form_main input[type="email"]:active,
-.fasad_form_main input[type="number"]:active,
-.fasad_form_main input[type="search"]:active,
-.fasad_form_main input[type="tel"]:active,
-.fasad_form_main input[type="time"]:active,
-.fasad_form_main input[type="url"]:active {
-    background: rgb(229, 240, 240);
-}
-
-.fasad_form_main input[type="text"]:focus,
-.fasad_form_main input[type="password"]:focus,
-.fasad_form_main input[type="date"]:focus,
-.fasad_form_main input[type="datetime"]:focus,
-.fasad_form_main input[type="email"]:focus,
-.fasad_form_main input[type="number"]:focus,
-.fasad_form_main input[type="search"]:focus,
-.fasad_form_main input[type="tel"]:focus,
-.fasad_form_main input[type="time"]:focus,
-.fasad_form_main input[type="url"]:focus {
-    outline: rgb(84, 165, 46);
-}
-
-
-/* Убираются стрелочки у input[type=number] */
-
-.fasad_form_main input[type="number"]::-webkit-outer-spin-button,
-.fasad_form_main input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.fasad_form_main input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-.fasad_form_main input[type="number"]:hover,
-.fasad_form_main input[type="number"]:focus {
-    -moz-appearance: number-input;
-}
-
-.fasad_form_main input[type=number]::-webkit-inner-spin-button,
-.fasad_form_main input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.fasad_form_main .wf_wall-wrp,
-.fasad_form_main .window_wall-wrp,
-.fasad_form_main .door_wall-wrp,
-.fasad_form_main .ugol-vnesh_wall-wrp,
-.fasad_form_main .ugol-inner_wall-wrp,
-.fasad_form_main .tf-quantity-wrp,
-.fasad_form_main .tf-window-groups-wrp,
-.fasad_form_main .tf-window-num-wrp,
-.fasad_form_main .tf-door-number-wrp,
-.fasad_form_main .tf-frontsves-number-wrp,
-.fasad_form_main .tf-karnizsves-number-wrp,
-.fasad_form_main .lf-window-num-wrp,
-.fasad_form_main .lf-door-number-wrp,
-.fasad_form_main .lf-frontsves-number-wrp,
-.fasad_form_main .lf-karnizsves-number-wrp,
-.fasad_form_main .notfront-karnizsves-number-wrp {
-    margin-top: 17px;
-}
-
-.fasad_form_main .tf-width-wrp {
-    margin-top: -24px;
-}
-
-.fasad_form_main .wf_result-formula,
-.fasad_form_main .window_result-formula,
-.fasad_form_main .door_result-formula,
-.fasad_form_main .tf-result-formula,
-.fasad_form_main .tf-area-wrp,
-.fasad_form_main .tf-window-result-formula,
-.fasad_form_main .tf-door-result-formula,
-.fasad_form_main .tf-frontsves-result-formula,
-.fasad_form_main .tf-karnizsves-result-formula,
-.fasad_form_main .lf-area-wrp,
-.fasad_form_main .lf-window-result-formula,
-.fasad_form_main .lf-door-result-formula,
-.fasad_form_main .lf-frontsves-result-formula,
-.fasad_form_main .lf-karnizsves-result-formula,
-.fasad_form_main .notfront-karnizsves-result-formula {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-}
-
-.fasad_form_main input.wf_result-wall,
-.fasad_form_main input.window_result-window,
-.fasad_form_main input.door_result-door {
-    width: 100px;
-    margin: 0 10px 0 10px;
-}
-
-.fasad_form_main input[type="radio"],
-.fasad_form_main input[type="checkbox"] {
-    margin: 0 4px 8px 0;
-}
-
-.fasad_form_main select {
-    padding: 6px;
-    height: 32px;
-    border-radius: 2px;
-}
-
-.fasad_form_main button {
-    padding: 19px 39px 18px 39px;
-    color: #FFF;
-    background-color: #4bc970;
-    font-size: 15px;
-    text-align: center;
-    font-style: normal;
-    border-radius: 5px;
-    width: 100%;
-    border: 1px solid #3ac162;
-    border-width: 1px 1px 3px;
-    -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    margin-bottom: 10px;
-}
-
-.fasad_form_main .add-form-btn {
-    width: 250px;
-    text-align: center;
-    background-color: #4bc970;
-    fill: white;
-    color: white;
-    padding: 8px 8px;
-    margin: 14px 0 8px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    border: 0.5px solid #31c15c;
-    outline: none;
-    border-radius: 4px;
-    border-width: 1px 1px 3px;
-    -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    cursor: pointer;
-}
-
-.fasad_form_main .show-form-btn {
-    width: 250px;
-    text-align: left;
-    background-color: #d8d9db;
-    fill: white;
-    color: white;
-    padding: 8px 8px;
-    margin: 14px 0 8px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    border: 0.5px solid #c0c0c0;
-    outline: none;
-    border-radius: 4px;
-    border-width: 1px 1px 3px;
-    -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-    cursor: pointer;
-}
-
-.fasad_form_main .add-form-btn:hover {
-    background-color: #31c15c;
-    fill: rgb(250, 253, 54);
-    cursor: pointer;
-}
-
-.fasad_form_main .add-form-btn:active {
-    background-color: #4bc970;
-    fill: rgb(250, 253, 54);
-    cursor: pointer;
-}
-
-.fasad_form_main .show-form-btn:hover {
-    background-color: #cccccc;
-    fill: rgb(255, 255, 255);
-}
-
-.fasad_form_main .show-form-btn:active {
-    background-color: #09d5db;
-    fill: rgb(254, 254, 254);
-    border: 0.5px solid #1ec6cc;
-    outline: none;
-    border-radius: 4px;
-    border-width: 1px 1px 3px;
-    -webkit-box-shadow: 0 -1px 0 #1dd2d9 inset;
-    box-shadow: 0 -1px 0 #1dd2d9 inset;
-}
-
-
-.fasad_form_main .remove-form-btn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    background: none;
-    display: block;
-    border: none;
-    cursor: pointer;
-    background: none;
-}
-
-.fasad_form_main .tf-remove-form,
-.fasad_form_main .lf-remove-form {
-    margin: 0 0 0 234px;
-}
-
-.fasad_form_main .remove-form-btn:hover {
-    fill: red;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: none;
-}
-
-.fasad_form_main .remove-form-btn:active {
-    fill: rgb(252, 56, 56);
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background: none;
-}
-
-.fasad_form_main .remove-form-btn:focus {
-    fill: rgb(252, 56, 56);
-    outline: #3ac162;
-    border: none;
-    cursor: pointer;
-    background: #3ac162;
-}
-
-.fasad_form_main fieldset {
-    margin-bottom: 30px;
-    border: none;
-}
-
-.fasad_form_main legend {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.fasad_form_main .number {
-    background-color: #5fcf80;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 100%;
-}
-
-.fasad_form_main .wall-form-label,
-.fasad_form_main .window-form-label,
-.fasad_form_main .door-form-label,
-.fasad_form_main .ugol-vnesh-label,
-.fasad_form_main .ugol-inner-label,
-.fasad_form_main .tf-form-label,
-.fasad_form_main .tf-window-form-label,
-.fasad_form_main .tf-door-form-label,
-.fasad_form_main .tf-frontsves-form-label,
-.fasad_form_main .tf-karnizsves-form-label,
-.fasad_form_main .lf-window-form-label,
-.fasad_form_main .lf-door-form-label,
-.fasad_form_main .lf-frontsves-form-label,
-.fasad_form_main .lf-karnizsves-form-label,
-.fasad_form_main .notfront-karnizsves-form-label {
-    font-size: 19px;
-    font-weight: 600;
-    color: #000;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.fasad_form_main .all-results-wrp {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    -ms-flex-line-pack: start;
-    align-content: flex-start;
-}
-
-
+/*кастомный чекбокс (начало)*/
 .fasad_form_main .checkboxs-lable-title {
     font-weight: 600;
 }
@@ -534,4 +74,490 @@
 .fasad_form_main label:hover {
     cursor: pointer;
 }
+/*кастомный чекбокс (конец)*/
+
+
+@media only screen and (max-width: 1150px) and (min-width: 770px) {
+
+}
+@media only screen and (max-width: 769px) and (min-width: 300px) {
+
+
+
+
+    .fasad_form_main .wall,
+    .fasad_form_main .fronton,
+    .allwalls-wrp, .fronton-item-wrp {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main .wall-title-h2,
+    .fasad_form_main .fronton-title-h2 {
+        margin: 20px 0;
+        text-align: center;
+        border-bottom: 3px solid #4bc970bd;
+        padding: 0px 0 4px 0;
+        background-color: #4bc97012;
+    }
+ 
+    .fasad_form_main ul {
+        list-style: none;
+    }
+    
+    .fasad_form_main .walls,
+    .fasad_form_main .windows,
+    .fasad_form_main .doors,
+    .fasad_form_main .ugols-vnesh,
+    .fasad_form_main .ugols-inner,
+    .fasad_form_main .tf,
+    .fasad_form_main .tf-window,
+    .fasad_form_main .tf-door,
+    .fasad_form_main .tf-frontsves,
+    .fasad_form_main .tf-karnizsves,
+    .fasad_form_main .lf,
+    .fasad_form_main .lf-window,
+    .fasad_form_main .lf-door,
+    .fasad_form_main .lf-frontsves,
+    .fasad_form_main .lf-karnizsves,
+    .fasad_form_main .notfront-karnizsves {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .fasad_form_main .windows-form {
+        list-style-type: none;
+    }
+    
+    .fasad_form_main .walls-form,
+    .fasad_form_main .windows-form,
+    .fasad_form_main .doors-form,
+    .fasad_form_main .ugol-vnesh-form,
+    .fasad_form_main .ugol-inner-form,
+    .fasad_form_main .tf-form,
+    .fasad_form_main .tf-window-form,
+    .fasad_form_main .tf-door-form,
+    .fasad_form_main .tf-frontsves-form,
+    .fasad_form_main .tf-karnizsves-form,
+    .fasad_form_main .lf-form,
+    .fasad_form_main .lf-window-form,
+    .fasad_form_main .lf-door-form,
+    .fasad_form_main .lf-frontsves-form,
+    .fasad_form_main .lf-karnizsves-form,
+    .fasad_form_main .notfront-karnizsves-form {
+        position: relative;
+        width: 240px;
+        background-color: #f2f2f240;
+        border: 0.5px solid #00000005;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
+        margin: 2px;
+    }
+    
+    .fasad_form_main form {
+        max-width: 300px;
+        margin: 10px auto;
+        padding: 10px 20px;
+        background: #f4f7f8;
+        border-radius: 8px;
+    }
+    
+    .fasad_form_main h1 {
+        margin: 0 0 30px 0;
+        text-align: center;
+    }
+    
+    .fasad_form_main input[type="text"],
+    .fasad_form_main input[type="password"],
+    .fasad_form_main input[type="date"],
+    .fasad_form_main input[type="datetime"],
+    .fasad_form_main input[type="email"],
+    .fasad_form_main input[type="number"],
+    .fasad_form_main input[type="search"],
+    .fasad_form_main input[type="tel"],
+    .fasad_form_main input[type="time"],
+    .fasad_form_main input[type="url"],
+    .fasad_form_main textarea,
+    .fasad_form_main select {
+        background: rgba(255, 255, 255, 0.1);
+        border: none;
+        font-size: 16px;
+        height: auto;
+        margin: 0;
+        outline: 0;
+        padding: 7px;
+        width: 85%;
+        background-color: #e8eeefb0;
+        color: #8a97a0;
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+        margin-bottom: 5px;
+    }
+    
+    .fasad_form_main input[type="text"]:hover,
+    .fasad_form_main input[type="password"]:hover,
+    .fasad_form_main input[type="date"]:hover,
+    .fasad_form_main input[type="datetime"]:hover,
+    .fasad_form_main input[type="email"]:hover,
+    .fasad_form_main input[type="number"]:hover,
+    .fasad_form_main input[type="search"]:hover,
+    .fasad_form_main input[type="tel"]:hover,
+    .fasad_form_main input[type="time"]:hover,
+    .fasad_form_main input[type="url"]:hover {
+        background: rgb(224, 236, 236);
+    }
+    
+    .fasad_form_main input[type="text"]:active,
+    .fasad_form_main input[type="password"]:active,
+    .fasad_form_main input[type="date"]:active,
+    .fasad_form_main input[type="datetime"]:active,
+    .fasad_form_main input[type="email"]:active,
+    .fasad_form_main input[type="number"]:active,
+    .fasad_form_main input[type="search"]:active,
+    .fasad_form_main input[type="tel"]:active,
+    .fasad_form_main input[type="time"]:active,
+    .fasad_form_main input[type="url"]:active {
+        background: rgb(229, 240, 240);
+    }
+    
+    .fasad_form_main input[type="text"]:focus,
+    .fasad_form_main input[type="password"]:focus,
+    .fasad_form_main input[type="date"]:focus,
+    .fasad_form_main input[type="datetime"]:focus,
+    .fasad_form_main input[type="email"]:focus,
+    .fasad_form_main input[type="number"]:focus,
+    .fasad_form_main input[type="search"]:focus,
+    .fasad_form_main input[type="tel"]:focus,
+    .fasad_form_main input[type="time"]:focus,
+    .fasad_form_main input[type="url"]:focus {
+        outline: rgb(84, 165, 46);
+    }
+    
+    
+    /* Убираются стрелочки у input[type=number] */
+    
+    .fasad_form_main input[type="number"]::-webkit-outer-spin-button,
+    .fasad_form_main input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    .fasad_form_main input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    
+    .fasad_form_main input[type="number"]:hover,
+    .fasad_form_main input[type="number"]:focus {
+        -moz-appearance: number-input;
+    }
+    
+    .fasad_form_main input[type=number]::-webkit-inner-spin-button,
+    .fasad_form_main input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    .fasad_form_main .wf_wall-wrp,
+    .fasad_form_main .window_wall-wrp,
+    .fasad_form_main .door_wall-wrp,
+    .fasad_form_main .ugol-vnesh_wall-wrp,
+    .fasad_form_main .ugol-inner_wall-wrp,
+    .fasad_form_main .tf-quantity-wrp,
+    .fasad_form_main .tf-window-groups-wrp,
+    .fasad_form_main .tf-window-num-wrp,
+    .fasad_form_main .tf-door-number-wrp,
+    .fasad_form_main .tf-frontsves-number-wrp,
+    .fasad_form_main .tf-karnizsves-number-wrp,
+    .fasad_form_main .lf-window-num-wrp,
+    .fasad_form_main .lf-door-number-wrp,
+    .fasad_form_main .lf-frontsves-number-wrp,
+    .fasad_form_main .lf-karnizsves-number-wrp,
+    .fasad_form_main .notfront-karnizsves-number-wrp {
+        margin-top: 17px;
+    }
+    
+    .fasad_form_main .tf-width-wrp {
+        margin-top: -24px;
+    }
+    
+    .fasad_form_main .wf_result-formula,
+    .fasad_form_main .window_result-formula,
+    .fasad_form_main .door_result-formula,
+    .fasad_form_main .tf-result-formula,
+    .fasad_form_main .tf-area-wrp,
+    .fasad_form_main .tf-window-result-formula,
+    .fasad_form_main .tf-door-result-formula,
+    .fasad_form_main .tf-frontsves-result-formula,
+    .fasad_form_main .tf-karnizsves-result-formula,
+    .fasad_form_main .lf-area-wrp,
+    .fasad_form_main .lf-window-result-formula,
+    .fasad_form_main .lf-door-result-formula,
+    .fasad_form_main .lf-frontsves-result-formula,
+    .fasad_form_main .lf-karnizsves-result-formula,
+    .fasad_form_main .notfront-karnizsves-result-formula {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+    }
+    
+    .fasad_form_main input.wf_result-wall,
+    .fasad_form_main input.window_result-window,
+    .fasad_form_main input.door_result-door {
+        width: 100px;
+        margin: 0 10px 0 10px;
+    }
+    
+    .fasad_form_main input[type="radio"],
+    .fasad_form_main input[type="checkbox"] {
+        margin: 0 4px 8px 0;
+    }
+    
+    .fasad_form_main select {
+        padding: 6px;
+        height: 32px;
+        border-radius: 2px;
+    }
+    
+    .fasad_form_main button {
+        padding: 19px 39px 18px 39px;
+        color: #FFF;
+        background-color: #4bc970;
+        font-size: 15px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 5px;
+        width: 100%;
+        border: 1px solid #3ac162;
+        border-width: 1px 1px 3px;
+        -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        margin-bottom: 10px;
+    }
+    
+    .fasad_form_main .add-form-btn {
+        width: 250px;
+        text-align: center;
+        background-color: #4bc970;
+        fill: white;
+        color: white;
+        padding: 8px 8px;
+        margin: 14px 0 8px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        border: 0.5px solid #31c15c;
+        outline: none;
+        border-radius: 4px;
+        border-width: 1px 1px 3px;
+        -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        cursor: pointer;
+    }
+    
+    .fasad_form_main .show-form-btn {
+        width: 250px;
+        text-align: left;
+        background-color: #d8d9db;
+        fill: white;
+        color: white;
+        padding: 8px 8px;
+        margin: 14px 0 8px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+        border: 0.5px solid #c0c0c0;
+        outline: none;
+        border-radius: 4px;
+        border-width: 1px 1px 3px;
+        -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+        cursor: pointer;
+    }
+    
+    .fasad_form_main .add-form-btn:hover {
+        background-color: #31c15c;
+        fill: rgb(250, 253, 54);
+        cursor: pointer;
+    }
+    
+    .fasad_form_main .add-form-btn:active {
+        background-color: #4bc970;
+        fill: rgb(250, 253, 54);
+        cursor: pointer;
+    }
+    
+    .fasad_form_main .show-form-btn:hover {
+        background-color: #cccccc;
+        fill: rgb(255, 255, 255);
+    }
+    
+    .fasad_form_main .show-form-btn:active {
+        background-color: #09d5db;
+        fill: rgb(254, 254, 254);
+        border: 0.5px solid #1ec6cc;
+        outline: none;
+        border-radius: 4px;
+        border-width: 1px 1px 3px;
+        -webkit-box-shadow: 0 -1px 0 #1dd2d9 inset;
+        box-shadow: 0 -1px 0 #1dd2d9 inset;
+    }
+    
+    
+    .fasad_form_main .remove-form-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        display: block;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+    
+    .fasad_form_main .tf-remove-form,
+    .fasad_form_main .lf-remove-form {
+        margin: 0 0 0 234px;
+    }
+    
+    .fasad_form_main .remove-form-btn:hover {
+        fill: red;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+    
+    .fasad_form_main .remove-form-btn:active {
+        fill: rgb(252, 56, 56);
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+    
+    .fasad_form_main .remove-form-btn:focus {
+        fill: rgb(252, 56, 56);
+        outline: #3ac162;
+        border: none;
+        cursor: pointer;
+        background: #3ac162;
+    }
+    
+    .fasad_form_main fieldset {
+        margin-bottom: 30px;
+        border: none;
+    }
+    
+    .fasad_form_main legend {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .fasad_form_main .number {
+        background-color: #5fcf80;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+        display: inline-block;
+        font-size: 0.8em;
+        margin-right: 4px;
+        line-height: 30px;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+        border-radius: 100%;
+    }
+    
+    .fasad_form_main .wall-form-label,
+    .fasad_form_main .window-form-label,
+    .fasad_form_main .door-form-label,
+    .fasad_form_main .ugol-vnesh-label,
+    .fasad_form_main .ugol-inner-label,
+    .fasad_form_main .tf-form-label,
+    .fasad_form_main .tf-window-form-label,
+    .fasad_form_main .tf-door-form-label,
+    .fasad_form_main .tf-frontsves-form-label,
+    .fasad_form_main .tf-karnizsves-form-label,
+    .fasad_form_main .lf-window-form-label,
+    .fasad_form_main .lf-door-form-label,
+    .fasad_form_main .lf-frontsves-form-label,
+    .fasad_form_main .lf-karnizsves-form-label,
+    .fasad_form_main .notfront-karnizsves-form-label {
+        font-size: 19px;
+        font-weight: 600;
+        color: #000;
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .fasad_form_main .all-results-wrp {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
 
