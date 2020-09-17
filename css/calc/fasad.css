@@ -133,6 +133,8 @@
         align-content: flex-start;
     }
 
+    
+
 
 
     .fasad_form_main .wall-title-h2,
@@ -483,6 +485,12 @@
         box-shadow: 0 -1px 0 #1dd2d9 inset;
     }
     
+   .fasad_form_main svg#copy-form-id {
+    height: 21px;
+    margin: 0 0 0 230px;
+    position: absolute;
+    }
+
     
     .fasad_form_main .remove-form-btn {
         position: absolute;
@@ -497,13 +505,24 @@
         border: none;
         cursor: pointer;
         background: none;
+        margin: 7px 10px 0 0px;
     }
     
     .fasad_form_main .tf-remove-form,
     .fasad_form_main .lf-remove-form {
         margin: 0 0 0 234px;
     }
-    
+
+
+						
+   .fasad_form_main svg#copy-form-id:hover {
+        fill: rgb(21, 158, 21);
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+
     .fasad_form_main .remove-form-btn:hover {
         fill: red;
         outline: none;
@@ -512,6 +531,14 @@
         background: none;
     }
     
+    .fasad_form_main svg#copy-form-id:active {
+        fill: rgb(57, 158, 57)
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+
     .fasad_form_main .remove-form-btn:active {
         fill: rgb(252, 56, 56);
         outline: none;
@@ -520,6 +547,14 @@
         background: none;
     }
     
+    .fasad_form_main svg#copy-form-id:focus {
+        fill: rgb(21, 158, 21);
+        outline: #3ac162;
+        border: none;
+        cursor: pointer;
+        background: #3ac162;
+    }
+
     .fasad_form_main .remove-form-btn:focus {
         fill: rgb(252, 56, 56);
         outline: #3ac162;

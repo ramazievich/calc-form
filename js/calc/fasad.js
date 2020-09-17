@@ -288,22 +288,23 @@ console.log(allFormsLomFronton);
 function funcLomFronton() {
 	allFormsLomFronton = document.querySelectorAll(".lf-form");
 	for (let i = 0, max = allFormsLomFronton.length; i < max; i++) {
-		let form = allFormsLomFronton[i];
-		let shirina = Number(form.querySelector(".lf-width").value);
-		shirina = parseFloat(shirina);
-		let shirina2 = Number(form.querySelector(".lf-width2").value);
-		shirina2 = parseFloat(shirina2);
-		let visota = Number(form.querySelector(".lf-height").value);
-		visota = parseFloat(visota);
-		let visota2 = Number(form.querySelector(".lf-height2").value);
-		visota2 = parseFloat(visota2);
-		let s1 = (shirina - shirina2) / visota;
-		let s2 = 0.5 * shirina2 * visota2;
-		let s3 = shirina2 * visota;
-		let result = (s1 + s2 + s3);
-		form.querySelector(".lf-area").value = result;
+	  let form = allFormsLomFronton[i];
+	  let shirina = Number(form.querySelector(".lf-width").value); //B
+	  shirina = parseFloat(shirina);
+	  let shirina2 = Number(form.querySelector(".lf-width2").value); //C
+	  shirina2 = parseFloat(shirina2);
+	  let visota = Number(form.querySelector(".lf-height").value); //H
+	  visota = parseFloat(visota);
+	  let visota2 = Number(form.querySelector(".lf-height2").value); //D
+	  visota2 = parseFloat(visota2);
+	  // let s1 = (shirina - shirina2) / visota;
+	  // let s2 = 0.5 * shirina2 * visota2;
+	  // let s3 = shirina2 * visota;
+	  // let result = (s1 + s2 + s3);
+	  let result = ((shirina2 + shirina) / 2 * visota) + (shirina2 * visota2) / 2;
+	  form.querySelector(".lf-area").value = result;
 	}
-}
+  }
 
 
 /**
@@ -1252,6 +1253,7 @@ function remuveBtntfKarnizsves() {
  * @param {node} node - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormStenaId} newFormStenaId - добавляем новую форму
+ * @function [copyForm] copyForm -функция копирования формы
  */
 let newFormStenaId = 1;
 let node = document.getElementById("walls-form-id").cloneNode(true);
@@ -1268,6 +1270,22 @@ $(document).on('click', '.add-form', function () {
 	funcStena();
 	newFormStenaId++;
 });
+
+function copyForm(){
+let parent = document.getElementById('walls-id');
+let elem = parent.querySelector('.walls-form');
+
+let newClonedNode = elem.cloneNode(true);
+parent.appendChild(newClonedNode);
+newClonedNode.id = "walls-form-id-" + newFormStenaId;
+	newClonedNode.querySelector(".wf_length").name = 'data[Стены][' + newFormStenaId + '][Длина]';
+	newClonedNode.querySelector(".wf_height").name = 'data[Стены][' + newFormStenaId + '][Высота]';
+	funcStena();
+	newFormStenaId++;
+
+}
+
+
 
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе стены
