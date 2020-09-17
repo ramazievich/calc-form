@@ -644,15 +644,16 @@
 			<!--
 			   <input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugol" onchange ='showTreugolFrontonItems(this)'> <label class="light check-treugol-fronton" for="check-treugol">треугольный</label><br>
 			   -->
-			   <div class="img-tf-wrp" id="img-tf-wrp-id">
+			<div class="treugol-fronton-wrp" id="treugol-fronton-wrp-id">
 				<img class="img-tf" src="../calc-form/img/calc/fasad/house-1treug-fronton.svg" alt="треугольный фронтон" height="150" id="img-tf-id">
+				<img class="img-tf-color hidden" src="../calc-form/img/calc/fasad/house-1treug-fronton(color).svg" alt="треугольный фронтон" height="150" id="img-tf-color-id">
+				    <label class="custom-lable treugol-fronton-label" for="check-treugol" id="custom-lable-id">
+					<input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugo"
+					       onchange='showTreugolFrontonItems(this)'>
+					<i class="treugol-fronton-i"></i>
+					<span class="treugol-fronton-span">треугольный фронтон</span>
+				    </label>
 			</div>
-			    <label class="custom-lable" for="check-treugol">
-				<input type="checkbox" id="check-treugol" value="interest_treugol" name="check-treugo"
-				       onchange='showTreugolFrontonItems(this)'>
-				<i></i>
-				треугольный фронтон
-			    </label>
 			<!-- Количество, размеры, свесы треугольных фронтонов -->
 			<div class="select-treugol-fronton hidden" id="check-treugol-field">
 				<!-- Начало формы для размеров треугольных фронтонов-->
@@ -1055,15 +1056,16 @@
 			<!--
 			   <input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy" onchange ='showLomFrontonItems(this)'><label class="light" for="check-lom">ломаный</label><br>
 			   -->
-			<div class="img-lom-wrp" id="img-lom-wrp-id">
+			<div class="lom-fronton-wrp" id="lom-fronton-wrp-id">
 				<img class="img-lom" src="../calc-form/img/calc/fasad/house-1lom-fronton.svg" alt="ломаный фронтон" height="150" id="img-lom-id">
-			</div>   
-			<label class="custom-lable" for="check-lom">
-				<input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy"
-				       onchange='showLomFrontonItems(this)'>
-				<i></i>
-				ломаный фронтон
-			</label>
+				<img class="img-lom-color hidden" src="../calc-form/img/calc/fasad/house-1lom-fronton(color).svg" alt="ломаный фронтон" height="150" id="img-lom-color-id">
+				<label class="custom-lable lom-fronton-label" for="check-lom">
+					<input type="checkbox" id="check-lom" value="interest_lomaniy" name="lomaniy"
+					       onchange='showLomFrontonItems(this)'>
+					<i class="lom-fronton-i"></i>
+					<span class="lom-fronton-span">ломаный фронтон</span>
+				</label>
+			</div>
 			<!-- Количество, размеры, свесы ломаных фронтонов -->
 			<div class="select-lom-fronton hidden" id="check-lom-field">
 				<!-- Начало формы для размеров ломаных фронтонов-->
@@ -1499,15 +1501,17 @@
 			<!--
 			   <input type="checkbox" id="check-notfront" value="interest_notfront" name="notfront" onchange ='showNotFrontonItems(this)'><label class="light" for="check-notfront">без фронтона (вальмовая и шатровая крыша)</label><br>
 				-->
-			<div class="img-notfront-wrp" id="img-notfront-wrp-id">
-					<img class="img-notfront" src="../calc-form/img/calc/fasad/house-1nan-fronton.svg" alt="без фронтона фронтон" height="150" id="img-notfront-id">
-				</div>  	
-			<label class="custom-lable" for="check-notfront">
-				<input type="checkbox" id="check-notfront" value="interest_notfront" name="notfront"
-				       onchange='showNotFrontonItems(this)'>
-				<i></i>
-				без фронтона (вальмовая и шатровая крыша)
-			</label>
+			<div class="notfront-wrp" id="notfront-wrp-id">
+				<img class="img-notfront" src="../calc-form/img/calc/fasad/house-1nan-fronton.svg" alt="без фронтона фронтон" height="150" id="img-notfront-id">
+				<img class="img-notfront-color hidden" src="../calc-form/img/calc/fasad/house-1nan-fronton(color).svg" alt="без фронтона фронтон" height="150" id="img-notfront-color-id">
+				<label class="custom-lable custom-lable-notfront" for="check-notfront">
+					<input type="checkbox" id="check-notfront" value="interest_notfront" name="notfront"
+					       onchange='showNotFrontonItems(this)'>
+					<i class="not-fronton-span"></i>
+				<span class="notfront-span">без фронтона (вальмовая или шатровая крыша)</span>
+				
+				</label>
+			</div>
 			<!-- Количество, размеры, свесов когда нет фронтонов -->
 			<!-- notfront - без фронтонов -->
 			<div class="select-notfront-fronton hidden" id="check-notfront-field">

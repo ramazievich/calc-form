@@ -1017,15 +1017,20 @@ function sumAllSquareNotFrontonKarnizsves() {
  * @param {check}  - переменная к классу для чекбокса
  * @param {add}  - добавляет hidden к форме
  * @function [clearAllFormTreugolFronton] функция сброса всех данных в заполненых полях в треугольных фронтонах когда checkbox снят
+ * @function [clearAllFormTreugolFronton] функция сброса всех данных в заполненых полях в треугольных фронтонах когда checkbox снят
  */
 function showTreugolFrontonItems(check) {
 	check = document.getElementById("check-treugol");
 	if (check.checked) {
 		document.getElementById("check-treugol-field").classList.remove("hidden");
-	} else
+		document.getElementById("img-tf-color-id").classList.remove("hidden");
+		document.getElementById("img-tf-id").classList.add("hidden");
+	} else {
 	document.getElementById("check-treugol-field").classList.add("hidden");
-	clearAllFormTreugolFronton();
-
+	document.getElementById("img-tf-color-id").classList.add("hidden");
+	document.getElementById("img-tf-id").classList.remove("hidden");
+		clearAllFormTreugolFronton();
+	}
 }
 
 function clearAllFormTreugolFronton() {
@@ -1034,9 +1039,7 @@ function clearAllFormTreugolFronton() {
 	for (let input of inputs)
 	  input.value = '';
   }
-  
-  let checkboxTreugol = document.getElementById('check-treugol');
-  checkboxTreugol.addEventListener('click', clearAllFormTreugolFronton);
+
 
 /**
  * Для чекбокса
@@ -1051,8 +1054,15 @@ function showLomFrontonItems(check) {
 	check = document.getElementById("check-lom");
 	if (check.checked) {
 		document.getElementById("check-lom-field").classList.remove("hidden");
-	} else document.getElementById("check-lom-field").classList.add("hidden");
-	clearAllFormLomFronton();
+		document.getElementById("img-lom-color-id").classList.remove("hidden");
+		document.getElementById("img-lom-id").classList.add("hidden");
+	} else {
+		document.getElementById("check-lom-field").classList.add("hidden");
+		document.getElementById("img-lom-color-id").classList.add("hidden");
+		document.getElementById("img-lom-id").classList.remove("hidden");
+		clearAllFormLomFronton();
+	}	
+	
 }
 
 function clearAllFormLomFronton() {
@@ -1079,8 +1089,14 @@ function showNotFrontonItems(check) {
 	check = document.getElementById("check-notfront");
 	if (check.checked) {
 		document.getElementById("check-notfront-field").classList.remove("hidden");
-	} else document.getElementById("check-notfront-field").classList.add("hidden");
-	clearAllFormNotFronton();
+		document.getElementById("img-notfront-color-id").classList.remove("hidden");
+		document.getElementById("img-notfront-id").classList.add("hidden");
+	} else {
+		document.getElementById("check-notfront-field").classList.add("hidden");
+		document.getElementById("img-notfront-color-id").classList.add("hidden");
+		document.getElementById("img-notfront-id").classList.remove("hidden");
+		clearAllFormNotFronton();
+}
 }
 
 function clearAllFormNotFronton() {

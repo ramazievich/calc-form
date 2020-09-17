@@ -10,6 +10,16 @@
     overflow: hidden;
 }
 /*кастомный чекбокс (начало)*/
+
+.fasad_form_main .custom-lable {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 .fasad_form_main .checkboxs-lable-title {
     font-weight: 600;
 }
@@ -26,15 +36,6 @@
 
 .fasad_form_main label > input {
     display: none;
-}
-
-.fasad_form_main .custom-lable {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
 }
 
 .fasad_form_main label i {
@@ -80,14 +81,50 @@
 @media only screen and (max-width: 1150px) and (min-width: 770px) {
 
 }
-@media only screen and (max-width: 769px) and (min-width: 300px) {
-
-
-
+@media only screen and (min-width: 300px){
+    
+    .treugol-fronton-label {
+        margin: 25px 0 0 0;
+    }
+    
+    .treugol-fronton-i {
+        margin: 0 0 0 10px;
+    }
+    
+    .treugol-fronton-span {
+        margin: 37px 0 0 0;
+    }
+    
+    .lom-fronton-label {
+        margin: 25px 0 0 0;
+    }
+    
+    .lom-fronton-label {
+        margin: 25px 0 0 15px;
+    }
+    
+    .lom-fronton-span {
+        margin: 37px 0 0 0;
+    }
+    
+    .custom-lable-notfront {
+        margin: -130px 0 0 159px;
+    }
+    
+    .notfront-span {
+        text-align: center;
+        margin: 29px 0 0 0;
+    }
 
     .fasad_form_main .wall,
     .fasad_form_main .fronton,
-    .allwalls-wrp, .fronton-item-wrp {
+    .allwalls-wrp,
+    .tf-wrp,
+    .select-lom-fronton,
+    .notfront-karnizsves-wrp,
+    .fronton-item-wrp,
+    .select-treugol-fronton,
+    .custom-lable-notfront {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -96,6 +133,8 @@
         align-content: flex-start;
     }
 
+
+
     .fasad_form_main .wall-title-h2,
     .fasad_form_main .fronton-title-h2 {
         margin: 20px 0;
@@ -103,6 +142,13 @@
         border-bottom: 3px solid #4bc970bd;
         padding: 0px 0 4px 0;
         background-color: #4bc97012;
+        -moz-border-radius-topleft: 4px;
+        -webkit-border-top-left-radius: 4px;
+         border-top-left-radius: 4px;
+        -moz-border-radius-topright: 5px;
+        -webkit-border-top-right-radius: 5px;
+        border-top-right-radius: 5px;
+        font-size: 20px;
     }
  
     .fasad_form_main ul {
@@ -297,11 +343,7 @@
     .fasad_form_main .notfront-karnizsves-number-wrp {
         margin-top: 17px;
     }
-    
-    .fasad_form_main .tf-width-wrp {
-        margin-top: -24px;
-    }
-    
+
     .fasad_form_main .wf_result-formula,
     .fasad_form_main .window_result-formula,
     .fasad_form_main .door_result-formula,
@@ -551,6 +593,21 @@
         -ms-flex-line-pack: start;
         align-content: flex-start;
     }
+    /* стили для расположения чекбоксов и картинок во фронтонах*/
+    .treugol-fronton-wrp,
+    .lom-fronton-wrp,
+    .notfront-wrp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    }
+
+
+
+
 }
 
 
