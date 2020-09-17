@@ -1283,7 +1283,28 @@ newClonedNode.id = "walls-form-id-" + newFormStenaId;
 	funcStena();
 	newFormStenaId++;
 
+/*
+
+	let parent = document.getElementById('parent');
+	let elem = parent.querySelector('.elem');
+
+	let clone = elem.cloneNode(true);
+	parent.appendChild(clone);
+
+
+function deleteForm(btn) {
+	let forms = document.getElementsByClassName('walls-form');
+	if (forms.length > 1) {
+		btn.parentElement.remove();
+		sumPerimeters();
+		sumAreas();
+	}
 }
+*/
+
+}
+
+
 
 
 

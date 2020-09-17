@@ -78,9 +78,6 @@
 /*кастомный чекбокс (конец)*/
 
 
-@media only screen and (max-width: 1150px) and (min-width: 770px) {
-
-}
 @media only screen and (min-width: 300px){
     
     .treugol-fronton-label {
@@ -139,18 +136,20 @@
 
     .fasad_form_main .wall-title-h2,
     .fasad_form_main .fronton-title-h2 {
+        width: 300px;
         margin: 20px 0;
         text-align: center;
-        border-bottom: 3px solid #4bc970bd;
-        padding: 0px 0 4px 0;
-        background-color: #4bc97012;
+        color: white;
+        border-bottom: 3px solid #39a759bd;
+        padding: 4px;
+        background-color: #4bc970;
         -moz-border-radius-topleft: 4px;
         -webkit-border-top-left-radius: 4px;
-         border-top-left-radius: 4px;
+        border-top-left-radius: 4px;
         -moz-border-radius-topright: 5px;
         -webkit-border-top-right-radius: 5px;
         border-top-right-radius: 5px;
-        font-size: 20px;
+        font-size: 19px;
     }
  
     .fasad_form_main ul {
@@ -176,10 +175,8 @@
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         -webkit-box-pack: start;
@@ -216,7 +213,7 @@
     .fasad_form_main .notfront-karnizsves-form {
         position: relative;
         width: 240px;
-        background-color: #f2f2f240;
+        background-color: #f2f2f254;
         border: 0.5px solid #00000005;
         border-radius: 4px;
         -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
@@ -225,7 +222,7 @@
     }
     
     .fasad_form_main form {
-        max-width: 300px;
+        width: 300px;
         margin: 10px auto;
         padding: 10px 20px;
         background: #f4f7f8;
@@ -486,9 +483,19 @@
     }
     
    .fasad_form_main svg#copy-form-id {
-    height: 21px;
-    margin: 0 0 0 230px;
     position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    display: block;
+    border: none;
+    cursor: pointer;
+    background: none;
+    margin: 41px 10px 0 0px;
     }
 
     
@@ -629,9 +636,9 @@
         align-content: flex-start;
     }
     /* стили для расположения чекбоксов и картинок во фронтонах*/
-    .treugol-fronton-wrp,
-    .lom-fronton-wrp,
-    .notfront-wrp {
+    .fasad_form_main .treugol-fronton-wrp,
+    .fasad_form_main .lom-fronton-wrp,
+    .fasad_form_main .notfront-wrp {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -640,12 +647,38 @@
     align-content: flex-start;
     }
 
-
-
+    .fasad_form_main .fronton-wrp {
+        width: 300px;
+    }
 
 }
 
+@media only screen and (min-width: 480px) {
+    .fasad_form_main .wall-title-h2,
+    .fasad_form_main .fronton-title-h2 {
+        width: 480px;
+        font-size: 31px;
+    }
+    .fasad_form_main .walls-form,
+    .fasad_form_main .windows-form,
+    .fasad_form_main .doors-form,
+    .fasad_form_main .ugol-vnesh-form,
+    .fasad_form_main .ugol-inner-form,
+    .fasad_form_main .tf-form,
+    .fasad_form_main .tf-window-form,
+    .fasad_form_main .tf-door-form,
+    .fasad_form_main .tf-frontsves-form,
+    .fasad_form_main .tf-karnizsves-form,
+    .fasad_form_main .lf-form,
+    .fasad_form_main .lf-window-form,
+    .fasad_form_main .lf-door-form,
+    .fasad_form_main .lf-frontsves-form,
+    .fasad_form_main .lf-karnizsves-form,
+    .fasad_form_main .notfront-karnizsves-form {
+        width: 350px;
+    }
 
+}
 
 
 
