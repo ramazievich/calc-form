@@ -18,7 +18,9 @@ function funcStena() {
 		let visota = Number(form.querySelector(".wf_height").value);
 		visota = parseFloat(visota);
 		let result = (dlina * visota);
-		form.querySelector(".wf_result-wall").value = result;
+		form.querySelector(".wf_result-wall").value = result.toFixed(3);
+		
+		   
 	}
 }
 
@@ -42,7 +44,7 @@ function funcWindow() {
 		let visota = Number(form.querySelector(".window_height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".window_result-window").value = result;
+		form.querySelector(".window_result-window").value = result.toFixed(3);
 	}
 }
 
@@ -69,7 +71,7 @@ function funcTreugFrontonWindow() {
 		let visota = Number(form.querySelector(".tf-window-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * okno;
-		form.querySelector(".tf-window-result").value = result;
+		form.querySelector(".tf-window-result").value = result.toFixed(3);
 	}
 }
 
@@ -97,7 +99,7 @@ function funcLomFrontonWindow() {
 		let visota = Number(form.querySelector(".lf-window-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * okno;
-		form.querySelector(".lf-window-result").value = result;
+		form.querySelector(".lf-window-result").value = result.toFixed(3);
 	}
 }
 
@@ -125,7 +127,7 @@ function funcTreugFrontonDoor() {
 		let visota = Number(form.querySelector(".tf-door-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * dver;
-		form.querySelector(".tf-door-result").value = result;
+		form.querySelector(".tf-door-result").value = result.toFixed(3);
 	}
 }
 
@@ -149,7 +151,7 @@ function funcTreugFrontonFrontsves() {
 		let visota = Number(form.querySelector(".tf-frontsves-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".tf-frontsves-result").value = result;
+		form.querySelector(".tf-frontsves-result").value = result.toFixed(3);
 	}
 }
 
@@ -175,7 +177,7 @@ function funcLomFrontonFrontsves() {
 		let visota2 = Number(form.querySelector(".lf-frontsves-height2").value);
 		visota2 = parseFloat(visota2);
 		let result = shirina * (visota + visota2);
-		form.querySelector(".lf-frontsves-result").value = result;
+		form.querySelector(".lf-frontsves-result").value = result.toFixed(3);
 	}
 }
 
@@ -199,7 +201,7 @@ function funcTreugFrontonKarnizsves() {
 		let visota = Number(form.querySelector(".tf-karnizsves-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".tf-karnizsves-result").value = result;
+		form.querySelector(".tf-karnizsves-result").value = result.toFixed(3);
 	}
 }
 
@@ -223,7 +225,7 @@ function funcLomFrontonKarnizsves() {
 		let visota = Number(form.querySelector(".lf-karnizsves-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".lf-karnizsves-result").value = result;
+		form.querySelector(".lf-karnizsves-result").value = result.toFixed(3);
 	}
 }
 
@@ -247,7 +249,7 @@ function funcDoor() {
 		let visota = Number(form.querySelector(".door_height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".door_result-door").value = result;
+		form.querySelector(".door_result-door").value = result.toFixed(3);
 	}
 }
 
@@ -270,7 +272,7 @@ function funcTreugFronton() {
 		let visota = Number(form.querySelector(".tf-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".tf-area").value = result;
+		form.querySelector(".tf-area").value = result.toFixed(3);
 	}
 }
 
@@ -302,7 +304,7 @@ function funcLomFronton() {
 	  // let s3 = shirina2 * visota;
 	  // let result = (s1 + s2 + s3);
 	  let result = ((shirina2 + shirina) / 2 * visota) + (shirina2 * visota2) / 2;
-	  form.querySelector(".lf-area").value = result;
+	  form.querySelector(".lf-area").value = result.toFixed(3);
 	}
   }
 
@@ -324,7 +326,7 @@ function funcCornerVnesh() {
 		let visota = Number(form.querySelector(".ugol_height").value);
 		visota = parseFloat(visota);
 		let result = visota;
-		form.querySelector(".ugol_sum-width").value = result;
+		form.querySelector(".ugol_sum-width").value = result.toFixed(3);
 	}
 }
 
@@ -346,7 +348,7 @@ function funcCornerInner() {
 		let visota = Number(form.querySelector(".ugol-inner_height").value);
 		visota = parseFloat(visota);
 		let result = visota;
-		form.querySelector(".ugol-inner_sum-width").value = result;
+		form.querySelector(".ugol-inner_sum-width").value = result.toFixed(3);
 	}
 }
 
@@ -559,14 +561,14 @@ function sumWidthWindows() {
 		formWindow.querySelector(".window_sum-width").value = result;
 	}
 }
-
+/*
 /**
  * @function [sumWidthTreugFrontonWindows] Функция подсчета сумарной ширины оконного проема для одной формы треугольного фронтона
  * @param {allFormsTreugFrontonWindow} formTreugFrontonWindow переменная для формы подсчета площади оконного проема
  * @param {number} window - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
  * @param {number} result - результат подсчета
- */
+
 function sumWidthTreugFrontonWindows() {
 	for (let i = 0, max = allFormsTreugFrontonWindow.length; i < max; i++) {
 		let formTreugFrontonWindow = allFormsTreugFrontonWindow[i];
@@ -579,14 +581,14 @@ function sumWidthTreugFrontonWindows() {
 		formTreugFrontonWindow.querySelector(".tf-window-sum-width").value = result;
 	}
 }
-
+*/
 /**
  * @function [sumWidthLomFrontonWindows] Функция подсчета сумарной ширины оконного проема для одной формы ломаного фронтона
  * @param {allFormsLomFrontonWindow} formLomFrontonWindow переменная для формы подсчета площади оконного проема
  * @param {number} window - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
  * @param {number} result - результат подсчета
- */
+ 
 function sumWidthLomFrontonWindows() {
 	for (let i = 0, max = allFormsLomFrontonWindow.length; i < max; i++) {
 		let formLomFrontonWindow = allFormsLomFrontonWindow[i];
@@ -599,6 +601,7 @@ function sumWidthLomFrontonWindows() {
 		formLomFrontonWindow.querySelector(".lf-window-sum-width").value = result;
 	}
 }
+*/
 
 /**
  * @function [sumWidthTreugFrontonDoor] Функция подсчета сумарной ширины дверного проема для одной формы треугольного фронтона
@@ -606,7 +609,7 @@ function sumWidthLomFrontonWindows() {
  * @param {number} door - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
  * @param {number} result - результат подсчета
- */
+
 function sumWidthTreugFrontonDoor() {
 	for (let i = 0, max = allFormsTreugFrontonDoor.length; i < max; i++) {
 		let formTreugFrontonDoor = allFormsTreugFrontonDoor[i];
@@ -619,14 +622,14 @@ function sumWidthTreugFrontonDoor() {
 		formTreugFrontonDoor.querySelector(".tf-door-sum-width").value = result;
 	}
 }
-
+*/
 /**
  * @function [sumWidthLomFrontonDoor] Функция подсчета сумарной ширины дверного проема для одной формы ломаного фронтона
  * @param {allFormsLomFrontonDoor} formLomFrontonDoor переменная для формы подсчета площади дверного проема
  * @param {number} Door - поле ввода количества оконных проемов
  * @param {number} shirina - поле ввода ширины оконного проема
  * @param {number} result - результат подсчета
- */
+
 function sumWidthLomFrontonDoor() {
 	for (let i = 0, max = allFormsLomFrontonDoor.length; i < max; i++) {
 		let formLomFrontonDoor = allFormsLomFrontonDoor[i];
@@ -639,6 +642,7 @@ function sumWidthLomFrontonDoor() {
 		formLomFrontonDoor.querySelector(".lf-door-sum-width").value = result;
 	}
 }
+ */
 
 /**
  * @function [sumWidthTreugFrontonFrontsves] Функция подсчета сумарной ширины фронтонного свеса для одной формы треугольного фронтона
