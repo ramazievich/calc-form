@@ -1261,6 +1261,7 @@ function remuveBtntfKarnizsves() {
  */
 let newFormStenaId = 1;
 let node = document.getElementById("walls-form-id").cloneNode(true);
+let node2 = document.querySelector(".walls-form").cloneNode(true);
 
 // document.querySelector(".add-form").addEventListener("click", function () {
 $(document).on('click', '.add-form', function () {
@@ -1276,16 +1277,16 @@ $(document).on('click', '.add-form', function () {
 });
 
 function copyForm(){
-let parent = document.getElementById('walls-id');
-let elem = parent.querySelector('.walls-form');
 
-let newClonedNode = elem.cloneNode(true);
-parent.appendChild(newClonedNode);
-newClonedNode.id = "walls-form-id-" + newFormStenaId;
+
+	let newClonedNode = node2.cloneNode(true);
+	document.querySelector(".walls").appendChild(newClonedNode);
+	newClonedNode.id = "walls-form-id-" + newFormStenaId;
 	newClonedNode.querySelector(".wf_length").name = 'data[Стены][' + newFormStenaId + '][Длина]';
-	newClonedNode.querySelector(".wf_height").name = 'data[Стены][' + newFormStenaId + '][Высота]';
-	funcStena();
+		newClonedNode.querySelector(".wf_height").name = 'data[Стены][' + newFormStenaId + '][Высота]';
+		funcStena();
 	newFormStenaId++;
+
 
 /*
 
@@ -1297,12 +1298,9 @@ newClonedNode.id = "walls-form-id-" + newFormStenaId;
 
 
 function deleteForm(btn) {
-	let forms = document.getElementsByClassName('walls-form');
-	if (forms.length > 1) {
-		btn.parentElement.remove();
-		sumPerimeters();
-		sumAreas();
-	}
+var clonedNode = document.getElementById("myObj").cloneNode(true);
+ 
+document.querySelector("body").appendChild(clonedNode);
 }
 */
 

@@ -26,7 +26,7 @@
 
 .fasad_form_main label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
 }
 
 .fasad_form_main label.light {
@@ -337,21 +337,22 @@
     .fasad_form_main input.wf_result-wall,
     .fasad_form_main input.window_result-window,
     .fasad_form_main input.door_result-door {
-        width: 139px;
+        width: 117px;
         margin: 0 10px 0 10px;
+        height: 20px;
     }
 
     select.select-selected.input-style {
         width: 225px;
     }
 
-    input.tf-area.input-style,
-    input.tf-frontsves-result.input-style,
-    input.tf-karnizsves-result.input-style,
-    input.lf-area.input-style,
-    input.lf-frontsves-result.input-style,
-    input.lf-karnizsves-result.input-style {
-        width: 141px;
+    .fasad_form_main input.tf-area,
+    .fasad_form_main input.tf-frontsves-result,
+    .fasad_form_main input.tf-karnizsves-result,
+    .fasad_form_main input.lf-area,
+    .fasad_form_main input.lf-frontsves-result,
+    .fasad_form_main input.lf-karnizsves-result {
+        width: 118px;
         margin: 0 12px 0 9px;
     }
     
@@ -570,11 +571,12 @@
     .fasad_form_main .lf-frontsves-form-label,
     .fasad_form_main .lf-karnizsves-form-label,
     .fasad_form_main .notfront-karnizsves-form-label {
-        font-size: 19px;
+        font-size: 18px;
         font-weight: 600;
+        text-transform: uppercase;
         color: #000;
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 18px;
     }
     
     .fasad_form_main .all-results-wrp {
@@ -616,6 +618,55 @@
     .fasad_form_main .img-notfront-color {
         margin: 0 0 0 -6px;
     }
+
+    .fasad_form_main .tf-frontsves-groups-img-wrp,
+    .fasad_form_main .tf-karnizsves-groups-img-wrp,
+    .fasad_form_main .lf-frontsves-groups-img-wrp,
+    .fasad_form_main .lf-karnizsves-groups-img-wrp,
+    .fasad_form_main .notfront-karnizsves-img-wrp{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+     .fasad_form_main .img-tf-frontsves,
+     .fasad_form_main .img-tf-karnizsves,
+     .fasad_form_main .img-lf-frontsves,
+     .fasad_form_main .img-lf-karnizsves,
+     .fasad_form_main .img-notfront-item-wrp {
+        margin: 0 auto;
+    }
+    .fasad_form_main input.tf-frontsves-length,
+    .fasad_form_main input.tf-frontsves-height,
+    .fasad_form_main input.tf-karnizsves-length,
+    .fasad_form_main input.tf-karnizsves-height,
+    .fasad_form_main input.lf-frontsves-length,
+    .fasad_form_main input.lf-frontsves-height,
+    .fasad_form_main input.lf-frontsves-height2,
+    .fasad_form_main input.lf-karnizsves-length,
+    .fasad_form_main input.lf-karnizsves-height,
+    .fasad_form_main input.notfront-karnizsves-length,
+    .fasad_form_main input.notfront-karnizsves-height {
+        width: 214px;
+    }
+
+    .fasad_form_main .img-tf-frontsves-item,
+    .fasad_form_main .img-tf-karnizsves-item,
+    .fasad_form_main .img-lf-karnizsves-item,
+    .fasad_form_main .img-lf-frontsves-item,
+    .fasad_form_main .img-notfront-item {
+        height: 150px;
+        margin-bottom: -20px;
+    }
+
+    .fasad_form_main .img-notfront-item {
+        height: 100px;
+        margin: 0 -17px 0 0;
+    }
+
 
 }
 
@@ -667,67 +718,153 @@
         margin: 0 10px 0 10px;
     }
 
-    input.tf-area.input-style,
-    input.tf-frontsves-result.input-style,
-    input.tf-karnizsves-result.input-style,
-    input.lf-area.input-style,
-    input.lf-frontsves-result.input-style,
-    input.lf-karnizsves-result.input-style {
+    .fasad_form_main input.tf-area,
+    .fasad_form_main input.tf-frontsves-result,
+    .fasad_form_main input.tf-karnizsves-result,
+    .fasad_form_main input.lf-area,
+    .fasad_form_main input.lf-frontsves-result,
+    .fasad_form_main input.lf-karnizsves-result {
         width: 214px;
         margin: 0 12px 0 9px;
     }
 
+    .fasad_form_main input.wf_length,
+    .fasad_form_main input.wf_height,
+    .fasad_form_main input.window_length,
+    .fasad_form_main input.window_height,
+    .fasad_form_main input.door_length,
+    .fasad_form_main input.door_height {
+        width: 100px;
+        height: 20px;
+    }
+
+    .fasad_form_main .input_groups-wrp,
+    .fasad_form_main .input_groups-window-wrp,
+    .fasad_form_main .input_groups-door-wrp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    }
+
+    .fasad_form_main select.select-selected {
+        width: 322px;
+    }
+
+    .fasad_form_main input.ugol_height,
+    .fasad_form_main input.ugol-inner_height {
+        width: 305px;
+    }
+
+
+    .fasad_form_main .tf-width-wrp {
+        margin: 0 9px 0 0;
+    }
+
+    .fasad_form_main .tf-items-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main .tf-area-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        margin: 8px 0 0 3px;
+    }
+
+    .fasad_form_main .tf-items-wrp-all {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: start;
+    }
+
+    .fasad_form_main input.tf-width,
+    .fasad_form_main input.tf-height {
+        width: 140px;
+        height: 20px;
+    }
+
+    .fasad_form_main input.tf-area {
+        width: 206px;
+        height: 20px;
+    }
+
+    .fasad_form_main p.tf-area-txt {
+        margin: 9px 0 0 0;
+    }
+
+    .fasad_form_main input.tf-frontsves-length,
+    .fasad_form_main input.tf-frontsves-height,
+    .fasad_form_main input.tf-karnizsves-length,
+    .fasad_form_main input.tf-karnizsves-height,
+    .fasad_form_main input.lf-frontsves-length,
+    .fasad_form_main input.lf-frontsves-height,
+    .fasad_form_main input.lf-frontsves-height2,
+    .fasad_form_main input.lf-karnizsves-length,
+    .fasad_form_main input.lf-karnizsves-height,
+    .fasad_form_main input.notfront-karnizsves-length,
+    .fasad_form_main input.notfront-karnizsves-height {
+        width: 100px;
+        height: 20px;
+    }
+
+    .fasad_form_main input.lf-width,
+    .fasad_form_main input.lf-width2 {
+        margin: 0 8px 0 0;
+    }
+
+    .fasad_form_main input.lf-width,
+    .fasad_form_main input.lf-height,
+    .fasad_form_main input.lf-width2,
+    .fasad_form_main input.lf-height2 {
+        width: 143px;
+        height: 20px;
+    }
+
+    .fasad_form_main .lf-items-wrp,
+    .fasad_form_main .lf-items2-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;        
+    }
+
+    .fasad_form_main .lf-items-wrp {
+    margin-top: 18px;
+    }
+    .fasad_form_main .tf-frontsves-groups-img-wrp,
+    .fasad_form_main .tf-karnizsves-groups-img-wrp,
+    .fasad_form_main .lf-frontsves-groups-img-wrp,
+    .fasad_form_main .lf-karnizsves-groups-img-wrp,
+    .fasad_form_main .notfront-karnizsves-img-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main  .notfront-karnizsves-form-label {
+        width: 260px;
+        margin-bottom: 20px;
+    }
 
 }
 
 @media only screen and (min-width: 480px){
-    .fasad_form_main .wall-title-h2,
-    .fasad_form_main .fronton-title-h2 {
-        font-size: 28px;
-    }
-    .fasad_form_main .walls-form,
-    .fasad_form_main .windows-form,
-    .fasad_form_main .doors-form,
-    .fasad_form_main .ugol-vnesh-form,
-    .fasad_form_main .ugol-inner-form,
-    .fasad_form_main .tf-form,
-    .fasad_form_main .tf-window-form,
-    .fasad_form_main .tf-door-form,
-    .fasad_form_main .tf-frontsves-form,
-    .fasad_form_main .tf-karnizsves-form,
-    .fasad_form_main .lf-form,
-    .fasad_form_main .lf-window-form,
-    .fasad_form_main .lf-door-form,
-    .fasad_form_main .lf-frontsves-form,
-    .fasad_form_main .lf-karnizsves-form,
-    .fasad_form_main .notfront-karnizsves-form {
-        width: 400px;
-    }
-
-    select.select-selected.input-style {
-        width: 354px;
-    }
-
-    .fasad_form_main input.wf_result-wall,
-    .fasad_form_main input.window_result-window,
-    .fasad_form_main input.door_result-door {
-        width: 268px;
-        margin: 0 10px 0 10px;
-    }
-
-    input.tf-area.input-style,
-    input.tf-frontsves-result.input-style,
-    input.tf-karnizsves-result.input-style,
-    input.lf-area.input-style,
-    input.lf-frontsves-result.input-style,
-    input.lf-karnizsves-result.input-style {
-        width: 270px;
-        margin: 0 12px 0 9px;
-    }
-
-}
-
-@media only screen and (min-width: 520px){
     .fasad_form_main .wall-title-h2,
     .fasad_form_main .fronton-title-h2 {
         font-size: 30px;
@@ -748,21 +885,22 @@
     .fasad_form_main .lf-frontsves-form,
     .fasad_form_main .lf-karnizsves-form,
     .fasad_form_main .notfront-karnizsves-form {
-        width: 455px;
+        width: 420px;
     }  
 
-    .fasad_form_main input[type="text"],
-    .fasad_form_main input[type="password"],
-    .fasad_form_main input[type="date"],
-    .fasad_form_main input[type="datetime"],
-    .fasad_form_main input[type="email"],
-    .fasad_form_main input[type="number"],
-    .fasad_form_main input[type="search"],
-    .fasad_form_main input[type="tel"],
-    .fasad_form_main input[type="time"],
-    .fasad_form_main input[type="url"] {
-        width: 100px;
-        height: 30px;
+    .fasad_form_main input.tf-frontsves-length,
+    .fasad_form_main input.tf-frontsves-height,
+    .fasad_form_main input.tf-karnizsves-length,
+    .fasad_form_main input.tf-karnizsves-height,
+    .fasad_form_main input.lf-frontsves-length,
+    .fasad_form_main input.lf-frontsves-height,
+    .fasad_form_main input.lf-frontsves-height2,
+    .fasad_form_main input.lf-karnizsves-length,
+    .fasad_form_main input.lf-karnizsves-height,
+    .fasad_form_main input.notfront-karnizsves-length,
+    .fasad_form_main input.notfront-karnizsves-height {
+        width: 85px;
+        height: 20px;
     }
 
     .fasad_form_main .input_groups-wrp {
@@ -775,7 +913,7 @@
     }
 
     .fasad_form_main .wf_length-wrp {
-        margin: 0 26px 0 0px;
+        margin: 0 10px 0 0px;
     }
 
     .fasad_form_main .all-input_groups-wrp {
@@ -794,21 +932,20 @@
         justify-content: flex-start;
         align-items: flex-start;
         align-content: flex-start;
-        width: 190px;
-    }
-
-    .fasad_form_main .wf_area-labe2 {
-        position: absolute;
-        margin: 29px 0 0 138px;
-    }
+        width: 180px;
+    }    
 
     .fasad_form_main .wf_area-labe {
         position: absolute;
-        margin: -7px 0px 0 14px;
+        margin: -6px 0px 0 12px;
     }
 
-    .fasad_form_main input.wf_result-wall.input-style {
-        margin: 18px 0 0 14px;
+    .fasad_form_main select.select-selected {
+        width: 420px;
+    }
+    .fasad_form_main input.wf_result-wall {
+        margin: 14px 0 0 8px;
+        width: 140px;
     }
 
     .fasad_form_main .copy-form {
@@ -837,10 +974,10 @@
         margin: 0 50px 0 0;
     }
 
-    .fasad_form_main input.window_length.input-style,
-    .fasad_form_main input.window_height.input-style,
-    .fasad_form_main input.door_length.input-style,
-    .fasad_form_main input.door_height.input-style {
+    .fasad_form_main input.window_length,
+    .fasad_form_main input.window_height,
+    .fasad_form_main input.door_length,
+    .fasad_form_main input.door_height {
         width: 170px;
     }
 
@@ -863,8 +1000,412 @@
     .fasad_form_main input.ugol-inner_height {
         width: 300px;
     }
+
+    .fasad_form_main .tf-area-txt {
+        margin: 0px 0 8px 10px;
+    }
+
+
+    .tf-frontsves-groups-img-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .fasad_form_main .tf-area-wrp {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        margin: -7px 0 0 0;
+    }
+
+    .fasad_form_main p.tf-area-txt {
+        margin: 9px 0 0 9px;
+    }
+
+    .fasad_form_main .tf-items-wrp-all {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: start;
+        margin: 16px 0 0 0;
+    }
+
+    .fasad_form_main input.tf-area {
+        width: 140px;
+        height: 20px;
+    }
+
+    .fasad_form_main input.tf-width,
+    .fasad_form_main input.tf-height {
+        width: 100px;
+        height: 20px;
+    }
+
+    .fasad_form_main .img-tf-frontsves-item,
+    .fasad_form_main .img-tf-karnizsves-item {
+        margin: -10px -19px -20px 0;
+    }
+
+    .fasad_form_main  .tf-frontsves-groups-wrp,
+    .fasad_form_main  .tf-karnizsves-groups-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main  .tf-frontsves-length-wrp,
+    .fasad_form_main  .tf-karnizsves-length-wrp {
+        margin: 0 9px 0 0;
+    }
+
+    .fasad_form_main .tf-frontsves-result-formula,
+    .fasad_form_main .tf-karnizsves-result-formula {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        margin: -60px 0 13px 0;
+    }
+
+    .fasad_form_main .tf-frontsves-area-all,
+    .fasad_form_main .tf-karnizsves-area-all {
+        margin: 0 0 1px 0px;
+    }
+
+    .fasad_form_main input.tf-frontsves-result,
+    .fasad_form_main input.tf-karnizsves-result {
+        width: 193px;
+        margin: 0 12px 0 0;
+    }
+
+    .fasad_form_main input.lf-width,
+    .fasad_form_main input.lf-height,
+    .fasad_form_main input.lf-width2,
+    .fasad_form_main input.lf-height2 {
+        width: 185px;
+    }
+
+    .fasad_form_main input.lf-area {
+        width: 298px;
+    }
+
+    .lf-frontsves-groups-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main input.lf-frontsves-length,
+    .fasad_form_main input.lf-frontsves-height,
+    .fasad_form_main input.lf-frontsves-height2 {
+        width: 115px;
+        margin: 0 8px 0 0;
+    }
+    
+    .fasad_form_main .img-lf-frontsves-item {
+        margin: -6px 0 -30px 202px;
+    }
+
+    .fasad_form_main .lf-frontsves-result-formula {
+        flex-direction: column;
+        margin: -75px 61px 0 0;
+    }
+    
+
+    .fasad_form_main .lf-frontsves-area-all {
+        margin: 0 74px 0 0;
+    }
+
+    .fasad_form_main input.lf-frontsves-result {
+        width: 150px;
+        margin: 0 0 0 0;
+    }
+
+    .fasad_form_main input.lf-karnizsves-length,
+    .fasad_form_main input.lf-karnizsves-height {
+        width: 150px;
+    }
+
+    .fasad_form_main .img-lf-karnizsves-item {
+        margin: 0 -30px 0 0;
+    }
+
+    .fasad_form_main .lf-karnizsves-result-formula {
+        flex-direction: column;
+        margin: -30px 0 0 -8px;
+    }
+
+    .fasad_form_main .lf-karnizsves-result-formula {
+        margin: -30px 0 0 -8px;
+    }
+
+    .fasad_form_main .lf-karnizsves-area-all {
+        margin: 0 180px 0 0;
+    }
+
+    .fasad_form_main input.lf-karnizsves-result {
+        width: 150px;
+        margin: 0 113px 0 9px;
+    }
+
+    .fasad_form_main .notfront-karnizsves-form-label {
+        width: 335px;
+    }
+
+}
+
+@media only screen and (min-width: 576px){
+
+    .fasad_form_main .walls-form,
+    .fasad_form_main .windows-form,
+    .fasad_form_main .doors-form,
+    .fasad_form_main .ugol-vnesh-form,
+    .fasad_form_main .ugol-inner-form,
+    .fasad_form_main .tf-form,
+    .fasad_form_main .tf-window-form,
+    .fasad_form_main .tf-door-form,
+    .fasad_form_main .tf-frontsves-form,
+    .fasad_form_main .tf-karnizsves-form,
+    .fasad_form_main .lf-form,
+    .fasad_form_main .lf-window-form,
+    .fasad_form_main .lf-door-form,
+    .fasad_form_main .lf-frontsves-form,
+    .fasad_form_main .lf-karnizsves-form,
+    .fasad_form_main .notfront-karnizsves-form {
+        width: 515px;
+    }
+
+    .fasad_form_main input.wf_length,
+    .fasad_form_main input.wf_height,
+    .fasad_form_main input.door_length,
+    .fasad_form_main input.door_height {
+        width: 147px;
+    }
+
+    .fasad_form_main .input_groups-window-wrp,
+    .fasad_form_main .input_groups-door-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: space-around;
+    }
+
+    .fasad_form_main .window_length-wrp,
+    .fasad_form_main .door_length-wrp {
+        margin: 0px 8px 0 0;
+    }
+
+    .fasad_form_main input.window_length,
+    .fasad_form_main input.window_height,
+    .fasad_form_main input.door_length,
+    .fasad_form_main input.door_height {
+        width: 73px;
+    }
+
+    .fasad_form_main .input_groups-window-wrp,
+    .fasad_form_main .input_groups-door-wrp {
+        float: left;
+    }
+
+    .fasad_form_main select.select-selected {
+        width: 300px;
+        margin: 0 0 0 8px;
+    }
+
+    .fasad_form_main .input_groups-window-all-wrp,
+    .fasad_form_main .input_groups-door-all-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main .window_select-wrp-title,
+    .fasad_form_main .door_select-wrp-title {
+        margin: 0 0 0 10px;
+    }
+
+    .fasad_form_main input.tf-width,
+    .fasad_form_main input.tf-height {
+        width: 145px;
+    }
+
+    .fasad_form_main input.tf-frontsves-length,
+    .fasad_form_main input.tf-frontsves-height,
+    .fasad_form_main input.tf-karnizsves-length,
+    .fasad_form_main input.tf-karnizsves-height,
+    .fasad_form_main input.lf-frontsves-length,
+    .fasad_form_main input.lf-frontsves-height,
+    .fasad_form_main input.lf-frontsves-height2,
+    .fasad_form_main input.lf-karnizsves-length,
+    .fasad_form_main input.lf-karnizsves-height {
+        width: 145px;
+    }
+
+    .fasad_form_main input.notfront-karnizsves-length,
+    .fasad_form_main input.notfront-karnizsves-height {
+        width: 140px;
+    }
+
+    .fasad_form_main .tf-frontsves-result-formula,
+    .fasad_form_main .tf-karnizsves-result-formula {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        margin: -50px 0 18px 0;
+    }
+
+    .fasad_form_main .tf-frontsves-area-all,
+    .fasad_form_main .tf-karnizsves-area-all {
+        margin: 6px 12px 1px 0px;
+    }
+
+    .fasad_form_main input.tf-frontsves-result,
+    .fasad_form_main input.tf-karnizsves-result {
+        width: 216px;
+        margin: 0 12px 0 0;
+    }
+
+    .fasad_form_main input.lf-width,
+    .fasad_form_main input.lf-height,
+    .fasad_form_main input.lf-width2,
+    .fasad_form_main input.lf-height2 {
+        width: 95px;
+    }
+
+    .fasad_form_main .lf-items-all-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main .lf-items-wrp,
+    .fasad_form_main .lf-items2-wrp {
+        margin: 18px 8px 0 0;
+    }
+
+    .fasad_form_main input.lf-area {
+        width: 353px;
+    }
+
+    .fasad_form_main .lf-frontsves-groups-wrp {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 340px;
+    }
+
+    .fasad_form_main input.lf-frontsves-length,
+    .fasad_form_main input.lf-frontsves-height,
+    .fasad_form_main input.lf-frontsves-height2 {
+        width: 90px;
+    }
+
+    .fasad_form_main .lf-frontsves-result-formula {
+        flex-direction: row;
+        margin: 1px 0 5px 0px;
+    }
+
+    .fasad_form_main .img-lf-frontsves-item {
+        margin: -122px 0 -69px 332px;
+    }
+
+    .fasad_form_main .lf-frontsves-area-all {
+        margin: 5px 10px 0 0;
+    }
+
+    .fasad_form_main input.lf-frontsves-result {
+        width: 219px;
+        margin: 0 0 0 0;
+    }
+
+    .fasad_form_main .lf-karnizsves-groups-wrp,
+    .fasad_form_main .notfront-karnizsves-groups-wrp{
+        width: 330px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main .lf-karnizsves-length-wrp,
+    .fasad_form_main .notfront-karnizsves-length-wrp {
+        margin: 0 8px 0 0;
+    }
+
+    .fasad_form_main .lf-karnizsves-result-formula {
+        margin: -40px 0 0 -7px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+
+    .fasad_form_main .lf-karnizsves-area-all {
+        margin: 8px 0 0 0;
+    }
+
+    .fasad_form_main input.lf-karnizsves-result {
+        width: 227px;
+        margin: 0 113px 0 9px;
+        height: 20px;
+    }
+
+    .fasad_form_main .img-lf-karnizsves-item {
+        margin: -10px -15px -31px 0;
+    }
+
+    .fasad_form_main .notfront-karnizsves-form-label {
+        width: 450px;
+    }
+
+    .fasad_form_main .img-notfront-item {
+        height: 100px;
+        margin: -13px -17px -7px 0;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 768px){
+}
+/*
+@media only screen and (min-width: 820px){
 }
 
 
-
+@media only screen and (min-width: 900px){
+}
+*/
 
