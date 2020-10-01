@@ -10,6 +10,16 @@
     overflow: hidden;
 }
 
+.fasad_form_main .img-tf,
+.fasad_form_main .img-tf-color,
+.fasad_form_main .img-lom,
+.fasad_form_main .img-lom-color,
+.fasad_form_main .img-notfront,
+.fasad_form_main .img-notfront-color {
+    width: 150px;
+}
+
+
 input[placeholder] { 
 font-family: OpenSans;   
 text-indent: 3px;
@@ -489,7 +499,7 @@ transition: opacity 0.3s ease;
         cursor: pointer;
         background: none;
     }
-    
+
     .fasad_form_main .copy-form:focus {
         fill: rgb(21, 158, 21);
         outline: #3ac162;
