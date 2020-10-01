@@ -19,8 +19,8 @@ function funcStena() {
 		visota = parseFloat(visota);
 		let result = (dlina * visota);
 		form.querySelector(".wf_result-wall").value = result.toFixed(3);
-		
-		   
+
+
 	}
 }
 
@@ -290,23 +290,23 @@ console.log(allFormsLomFronton);
 function funcLomFronton() {
 	allFormsLomFronton = document.querySelectorAll(".lf-form");
 	for (let i = 0, max = allFormsLomFronton.length; i < max; i++) {
-	  let form = allFormsLomFronton[i];
-	  let shirina = Number(form.querySelector(".lf-width").value); //B
-	  shirina = parseFloat(shirina);
-	  let shirina2 = Number(form.querySelector(".lf-width2").value); //C
-	  shirina2 = parseFloat(shirina2);
-	  let visota = Number(form.querySelector(".lf-height").value); //H
-	  visota = parseFloat(visota);
-	  let visota2 = Number(form.querySelector(".lf-height2").value); //D
-	  visota2 = parseFloat(visota2);
-	  // let s1 = (shirina - shirina2) / visota;
-	  // let s2 = 0.5 * shirina2 * visota2;
-	  // let s3 = shirina2 * visota;
-	  // let result = (s1 + s2 + s3);
-	  let result = ((shirina2 + shirina) / 2 * visota) + (shirina2 * visota2) / 2;
-	  form.querySelector(".lf-area").value = result.toFixed(3);
+		let form = allFormsLomFronton[i];
+		let shirina = Number(form.querySelector(".lf-width").value); //B
+		shirina = parseFloat(shirina);
+		let shirina2 = Number(form.querySelector(".lf-width2").value); //C
+		shirina2 = parseFloat(shirina2);
+		let visota = Number(form.querySelector(".lf-height").value); //H
+		visota = parseFloat(visota);
+		let visota2 = Number(form.querySelector(".lf-height2").value); //D
+		visota2 = parseFloat(visota2);
+		// let s1 = (shirina - shirina2) / visota;
+		// let s2 = 0.5 * shirina2 * visota2;
+		// let s3 = shirina2 * visota;
+		// let result = (s1 + s2 + s3);
+		let result = ((shirina2 + shirina) / 2 * visota) + (shirina2 * visota2) / 2;
+		form.querySelector(".lf-area").value = result.toFixed(3);
 	}
-  }
+}
 
 
 /**
@@ -1031,9 +1031,9 @@ function showTreugolFrontonItems(check) {
 		document.getElementById("img-tf-color-id").classList.remove("hidden");
 		document.getElementById("img-tf-id").classList.add("hidden");
 	} else {
-	document.getElementById("check-treugol-field").classList.add("hidden");
-	document.getElementById("img-tf-color-id").classList.add("hidden");
-	document.getElementById("img-tf-id").classList.remove("hidden");
+		document.getElementById("check-treugol-field").classList.add("hidden");
+		document.getElementById("img-tf-color-id").classList.add("hidden");
+		document.getElementById("img-tf-id").classList.remove("hidden");
 		clearAllFormTreugolFronton();
 	}
 }
@@ -1042,8 +1042,8 @@ function clearAllFormTreugolFronton() {
 	let form = document.getElementById('check-treugol-field');
 	let inputs = form.getElementsByTagName('input');
 	for (let input of inputs)
-	  input.value = '';
-  }
+		input.value = '';
+}
 
 
 /**
@@ -1066,20 +1066,20 @@ function showLomFrontonItems(check) {
 		document.getElementById("img-lom-color-id").classList.add("hidden");
 		document.getElementById("img-lom-id").classList.remove("hidden");
 		clearAllFormLomFronton();
-	}	
-	
+	}
+
 }
 
 function clearAllFormLomFronton() {
 	let form = document.getElementById('check-lom-field');
 	let inputs = form.getElementsByTagName('input');
 	for (let input of inputs)
-	  input.value = '';
-  }
-  
-  let checkboxLom = document.getElementById('check-lom');
-  checkboxLom.addEventListener('click', clearAllFormLomFronton);
-  
+		input.value = '';
+}
+
+let checkboxLom = document.getElementById('check-lom');
+checkboxLom.addEventListener('click', clearAllFormLomFronton);
+
 
 /**
  * Для чекбокса
@@ -1101,19 +1101,19 @@ function showNotFrontonItems(check) {
 		document.getElementById("img-notfront-color-id").classList.add("hidden");
 		document.getElementById("img-notfront-id").classList.remove("hidden");
 		clearAllFormNotFronton();
-}
+	}
 }
 
 function clearAllFormNotFronton() {
 	let form = document.getElementById('check-notfront-field');
 	let inputs = form.getElementsByTagName('input');
 	for (let input of inputs)
-	  input.value = '';
+		input.value = '';
 
-  }
-  
-  let checkboxNotFronton = document.getElementById('check-notfront');
-  checkboxNotFronton.addEventListener('click', clearAllFormNotFronton);
+}
+
+let checkboxNotFronton = document.getElementById('check-notfront');
+checkboxNotFronton.addEventListener('click', clearAllFormNotFronton);
 
 
 /**
@@ -1257,11 +1257,10 @@ function remuveBtntfKarnizsves() {
  * @param {node} node - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormStenaId} newFormStenaId - добавляем новую форму
- * @function [copyForm] copyForm -функция копирования формы
+ * @function [copyForm] el - функция копирования формы
  */
 let newFormStenaId = 1;
 let node = document.getElementById("walls-form-id").cloneNode(true);
-let node2 = document.querySelector(".walls-form").cloneNode(true);
 
 // document.querySelector(".add-form").addEventListener("click", function () {
 $(document).on('click', '.add-form', function () {
@@ -1276,45 +1275,23 @@ $(document).on('click', '.add-form', function () {
 	newFormStenaId++;
 });
 
-function copyForm(){
-
-
-	let newClonedNode = node2.cloneNode(true);
-	document.querySelector(".walls").appendChild(newClonedNode);
-	newClonedNode.id = "walls-form-id-" + newFormStenaId;
-	newClonedNode.querySelector(".wf_length").name = 'data[Стены][' + newFormStenaId + '][Длина]';
-		newClonedNode.querySelector(".wf_height").name = 'data[Стены][' + newFormStenaId + '][Высота]';
-		funcStena();
+function copyForm(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".walls").appendChild(newArticleDiv);
+	newArticleDiv.id = "walls-form-id-" + newFormStenaId;
+	newArticleDiv.querySelector(".wf_length").name = 'data[Стены][' + newFormStenaId + '][Длина]';
+	newArticleDiv.querySelector(".wf_height").name = 'data[Стены][' + newFormStenaId + '][Высота]';
+	funcStena();
 	newFormStenaId++;
-
-
-/*
-
-	let parent = document.getElementById('parent');
-	let elem = parent.querySelector('.elem');
-
-	let clone = elem.cloneNode(true);
-	parent.appendChild(clone);
-
-
-function deleteForm(btn) {
-var clonedNode = document.getElementById("myObj").cloneNode(true);
- 
-document.querySelector("body").appendChild(clonedNode);
 }
-*/
-
-}
-
-
-
-
 
 /**
  * Кнопка добавления новой формы для оконных проемов в разделе стены
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormWindow} newFormWindow - добавляем новую форму
+ * @function [copyFormWindow] el - функция копирования формы
  */
 let newFormWindow = 1;
 let nodeWindow = document.getElementById("windows-form-id").cloneNode(true);
@@ -1328,8 +1305,21 @@ $(document).on('click', '.add-form-window', function () {
 	newClonedNode.querySelector(".window_height").name = 'data[Окна][' + newFormWindow + '][Высота]';
 	newClonedNode.querySelector(".window_height").value = '';
 	newClonedNode.querySelector(".select-selected").name = 'data[Окна][' + newFormWindow + '][Исполнение]';
+	funcWindow();
 	newFormWindow++;
 });
+
+function copyFormWindow(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".windows").appendChild(newArticleDiv);
+	newArticleDiv.id = "windows-form-id-" + newFormWindow;
+	newArticleDiv.querySelector(".window_length").name = 'data[Окна][' + newFormWindow + '][Ширина]';
+	newArticleDiv.querySelector(".window_height").name = 'data[Окна][' + newFormWindow + '][Высота]';
+	newArticleDiv.querySelector(".select-selected").name = 'data[Окна][' + newFormWindow + '][Исполнение]';
+	funcWindow();
+	newFormWindow++;
+}
 
 
 /**
@@ -1337,6 +1327,7 @@ $(document).on('click', '.add-form-window', function () {
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormDoor} newFormDoor - добавляем новую форму
+ * @function [copyFormDoor] el - функция копирования формы
  */
 let newFormDoor = 1;
 let nodeDoor = document.getElementById("doors-form-id").cloneNode(true);
@@ -1351,14 +1342,28 @@ $(document).on('click', '.add-form-door', function () {
 	newClonedNode.querySelector(".door_height").name = 'data[Двери][' + newFormDoor + '][Высота]';
 	newClonedNode.querySelector(".door_height").value = '';
 	newClonedNode.querySelector(".select-selected").name = 'data[Двери][' + newFormDoor + '][Исполнение]';
+	funcDoor();
 	newFormDoor++;
 });
+
+function copyFormDoor(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".doors").appendChild(newArticleDiv);
+	newArticleDiv.id = "doors-form-id-" + newFormDoor;
+	newArticleDiv.querySelector(".door_length").name = 'data[Двери][' + newFormDoor + '][Ширина]';
+	newArticleDiv.querySelector(".door_height").name = 'data[Двери][' + newFormDoor + '][Высота]';
+	newArticleDiv.querySelector(".select-selected").name = 'data[Двери][' + newFormDoor + '][Исполнение]';
+	funcDoor();
+	newFormDoor++;
+}
 
 /**
  * Кнопка добавления новой формы для подсчета высоты внешних углов в стенах
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormVneshUgol} newFormVneshUgol - добавляем новую форму
+ * @function [copyFormUgolVnesh] el - функция копирования формы
  */
 let newFormVneshUgol = 1;
 let nodeVneshUgol = document.getElementById("ugol-vnesh-form-id").cloneNode(true);
@@ -1372,12 +1377,22 @@ $(document).on('click', '.add-form-ugols-vnesh', function () {
 	newFormVneshUgol++;
 });
 
+function copyFormUgolVnesh(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".ugols-vnesh").appendChild(newArticleDiv);
+	newArticleDiv.id = "ugol-vnesh-form-id-" + newFormVneshUgol;
+	newArticleDiv.name = "ugol-vnesh-form-id-" + newFormVneshUgol;
+	newFormVneshUgol++;
+}
+
 
 /**
  * Кнопка добавления новой формы для подсчета высоты внутренних углов в стенах
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormInnerUgol} newFormInnerUgol - добавляем новую форму
+ * @function [copyFormUgolInner] el - функция копирования формы
  */
 let newFormInnerUgol = 1;
 let nodeInnerUgol = document.getElementById("ugol-inner-form-id").cloneNode(true);
@@ -1391,12 +1406,22 @@ $(document).on('click', '.add-form-ugols-inner', function () {
 	newFormInnerUgol++;
 });
 
+function copyFormUgolInner(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".ugols-inner").appendChild(newArticleDiv);
+	newArticleDiv.id = "gol-inner-form-id-" + newFormInnerUgol;
+	newArticleDiv.name = "ugol-inner-form-" + newFormInnerUgol;
+	newFormInnerUgol++;
+}
+
 
 /**
  * Кнопка добавления новой формы для размера и площади фронтона в разделе треугольный фронтон
  * @param {nodeTreugFronton} nodeTreugFronton - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormTreugFronton} newFormTreugFronton - добавляем новую форму
+ * @function [copyFormTF] el - функция копирования формы
  */
 let newFormTreugFronton = 1;
 let nodeTreugFronton = document.getElementById("tf-form-id").cloneNode(true);
@@ -1410,11 +1435,21 @@ $(document).on('click', '.add-form-tf', function () {
 	newFormTreugFronton++;
 });
 
+function copyFormTF(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".tf").appendChild(newArticleDiv);
+	newArticleDiv.id = "tf-form-id-" + newFormTreugFronton;
+	newArticleDiv.name = "tf-form-id-" + newFormTreugFronton;
+	newFormTreugFronton++;
+}
+
 /**
  * Кнопка добавления новой формы для размера и площади фронтона в разделе ломаный фронтон
  * @param {nodeLomFronton} nodeLomFronton - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormLomFronton} newFormLomFronton - добавляем новую форму
+ * @function [copyFormLF] el - функция копирования формы
  */
 let newFormLomFronton = 1;
 let nodeLomFronton = document.getElementById("lf-form-id").cloneNode(true);
@@ -1428,11 +1463,21 @@ $(document).on('click', '.add-form-lf', function () {
 	newFormLomFronton++;
 });
 
+function copyFormLF(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".lf").appendChild(newArticleDiv);
+	newArticleDiv.id = "lf-form-id-" + newFormLomFronton;
+	newArticleDiv.name = "lf-form-id-" + newFormLomFronton;
+	newFormLomFronton++;
+}
+
 /**
  * Кнопка добавления новой формы для фронтонных свесов в разделе треугольный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormTreugFrontonFrontsves} newFormTreugFrontonFrontsves - добавляем новую форму
+ * @function [copyFormTFFrontsves] el - функция копирования формы
  */
 let newFormTreugFrontonFrontsves = 1;
 let nodeTreugFrontonFrontsves = document.getElementById("tf-frontsves-form-id").cloneNode(true);
@@ -1446,11 +1491,21 @@ $(document).on('click', '.add-form-tf-frontsves', function () {
 	newFormTreugFrontonFrontsves++;
 });
 
+function copyFormTFFrontsves(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".tf-frontsves").appendChild(newArticleDiv);
+	newArticleDiv.id = "tf-frontsves-form-id-" + newFormTreugFrontonFrontsves;
+	newArticleDiv.name = "tf-frontsves-form-id-" + newFormTreugFrontonFrontsves;
+	newFormTreugFrontonFrontsves++;
+}
+
 /**
  * Кнопка добавления новой формы для фронтонных свесов в разделе ломаный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormLomFrontonFrontsves} newFormLomFrontonFrontsves - добавляем новую форму
+ * @function [copyFormLFFrontsves] el - функция копирования формы
  */
 let newFormLomFrontonFrontsves = 1;
 let nodeLomFrontonFrontsves = document.getElementById("lf-frontsves-form-id").cloneNode(true);
@@ -1464,11 +1519,21 @@ $(document).on('click', '.add-form-lf-frontsves', function () {
 	newFormLomFrontonFrontsves++;
 });
 
+function copyFormLFFrontsves(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".lf-frontsves").appendChild(newArticleDiv);
+	newArticleDiv.id = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
+	newArticleDiv.name = "lf-frontsves-form-id-" + newFormLomFrontonFrontsves;
+	newFormLomFrontonFrontsves++;
+}
+
 /**
  * Кнопка добавления новой формы для карнизных свесов в разделе треугольный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormTreugFrontonKarnizsves} newFormTreugFrontonKarnizsves - добавляем новую форму
+ * @function [copyFormTFKarnizsves] el - функция копирования формы
  */
 let newFormTreugFrontonKarnizsves = 1;
 let nodeTreugFrontonKarnizsves = document.getElementById("tf-karnizsves-form-id").cloneNode(true);
@@ -1482,11 +1547,21 @@ $(document).on('click', '.add-form-tf-karnizsves', function () {
 	newFormTreugFrontonKarnizsves++;
 });
 
+function copyFormTFKarnizsves(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".tf-karnizsves").appendChild(newArticleDiv);
+	newArticleDiv.id = "tf-karnizsves-form-id-" + newFormTreugFrontonKarnizsves;
+	newArticleDiv.name = "tf-karnizsves-form-id-" + newFormTreugFrontonKarnizsves;
+	newFormTreugFrontonKarnizsves++;
+}
+
 /**
  * Кнопка добавления новой формы для карнизных свесов в разделе ломаный фронтон
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormLomFrontonKarnizsves} newFormLomFrontonKarnizsves - добавляем новую форму
+ * @function [copyFormLFKarnizsves] el - функция копирования формы
  */
 let newFormLomFrontonKarnizsves = 1;
 let nodeLomFrontonKarnizsves = document.getElementById("lf-karnizsves-form-id").cloneNode(true);
@@ -1500,11 +1575,21 @@ $(document).on('click', '.add-form-lf-karnizsves', function () {
 	newFormLomFrontonKarnizsves++;
 });
 
+function copyFormLFKarnizsves(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".lf-karnizsves").appendChild(newArticleDiv);
+	newArticleDiv.id = "lf-karnizsves-form-id-" + newFormLomFrontonKarnizsves;
+	newArticleDiv.name = "lf-karnizsves-form-id-" + newFormLomFrontonKarnizsves;
+	newFormLomFrontonKarnizsves++;
+}
+
 /**
  * Кнопка добавления новой формы для карнизных свесов в разделе без фронтонов
  * @param {newClonedNode} newClonedNode - переменная для всей формы
  * @param {cloneNode} newClonedNode - получаем форму и клонируем ее
  * @param {newFormNotFrontonKarnizsves} newFormNotFrontonKarnizsves - добавляем новую форму
+ * @function [copyFormNotfront] el - функция копирования формы
  */
 let newFormNotFrontonKarnizsves = 1;
 let nodeNotFrontonKarnizsves = document.getElementById("notfront-karnizsves-form-id").cloneNode(true);
@@ -1517,6 +1602,15 @@ $(document).on('click', '.add-form-notfront-karnizsves', function () {
 	newClonedNode.name = "notfront-karnizsves-form-id-" + newFormNotFrontonKarnizsves;
 	newFormNotFrontonKarnizsves++;
 });
+
+function copyFormNotfront(el) {
+	let articleDiv = el.parentElement;
+	let newArticleDiv = articleDiv.cloneNode(true);
+	document.querySelector(".notfront-karnizsves").appendChild(newArticleDiv);
+	newArticleDiv.id = "notfront-karnizsves-form-id-" + newFormNotFrontonKarnizsves;
+	newArticleDiv.name = "notfront-karnizsves-form-id-" + newFormNotFrontonKarnizsves;
+	newFormNotFrontonKarnizsves++;
+}
 
 /**
  * @function [deleteForm] Функция удаления формы для стен
