@@ -1,17 +1,25 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 5 version
+*/
+
 .fasad_form_main .hidden {
-    position: absolute !important;
-    clip: rect(1px 1px 1px 1px);
-    /* IE6, IE7 */
-    clip: rect(1px, 1px, 1px, 1px);
-    padding: 0 !important;
-    border: 0 !important;
-    height: 1px !important;
-    width: 1px !important;
-    overflow: hidden;
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
 }
 
 * {
-    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .fasad_form_main .img-tf,
@@ -20,1865 +28,2084 @@
 .fasad_form_main .img-lom-color,
 .fasad_form_main .img-notfront,
 .fasad_form_main .img-notfront-color {
-    width: 150px;
+	width: 150px;
 }
 
-
-input[placeholder] { 
-font-family: OpenSans;   
-text-indent: 3px;
-text-overflow:ellipsis;
-opacity: 1;
-transition: opacity 0.3s ease;
+input[placeholder] {
+	font-family: OpenSans;
+	text-indent: 3px;
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s ease;
+	-o-transition: opacity 0.3s ease;
+	transition: opacity 0.3s ease;
 }
+
 
 /*кастомный чекбокс (начало)*/
+
 .fasad_form_main .custom-lable {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: center;
+	    align-content: center;
 }
 
 .fasad_form_main .checkboxs-lable-title {
-    font-weight: 600;
-    font-size: 23px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+	font-weight: 600;
+	font-size: 23px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
-
 
 .fasad_form_main label.light {
-    font-weight: 300;
-    display: inline;
+	font-weight: 300;
+	display: inline;
 }
 
-.fasad_form_main label > input {
-    display: none;
+.fasad_form_main label>input {
+	display: none;
 }
 
 .fasad_form_main label i {
-    padding: 2px;
-    width: 40px;
-    height: 20px;
-    border-radius: 13px;
-    vertical-align: middle;
-    transition: 0.15s 0.09s;
-    position: relative;
-    background: #869e86;
-    box-sizing: initial;
-    margin-bottom: 10px;
+	padding: 2px;
+	width: 40px;
+	height: 20px;
+	border-radius: 13px;
+	vertical-align: middle;
+	-webkit-transition: 0.15s 0.09s;
+	-o-transition: 0.15s 0.09s;
+	transition: 0.15s 0.09s;
+	position: relative;
+	background: #869e86;
+	-webkit-box-sizing: initial;
+	        box-sizing: initial;
+	margin-bottom: 10px;
 }
 
 .fasad_form_main label i:after {
-    content: " ";
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #fff;
-    position: absolute;
-    left: 2px;
-    top: 1.5px;
-    transition: 0.15s;
+	content: " ";
+	display: block;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #fff;
+	position: absolute;
+	left: 2px;
+	top: 1.5px;
+	-webkit-transition: 0.15s;
+	-o-transition: 0.15s;
+	transition: 0.15s;
 }
 
-.fasad_form_main label > input:checked + i {
-    background: #4bd865;
+.fasad_form_main label>input:checked+i {
+	background: #4bd865;
 }
 
-.fasad_form_main label > input:checked + i:after {
-    transform: translateX(20px);
+.fasad_form_main label>input:checked+i:after {
+	-webkit-transform: translateX(20px);
+	    -ms-transform: translateX(20px);
+	        transform: translateX(20px);
 }
 
 .fasad_form_main label:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
+
+
 /*кастомный чекбокс (конец)*/
 
 @media screen and (min-width: 150px) {
-
-
-
-
-    .fasad_form_main .wall,
-    .fasad_form_main .fronton,
-    .allwalls-wrp,
-    .tf-wrp,
-    .select-lom-fronton,
-    .notfront-karnizsves-wrp,
-    .fronton-item-wrp,
-    .select-treugol-fronton {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-    }
-
-    .fasad_form_main .wall-title-h2,
-    .fasad_form_main .fronton-title-h2 {
-        /*width: 300px;*/
-        width: auto;
-        margin: 20px 0;
-        text-align: center;
-        color: white;
-        border-bottom: 3px solid #39a759bd;
-        padding: 10px;
-        background-color: #4bc970;
-        -moz-border-radius-topleft: 4px;
-        -webkit-border-top-left-radius: 4px;
-        border-top-left-radius: 4px;
-        -moz-border-radius-topright: 5px;
-        -webkit-border-top-right-radius: 5px;
-        border-top-right-radius: 5px;
-        font-size: 19px;
-    }
- 
-    .fasad_form_main ul {
-        list-style: none;
-    }
-    
-    .fasad_form_main .walls,
-    .fasad_form_main .windows,
-    .fasad_form_main .doors,
-    .fasad_form_main .ugols-vnesh,
-    .fasad_form_main .ugols-inner,
-    .fasad_form_main .tf,
-    .fasad_form_main .tf-window,
-    .fasad_form_main .tf-door,
-    .fasad_form_main .tf-frontsves,
-    .fasad_form_main .tf-karnizsves,
-    .fasad_form_main .lf,
-    .fasad_form_main .lf-window,
-    .fasad_form_main .lf-door,
-    .fasad_form_main .lf-frontsves,
-    .fasad_form_main .lf-karnizsves,
-    .fasad_form_main .notfront-karnizsves {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -ms-flex-line-pack: start;
-        align-content: flex-start;
-        margin: 0;
-        padding: 0;
-    }
-    
-    .fasad_form_main .walls-form,
-    .fasad_form_main .windows-form,
-    .fasad_form_main .doors-form,
-    .fasad_form_main .ugol-vnesh-form,
-    .fasad_form_main .ugol-inner-form,
-    .fasad_form_main .tf-form,
-    .fasad_form_main .tf-window-form,
-    .fasad_form_main .tf-door-form,
-    .fasad_form_main .tf-frontsves-form,
-    .fasad_form_main .tf-karnizsves-form,
-    .fasad_form_main .lf-form,
-    .fasad_form_main .lf-window-form,
-    .fasad_form_main .lf-door-form,
-    .fasad_form_main .lf-frontsves-form,
-    .fasad_form_main .lf-karnizsves-form,
-    .fasad_form_main .notfront-karnizsves-form {
-        position: relative;
-        width: 250px;
-        background-color: #f2f2f26b;
-        border: 0.5px solid #00000008;
-        border-radius: 4px;
-        -webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
-        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
-        margin: 2px;
-    }
-
-
-
-
-    .fasad_form_main form {
-        width: 300px;
-        margin: 10px auto;
-        padding: 10px 20px;
-        background: #f4f7f8;
-        border-radius: 8px;
-    }
-    
-    .fasad_form_main h1 {
-        margin: 0 0 30px 0;
-        text-align: center;
-    }
-    
-    .fasad_form_main .input-style {
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        height: auto;
-        margin: 0;
-        outline: 0;
-        padding: 7px;
-        width: 95%;
-        background-color: #e8eeefb0;
-        color: #8a97a0;
-        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-        margin-bottom: 5px;
-    }
-
-    .fasad_form_main .tf-items-wrp {
-        width: 98%;
-    }
-    
-    .fasad_form_main .input-style:hover {
-        background: rgb(224, 236, 236);
-    }
-   
-    .fasad_form_main .input-style:active {
-        background: rgb(229, 240, 240);
-    }
-    
-    .fasad_form_main .input-style:focus {
-        outline: rgb(84, 165, 46);
-    }
-    
-  
-    /* Убираются стрелочки у input[type=number] */
-    
-    .fasad_form_main input[type="number"]::-webkit-outer-spin-button,
-    .fasad_form_main input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-    
-    .fasad_form_main input[type="number"] {
-        -moz-appearance: textfield;
-    }
-    
-    .fasad_form_main input[type="number"]:hover,
-    .fasad_form_main input[type="number"]:focus {
-        -moz-appearance: number-input;
-    }
-    
-    .fasad_form_main input[type=number]::-webkit-inner-spin-button,
-    .fasad_form_main input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-       
-    .fasad_form_main .wf_wall-wrp,
-    .fasad_form_main .window_wall-wrp,
-    .fasad_form_main .door_wall-wrp,
-    .fasad_form_main .ugol-vnesh_wall-wrp,
-    .fasad_form_main .ugol-inner_wall-wrp,
-    .fasad_form_main .tf-quantity-wrp,
-    .fasad_form_main .tf-window-groups-wrp,
-    .fasad_form_main .tf-window-num-wrp,
-    .fasad_form_main .tf-door-number-wrp,
-    .fasad_form_main .tf-frontsves-number-wrp,
-    .fasad_form_main .tf-karnizsves-number-wrp,
-    .fasad_form_main .lf-window-num-wrp,
-    .fasad_form_main .lf-door-number-wrp,
-    .fasad_form_main .lf-frontsves-number-wrp,
-    .fasad_form_main .lf-karnizsves-number-wrp,
-    .fasad_form_main .notfront-karnizsves-number-wrp {
-        margin-top: 17px;
-    }
-
-    .fasad_form_main .wf_result-formula,
-    .fasad_form_main .window_result-formula,
-    .fasad_form_main .door_result-formula,
-    .fasad_form_main .tf-result-formula,
-    .fasad_form_main .tf-area-wrp,
-    .fasad_form_main .tf-window-result-formula,
-    .fasad_form_main .tf-door-result-formula,
-    .fasad_form_main .tf-frontsves-result-formula,
-    .fasad_form_main .tf-karnizsves-result-formula,
-    .fasad_form_main .lf-area-wrp,
-    .fasad_form_main .lf-window-result-formula,
-    .fasad_form_main .lf-door-result-formula,
-    .fasad_form_main .lf-frontsves-result-formula,
-    .fasad_form_main .lf-karnizsves-result-formula,
-    .fasad_form_main .notfront-karnizsves-result-formula {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -ms-flex-line-pack: center;
-        align-content: center;
-    }
-    
-    .fasad_form_main input.wf_result-wall,
-    .fasad_form_main input.window_result-window,
-    .fasad_form_main input.door_result-door {
-        width: 95px;
-        margin: 0 0px 0 17px;
-        height: 34px;    
-    }
-
-    select.select-selected.input-style {
-        width: 198x;
-    }
-
-    .fasad_form_main input.tf-area,
-    .fasad_form_main input.tf-frontsves-result,
-    .fasad_form_main input.tf-karnizsves-result,
-    .fasad_form_main input.lf-area,
-    .fasad_form_main input.lf-frontsves-result,
-    .fasad_form_main input.lf-karnizsves-result {
-        width: 90px;
-        margin: 0 0px 0 9px;
-    }
-    
-    .fasad_form_main input[type="radio"],
-    .fasad_form_main input[type="checkbox"] {
-        margin: 0 4px 8px 0;
-    }
-    
-    .fasad_form_main select {
-        padding: 6px;
-        height: 32px;
-        border-radius: 2px;
-    }
-    
-    .fasad_form_main button {
-        padding: 19px 39px 18px 39px;
-        color: #FFF;
-        background-color: #4bc970;
-        font-size: 15px;
-        text-align: center;
-        font-style: normal;
-        border-radius: 5px;
-        width: 100%;
-        border: 1px solid #3ac162;
-        border-width: 1px 1px 3px;
-        -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        margin-bottom: 10px;
-    }
-
-    .fasad_form_main .add-form-btn {
-        width: 250px;
-        text-align: center;
-        background-color: #4bc970;
-        fill: white;
-        color: white;
-        padding: 8px 8px;
-        margin: 14px 0 8px 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-        border: 0.5px solid #31c15c;
-        outline: none;
-        border-radius: 4px;
-        border-width: 1px 1px 3px;
-        -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        cursor: pointer;
-    }
-    
-    .fasad_form_main .show-form-btn {
-        width: 250px;
-        text-align: left;
-        background-color: #d8d9db;
-        fill: white;
-        color: white;
-        padding: 8px 8px;
-        margin: 14px 0 8px 0;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
-        border: 0.5px solid #c0c0c0;
-        outline: none;
-        border-radius: 4px;
-        border-width: 1px 1px 3px;
-        -webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-        cursor: pointer;
-    }
-    
-    .fasad_form_main .add-form-btn:hover {
-        background-color: #31c15c;
-        fill: rgb(250, 253, 54);
-        cursor: pointer;
-    }
-    
-    .fasad_form_main .add-form-btn:active {
-        background-color: #4bc970;
-        fill: rgb(250, 253, 54);
-        cursor: pointer;
-    }
-    
-    .fasad_form_main .show-form-btn:hover {
-        background-color: #cccccc;
-        fill: rgb(255, 255, 255);
-    }
-    
-    .fasad_form_main .show-form-btn:active {
-        background-color: #09d5db;
-        fill: rgb(254, 254, 254);
-        border: 0.5px solid #1ec6cc;
-        outline: none;
-        border-radius: 4px;
-        border-width: 1px 1px 3px;
-        -webkit-box-shadow: 0 -1px 0 #1dd2d9 inset;
-        box-shadow: 0 -1px 0 #1dd2d9 inset;
-    }
-    
-   .fasad_form_main .copy-form {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    background: none;
-    display: block;
-    border: none;
-    cursor: pointer;
-    background: none;
-    margin: 41px 10px 0 0px;
-    }
-
-    
-    .fasad_form_main .remove-form-btn,
-    .fasad_form_main .tf-remove-form,
-    .fasad_form_main .lf-remove-form {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 20px;
-        height: 20px;
-        border: none;
-        cursor: pointer;
-        background: none;
-        display: block;
-        border: none;
-        cursor: pointer;
-        background: none;
-        margin: 7px 10px 0 0px;
-    }
-						
-   .fasad_form_main .copy-form:hover {
-        fill: rgb(21, 158, 21);
-        outline: none;
-        border: none;
-        cursor: pointer;
-        background: none;
-    }
-
-    .fasad_form_main .remove-form-btn:hover {
-        fill: red;
-        outline: none;
-        border: none;
-        cursor: pointer;
-        background: none;
-    }
-
-    .fasad_form_main .remove-form-btn:active {
-        fill: rgb(252, 56, 56);
-        outline: none;
-        border: none;
-        cursor: pointer;
-        background: none;
-    }
-
-    .fasad_form_main .copy-form:focus {
-        fill: rgb(21, 158, 21);
-        outline: #3ac162;
-        border: none;
-        cursor: pointer;
-        background: #3ac162;
-    }
-
-    .fasad_form_main .remove-form-btn:focus {
-        fill: rgb(252, 56, 56);
-        outline: #3ac162;
-        border: none;
-        cursor: pointer;
-        background: #3ac162;
-    }
-    
-    .fasad_form_main fieldset {
-        margin-bottom: 30px;
-        border: none;
-    }
-    
-    .fasad_form_main legend {
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
-    
-    .fasad_form_main .number {
-        background-color: #5fcf80;
-        color: #fff;
-        height: 30px;
-        width: 30px;
-        display: inline-block;
-        font-size: 0.8em;
-        margin-right: 4px;
-        line-height: 30px;
-        text-align: center;
-        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-        border-radius: 100%;
-    }
-    
-    .fasad_form_main .wall-form-label,
-    .fasad_form_main .window-form-label,
-    .fasad_form_main .door-form-label,
-    .fasad_form_main .ugol-vnesh-label,
-    .fasad_form_main .ugol-inner-label,
-    .fasad_form_main .tf-form-label,
-    .fasad_form_main .tf-window-form-label,
-    .fasad_form_main .tf-door-form-label,
-    .fasad_form_main .tf-frontsves-form-label,
-    .fasad_form_main .tf-karnizsves-form-label,
-    .fasad_form_main .lf-window-form-label,
-    .fasad_form_main .lf-door-form-label,
-    .fasad_form_main .lf-frontsves-form-label,
-    .fasad_form_main .lf-karnizsves-form-label,
-    .fasad_form_main .notfront-karnizsves-form-label {
-        font-size: 15px;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: #000;
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 18px;
-    }
-    
-    .fasad_form_main .all-results-wrp {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -ms-flex-line-pack: start;
-        align-content: flex-start;
-    }
-    /* стили для расположения чекбоксов и картинок во фронтонах*/
-    .fasad_form_main .treugol-fronton-wrp,
-    .fasad_form_main .lom-fronton-wrp,
-    .fasad_form_main .notfront-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: center;
-    }
-
-
-
-    .fasad_form_main .checkbox-wrp {
-        padding: 20px 15px;
-        width: 100px;
-        text-align: center;
-        color: #ffffff;
-        text-transform: uppercase;
-        background: #7bb37b6b;
-        border-radius: 5px;
-        font-size: 13px;
-    }
-
-
-    .fasad_form_main .fronton-wrp {
-        width: 300px;
-        display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    }
-
-    .fasad_form_main .bg-fon-fronton {
-
-        /*background-size: 50px 50px;
+	.fasad_form_main .podskazka {
+		display: none;
+		position: absolute;
+		border-radius: 4px;
+		right: 42px;
+		top: 38px;
+		background-color: #4bc970;
+		color: rgb(255 255 255);
+		padding: 5px;
+		text-align: center;
+		-webkit-box-shadow: 0 1px 1px rgb(61 175 95);
+		        box-shadow: 0 1px 1px rgb(61 175 95);
+		font-size: 12px;
+	}
+	.fasad_form_main .podskazka::after {
+		content: '';
+		position: absolute;
+		left: 67px;
+		bottom: 5px;
+		border: 6px solid transparent;
+		border-left: 10px solid #4bc970;
+	}
+	.fasad_form_main .copy-form:hover+.podskazka {
+		display: block;
+		transition: all 0.8s 0.6s ease;
+		-webkit-transition: all 0.8s 0.6s ease;
+		-moz-transition: all 0.8s 0.6s ease;
+		-o-transition: all 0.8s 0.6s ease;
+	}
+	.fasad_form_main .wall,
+	.fasad_form_main .fronton,
+	.allwalls-wrp,
+	.tf-wrp,
+	.select-lom-fronton,
+	.notfront-karnizsves-wrp,
+	.fronton-item-wrp,
+	.select-treugol-fronton {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: center;
+		    align-content: center;
+	}
+	.fasad_form_main .wall-title-h2,
+	.fasad_form_main .fronton-title-h2 {
+		/*width: 300px;*/
+		width: auto;
+		margin: 20px 0;
+		text-align: center;
+		color: white;
+		border-bottom: 3px solid #39a759bd;
+		padding: 10px;
+		background-color: #4bc970;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 5px;
+		font-size: 19px;
+	}
+	.fasad_form_main ul {
+		list-style: none;
+	}
+	.fasad_form_main .walls,
+	.fasad_form_main .windows,
+	.fasad_form_main .doors,
+	.fasad_form_main .ugols-vnesh,
+	.fasad_form_main .ugols-inner,
+	.fasad_form_main .tf,
+	.fasad_form_main .tf-window,
+	.fasad_form_main .tf-door,
+	.fasad_form_main .tf-frontsves,
+	.fasad_form_main .tf-karnizsves,
+	.fasad_form_main .lf,
+	.fasad_form_main .lf-window,
+	.fasad_form_main .lf-door,
+	.fasad_form_main .lf-frontsves,
+	.fasad_form_main .lf-karnizsves,
+	.fasad_form_main .notfront-karnizsves {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+		margin: 0;
+		padding: 0;
+	}
+	.fasad_form_main .walls-form,
+	.fasad_form_main .windows-form,
+	.fasad_form_main .doors-form,
+	.fasad_form_main .ugol-vnesh-form,
+	.fasad_form_main .ugol-inner-form,
+	.fasad_form_main .tf-form,
+	.fasad_form_main .tf-window-form,
+	.fasad_form_main .tf-door-form,
+	.fasad_form_main .tf-frontsves-form,
+	.fasad_form_main .tf-karnizsves-form,
+	.fasad_form_main .lf-form,
+	.fasad_form_main .lf-window-form,
+	.fasad_form_main .lf-door-form,
+	.fasad_form_main .lf-frontsves-form,
+	.fasad_form_main .lf-karnizsves-form,
+	.fasad_form_main .notfront-karnizsves-form {
+		position: relative;
+		width: 250px;
+		background-color: #f2f2f26b;
+		border: 0.5px solid #00000008;
+		border-radius: 4px;
+		-webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
+		box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
+		margin: 2px;
+	}
+	.fasad_form_main form {
+		width: 300px;
+		margin: 10px auto;
+		padding: 10px 20px;
+		background: #f4f7f8;
+		border-radius: 8px;
+	}
+	.fasad_form_main h1 {
+		margin: 0 0 30px 0;
+		text-align: center;
+	}
+	.fasad_form_main .input-style {
+		background: rgba(255, 255, 255, 0.1);
+		border: none;
+		border-radius: 4px;
+		font-size: 16px;
+		height: auto;
+		margin: 0;
+		outline: 0;
+		padding: 7px;
+		width: 95%;
+		background-color: #e8eeefb0;
+		color: #8a97a0;
+		-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+		box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+		margin-bottom: 5px;
+	}
+	.fasad_form_main .tf-items-wrp {
+		width: 98%;
+	}
+	.fasad_form_main .input-style:hover {
+		background: rgb(224, 236, 236);
+	}
+	.fasad_form_main .input-style:active {
+		background: rgb(229, 240, 240);
+	}
+	.fasad_form_main .input-style:focus {
+		outline: rgb(84, 165, 46);
+	}
+	/* Убираются стрелочки у input[type=number] */
+	.fasad_form_main input[type="number"]::-webkit-outer-spin-button,
+	.fasad_form_main input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	.fasad_form_main input[type="number"] {
+		-moz-appearance: textfield;
+	}
+	.fasad_form_main input[type="number"]:hover,
+	.fasad_form_main input[type="number"]:focus {
+		-moz-appearance: number-input;
+	}
+	.fasad_form_main input[type=number]::-webkit-inner-spin-button,
+	.fasad_form_main input[type=number]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	.fasad_form_main .wf_wall-wrp,
+	.fasad_form_main .window_wall-wrp,
+	.fasad_form_main .door_wall-wrp,
+	.fasad_form_main .ugol-vnesh_wall-wrp,
+	.fasad_form_main .ugol-inner_wall-wrp,
+	.fasad_form_main .tf-quantity-wrp,
+	.fasad_form_main .tf-window-groups-wrp,
+	.fasad_form_main .tf-window-num-wrp,
+	.fasad_form_main .tf-door-number-wrp,
+	.fasad_form_main .tf-frontsves-number-wrp,
+	.fasad_form_main .tf-karnizsves-number-wrp,
+	.fasad_form_main .lf-window-num-wrp,
+	.fasad_form_main .lf-door-number-wrp,
+	.fasad_form_main .lf-frontsves-number-wrp,
+	.fasad_form_main .lf-karnizsves-number-wrp,
+	.fasad_form_main .notfront-karnizsves-number-wrp {
+		margin-top: 17px;
+	}
+	.fasad_form_main .wf_result-formula,
+	.fasad_form_main .window_result-formula,
+	.fasad_form_main .door_result-formula,
+	.fasad_form_main .tf-result-formula,
+	.fasad_form_main .tf-area-wrp,
+	.fasad_form_main .tf-window-result-formula,
+	.fasad_form_main .tf-door-result-formula,
+	.fasad_form_main .tf-frontsves-result-formula,
+	.fasad_form_main .tf-karnizsves-result-formula,
+	.fasad_form_main .lf-area-wrp,
+	.fasad_form_main .lf-window-result-formula,
+	.fasad_form_main .lf-door-result-formula,
+	.fasad_form_main .lf-frontsves-result-formula,
+	.fasad_form_main .lf-karnizsves-result-formula,
+	.fasad_form_main .notfront-karnizsves-result-formula {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-line-pack: center;
+		align-content: center;
+	}
+	.fasad_form_main input.wf_result-wall,
+	.fasad_form_main input.window_result-window,
+	.fasad_form_main input.door_result-door {
+		width: 95px;
+		margin: 0 0px 0 17px;
+		height: 34px;
+	}
+	select.select-selected.input-style {
+		width: 198x;
+	}
+	.fasad_form_main input.tf-area,
+	.fasad_form_main input.tf-frontsves-result,
+	.fasad_form_main input.tf-karnizsves-result,
+	.fasad_form_main input.lf-area,
+	.fasad_form_main input.lf-frontsves-result,
+	.fasad_form_main input.lf-karnizsves-result {
+		width: 90px;
+		margin: 0 0px 0 9px;
+	}
+	.fasad_form_main input[type="radio"],
+	.fasad_form_main input[type="checkbox"] {
+		margin: 0 4px 8px 0;
+	}
+	.fasad_form_main select {
+		padding: 6px;
+		height: 32px;
+		border-radius: 2px;
+	}
+	.fasad_form_main button {
+		padding: 19px 39px 18px 39px;
+		color: #FFF;
+		background-color: #4bc970;
+		font-size: 15px;
+		text-align: center;
+		font-style: normal;
+		border-radius: 5px;
+		width: 100%;
+		border: 1px solid #3ac162;
+		border-width: 1px 1px 3px;
+		-webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+		box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+		margin-bottom: 10px;
+	}
+	.fasad_form_main .add-form-btn {
+		width: 250px;
+		text-align: center;
+		background-color: #4bc970;
+		fill: white;
+		color: white;
+		padding: 8px 8px;
+		margin: 14px 0 8px 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: space-evenly;
+		-ms-flex-pack: space-evenly;
+		justify-content: space-evenly;
+		border: 0.5px solid #31c15c;
+		outline: none;
+		border-radius: 4px;
+		border-width: 1px 1px 3px;
+		-webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+		box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+		cursor: pointer;
+	}
+	.fasad_form_main .show-form-btn {
+		width: 250px;
+		text-align: left;
+		background-color: #d8d9db;
+		fill: white;
+		color: white;
+		padding: 8px 8px;
+		margin: 14px 0 8px 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: space-evenly;
+		-ms-flex-pack: space-evenly;
+		justify-content: space-evenly;
+		border: 0.5px solid #c0c0c0;
+		outline: none;
+		border-radius: 4px;
+		border-width: 1px 1px 3px;
+		-webkit-box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+		box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+		cursor: pointer;
+	}
+	.fasad_form_main .add-form-btn:hover {
+		background-color: #31c15c;
+		fill: rgb(250, 253, 54);
+		cursor: pointer;
+	}
+	.fasad_form_main .add-form-btn:active {
+		background-color: #4bc970;
+		fill: rgb(250, 253, 54);
+		cursor: pointer;
+	}
+	.fasad_form_main .show-form-btn:hover {
+		background-color: #cccccc;
+		fill: rgb(255, 255, 255);
+	}
+	.fasad_form_main .show-form-btn:active {
+		background-color: #09d5db;
+		fill: rgb(254, 254, 254);
+		border: 0.5px solid #1ec6cc;
+		outline: none;
+		border-radius: 4px;
+		border-width: 1px 1px 3px;
+		-webkit-box-shadow: 0 -1px 0 #1dd2d9 inset;
+		box-shadow: 0 -1px 0 #1dd2d9 inset;
+	}
+	.fasad_form_main .copy-form {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		border: none;
+		cursor: pointer;
+		background: none;
+		display: block;
+		border: none;
+		cursor: pointer;
+		background: none;
+		margin: 41px 10px 0 0px;
+	}
+	.fasad_form_main .remove-form-btn,
+	.fasad_form_main .tf-remove-form,
+	.fasad_form_main .lf-remove-form {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 20px;
+		height: 20px;
+		border: none;
+		cursor: pointer;
+		background: none;
+		display: block;
+		border: none;
+		cursor: pointer;
+		background: none;
+		margin: 7px 10px 0 0px;
+	}
+	.fasad_form_main .copy-form:hover {
+		fill: rgb(21, 158, 21);
+		outline: none;
+		border: none;
+		cursor: pointer;
+		background: none;
+	}
+	.fasad_form_main .remove-form-btn:hover {
+		fill: red;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		background: none;
+	}
+	.fasad_form_main .remove-form-btn:active {
+		fill: rgb(252, 56, 56);
+		outline: none;
+		border: none;
+		cursor: pointer;
+		background: none;
+	}
+	.fasad_form_main .copy-form:focus {
+		fill: rgb(21, 158, 21);
+		outline: #3ac162;
+		border: none;
+		cursor: pointer;
+		background: #3ac162;
+	}
+	.fasad_form_main .remove-form-btn:focus {
+		fill: rgb(252, 56, 56);
+		outline: #3ac162;
+		border: none;
+		cursor: pointer;
+		background: #3ac162;
+	}
+	.fasad_form_main fieldset {
+		margin-bottom: 30px;
+		border: none;
+	}
+	.fasad_form_main legend {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.fasad_form_main .number {
+		background-color: #5fcf80;
+		color: #fff;
+		height: 30px;
+		width: 30px;
+		display: inline-block;
+		font-size: 0.8em;
+		margin-right: 4px;
+		line-height: 30px;
+		text-align: center;
+		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+		border-radius: 100%;
+	}
+	.fasad_form_main .wall-form-label,
+	.fasad_form_main .window-form-label,
+	.fasad_form_main .door-form-label,
+	.fasad_form_main .ugol-vnesh-label,
+	.fasad_form_main .ugol-inner-label,
+	.fasad_form_main .tf-form-label,
+	.fasad_form_main .tf-window-form-label,
+	.fasad_form_main .tf-door-form-label,
+	.fasad_form_main .tf-frontsves-form-label,
+	.fasad_form_main .tf-karnizsves-form-label,
+	.fasad_form_main .lf-window-form-label,
+	.fasad_form_main .lf-door-form-label,
+	.fasad_form_main .lf-frontsves-form-label,
+	.fasad_form_main .lf-karnizsves-form-label,
+	.fasad_form_main .notfront-karnizsves-form-label {
+		font-size: 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #000;
+		display: block;
+		margin-top: 10px;
+		margin-bottom: 18px;
+	}
+	.fasad_form_main .all-results-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+		-webkit-box-align: start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+	}
+	/* стили для расположения чекбоксов и картинок во фронтонах*/
+	.fasad_form_main .treugol-fronton-wrp,
+	.fasad_form_main .lom-fronton-wrp,
+	.fasad_form_main .notfront-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: center;
+		    align-content: center;
+	}
+	.fasad_form_main .checkbox-wrp {
+		padding: 20px 15px;
+		width: 100px;
+		text-align: center;
+		color: #ffffff;
+		text-transform: uppercase;
+		background: #7bb37b6b;
+		border-radius: 5px;
+		font-size: 13px;
+	}
+	.fasad_form_main .fronton-wrp {
+		width: 300px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: center;
+		    align-content: center;
+	}
+	.fasad_form_main .bg-fon-fronton {
+		/*background-size: 50px 50px;
         background-color: #3db05f;*/
-        background-color: #b1ddb1;
-        background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-        background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-        background-image: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    }
-    
-    .fasad_form_main .bg-fon-fronton2 {
-
-        /*background-size: 50px 50px;
+		background-color: #b1ddb1;
+		background-image: -o-linear-gradient(315deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(135deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	}
+	.fasad_form_main .bg-fon-fronton2 {
+		/*background-size: 50px 50px;
         background-color: #3db05f;*/
-        background-color: #b1ddb1;
-        background-image: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-        background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-        background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-    }
-
-    .fasad_form_main .treugol-fronton-wrp-header,
-    .fasad_form_main .lom-fronton-wrp-header,
-    .fasad_form_main .notfront-wrp-header {
-        width: 300px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        align-content: center; 
-        margin-bottom: 2px;       
-    }
-
-    .fasad_form_main .tf-frontsves-groups-img-wrp,
-    .fasad_form_main .tf-karnizsves-groups-img-wrp,
-    .fasad_form_main .lf-frontsves-groups-img-wrp,
-    .fasad_form_main .lf-karnizsves-groups-img-wrp,
-    .fasad_form_main .notfront-karnizsves-img-wrp{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-     .fasad_form_main .img-tf-frontsves,
-     .fasad_form_main .img-tf-karnizsves,
-     .fasad_form_main .img-lf-frontsves,
-     .fasad_form_main .img-lf-karnizsves,
-     .fasad_form_main .img-notfront-item-wrp {
-        margin: 0 auto;
-    }
-    .fasad_form_main input.tf-frontsves-length,
-    .fasad_form_main input.tf-frontsves-height,
-    .fasad_form_main input.tf-karnizsves-length,
-    .fasad_form_main input.tf-karnizsves-height,
-    .fasad_form_main input.lf-frontsves-length,
-    .fasad_form_main input.lf-frontsves-height,
-    .fasad_form_main input.lf-frontsves-height2,
-    .fasad_form_main input.lf-karnizsves-length,
-    .fasad_form_main input.lf-karnizsves-height,
-    .fasad_form_main input.notfront-karnizsves-length,
-    .fasad_form_main input.notfront-karnizsves-height {
-        width: 214px;
-    }
-
-    .fasad_form_main .img-tf-frontsves-item,
-    .fasad_form_main .img-tf-karnizsves-item,
-    .fasad_form_main .img-lf-karnizsves-item,
-    .fasad_form_main .img-lf-frontsves-item,
-    .fasad_form_main .img-notfront-item {
-        height: 150px;
-        margin-bottom: -20px;
-    }
-
-    .fasad_form_main .img-notfront-item {
-        height: 100px;
-        margin: 0 -17px 0 0;
-    }
-
-    .fasad_form_main .lf-items-all-wrp {
-        margin-top: 10px;
-    }
-
-
+		background-color: #b1ddb1;
+		background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+		background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+	}
+	.fasad_form_main .treugol-fronton-wrp-header,
+	.fasad_form_main .lom-fronton-wrp-header,
+	.fasad_form_main .notfront-wrp-header {
+		width: 300px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: space-evenly;
+		    -ms-flex-pack: space-evenly;
+		        justify-content: space-evenly;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: center;
+		    align-content: center;
+		margin-bottom: 2px;
+	}
+	.fasad_form_main .tf-frontsves-groups-img-wrp,
+	.fasad_form_main .tf-karnizsves-groups-img-wrp,
+	.fasad_form_main .lf-frontsves-groups-img-wrp,
+	.fasad_form_main .lf-karnizsves-groups-img-wrp,
+	.fasad_form_main .notfront-karnizsves-img-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .img-tf-frontsves,
+	.fasad_form_main .img-tf-karnizsves,
+	.fasad_form_main .img-lf-frontsves,
+	.fasad_form_main .img-lf-karnizsves,
+	.fasad_form_main .img-notfront-item-wrp {
+		margin: 0 auto;
+	}
+	.fasad_form_main input.tf-frontsves-length,
+	.fasad_form_main input.tf-frontsves-height,
+	.fasad_form_main input.tf-karnizsves-length,
+	.fasad_form_main input.tf-karnizsves-height,
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2,
+	.fasad_form_main input.lf-karnizsves-length,
+	.fasad_form_main input.lf-karnizsves-height,
+	.fasad_form_main input.notfront-karnizsves-length,
+	.fasad_form_main input.notfront-karnizsves-height {
+		width: 214px;
+	}
+	.fasad_form_main .img-tf-frontsves-item,
+	.fasad_form_main .img-tf-karnizsves-item,
+	.fasad_form_main .img-lf-karnizsves-item,
+	.fasad_form_main .img-lf-frontsves-item,
+	.fasad_form_main .img-notfront-item {
+		height: 150px;
+		margin-bottom: -20px;
+	}
+	.fasad_form_main .img-notfront-item {
+		height: 100px;
+		margin: 0 -17px 0 0;
+	}
+	.fasad_form_main .lf-items-all-wrp {
+		margin-top: 10px;
+	}
 }
 
-@media only screen and (min-width: 400px){
-    .fasad_form_main .wall-title-h2,
-    .fasad_form_main .fronton-title-h2 {
-        font-size: 25px;
-    }
-    .fasad_form_main .walls-form,
-    .fasad_form_main .windows-form,
-    .fasad_form_main .doors-form,
-    .fasad_form_main .ugol-vnesh-form,
-    .fasad_form_main .ugol-inner-form,
-    .fasad_form_main .tf-form,
-    .fasad_form_main .tf-window-form,
-    .fasad_form_main .tf-door-form,
-    .fasad_form_main .tf-frontsves-form,
-    .fasad_form_main .tf-karnizsves-form,
-    .fasad_form_main .lf-form,
-    .fasad_form_main .lf-window-form,
-    .fasad_form_main .lf-door-form,
-    .fasad_form_main .lf-frontsves-form,
-    .fasad_form_main .lf-karnizsves-form,
-    .fasad_form_main .notfront-karnizsves-form {
-        width: 336px;
-    }
-
-    .fasad_form_main .wall-form-label,
-    .fasad_form_main .window-form-label,
-    .fasad_form_main .door-form-label,
-    .fasad_form_main .ugol-vnesh-label,
-    .fasad_form_main .ugol-inner-label,
-    .fasad_form_main .tf-form-label,
-    .fasad_form_main .tf-window-form-label,
-    .fasad_form_main .tf-door-form-label,
-    .fasad_form_main .tf-frontsves-form-label,
-    .fasad_form_main .tf-karnizsves-form-label,
-    .fasad_form_main .lf-window-form-label,
-    .fasad_form_main .lf-door-form-label,
-    .fasad_form_main .lf-frontsves-form-label,
-    .fasad_form_main .lf-karnizsves-form-label,
-    .fasad_form_main .notfront-karnizsves-form-label {
-        font-size: 17px;
-    }
-
-    .fasad_form_main .remove-form-btn,
-    .fasad_form_main .tf-remove-form,
-    .fasad_form_main .lf-remove-form {
-        width: 25px;
-        height: 25px;
-    }
-
-    .fasad_form_main .copy-form {
-    width: 25px;
-    height: 25px;
-    margin: 9px 50px 0 0px;
-    }
-
-    select.select-selected.input-style {
-        width: 299px;
-    }
-
-    .fasad_form_main input.wf_result-wall,
-    .fasad_form_main input.window_result-window,
-    .fasad_form_main input.door_result-door {
-        width: 195px;
-        margin: 0 0px 0 10px;
-    }
-
-    .fasad_form_main input.tf-area,
-    .fasad_form_main input.tf-frontsves-result,
-    .fasad_form_main input.tf-karnizsves-result,
-    .fasad_form_main input.lf-area,
-    .fasad_form_main input.lf-frontsves-result,
-    .fasad_form_main input.lf-karnizsves-result {
-        width: 185px;
-        margin: 0 0 0 14px;
-        height: 34px;
-    }
-
-    .fasad_form_main input.wf_length,
-    .fasad_form_main input.wf_height,
-    .fasad_form_main input.window_length,
-    .fasad_form_main input.window_height,
-    .fasad_form_main input.door_length,
-    .fasad_form_main input.door_height {
-        width: 140px;
-        height: 34px;
-    }
-
-    .fasad_form_main .input_groups-wrp,
-    .fasad_form_main .input_groups-window-wrp,
-    .fasad_form_main .input_groups-door-wrp {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-    align-content: flex-start;
-    }
-
-    .fasad_form_main .wf_length-wrp,
-    .fasad_form_main .wf_height-wrp,
-    .fasad_form_main .window_length-wrp,
-    .fasad_form_main .window_height-wrp,
-    .fasad_form_main .window_select-wrp,
-    .fasad_form_main .door_length-wrp,
-    .fasad_form_main .door_height-wrp,
-    .fasad_form_main .door_select-wrp,
-    .fasad_form_main .tf-width-wrp,
-    .fasad_form_main .tf-height-wrp,
-    .fasad_form_main .tf-frontsves-length-wrp,
-    .fasad_form_main .tf-frontsves-height-wrp,
-    .fasad_form_main .tf-karnizsves-length-wrp,
-    .fasad_form_main .tf-karnizsves-height-wrp,
-    .fasad_form_main .lf-width-wrp,
-    .fasad_form_main .lf-height-wrp,
-    .fasad_form_main .lf-width2-wrp,
-    .fasad_form_main .lf-height2-wrp,
-    .fasad_form_main .lf-frontsves-length-wrp,
-    .fasad_form_main .lf-frontsves-height-wrp,
-    .fasad_form_main .lf-frontsves-height-wrp,
-    .fasad_form_main .lf-karnizsves-length-wrp,
-    .fasad_form_main .lf-karnizsves-height-wrp,
-    .fasad_form_main .notfront-karnizsves-length-wrp,
-    .fasad_form_main .notfront-karnizsves-height-wrp {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .notfront-karnizsves-height-wrp {
-        margin: 0 0 0 8px;
-    }
-
-    .fasad_form_main select.select-selected {
-        width: 290px;
-    }
-
-    .fasad_form_main input.ugol_height,
-    .fasad_form_main input.ugol-inner_height {
-        width: 293px;
-    }
-
-    .fasad_form_main .checkbox-wrp {
-        width: 200px;
-    }
-
-    .fasad_form_main .fronton-wrp,
-    .fasad_form_main .treugol-fronton-wrp-header,
-    .fasad_form_main .lom-fronton-wrp-header,
-    .fasad_form_main .notfront-wrp-header {
-        width: 400px;
-    } 
-
-    .fasad_form_main .tf-width-wrp {
-        margin: 0 9px 0 0;
-    }
-
-    .fasad_form_main .tf-items-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin: 5px 0 0 0;
-    }
-
-    .fasad_form_main .tf-area-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin: 8px 0 0 3px;
-    }
-
-    .fasad_form_main .tf-items-wrp-all {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: start;
-    }
-
-    .fasad_form_main input.tf-width,
-    .fasad_form_main input.tf-height {
-        width: 139px;
-        height: 34px;
-    }
-
-    .fasad_form_main input.tf-area {
-        width: 184px;
-        height: 34px;
-        margin: 0 0 0 16px;
-    }
-
-    .fasad_form_main p.tf-area-txt {
-        margin: 9px 0 0 0;
-    }
-
-    .fasad_form_main input.tf-frontsves-length,
-    .fasad_form_main input.tf-frontsves-height,
-    .fasad_form_main input.tf-karnizsves-length,
-    .fasad_form_main input.tf-karnizsves-height,
-    .fasad_form_main input.lf-frontsves-length,
-    .fasad_form_main input.lf-frontsves-height,
-    .fasad_form_main input.lf-frontsves-height2,
-    .fasad_form_main input.lf-karnizsves-length,
-    .fasad_form_main input.lf-karnizsves-height {
-        width: 120px;
-        height: 34px;
-    }
-
-    .fasad_form_main input.notfront-karnizsves-length,
-    .fasad_form_main input.notfront-karnizsves-height {
-        width: 138px;
-        height: 34px;
-    }
-
-    .fasad_form_main input.lf-width,
-    .fasad_form_main input.lf-width2 {
-        margin: 0 8px 0 0;
-    }
-
-    .fasad_form_main input.lf-width,
-    .fasad_form_main input.lf-height,
-    .fasad_form_main input.lf-width2,
-    .fasad_form_main input.lf-height2 {
-        width: 138px;
-        height: 34px;
-    }
-
-    .fasad_form_main .lf-items-wrp,
-    .fasad_form_main .lf-items2-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        align-content: flex-start;        
-    }
-
-    .fasad_form_main .lf-items-wrp {
-    margin-top: 30px;
-    }
-    .fasad_form_main .tf-frontsves-groups-img-wrp,
-    .fasad_form_main .tf-karnizsves-groups-img-wrp,
-    .fasad_form_main .lf-frontsves-groups-img-wrp,
-    .fasad_form_main .lf-karnizsves-groups-img-wrp,
-    .fasad_form_main .notfront-karnizsves-img-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main  .notfront-karnizsves-form-label {
-        width: 260px;
-        margin-bottom: 20px;
-    }
-
-    .fasad_form_main  .notfront-karnizsves-groups-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .checkbox-wrp {
-        font-size: 16px;
-    }
-
+@media only screen and (min-width: 400px) {
+	.fasad_form_main .podskazka {
+		right: 94px;
+		top: 7px;
+	}
+	.fasad_form_main .wall-title-h2,
+	.fasad_form_main .fronton-title-h2 {
+		font-size: 25px;
+	}
+	.fasad_form_main .walls-form,
+	.fasad_form_main .windows-form,
+	.fasad_form_main .doors-form,
+	.fasad_form_main .ugol-vnesh-form,
+	.fasad_form_main .ugol-inner-form,
+	.fasad_form_main .tf-form,
+	.fasad_form_main .tf-window-form,
+	.fasad_form_main .tf-door-form,
+	.fasad_form_main .tf-frontsves-form,
+	.fasad_form_main .tf-karnizsves-form,
+	.fasad_form_main .lf-form,
+	.fasad_form_main .lf-window-form,
+	.fasad_form_main .lf-door-form,
+	.fasad_form_main .lf-frontsves-form,
+	.fasad_form_main .lf-karnizsves-form,
+	.fasad_form_main .notfront-karnizsves-form {
+		width: 336px;
+	}
+	.fasad_form_main .wall-form-label,
+	.fasad_form_main .window-form-label,
+	.fasad_form_main .door-form-label,
+	.fasad_form_main .ugol-vnesh-label,
+	.fasad_form_main .ugol-inner-label,
+	.fasad_form_main .tf-form-label,
+	.fasad_form_main .tf-window-form-label,
+	.fasad_form_main .tf-door-form-label,
+	.fasad_form_main .tf-frontsves-form-label,
+	.fasad_form_main .tf-karnizsves-form-label,
+	.fasad_form_main .lf-window-form-label,
+	.fasad_form_main .lf-door-form-label,
+	.fasad_form_main .lf-frontsves-form-label,
+	.fasad_form_main .lf-karnizsves-form-label,
+	.fasad_form_main .notfront-karnizsves-form-label {
+		font-size: 17px;
+	}
+	.fasad_form_main .remove-form-btn,
+	.fasad_form_main .tf-remove-form,
+	.fasad_form_main .lf-remove-form {
+		width: 25px;
+		height: 25px;
+	}
+	.fasad_form_main .copy-form {
+		width: 25px;
+		height: 25px;
+		margin: 9px 50px 0 0px;
+	}
+	select.select-selected.input-style {
+		width: 299px;
+	}
+	.fasad_form_main input.wf_result-wall,
+	.fasad_form_main input.window_result-window,
+	.fasad_form_main input.door_result-door {
+		width: 195px;
+		margin: 0 0px 0 10px;
+	}
+	.fasad_form_main input.tf-area,
+	.fasad_form_main input.tf-frontsves-result,
+	.fasad_form_main input.tf-karnizsves-result,
+	.fasad_form_main input.lf-area,
+	.fasad_form_main input.lf-frontsves-result,
+	.fasad_form_main input.lf-karnizsves-result {
+		width: 185px;
+		margin: 0 0 0 14px;
+		height: 34px;
+	}
+	.fasad_form_main input.wf_length,
+	.fasad_form_main input.wf_height,
+	.fasad_form_main input.window_length,
+	.fasad_form_main input.window_height,
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 140px;
+		height: 34px;
+	}
+	.fasad_form_main .input_groups-wrp,
+	.fasad_form_main .input_groups-window-wrp,
+	.fasad_form_main .input_groups-door-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .wf_length-wrp,
+	.fasad_form_main .wf_height-wrp,
+	.fasad_form_main .window_length-wrp,
+	.fasad_form_main .window_height-wrp,
+	.fasad_form_main .window_select-wrp,
+	.fasad_form_main .door_length-wrp,
+	.fasad_form_main .door_height-wrp,
+	.fasad_form_main .door_select-wrp,
+	.fasad_form_main .tf-width-wrp,
+	.fasad_form_main .tf-height-wrp,
+	.fasad_form_main .tf-frontsves-length-wrp,
+	.fasad_form_main .tf-frontsves-height-wrp,
+	.fasad_form_main .tf-karnizsves-length-wrp,
+	.fasad_form_main .tf-karnizsves-height-wrp,
+	.fasad_form_main .lf-width-wrp,
+	.fasad_form_main .lf-height-wrp,
+	.fasad_form_main .lf-width2-wrp,
+	.fasad_form_main .lf-height2-wrp,
+	.fasad_form_main .lf-frontsves-length-wrp,
+	.fasad_form_main .lf-frontsves-height-wrp,
+	.fasad_form_main .lf-frontsves-height-wrp,
+	.fasad_form_main .lf-karnizsves-length-wrp,
+	.fasad_form_main .lf-karnizsves-height-wrp,
+	.fasad_form_main .notfront-karnizsves-length-wrp,
+	.fasad_form_main .notfront-karnizsves-height-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .notfront-karnizsves-height-wrp {
+		margin: 0 0 0 8px;
+	}
+	.fasad_form_main select.select-selected {
+		width: 290px;
+	}
+	.fasad_form_main input.ugol_height,
+	.fasad_form_main input.ugol-inner_height {
+		width: 293px;
+	}
+	.fasad_form_main .checkbox-wrp {
+		width: 200px;
+	}
+	.fasad_form_main .fronton-wrp,
+	.fasad_form_main .treugol-fronton-wrp-header,
+	.fasad_form_main .lom-fronton-wrp-header,
+	.fasad_form_main .notfront-wrp-header {
+		width: 400px;
+	}
+	.fasad_form_main .tf-width-wrp {
+		margin: 0 9px 0 0;
+	}
+	.fasad_form_main .tf-items-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: 5px 0 0 0;
+	}
+	.fasad_form_main .tf-area-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: 8px 0 0 3px;
+	}
+	.fasad_form_main .tf-items-wrp-all {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: start;
+	}
+	.fasad_form_main input.tf-width,
+	.fasad_form_main input.tf-height {
+		width: 139px;
+		height: 34px;
+	}
+	.fasad_form_main input.tf-area {
+		width: 184px;
+		height: 34px;
+		margin: 0 0 0 16px;
+	}
+	.fasad_form_main p.tf-area-txt {
+		margin: 9px 0 0 0;
+	}
+	.fasad_form_main input.tf-frontsves-length,
+	.fasad_form_main input.tf-frontsves-height,
+	.fasad_form_main input.tf-karnizsves-length,
+	.fasad_form_main input.tf-karnizsves-height,
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2,
+	.fasad_form_main input.lf-karnizsves-length,
+	.fasad_form_main input.lf-karnizsves-height {
+		width: 120px;
+		height: 34px;
+	}
+	.fasad_form_main input.notfront-karnizsves-length,
+	.fasad_form_main input.notfront-karnizsves-height {
+		width: 138px;
+		height: 34px;
+	}
+	.fasad_form_main input.lf-width,
+	.fasad_form_main input.lf-width2 {
+		margin: 0 8px 0 0;
+	}
+	.fasad_form_main input.lf-width,
+	.fasad_form_main input.lf-height,
+	.fasad_form_main input.lf-width2,
+	.fasad_form_main input.lf-height2 {
+		width: 138px;
+		height: 34px;
+	}
+	.fasad_form_main .lf-items-wrp,
+	.fasad_form_main .lf-items2-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .lf-items-wrp {
+		margin-top: 30px;
+	}
+	.fasad_form_main .tf-frontsves-groups-img-wrp,
+	.fasad_form_main .tf-karnizsves-groups-img-wrp,
+	.fasad_form_main .lf-frontsves-groups-img-wrp,
+	.fasad_form_main .lf-karnizsves-groups-img-wrp,
+	.fasad_form_main .notfront-karnizsves-img-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .notfront-karnizsves-form-label {
+		width: 260px;
+		margin-bottom: 20px;
+	}
+	.fasad_form_main .notfront-karnizsves-groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .checkbox-wrp {
+		font-size: 16px;
+	}
 }
 
-@media only screen and (min-width: 480px){
-    .fasad_form_main .wall-title-h2,
-    .fasad_form_main .fronton-title-h2 {
-        font-size: 30px;
-    }
-    .fasad_form_main .walls-form,
-    .fasad_form_main .windows-form,
-    .fasad_form_main .doors-form,
-    .fasad_form_main .ugol-vnesh-form,
-    .fasad_form_main .ugol-inner-form,
-    .fasad_form_main .tf-form,
-    .fasad_form_main .tf-window-form,
-    .fasad_form_main .tf-door-form,
-    .fasad_form_main .tf-frontsves-form,
-    .fasad_form_main .tf-karnizsves-form,
-    .fasad_form_main .lf-form,
-    .fasad_form_main .lf-window-form,
-    .fasad_form_main .lf-door-form,
-    .fasad_form_main .lf-frontsves-form,
-    .fasad_form_main .lf-karnizsves-form,
-    .fasad_form_main .notfront-karnizsves-form {
-        width: 420px;
-    }  
-
-    .fasad_form_main input.wf_length,
-    .fasad_form_main input.wf_height {
-        width: 90px;
-        height: 34px;
-    }
-
-    .fasad_form_main input.tf-frontsves-length,
-    .fasad_form_main input.tf-frontsves-height,
-    .fasad_form_main input.tf-karnizsves-length,
-    .fasad_form_main input.tf-karnizsves-height,
-    .fasad_form_main input.lf-frontsves-length,
-    .fasad_form_main input.lf-frontsves-height,
-    .fasad_form_main input.lf-frontsves-height2,
-    .fasad_form_main input.lf-karnizsves-length,
-    .fasad_form_main input.lf-karnizsves-height,
-    .fasad_form_main input.notfront-karnizsves-length,
-    .fasad_form_main input.notfront-karnizsves-height {
-        width: 110px;
-        height: 34px;
-    }
-
-    .fasad_form_main .input_groups-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .wf_length-wrp {
-        margin: 0 10px 0 0px;
-    }
-
-    .fasad_form_main .all-input_groups-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        align-content: space-around;
-    }
-
-    .fasad_form_main .wf_result-formula {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        width: 180px;
-        margin: 0px -33px 5px 0px;
-    }    
-
-    .fasad_form_main .wf_area-labe {
-        margin: 0 0 0 0;
-    }
-
-    .fasad_form_main select.select-selected {
-        width: 375px;
-    }
-    .fasad_form_main input.wf_result-wall {
-        margin: 0 0 0 0;
-        width: 140px;
-    }
-
-    .fasad_form_main .copy-form {
-        margin: 7px 57px 0 0px;
-        width: 25px;
-        height: 25px;
-    }
-
-    .fasad_form_main .remove-form-btn {
-    width: 25px;
-    height: 25px;
-    }
-
-    .fasad_form_main .input_groups-window-wrp,
-    .fasad_form_main .input_groups-door-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        align-content: space-around;
-    }
-
-    .fasad_form_main .window_length-wrp,
-    .fasad_form_main .door_length-wrp {
-        margin: 0 50px 0 0;
-    }
-
-    .fasad_form_main input.window_length,
-    .fasad_form_main input.window_height,
-    .fasad_form_main input.door_length,
-    .fasad_form_main input.door_height {
-        width: 160px;
-    }
-
-    .fasad_form_main  .ugol_height-wrp,
-    .fasad_form_main  .ugol-inner_height-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: center;
-        align-content: center;
-    }
-
-    .fasad_form_main .ugol_height-title,
-    .fasad_form_main .ugol-inner_height-title {
-        margin-right: 20px;
-    }
-
-    .fasad_form_main input.ugol_height,
-    .fasad_form_main input.ugol-inner_height {
-        width: 280px;
-    }
-
-    .fasad_form_main .checkbox-wrp {
-        width: 300px;
-    }
-
-    .fasad_form_main .fronton-wrp,
-    .fasad_form_main .treugol-fronton-wrp-header,
-    .fasad_form_main .lom-fronton-wrp-header,
-    .fasad_form_main .notfront-wrp-header {
-        width: 470px;
-    }
-
-
-    .fasad_form_main .tf-area-txt {
-        margin: 0px 0 8px 10px;
-    }
-
-
-    .tf-frontsves-groups-img-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .fasad_form_main .tf-area-wrp {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin: -7px 0 0 0;
-    }
-
-    .fasad_form_main p.tf-area-txt {
-        margin: 12px 0 0 17px;
-    }
-
-    .fasad_form_main .tf-items-wrp-all {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: start;
-        margin: 16px 0 0 0;
-    }
-
-    .fasad_form_main input.tf-area {
-        width: 140px;
-
-    }
-
-    .fasad_form_main input.tf-width,
-    .fasad_form_main input.tf-height {
-        width: 100px;
-
-    }
-
-    .fasad_form_main .img-tf-frontsves-item,
-    .fasad_form_main .img-tf-karnizsves-item {
-        margin: -33px -19px -4px 0;
-    }
-
-    .fasad_form_main  .tf-frontsves-groups-wrp,
-    .fasad_form_main  .tf-karnizsves-groups-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main  .tf-frontsves-length-wrp,
-    .fasad_form_main  .tf-karnizsves-length-wrp {
-        margin: 0 9px 0 0;
-    }
-
-    .fasad_form_main .tf-frontsves-result-formula,
-    .fasad_form_main .tf-karnizsves-result-formula {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin: -42px 0px 0 20px;
-    }
-
-    .fasad_form_main .tf-frontsves-area-all,
-    .fasad_form_main .tf-karnizsves-area-all {
-        margin: 6px 0 0 0;
-    }
-
-    .fasad_form_main input.tf-frontsves-result,
-    .fasad_form_main input.tf-karnizsves-result {
-        width: 110px;
-    }
-
-    .fasad_form_main input.lf-width,
-    .fasad_form_main input.lf-height,
-    .fasad_form_main input.lf-width2,
-    .fasad_form_main input.lf-height2 {
-        width: 185px;
-    }
-
-    .fasad_form_main input.lf-area {
-        width: 278px;
-    }
-
-    .lf-frontsves-groups-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main input.lf-frontsves-length,
-    .fasad_form_main input.lf-frontsves-height,
-    .fasad_form_main input.lf-frontsves-height2 {
-        width: 115px;
-        margin: 0 8px 0 0;
-    }
-    
-    .fasad_form_main .img-lf-frontsves-item {
-        margin: -6px 0 -30px 202px;
-    }
-
-    .fasad_form_main .lf-frontsves-result-formula {
-        flex-direction: column;
-        margin: -75px 61px 0 0;
-    }
-    
-
-    .fasad_form_main .lf-frontsves-area-all {        
-    margin: 0 63px 0 0;
-    }
-
-    .fasad_form_main input.lf-frontsves-result {
-        width: 150px;
-        margin: 0 0 0 0;
-    }
-
-    .fasad_form_main input.lf-karnizsves-length,
-    .fasad_form_main input.lf-karnizsves-height {
-        width: 150px;
-    }
-
-    .fasad_form_main .img-lf-karnizsves-item {
-        margin: 0 -30px 0 0;
-    }
-
-    .fasad_form_main .lf-karnizsves-result-formula {
-        flex-direction: column;
-        margin: -37px 0 0 -9px;
-    }
-
-    .fasad_form_main .lf-karnizsves-area-all {
-        margin: 0 167px 0 0;
-    }
-
-    .fasad_form_main input.lf-karnizsves-result {
-        width: 150px;
-        margin: 0 113px 0 9px;
-    }
-
-    .fasad_form_main .notfront-karnizsves-form-label {
-        width: 310px;
-    }
-
-    .fasad_form_main .checkbox-wrp {
-        font-size: 18px;
-    }
-
-    .fasad_form_main .notfront-karnizsves-groups-wrp {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .notfront-karnizsves-height-wrp {
-        margin: 0 0 0 0;
-    }
-
+@media only screen and (min-width: 480px) {
+	.fasad_form_main .wall-title-h2,
+	.fasad_form_main .fronton-title-h2 {
+		font-size: 30px;
+	}
+	.fasad_form_main .walls-form,
+	.fasad_form_main .windows-form,
+	.fasad_form_main .doors-form,
+	.fasad_form_main .ugol-vnesh-form,
+	.fasad_form_main .ugol-inner-form,
+	.fasad_form_main .tf-form,
+	.fasad_form_main .tf-window-form,
+	.fasad_form_main .tf-door-form,
+	.fasad_form_main .tf-frontsves-form,
+	.fasad_form_main .tf-karnizsves-form,
+	.fasad_form_main .lf-form,
+	.fasad_form_main .lf-window-form,
+	.fasad_form_main .lf-door-form,
+	.fasad_form_main .lf-frontsves-form,
+	.fasad_form_main .lf-karnizsves-form,
+	.fasad_form_main .notfront-karnizsves-form {
+		width: 420px;
+	}
+	.fasad_form_main input.wf_length,
+	.fasad_form_main input.wf_height {
+		width: 90px;
+		height: 34px;
+	}
+	.fasad_form_main input.tf-frontsves-length,
+	.fasad_form_main input.tf-frontsves-height,
+	.fasad_form_main input.tf-karnizsves-length,
+	.fasad_form_main input.tf-karnizsves-height,
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2,
+	.fasad_form_main input.lf-karnizsves-length,
+	.fasad_form_main input.lf-karnizsves-height,
+	.fasad_form_main input.notfront-karnizsves-length,
+	.fasad_form_main input.notfront-karnizsves-height {
+		width: 110px;
+		height: 34px;
+	}
+	.fasad_form_main .input_groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .wf_length-wrp {
+		margin: 0 10px 0 0px;
+	}
+	.fasad_form_main .all-input_groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: distribute;
+		    align-content: space-around;
+	}
+	.fasad_form_main .wf_result-formula {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		width: 180px;
+		margin: 0px -33px 5px 0px;
+	}
+	.fasad_form_main .wf_area-labe {
+		margin: 0 0 0 0;
+	}
+	.fasad_form_main select.select-selected {
+		width: 375px;
+	}
+	.fasad_form_main input.wf_result-wall {
+		margin: 0 0 0 0;
+		width: 140px;
+	}
+	.fasad_form_main .copy-form {
+		margin: 7px 57px 0 0px;
+		width: 25px;
+		height: 25px;
+	}
+	.fasad_form_main .remove-form-btn {
+		width: 25px;
+		height: 25px;
+	}
+	.fasad_form_main .input_groups-window-wrp,
+	.fasad_form_main .input_groups-door-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: distribute;
+		    align-content: space-around;
+	}
+	.fasad_form_main .window_length-wrp,
+	.fasad_form_main .door_length-wrp {
+		margin: 0 50px 0 0;
+	}
+	.fasad_form_main input.window_length,
+	.fasad_form_main input.window_height,
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 160px;
+	}
+	.fasad_form_main .ugol_height-wrp,
+	.fasad_form_main .ugol-inner_height-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: center;
+		    align-content: center;
+	}
+	.fasad_form_main .ugol_height-title,
+	.fasad_form_main .ugol-inner_height-title {
+		margin-right: 20px;
+	}
+	.fasad_form_main input.ugol_height,
+	.fasad_form_main input.ugol-inner_height {
+		width: 280px;
+	}
+	.fasad_form_main .checkbox-wrp {
+		width: 300px;
+	}
+	.fasad_form_main .fronton-wrp,
+	.fasad_form_main .treugol-fronton-wrp-header,
+	.fasad_form_main .lom-fronton-wrp-header,
+	.fasad_form_main .notfront-wrp-header {
+		width: 470px;
+	}
+	.fasad_form_main .tf-area-txt {
+		margin: 0px 0 8px 10px;
+	}
+	.tf-frontsves-groups-img-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
+	.fasad_form_main .tf-area-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: -7px 0 0 0;
+	}
+	.fasad_form_main p.tf-area-txt {
+		margin: 12px 0 0 17px;
+	}
+	.fasad_form_main .tf-items-wrp-all {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: start;
+		margin: 16px 0 0 0;
+	}
+	.fasad_form_main input.tf-area {
+		width: 140px;
+	}
+	.fasad_form_main input.tf-width,
+	.fasad_form_main input.tf-height {
+		width: 100px;
+	}
+	.fasad_form_main .img-tf-frontsves-item,
+	.fasad_form_main .img-tf-karnizsves-item {
+		margin: -33px -19px -4px 0;
+	}
+	.fasad_form_main .tf-frontsves-groups-wrp,
+	.fasad_form_main .tf-karnizsves-groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .tf-frontsves-length-wrp,
+	.fasad_form_main .tf-karnizsves-length-wrp {
+		margin: 0 9px 0 0;
+	}
+	.fasad_form_main .tf-frontsves-result-formula,
+	.fasad_form_main .tf-karnizsves-result-formula {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: -42px 0px 0 20px;
+	}
+	.fasad_form_main .tf-frontsves-area-all,
+	.fasad_form_main .tf-karnizsves-area-all {
+		margin: 6px 0 0 0;
+	}
+	.fasad_form_main input.tf-frontsves-result,
+	.fasad_form_main input.tf-karnizsves-result {
+		width: 110px;
+	}
+	.fasad_form_main input.lf-width,
+	.fasad_form_main input.lf-height,
+	.fasad_form_main input.lf-width2,
+	.fasad_form_main input.lf-height2 {
+		width: 185px;
+	}
+	.fasad_form_main input.lf-area {
+		width: 278px;
+	}
+	.lf-frontsves-groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2 {
+		width: 115px;
+		margin: 0 8px 0 0;
+	}
+	.fasad_form_main .img-lf-frontsves-item {
+		margin: -6px 0 -30px 202px;
+	}
+	.fasad_form_main .lf-frontsves-result-formula {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		margin: -75px 61px 0 0;
+	}
+	.fasad_form_main .lf-frontsves-area-all {
+		margin: 0 63px 0 0;
+	}
+	.fasad_form_main input.lf-frontsves-result {
+		width: 150px;
+		margin: 0 0 0 0;
+	}
+	.fasad_form_main input.lf-karnizsves-length,
+	.fasad_form_main input.lf-karnizsves-height {
+		width: 150px;
+	}
+	.fasad_form_main .img-lf-karnizsves-item {
+		margin: 0 -30px 0 0;
+	}
+	.fasad_form_main .lf-karnizsves-result-formula {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		margin: -37px 0 0 -9px;
+	}
+	.fasad_form_main .lf-karnizsves-area-all {
+		margin: 0 167px 0 0;
+	}
+	.fasad_form_main input.lf-karnizsves-result {
+		width: 150px;
+		margin: 0 113px 0 9px;
+	}
+	.fasad_form_main .notfront-karnizsves-form-label {
+		width: 310px;
+	}
+	.fasad_form_main .checkbox-wrp {
+		font-size: 18px;
+	}
+	.fasad_form_main .notfront-karnizsves-groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .notfront-karnizsves-height-wrp {
+		margin: 0 0 0 0;
+	}
 }
 
-@media only screen and (min-width: 576px){
-
-    .fasad_form_main .walls-form,
-    .fasad_form_main .windows-form,
-    .fasad_form_main .doors-form,
-    .fasad_form_main .ugol-vnesh-form,
-    .fasad_form_main .ugol-inner-form,
-    .fasad_form_main .tf-form,
-    .fasad_form_main .tf-window-form,
-    .fasad_form_main .tf-door-form,
-    .fasad_form_main .tf-frontsves-form,
-    .fasad_form_main .tf-karnizsves-form,
-    .fasad_form_main .lf-form,
-    .fasad_form_main .lf-window-form,
-    .fasad_form_main .lf-door-form,
-    .fasad_form_main .lf-frontsves-form,
-    .fasad_form_main .lf-karnizsves-form,
-    .fasad_form_main .notfront-karnizsves-form {
-        width: 515px;
-    }
-
-    .fasad_form_main input.wf_length,
-    .fasad_form_main input.wf_height,
-    .fasad_form_main input.door_length,
-    .fasad_form_main input.door_height {
-        width: 147px;
-    }
-
-    .fasad_form_main .input_groups-window-wrp,
-    .fasad_form_main .input_groups-door-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: space-around;
-    }
-
-    .fasad_form_main .window_length-wrp,
-    .fasad_form_main .door_length-wrp {
-        margin: 0px 8px 0 0;
-    }
-
-    .fasad_form_main input.window_length,
-    .fasad_form_main input.window_height,
-    .fasad_form_main input.door_length,
-    .fasad_form_main input.door_height {
-        width: 73px;
-    }
-
-    .fasad_form_main .input_groups-window-wrp,
-    .fasad_form_main .input_groups-door-wrp {
-        float: left;
-    }
-
-    .fasad_form_main select.select-selected {
-        width: 300px;
-        margin: -2px 0 0 8px;
-    }
-
-    .fasad_form_main .input_groups-window-all-wrp,
-    .fasad_form_main .input_groups-door-all-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .window_select-wrp-title,
-    .fasad_form_main .door_select-wrp-title {
-        margin: 0 0 2px 10px;
-    }
-
-    .fasad_form_main .fronton-wrp,
-    .fasad_form_main .treugol-fronton-wrp-header,
-    .fasad_form_main .lom-fronton-wrp-header,
-    .fasad_form_main .notfront-wrp-header {
-        width: 565px;
-    }
-
-    .fasad_form_main input.tf-width,
-    .fasad_form_main input.tf-height {
-        width: 145px;
-    }
-
-    .fasad_form_main input.tf-frontsves-length,
-    .fasad_form_main input.tf-frontsves-height,
-    .fasad_form_main input.tf-karnizsves-length,
-    .fasad_form_main input.tf-karnizsves-height,
-    .fasad_form_main input.lf-frontsves-length,
-    .fasad_form_main input.lf-frontsves-height,
-    .fasad_form_main input.lf-frontsves-height2 {
-        width: 145px;
-    }
-
-    .fasad_form_main input.lf-karnizsves-length,
-    .fasad_form_main input.lf-karnizsves-height {
-        width: 153px;
-    }
-
-    .fasad_form_main input.notfront-karnizsves-length,
-    .fasad_form_main input.notfront-karnizsves-height {
-        width: 140px;
-    }
-
-    .fasad_form_main .tf-frontsves-result-formula,
-    .fasad_form_main .tf-karnizsves-result-formula {
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin: -50px 0 18px 0;
-    }
-
-    .fasad_form_main .tf-frontsves-area-all,
-    .fasad_form_main .tf-karnizsves-area-all {
-        margin: 6px 12px 1px 0px;
-    }
-
-    .fasad_form_main input.tf-frontsves-result,
-    .fasad_form_main input.tf-karnizsves-result {
-        width: 200px;
-        margin: 0 0 0 2px;
-    }
-
-    .fasad_form_main input.lf-width,
-    .fasad_form_main input.lf-height,
-    .fasad_form_main input.lf-width2,
-    .fasad_form_main input.lf-height2 {
-        width: 107px;
-    }
-
-    .fasad_form_main .lf-items-all-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin-top: 12px;
-    }
-
-    .fasad_form_main .lf-items-wrp,
-    .fasad_form_main .lf-items2-wrp {
-        margin: 18px 8px 0 0;
-    }
-
-    .fasad_form_main input.lf-area {
-        width: 353px;
-    }
-
-    .fasad_form_main .lf-frontsves-groups-wrp {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        width: 340px;
-    }
-
-    .fasad_form_main input.lf-frontsves-length,
-    .fasad_form_main input.lf-frontsves-height,
-    .fasad_form_main input.lf-frontsves-height2 {
-        width: 100px;
-    }
-
-    .fasad_form_main .lf-frontsves-result-formula {
-        flex-direction: row;
-        margin: 1px 0 5px 0px;
-    }
-
-    .fasad_form_main .img-lf-frontsves-item {
-        margin: -122px 0 -69px 332px;
-    }
-
-    .fasad_form_main .lf-frontsves-area-all {
-        margin: 5px 10px 0 0;
-    }
-
-    .fasad_form_main input.lf-frontsves-result {
-        width: 219px;
-        margin: 0 0 0 0;
-    }
-
-    .fasad_form_main .lf-karnizsves-groups-wrp{
-        width: 330px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-   .fasad_form_main .notfront-karnizsves-groups-wrp {
-        width: 220px;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .lf-karnizsves-length-wrp,
-    .fasad_form_main .notfront-karnizsves-length-wrp {
-        margin: 0 8px 0 0;
-    }
-
-    .fasad_form_main .lf-karnizsves-result-formula {
-        margin: -40px 0 0 -7px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-    }
-
-    .fasad_form_main .lf-karnizsves-area-all {
-        margin: 8px 0 0 0;
-    }
-
-    .fasad_form_main input.lf-karnizsves-result {
-        width: 227px;
-        margin: 0 113px 0 9px;
-    }
-
-    .fasad_form_main .img-lf-karnizsves-item {
-        margin: -10px -15px -31px 0;
-    }
-
-    .fasad_form_main .notfront-karnizsves-form-label {
-        width: 450px;
-    }
-
-    .fasad_form_main .img-notfront-item {
-        height: 100px;
-    }
-
-    .fasad_form_main .img-tf-frontsves-item, .fasad_form_main .img-tf-karnizsves-item {
-        margin: -20px -19px -16px 0;
-    }
-
-
-
+@media only screen and (min-width: 576px) {
+	.fasad_form_main .walls-form,
+	.fasad_form_main .windows-form,
+	.fasad_form_main .doors-form,
+	.fasad_form_main .ugol-vnesh-form,
+	.fasad_form_main .ugol-inner-form,
+	.fasad_form_main .tf-form,
+	.fasad_form_main .tf-window-form,
+	.fasad_form_main .tf-door-form,
+	.fasad_form_main .tf-frontsves-form,
+	.fasad_form_main .tf-karnizsves-form,
+	.fasad_form_main .lf-form,
+	.fasad_form_main .lf-window-form,
+	.fasad_form_main .lf-door-form,
+	.fasad_form_main .lf-frontsves-form,
+	.fasad_form_main .lf-karnizsves-form,
+	.fasad_form_main .notfront-karnizsves-form {
+		width: 515px;
+	}
+	.fasad_form_main input.wf_length,
+	.fasad_form_main input.wf_height,
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 147px;
+	}
+	.fasad_form_main .input_groups-window-wrp,
+	.fasad_form_main .input_groups-door-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: distribute;
+		    align-content: space-around;
+	}
+	.fasad_form_main .window_length-wrp,
+	.fasad_form_main .door_length-wrp {
+		margin: 0px 8px 0 0;
+	}
+	.fasad_form_main input.window_length,
+	.fasad_form_main input.window_height,
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 73px;
+	}
+	.fasad_form_main .input_groups-window-wrp,
+	.fasad_form_main .input_groups-door-wrp {
+		float: left;
+	}
+	.fasad_form_main select.select-selected {
+		width: 300px;
+		margin: -2px 0 0 8px;
+	}
+	.fasad_form_main .input_groups-window-all-wrp,
+	.fasad_form_main .input_groups-door-all-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .window_select-wrp-title,
+	.fasad_form_main .door_select-wrp-title {
+		margin: 0 0 2px 10px;
+	}
+	.fasad_form_main .fronton-wrp,
+	.fasad_form_main .treugol-fronton-wrp-header,
+	.fasad_form_main .lom-fronton-wrp-header,
+	.fasad_form_main .notfront-wrp-header {
+		width: 565px;
+	}
+	.fasad_form_main input.tf-width,
+	.fasad_form_main input.tf-height {
+		width: 145px;
+	}
+	.fasad_form_main input.tf-frontsves-length,
+	.fasad_form_main input.tf-frontsves-height,
+	.fasad_form_main input.tf-karnizsves-length,
+	.fasad_form_main input.tf-karnizsves-height,
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2 {
+		width: 145px;
+	}
+	.fasad_form_main input.lf-karnizsves-length,
+	.fasad_form_main input.lf-karnizsves-height {
+		width: 153px;
+	}
+	.fasad_form_main input.notfront-karnizsves-length,
+	.fasad_form_main input.notfront-karnizsves-height {
+		width: 140px;
+	}
+	.fasad_form_main .tf-frontsves-result-formula,
+	.fasad_form_main .tf-karnizsves-result-formula {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: nowrap;
+		    flex-wrap: nowrap;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: -50px 0 18px 0;
+	}
+	.fasad_form_main .tf-frontsves-area-all,
+	.fasad_form_main .tf-karnizsves-area-all {
+		margin: 6px 12px 1px 0px;
+	}
+	.fasad_form_main input.tf-frontsves-result,
+	.fasad_form_main input.tf-karnizsves-result {
+		width: 200px;
+		margin: 0 0 0 2px;
+	}
+	.fasad_form_main input.lf-width,
+	.fasad_form_main input.lf-height,
+	.fasad_form_main input.lf-width2,
+	.fasad_form_main input.lf-height2 {
+		width: 107px;
+	}
+	.fasad_form_main .lf-items-all-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin-top: 12px;
+	}
+	.fasad_form_main .lf-items-wrp,
+	.fasad_form_main .lf-items2-wrp {
+		margin: 18px 8px 0 0;
+	}
+	.fasad_form_main input.lf-area {
+		width: 353px;
+	}
+	.fasad_form_main .lf-frontsves-groups-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		width: 340px;
+	}
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2 {
+		width: 100px;
+	}
+	.fasad_form_main .lf-frontsves-result-formula {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		margin: 1px 0 5px 0px;
+	}
+	.fasad_form_main .img-lf-frontsves-item {
+		margin: -122px 0 -69px 332px;
+	}
+	.fasad_form_main .lf-frontsves-area-all {
+		margin: 5px 10px 0 0;
+	}
+	.fasad_form_main input.lf-frontsves-result {
+		width: 219px;
+		margin: 0 0 0 0;
+	}
+	.fasad_form_main .lf-karnizsves-groups-wrp {
+		width: 330px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .notfront-karnizsves-groups-wrp {
+		width: 220px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .lf-karnizsves-length-wrp,
+	.fasad_form_main .notfront-karnizsves-length-wrp {
+		margin: 0 8px 0 0;
+	}
+	.fasad_form_main .lf-karnizsves-result-formula {
+		margin: -40px 0 0 -7px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .lf-karnizsves-area-all {
+		margin: 8px 0 0 0;
+	}
+	.fasad_form_main input.lf-karnizsves-result {
+		width: 227px;
+		margin: 0 113px 0 9px;
+	}
+	.fasad_form_main .img-lf-karnizsves-item {
+		margin: -10px -15px -31px 0;
+	}
+	.fasad_form_main .notfront-karnizsves-form-label {
+		width: 450px;
+	}
+	.fasad_form_main .img-notfront-item {
+		height: 100px;
+	}
+	.fasad_form_main .img-tf-frontsves-item,
+	.fasad_form_main .img-tf-karnizsves-item {
+		margin: -20px -19px -16px 0;
+	}
 }
 
-@media only screen and (min-width: 768px){
-
-    .fasad_form_main input.window_length,
-    .fasad_form_main input.window_height, 
-    .fasad_form_main input.door_length,
-    .fasad_form_main input.door_height {
-        width: 100px;
-    }
-
-    .fasad_form_main input.door_length,
-.fasad_form_main input.door_height {
-    width: 100px;
+@media only screen and (min-width: 768px) {
+	.fasad_form_main input.window_length,
+	.fasad_form_main input.window_height,
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 100px;
+	}
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 100px;
+	}
+	.fasad_form_main .wall-title-h2,
+	.fasad_form_main .fronton-title-h2 {
+		font-size: 26px;
+		text-align: center;
+		width: 730px;
+	}
+	.fasad_form_main .walls-form,
+	.fasad_form_main .windows-form,
+	.fasad_form_main .doors-form,
+	.fasad_form_main .ugol-vnesh-form,
+	.fasad_form_main .ugol-inner-form,
+	.fasad_form_main .tf-form,
+	.fasad_form_main .tf-window-form,
+	.fasad_form_main .tf-door-form,
+	.fasad_form_main .tf-frontsves-form,
+	.fasad_form_main .tf-karnizsves-form,
+	.fasad_form_main .lf-form,
+	.fasad_form_main .lf-window-form,
+	.fasad_form_main .lf-door-form,
+	.fasad_form_main .lf-frontsves-form,
+	.fasad_form_main .lf-karnizsves-form,
+	.fasad_form_main .notfront-karnizsves-form {
+		width: 710px;
+	}
+	.fasad_form_main input.wf_length,
+	.fasad_form_main input.wf_height {
+		width: 180px;
+	}
+	.fasad_form_main .wf_result-formula {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: 0 10px 0 0;
+	}
+	.fasad_form_main .window_result-formula,
+	.fasad_form_main .door_result-formula {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: 0 0 0 39px;
+	}
+	.fasad_form_main input.wf_result-wall {
+		width: 180px;
+		margin: 0px 0 3px -2px;
+	}
+	.fasad_form_main input.window_result-window,
+	.fasad_form_main input.door_result-door {
+		width: 128px;
+		margin: 0px 0 0 -26px;
+	}
+	.fasad_form_main .wf_area-labe {
+		margin: 0;
+	}
+	.fasad_form_main .window_area-all,
+	.fasad_form_main .door_area-all {
+		margin: 0 0 0 -24px;
+	}
+	.fasad_form_main .fronton-wrp,
+	.fasad_form_main .treugol-fronton-wrp-header,
+	.fasad_form_main .lom-fronton-wrp-header,
+	.fasad_form_main .notfront-wrp-header {
+		width: 758px;
+	}
+	.fasad_form_main input.tf-width,
+	.fasad_form_main input.tf-height {
+		width: 180px;
+	}
+	.fasad_form_main .tf-area-wrp {
+		margin: -3px 0 0 129px;
+	}
+	.fasad_form_main input.tf-area {
+		margin: 0;
+	}
+	.fasad_form_main p.tf-area-txt {
+		margin: 9px 0 0 0;
+	}
+	.fasad_form_main .lf-area-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: 24px 25px 0 0px;
+	}
+	.fasad_form_main input.lf-area {
+		width: 140px;
+		margin: 0;
+	}
+	.fasad_form_main .lf-area-txt {
+		margin: 0;
+	}
+	.fasad_form_main .lf-items-full-wrp {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+	}
+	.fasad_form_main .img-lf-frontsves-item {
+		margin: -122px 0 -69px 355px;
+		height: 187px;
+	}
+	.fasad_form_main .lf-frontsves-groups-wrp {
+		width: 450px;
+	}
+	.fasad_form_main input.lf-frontsves-length,
+	.fasad_form_main input.lf-frontsves-height,
+	.fasad_form_main input.lf-frontsves-height2 {
+		width: 121px;
+	}
+	.fasad_form_main .lf-frontsves-result-formula {
+		margin: 1px 0px 5px 64px;
+	}
+	.fasad_form_main .img-lf-karnizsves-item {
+		height: 187px;
+		margin: -57px 0 -26px -95px;
+	}
+	.fasad_form_main .img-tf-frontsves-item,
+	.fasad_form_main .img-tf-karnizsves-item {
+		height: 187px;
+		margin: -46px 0 -24px 0;
+	}
+	.fasad_form_main .lf-karnizsves-groups-wrp {
+		width: 450px;
+	}
+	.fasad_form_main .notfront-karnizsves-groups-wrp {
+		width: 450px;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-webkit-box-align: start;
+		    -ms-flex-align: start;
+		        align-items: flex-start;
+		-ms-flex-line-pack: start;
+		    align-content: flex-start;
+		margin: 10px 0 0 0;
+	}
+	.fasad_form_main input.lf-karnizsves-result {
+		width: 219px;
+	}
+	.fasad_form_main input.lf-karnizsves-length,
+	.fasad_form_main input.lf-karnizsves-height {
+		width: 186px;
+	}
+	.fasad_form_main .lf-karnizsves-result-formula {
+		margin: -37px 0 0 67px;
+	}
+	.fasad_form_main input.tf-frontsves-length,
+	.fasad_form_main input.tf-frontsves-height,
+	.fasad_form_main input.tf-karnizsves-length,
+	.fasad_form_main input.tf-karnizsves-height {
+		width: 178px;
+	}
+	.fasad_form_main .tf-frontsves-result-formula,
+	.fasad_form_main .tf-karnizsves-result-formula {
+		margin: -50px 0 18px 65px;
+	}
+	.fasad_form_main input.notfront-karnizsves-length,
+	.fasad_form_main input.notfront-karnizsves-height {
+		width: 178px;
+	}
+	.fasad_form_main .img-notfront-item {
+		height: 112px;
+		margin-top: -30px;
+		margin-left: -90px;
+	}
 }
 
-.fasad_form_main .wall-title-h2, .fasad_form_main .fronton-title-h2 {
-    font-size: 26px;
-    text-align: center;
-    width: 730px;
+@media only screen and (min-width: 820px) {
+	.fasad_form_main .wall-title-h2,
+	.fasad_form_main .fronton-title-h2 {
+		width: 783px;
+	}
+	.fasad_form_main input.window_length,
+	.fasad_form_main input.window_height,
+	.fasad_form_main input.door_length,
+	.fasad_form_main input.door_height {
+		width: 120px;
+	}
+	.fasad_form_main .walls-form,
+	.fasad_form_main .windows-form,
+	.fasad_form_main .doors-form,
+	.fasad_form_main .ugol-vnesh-form,
+	.fasad_form_main .ugol-inner-form,
+	.fasad_form_main .tf-form,
+	.fasad_form_main .tf-window-form,
+	.fasad_form_main .tf-door-form,
+	.fasad_form_main .tf-frontsves-form,
+	.fasad_form_main .tf-karnizsves-form,
+	.fasad_form_main .lf-form,
+	.fasad_form_main .lf-window-form,
+	.fasad_form_main .lf-door-form,
+	.fasad_form_main .lf-frontsves-form,
+	.fasad_form_main .lf-karnizsves-form,
+	.fasad_form_main .notfront-karnizsves-form {
+		width: 760px;
+	}
+	.fasad_form_main .window_result-formula,
+	.fasad_form_main .door_result-formula {
+		margin: 0px 0 0 50px;
+	}
+	.fasad_form_main .tf-area-wrp {
+		margin: -7px 0 0 180px;
+	}
+	.fasad_form_main .lf-area-wrp {
+		margin: 25px 28px 0 0px;
+	}
+	.fasad_form_main .img-tf-frontsves-item,
+	.fasad_form_main .img-tf-karnizsves-item {
+		height: 187px;
+		margin: -46px -23px -24px 0;
+	}
+	.fasad_form_main .img-lf-frontsves-item {
+		margin: -119px 0 -68px 405px;
+		height: 187px;
+	}
+	.fasad_form_main .img-lf-karnizsves-item {
+		height: 187px;
+		margin: -50px 44px -31px 0px;
+	}
 }
 
-.fasad_form_main .walls-form,
-.fasad_form_main .windows-form,
-.fasad_form_main .doors-form,
-.fasad_form_main .ugol-vnesh-form,
-.fasad_form_main .ugol-inner-form,
-.fasad_form_main .tf-form,
-.fasad_form_main .tf-window-form,
-.fasad_form_main .tf-door-form,
-.fasad_form_main .tf-frontsves-form,
-.fasad_form_main .tf-karnizsves-form,
-.fasad_form_main .lf-form,
-.fasad_form_main .lf-window-form,
-.fasad_form_main .lf-door-form,
-.fasad_form_main .lf-frontsves-form,
-.fasad_form_main .lf-karnizsves-form,
-.fasad_form_main .notfront-karnizsves-form {
-    width: 710px;
-    
+@media only screen and (min-width: 900px) {
+	.fasad_form_main .wall-title-h2,
+	.fasad_form_main .fronton-title-h2 {
+		width: 868px;
+	}
+	.fasad_form_main .fronton-wrp,
+	.fasad_form_main .treugol-fronton-wrp-header,
+	.fasad_form_main .lom-fronton-wrp-header,
+	.fasad_form_main .notfront-wrp-header {
+		width: 810px;
+	}
 }
-
-.fasad_form_main input.wf_length,
-.fasad_form_main input.wf_height {
-    width: 180px;
-}
-
-.fasad_form_main .wf_result-formula {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    margin: 0 10px 0 0;
-}
-
-.fasad_form_main .window_result-formula,
-.fasad_form_main .door_result-formula {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin: 0 0 0 39px;
-}
-.fasad_form_main input.wf_result-wall {
-    width: 180px;
-    margin: 0px 0 3px -2px;
-}
-
-.fasad_form_main input.window_result-window,
-.fasad_form_main input.door_result-door {
-    width: 128px;
-    margin: 0px 0 0 -26px;
-}
-
-.fasad_form_main .wf_area-labe {
-    margin: 0;
-}
-
-.fasad_form_main .window_area-all,
-.fasad_form_main .door_area-all {
-    margin:0 0 0 -24px;
-}
-
-.fasad_form_main .fronton-wrp,
-.fasad_form_main .treugol-fronton-wrp-header,
-.fasad_form_main .lom-fronton-wrp-header,
-.fasad_form_main .notfront-wrp-header {
-    width: 758px;
-}
-
-.fasad_form_main input.tf-width,
-.fasad_form_main input.tf-height {
-    width: 180px;
-}
-
-.fasad_form_main .tf-area-wrp {
-    margin: -3px 0 0 129px;
-}
-
-.fasad_form_main input.tf-area {
-    margin: 0;
-}
-
-.fasad_form_main p.tf-area-txt {
-    margin: 9px 0 0 0;
-}
-
-.fasad_form_main .lf-area-wrp {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin: 24px 25px 0 0px;
-}
-
-.fasad_form_main input.lf-area {
-    width: 140px;
-    margin: 0;
-}
-
-.fasad_form_main .lf-area-txt {
-    margin: 0;
-}
-
-.fasad_form_main .lf-items-full-wrp {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: flex-start;
-}
-
-.fasad_form_main .img-lf-frontsves-item {
-    margin: -122px 0 -69px 355px;
-    height: 187px;
-}
-
-.fasad_form_main .lf-frontsves-groups-wrp {
-    width: 450px;
-}
-
-.fasad_form_main input.lf-frontsves-length,
-.fasad_form_main input.lf-frontsves-height,
-.fasad_form_main input.lf-frontsves-height2 {
-    width: 121px;
-}
-
-.fasad_form_main .lf-frontsves-result-formula {
-    margin: 1px 0px 5px 64px;
-}
-
-.fasad_form_main .img-lf-karnizsves-item {
-    height: 187px;
-    margin: -57px 0 -26px -95px;
-}
-
-.fasad_form_main .img-tf-frontsves-item,
-.fasad_form_main .img-tf-karnizsves-item {
-    height: 187px;
-    margin: -46px 0 -24px 0;
-}
-
-.fasad_form_main .lf-karnizsves-groups-wrp {
-    width: 450px;
-}
-
-.fasad_form_main .notfront-karnizsves-groups-wrp {
-    width: 450px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    margin: 10px 0 0 0;
-}
-
-.fasad_form_main input.lf-karnizsves-result {
-    width: 219px;
-}
-
-.fasad_form_main input.lf-karnizsves-length,
-.fasad_form_main input.lf-karnizsves-height {
-    width: 186px;
-}
-
-.fasad_form_main .lf-karnizsves-result-formula {
-    margin: -37px 0 0 67px;
-}
-
-.fasad_form_main input.tf-frontsves-length,
-.fasad_form_main input.tf-frontsves-height,
-.fasad_form_main input.tf-karnizsves-length,
-.fasad_form_main input.tf-karnizsves-height {
-    width: 178px;
-}
-
-.fasad_form_main .tf-frontsves-result-formula,
-.fasad_form_main .tf-karnizsves-result-formula {
-    margin: -50px 0 18px 65px;
-}
-
-.fasad_form_main input.notfront-karnizsves-length,
-.fasad_form_main input.notfront-karnizsves-height {
-    width: 178px;
-}
-
-.fasad_form_main .img-notfront-item {
-    height: 112px;
-    margin-top: -30px;
-    margin-left: -90px;
-}
-
-
-}
-
-@media only screen and (min-width: 820px){
-    .fasad_form_main .wall-title-h2,
-    .fasad_form_main .fronton-title-h2 {
-        width: 783px;
-    }
-
-    .fasad_form_main input.window_length,
-    .fasad_form_main input.window_height,
-    .fasad_form_main input.door_length,
-    .fasad_form_main input.door_height {
-        width: 120px;
-    }
-
-    .fasad_form_main .walls-form,
-    .fasad_form_main .windows-form,
-    .fasad_form_main .doors-form,
-    .fasad_form_main .ugol-vnesh-form,
-    .fasad_form_main .ugol-inner-form,
-    .fasad_form_main .tf-form,
-    .fasad_form_main .tf-window-form,
-    .fasad_form_main .tf-door-form,
-    .fasad_form_main .tf-frontsves-form,
-    .fasad_form_main .tf-karnizsves-form,
-    .fasad_form_main .lf-form,
-    .fasad_form_main .lf-window-form,
-    .fasad_form_main .lf-door-form,
-    .fasad_form_main .lf-frontsves-form,
-    .fasad_form_main .lf-karnizsves-form,
-    .fasad_form_main .notfront-karnizsves-form {
-        width: 760px;
-    }
-
-    .fasad_form_main .window_result-formula,
-    .fasad_form_main .door_result-formula {
-        margin: 0px 0 0 50px;
-    }
-
-    .fasad_form_main .tf-area-wrp {
-        margin: -7px 0 0 180px;
-    }
-
-    .fasad_form_main .lf-area-wrp {
-        margin: 25px 28px 0 0px;
-    }
-
-    .fasad_form_main .img-tf-frontsves-item, .fasad_form_main .img-tf-karnizsves-item {
-        height: 187px;
-        margin: -46px -23px -24px 0;
-    }
-
-    .fasad_form_main .img-lf-frontsves-item {
-        margin: -119px 0 -68px 405px;
-        height: 187px;
-    }
-
-    .fasad_form_main .img-lf-karnizsves-item {
-        height: 187px;
-        margin: -50px 44px -31px 0px;
-    }
-
-}
-@media only screen and (min-width: 900px){
-    .fasad_form_main .wall-title-h2,
-    .fasad_form_main .fronton-title-h2 {
-        width: 868px;
-    }
-
-    .fasad_form_main .fronton-wrp,
-    .fasad_form_main .treugol-fronton-wrp-header,
-    .fasad_form_main .lom-fronton-wrp-header,
-    .fasad_form_main .notfront-wrp-header {
-        width: 810px;
-    }
-}
-
-
