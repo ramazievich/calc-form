@@ -18,7 +18,7 @@ function funcStena() {
 		let visota = Number(form.querySelector(".wf_height").value);
 		visota = parseFloat(visota);
 		let result = (dlina * visota);
-		form.querySelector(".wf_result-wall").value = result.toFixed(3);
+		form.querySelector(".wf_result-wall").value = result.toFixed(2);
 
 
 	}
@@ -44,7 +44,7 @@ function funcWindow() {
 		let visota = Number(form.querySelector(".window_height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".window_result-window").value = result.toFixed(3);
+		form.querySelector(".window_result-window").value = result.toFixed(2);
 	}
 }
 
@@ -71,7 +71,7 @@ function funcTreugFrontonWindow() {
 		let visota = Number(form.querySelector(".tf-window-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * okno;
-		form.querySelector(".tf-window-result").value = result.toFixed(3);
+		form.querySelector(".tf-window-result").value = result.toFixed(2);
 	}
 }
 
@@ -99,7 +99,7 @@ function funcLomFrontonWindow() {
 		let visota = Number(form.querySelector(".lf-window-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * okno;
-		form.querySelector(".lf-window-result").value = result.toFixed(3);
+		form.querySelector(".lf-window-result").value = result.toFixed(2);
 	}
 }
 
@@ -127,7 +127,7 @@ function funcTreugFrontonDoor() {
 		let visota = Number(form.querySelector(".tf-door-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina + visota) * dver;
-		form.querySelector(".tf-door-result").value = result.toFixed(3);
+		form.querySelector(".tf-door-result").value = result.toFixed(2);
 	}
 }
 
@@ -151,7 +151,7 @@ function funcTreugFrontonFrontsves() {
 		let visota = Number(form.querySelector(".tf-frontsves-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".tf-frontsves-result").value = result.toFixed(3);
+		form.querySelector(".tf-frontsves-result").value = result.toFixed(2);
 	}
 }
 
@@ -177,7 +177,7 @@ function funcLomFrontonFrontsves() {
 		let visota2 = Number(form.querySelector(".lf-frontsves-height2").value);
 		visota2 = parseFloat(visota2);
 		let result = shirina * (visota + visota2);
-		form.querySelector(".lf-frontsves-result").value = result.toFixed(3);
+		form.querySelector(".lf-frontsves-result").value = result.toFixed(2);
 	}
 }
 
@@ -201,7 +201,7 @@ function funcTreugFrontonKarnizsves() {
 		let visota = Number(form.querySelector(".tf-karnizsves-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".tf-karnizsves-result").value = result.toFixed(3);
+		form.querySelector(".tf-karnizsves-result").value = result.toFixed(2);
 	}
 }
 
@@ -225,7 +225,7 @@ function funcLomFrontonKarnizsves() {
 		let visota = Number(form.querySelector(".lf-karnizsves-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".lf-karnizsves-result").value = result.toFixed(3);
+		form.querySelector(".lf-karnizsves-result").value = result.toFixed(2);
 	}
 }
 
@@ -249,7 +249,7 @@ function funcDoor() {
 		let visota = Number(form.querySelector(".door_height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".door_result-door").value = result.toFixed(3);
+		form.querySelector(".door_result-door").value = result.toFixed(2);
 	}
 }
 
@@ -272,7 +272,7 @@ function funcTreugFronton() {
 		let visota = Number(form.querySelector(".tf-height").value);
 		visota = parseFloat(visota);
 		let result = (shirina * visota);
-		form.querySelector(".tf-area").value = result.toFixed(3);
+		form.querySelector(".tf-area").value = result.toFixed(2);
 	}
 }
 
@@ -304,7 +304,7 @@ function funcLomFronton() {
 		// let s3 = shirina2 * visota;
 		// let result = (s1 + s2 + s3);
 		let result = ((shirina2 + shirina) / 2 * visota) + (shirina2 * visota2) / 2;
-		form.querySelector(".lf-area").value = result.toFixed(3);
+		form.querySelector(".lf-area").value = result.toFixed(2);
 	}
 }
 
@@ -326,7 +326,7 @@ function funcCornerVnesh() {
 		let visota = Number(form.querySelector(".ugol_height").value);
 		visota = parseFloat(visota);
 		let result = visota;
-		form.querySelector(".ugol_sum-width").value = result.toFixed(3);
+		form.querySelector(".ugol_sum-width").value = result.toFixed(2);
 	}
 }
 
@@ -348,7 +348,7 @@ function funcCornerInner() {
 		let visota = Number(form.querySelector(".ugol-inner_height").value);
 		visota = parseFloat(visota);
 		let result = visota;
-		form.querySelector(".ugol-inner_sum-width").value = result.toFixed(3);
+		form.querySelector(".ugol-inner_sum-width").value = result.toFixed(2);
 	}
 }
 
