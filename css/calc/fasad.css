@@ -640,6 +640,12 @@ input[placeholder] {
 		background: #7bb37b6b;
 		border-radius: 5px;
 		font-size: 13px;
+		display: flex;
+    	flex-direction: column;
+    	flex-wrap: wrap;
+    	justify-content: center;
+    	align-items: stretch;
+    	align-content: center;
 	}
 	.fasad_form_main .fronton-wrp {
 		width: 300px;
