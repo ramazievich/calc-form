@@ -152,8 +152,8 @@ input[placeholder] {
 	.fasad_form_main .podskazka::after {
 		content: '';
 		position: absolute;
-		left: 67px;
-		bottom: 5px;
+		left: 74px;
+		bottom: 8px;
 		border: 6px solid transparent;
 		border-left: 10px solid #4bc970;
 	}
@@ -780,7 +780,7 @@ input[placeholder] {
 
 @media only screen and (min-width: 400px) {
 	.fasad_form_main .podskazka {
-		right: 94px;
+		right: 87px;
 		top: 7px;
 	}
 
@@ -1118,6 +1118,12 @@ input[placeholder] {
 }
 
 @media only screen and (min-width: 480px) {
+
+	.fasad_form_main .podskazka {
+		right: 93px;
+		top: 7px;
+	}
+
 	.fasad_form_main .wall-title-h2,
 	.fasad_form_main .fronton-title-h2 {
 		font-size: 30px;
