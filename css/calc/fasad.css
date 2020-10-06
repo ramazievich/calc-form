@@ -4,6 +4,10 @@
 * Autoprefixer: v9.7.6
 * Browsers: last 5 version
 */
+body {
+	font-family: Arial, sans-serif;
+	line-height: 20px;
+}
 
 .fasad_form_main .hidden {
 	position: absolute !important;
@@ -144,6 +148,7 @@ input[placeholder] {
 		        box-shadow: 0 1px 1px rgb(61 175 95);
 		font-size: 12px;
 	}
+
 	.fasad_form_main .podskazka::after {
 		content: '';
 		position: absolute;
@@ -274,6 +279,12 @@ input[placeholder] {
 		margin: 0 0 30px 0;
 		text-align: center;
 	}
+
+	.fasad_form_main .window_select-wrp-title,
+	.fasad_form_main .door_select-wrp-title {
+		font-size: 14px;
+	}
+
 	.fasad_form_main .input-style {
 		background: rgba(255, 255, 255, 0.1);
 		border: none;
@@ -371,7 +382,7 @@ input[placeholder] {
 	.fasad_form_main input.wf_result-wall,
 	.fasad_form_main input.window_result-window,
 	.fasad_form_main input.door_result-door {
-		width: 95px;
+		width: 85px;
 		margin: 0 0px 0 17px;
 		height: 34px;
 	}
@@ -386,6 +397,10 @@ input[placeholder] {
 	.fasad_form_main input.lf-karnizsves-result {
 		width: 90px;
 		margin: 0 0px 0 9px;
+	}
+
+	.fasad_form_main input.lf-area {
+		width: 94px;
 	}
 	.fasad_form_main input[type="radio"],
 	.fasad_form_main input[type="checkbox"] {
@@ -744,7 +759,7 @@ input[placeholder] {
 	.fasad_form_main input.lf-karnizsves-height,
 	.fasad_form_main input.notfront-karnizsves-length,
 	.fasad_form_main input.notfront-karnizsves-height {
-		width: 214px;
+		width: 195px;
 	}
 	.fasad_form_main .img-tf-frontsves-item,
 	.fasad_form_main .img-tf-karnizsves-item,
@@ -768,6 +783,12 @@ input[placeholder] {
 		right: 94px;
 		top: 7px;
 	}
+
+	.fasad_form_main .window_select-wrp-title,
+	.fasad_form_main .door_select-wrp-title {
+		font-size: 16px;
+	}
+
 	.fasad_form_main .wall-title-h2,
 	.fasad_form_main .fronton-title-h2 {
 		font-size: 25px;
@@ -824,7 +845,7 @@ input[placeholder] {
 	.fasad_form_main input.wf_result-wall,
 	.fasad_form_main input.window_result-window,
 	.fasad_form_main input.door_result-door {
-		width: 195px;
+		width: 185px;
 		margin: 0 0px 0 10px;
 	}
 	.fasad_form_main input.tf-area,
@@ -833,7 +854,7 @@ input[placeholder] {
 	.fasad_form_main input.lf-area,
 	.fasad_form_main input.lf-frontsves-result,
 	.fasad_form_main input.lf-karnizsves-result {
-		width: 185px;
+		width: 175px;
 		margin: 0 0 0 14px;
 		height: 34px;
 	}
@@ -949,7 +970,7 @@ input[placeholder] {
 		        align-items: flex-start;
 		-ms-flex-line-pack: start;
 		    align-content: flex-start;
-		margin: 5px 0 0 0;
+		margin: 10px 0 0 0;
 	}
 	.fasad_form_main .tf-area-wrp {
 		display: -webkit-box;
@@ -991,9 +1012,9 @@ input[placeholder] {
 		height: 34px;
 	}
 	.fasad_form_main input.tf-area {
-		width: 184px;
+		width: 175px;
 		height: 34px;
-		margin: 0 0 0 16px;
+		margin: 0 0 0 14px;
 	}
 	.fasad_form_main p.tf-area-txt {
 		margin: 9px 0 0 0;
@@ -1132,12 +1153,16 @@ input[placeholder] {
 	.fasad_form_main input.lf-frontsves-height,
 	.fasad_form_main input.lf-frontsves-height2,
 	.fasad_form_main input.lf-karnizsves-length,
-	.fasad_form_main input.lf-karnizsves-height,
-	.fasad_form_main input.notfront-karnizsves-length,
-	.fasad_form_main input.notfront-karnizsves-height {
+	.fasad_form_main input.lf-karnizsves-height {
 		width: 110px;
 		height: 34px;
 	}
+
+	.fasad_form_main input.notfront-karnizsves-length,
+	.fasad_form_main input.notfront-karnizsves-height {
+    width: 138px;
+    height: 34px;
+}
 	.fasad_form_main .input_groups-wrp {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -1321,7 +1346,7 @@ input[placeholder] {
 		        align-items: flex-start;
 		-ms-flex-line-pack: start;
 		    align-content: flex-start;
-		margin: -7px 0 0 0;
+		margin: -2px 0 0 0;
 	}
 	.fasad_form_main p.tf-area-txt {
 		margin: 12px 0 0 17px;
@@ -1395,7 +1420,7 @@ input[placeholder] {
 		        align-items: flex-start;
 		-ms-flex-line-pack: start;
 		    align-content: flex-start;
-		margin: -42px 0px 0 20px;
+		margin: -42px 0px 0 10px;
 	}
 	.fasad_form_main .tf-frontsves-area-all,
 	.fasad_form_main .tf-karnizsves-area-all {
@@ -1412,7 +1437,7 @@ input[placeholder] {
 		width: 185px;
 	}
 	.fasad_form_main input.lf-area {
-		width: 278px;
+		width: 269px;
 	}
 	.lf-frontsves-groups-wrp {
 		display: -webkit-box;
@@ -1450,7 +1475,7 @@ input[placeholder] {
 		margin: -75px 61px 0 0;
 	}
 	.fasad_form_main .lf-frontsves-area-all {
-		margin: 0 63px 0 0;
+		margin: 0 55px 0 0;
 	}
 	.fasad_form_main input.lf-frontsves-result {
 		width: 150px;
@@ -1471,7 +1496,7 @@ input[placeholder] {
 		margin: -37px 0 0 -9px;
 	}
 	.fasad_form_main .lf-karnizsves-area-all {
-		margin: 0 167px 0 0;
+		margin: 0 159px 0 0;
 	}
 	.fasad_form_main input.lf-karnizsves-result {
 		width: 150px;
@@ -1615,7 +1640,7 @@ input[placeholder] {
 	}
 	.fasad_form_main input.lf-karnizsves-length,
 	.fasad_form_main input.lf-karnizsves-height {
-		width: 153px;
+		width: 158px;
 	}
 	.fasad_form_main input.notfront-karnizsves-length,
 	.fasad_form_main input.notfront-karnizsves-height {
@@ -1640,7 +1665,7 @@ input[placeholder] {
 		        align-items: flex-start;
 		-ms-flex-line-pack: start;
 		    align-content: flex-start;
-		margin: -50px 0 18px 0;
+		margin: -50px 0 18px 12px;
 	}
 	.fasad_form_main .tf-frontsves-area-all,
 	.fasad_form_main .tf-karnizsves-area-all {
@@ -1648,14 +1673,14 @@ input[placeholder] {
 	}
 	.fasad_form_main input.tf-frontsves-result,
 	.fasad_form_main input.tf-karnizsves-result {
-		width: 200px;
+		width: 179px;
 		margin: 0 0 0 2px;
 	}
 	.fasad_form_main input.lf-width,
 	.fasad_form_main input.lf-height,
 	.fasad_form_main input.lf-width2,
 	.fasad_form_main input.lf-height2 {
-		width: 107px;
+		width: 109px;
 	}
 	.fasad_form_main .lf-items-all-wrp {
 		display: -webkit-box;
@@ -1707,7 +1732,7 @@ input[placeholder] {
 	.fasad_form_main input.lf-frontsves-length,
 	.fasad_form_main input.lf-frontsves-height,
 	.fasad_form_main input.lf-frontsves-height2 {
-		width: 100px;
+		width: 102px;
 	}
 	.fasad_form_main .lf-frontsves-result-formula {
 		-webkit-box-orient: horizontal;
@@ -1916,7 +1941,7 @@ input[placeholder] {
 		width: 180px;
 	}
 	.fasad_form_main .tf-area-wrp {
-		margin: -3px 0 0 129px;
+		margin: 1px 18px 0 0;
 	}
 	.fasad_form_main input.tf-area {
 		margin: 0;
@@ -1980,7 +2005,7 @@ input[placeholder] {
 	.fasad_form_main input.lf-frontsves-length,
 	.fasad_form_main input.lf-frontsves-height,
 	.fasad_form_main input.lf-frontsves-height2 {
-		width: 121px;
+		width: 124px;
 	}
 	.fasad_form_main .lf-frontsves-result-formula {
 		margin: 1px 0px 5px 64px;
@@ -2023,7 +2048,7 @@ input[placeholder] {
 	}
 	.fasad_form_main input.lf-karnizsves-length,
 	.fasad_form_main input.lf-karnizsves-height {
-		width: 186px;
+		width: 191px;
 	}
 	.fasad_form_main .lf-karnizsves-result-formula {
 		margin: -37px 0 0 67px;
@@ -2036,7 +2061,7 @@ input[placeholder] {
 	}
 	.fasad_form_main .tf-frontsves-result-formula,
 	.fasad_form_main .tf-karnizsves-result-formula {
-		margin: -50px 0 18px 65px;
+		margin: -50px 0 18px 78px;
 	}
 	.fasad_form_main input.notfront-karnizsves-length,
 	.fasad_form_main input.notfront-karnizsves-height {
@@ -2047,6 +2072,12 @@ input[placeholder] {
 		margin-top: -30px;
 		margin-left: -90px;
 	}
+
+.fasad_form_main input.tf-frontsves-result,
+.fasad_form_main input.tf-karnizsves-result {
+    width: 178px;
+    margin: 0 0 0 2px;
+}
 }
 
 @media only screen and (min-width: 820px) {
@@ -2082,9 +2113,7 @@ input[placeholder] {
 	.fasad_form_main .door_result-formula {
 		margin: 0px 0 0 50px;
 	}
-	.fasad_form_main .tf-area-wrp {
-		margin: -7px 0 0 180px;
-	}
+
 	.fasad_form_main .lf-area-wrp {
 		margin: 25px 28px 0 0px;
 	}
