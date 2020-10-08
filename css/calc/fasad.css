@@ -129,8 +129,6 @@ input[placeholder] {
 .fasad_form_main label:hover {
 	cursor: pointer;
 }
-
-
 /*кастомный чекбокс (конец)*/
 
 @media screen and (min-width: 150px) {
@@ -261,8 +259,10 @@ input[placeholder] {
 	.fasad_form_main .notfront-karnizsves-form {
 		position: relative;
 		width: 250px;
-		background-color: #f2f2f26b;
-		border: 0.5px solid #00000008;
+		background-color: #f9fafa;
+		/*border: 0.5px solid #00000008;
+		background: url(https://www.subtlepatterns.com/patterns/grid_noise.png);*/
+    	border: 0.5px solid rgb(21 158 21 / 7%);
 		border-radius: 4px;
 		-webkit-box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
 		box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0);
@@ -776,6 +776,27 @@ input[placeholder] {
 	.fasad_form_main .lf-items-all-wrp {
 		margin-top: 10px;
 	}
+
+	.fasad_form_main .house {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+
+.fasad_form_main .house-image1 {
+		width: 300px;
+		margin-top: 20px;
+	}
+
+	.fasad_form_main .house-image2,
+	.fasad_form_main .tabs-block {
+		display: none;
+	}
+
+
 }
 
 @media only screen and (min-width: 400px) {
@@ -1115,6 +1136,12 @@ input[placeholder] {
 	.fasad_form_main .checkbox-wrp {
 		font-size: 16px;
 	}
+
+	.fasad_form_main .house-image1 {
+		width: 400px;
+		margin-top: 20px;
+	}
+
 }
 
 @media only screen and (min-width: 480px) {
@@ -1841,6 +1868,7 @@ input[placeholder] {
 	.fasad_form_main .img-tf-karnizsves-item {
 		margin: -20px -19px -16px 0;
 	}
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -1940,7 +1968,7 @@ input[placeholder] {
 	.fasad_form_main .treugol-fronton-wrp-header,
 	.fasad_form_main .lom-fronton-wrp-header,
 	.fasad_form_main .notfront-wrp-header {
-		width: 758px;
+		width: 766px;
 	}
 	.fasad_form_main input.tf-width,
 	.fasad_form_main input.tf-height {
@@ -2084,6 +2112,386 @@ input[placeholder] {
     width: 178px;
     margin: 0 0 0 2px;
 }
+
+
+	
+.fasad_form_main .house-image1 {
+	display: none;
+	width: 300px;
+	margin-top: 20px;
+}
+
+.fasad_form_main .house-image2,
+.fasad_form_main .tabs-block {
+	display: block;
+}
+
+/*Начало для табов*/
+
+.fasad_form_main .house {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    width: 710px;
+	margin: 0 auto;
+}
+
+.house-image {
+	margin: 53px 0 25px 0;
+}
+
+.fasad_form_main .tabs-block-item { 
+ /* width: 250px; 
+  padding: 0px; 
+  margin: 0 auto; 
+  position: relative; 
+  border: 1px solid #DEE8F2; 
+  column-count: 2;
+
+  	width: 241px;
+    padding: 0px;
+    position: relative;
+	column-count: 2;*/
+	width: 700px;
+    padding: 0px;
+    position: relative;
+    column-count: 4;
+} 
+
+
+#content1,
+#content2,
+#content3,
+#content4,
+#content5,
+#content6,
+#content7,
+#content8,
+#content9,
+#content10,
+#content11,
+#content12,
+#content13,
+#content14,
+#content15 { 
+    display: none;
+    position: absolute;
+	top: -220px;
+    right: 80px;
+}
+
+.fasad_form_main  .tabs-block-img {
+    width: 180px;
+}
+
+
+.fasad_form_main  .tabs-block-input { 
+  display: none; 
+}
+
+.fasad_form_main .tabs-block-label { 
+  display: block;
+  width: 180px;
+  font-size: 13px;
+  color: black;
+  background: #DEE8F2;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 5px;
+} 
+
+.fasad_form_main .tabs-block-input:checked + .tabs-block-label { 
+  color: #555; 
+  background: white; 
+} 
+
+.fasad_form_main .tabs-block-point {
+	background: red;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+}
+
+/*начало стилей точек на картинках*/
+#point1 {	
+	position: absolute;
+	top: 103px;
+	left: -343px;
+}
+
+#point1::before {	
+	content: '';
+    display: block;
+    width: 350px;
+    border-bottom: dotted 1px red;
+    margin: 5px 0 0 3px;
+}
+
+#point2 {	
+	position: absolute;
+	top: 61px;
+    left: -169px;
+}
+
+#point2::before {	
+	content: '';
+    display: block;
+    width: 190px;
+    border-bottom: dotted 1px red;
+    margin: 5px 0 0 3px;
+}
+
+#point3 {	
+	position: absolute;
+	top: 38px;
+    left: -169px;
+}
+
+#point3::before {	
+    content: '';
+    display: block;
+    width: 154px;
+    border-bottom: dotted 1px red;
+    margin: 24px 0 0 7px;
+    transform: rotate(14deg);
+}
+
+#point4 {	
+	position: absolute;
+	top: 86px;
+	left: -343px;
+}
+
+#point4::before {	
+	content: '';
+    display: block;
+    width: 350px;
+    border-bottom: dotted 1px red;
+    margin: 5px 0 0 3px;
+}
+
+#point5 {	
+	position: absolute;
+    top: 168px;
+    left: -131px;
+}
+
+#point5::before {	
+    content: '';
+    display: block;
+    width: 138px;
+    border-bottom: dotted 1px red;
+    margin: -18px 0 0 1px;
+    transform: rotate(-19deg);
+}
+
+#point6 {	
+	position: absolute;
+    top: 75px;
+    left: -218px;
+}
+
+#point6::before {	
+	content: '';
+    display: block;
+    width: 210px;
+    border-bottom: dotted 1px red;
+    margin: 10px 0 0 1px;
+    transform: rotate(3deg);
+}
+
+#point7 {	
+	position: absolute;
+	top: 124px;
+    left: -268px;
+}
+
+#point7::before {	
+	content: '';
+    display: block;
+    width: 258px;
+    border-bottom: dotted 1px red;
+    margin: -3px 0 0 6px;
+    transform: rotate(-4deg);
+}
+
+#point8 {	
+	position: absolute;
+	top: 139px;
+    left: -286px;
+}
+
+#point8::before {	
+	content: '';
+    display: block;
+    width: 276px;
+    border-bottom: dotted 1px red;
+    margin: -10px 0 0 6px;
+    transform: rotate(-6deg);
+}
+
+#point9 {	
+	position: absolute;
+	top: 140px;
+    left: -146px;
+}
+
+#point9::before {	
+	content: '';
+    display: block;
+    width: 139px;
+    border-bottom: dotted 1px red;
+    margin: -11px 0 0 6px;
+    transform: rotate(-13deg);
+}
+
+#point10 {	
+	position: absolute;
+    top: 122px;
+    left: -346px;
+}
+
+#point10::before {	
+	content: '';
+    display: block;
+    width: 333px;
+    border-bottom: dotted 1px red;
+    margin: -5px 0 0 7px;
+    transform: rotate(-3deg);
+}
+
+#point11 {	
+	position: absolute;
+    top: 66px;
+    left: -358px;
+}
+
+#point11::before {	
+	content: '';
+    display: block;
+    width: 333px;
+    border-bottom: dotted 1px red;
+    margin: 14px 0 0 7px;
+    transform: rotate(3deg);
+}
+
+#point12 {	
+	position: absolute;
+    top: 9px;
+    left: -191px;
+}
+
+#point12::before {	
+	content: '';
+    display: block;
+    width: 200px;
+    border-bottom: dotted 1px red;
+    margin: 48px 0 0 -7px;
+    transform: rotate(26deg);
+}
+
+#point13 {	
+    position: absolute;
+    top: 51px;
+    left: -344px;
+}
+
+#point13::before {	
+	content: '';
+    display: block;
+    width: 327px;
+    border-bottom: dotted 1px red;
+    margin: 7px 0 0 4px;
+    transform: rotate(1deg);
+}
+
+#point14 {	
+	position: absolute;
+    top: 18px;
+    left: -365px;
+}
+
+#point14::before {	
+	content: '';
+    display: block;
+    width: 371px;
+    border-bottom: dotted 1px red;
+    margin: 34px 0 0 4px;
+    transform: rotate(9deg);
+}
+
+#point15 {	
+	position: absolute;
+    top: 162px;
+    left: -345px;
+}
+
+#point15::before {	
+	content: '';
+    display: block;
+    width: 338px;
+    border-bottom: dotted 1px red;
+    margin: -19px 0 0 4px;
+    transform: rotate(-8deg);
+}
+
+#tab1:checked ~ #content1, #point1,
+#tab2:checked ~ #content2, #point2,
+#tab3:checked ~ #content3, #point3,
+#tab4:checked ~ #content4, #point4,
+#tab5:checked ~ #content5, #point5,
+#tab6:checked ~ #content6, #point6,
+#tab7:checked ~ #content7, #point7,
+#tab8:checked ~ #content8, #point8,
+#tab9:checked ~ #content9, #point9,
+#tab10:checked ~ #content10, #point10,
+#tab11:checked ~ #content11, #point11,
+#tab12:checked ~ #content12, #point12,
+#tab13:checked ~ #content13, #point13,
+#tab14:checked ~ #content14, #point14,
+#tab15:checked ~ #content15, #point15 { 
+  display: block; 
+}
+
+#content1,
+#content2,
+#content3,
+#content4,
+#content5,
+#content6,
+#content7,
+#content8,
+#content9,
+#content10,
+#content11,
+#content12,
+#content13,
+#content14,
+#content15 { 
+  animation: scale 0.7s ease-in-out; 
+} 
+
+@keyframes scale { 
+  0% { 
+  transform: scale(0.9); 
+  opacity: 0; 
+  } 
+  50% { 
+  transform: scale(1.005); 
+  opacity: 0.5; 
+  } 
+  100% { 
+  transform: scale(1); 
+  opacity: 1; 
+  } 
+}
+
+
+
 }
 
 @media only screen and (min-width: 820px) {
